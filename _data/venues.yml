@@ -1,10 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"CVPR":
+  url: https://cvpr2023.thecvf.com/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+"WACV":
+  url: https://wacv2024.thecvf.com/
 
+"FG":
+  url: https://fg2023.ieee-biometrics.org/
+
+"ICIP":
+  url: https://2022.ieeeicip.org//
 # "Efficient-NLP":
 #   color: "#F2DFD0"
 

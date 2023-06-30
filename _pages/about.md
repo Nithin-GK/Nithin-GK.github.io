@@ -2,13 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: <b>NLP Ph.D. Candidate at Princeton University<br>Researcher at Allen Institute for AI (AI2)</b>
+subtitle: <b>NLP Ph.D. Candidate at Johns Hopkins University)</b>
 
 profile:
   align: right
   image: SmallSize.jpg
   image_circular: false # crops the image to make it circular
-  address: asd@cs.princeton.edu #>
+  address: ngopala2@jhu.edu #>
     #<p>555 your office number</p>
     #<p>123 your address street</p>
     #<p>Your City, State 12345</p>
@@ -17,18 +17,18 @@ news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+I am a second year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University, where I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel</a> .
 
-I am a computer scientist pursuing my Ph.D. at Princeton University, advised by <a href='https://www.cs.princeton.edu/~karthikn/'>Dr. Karthik Narasimhan</a>.
-<!-- My research interests are broadly in the field of natural language processing (NLP), with special emphasis on sub-topics of AI safety, evaluation of large LMs, data-efficient algorithms, efficient NLP architectures, and multilingual NLP. -->
-My research interests are broadly in the field of natural language processing (NLP), with special emphasis on sub-topics of AI safety, data-efficient algorithms, efficient NLP architectures, and multilingual NLP.
 
-I am currently visiting <a href='https://allenai.org'>Allen Institute for AI (AI2)</a> and working with <a href='http://ashwinkalyan.com'>Dr. Ashwin Kalyan</a> as part of the <a href="https://allenai.org/aristo">Aristo team</a>.
+I work on problems in computer vision. My research primarily focuses on Deep generative modelling.  With a special emphasis on plug and play models and efficient architectures for generation. Enabling training and Infrence of generative models on low compute resources.
 
-I am deeply passionate about teaching and view disseminating knowledge to be as important as the research I do.
 
-Previously, I received my B.Tech from IIT Madras, where I worked on reinforcement learning with <a href='http://www.cse.iitm.ac.in/~miteshk/'>Prof. Balaraman Ravindran</a> and on NLP with <a href='http://ashwinkalyan.com'>Prof. Mitesh M. Khapra</a> and <a href='http://www.cse.iitm.ac.in/~sutanuc/'>Prof. Sutanu Chakraborti</a>.
 
-In my free time, I enjoy playing football (soccer), tennis, and the piano.
+Prior to joining JHU, I obtained a Bachelor's and Master's dual degree (B.Tech& M.Tech) with a major in Electrical Engineering from Indian Institute of Technology, Madras , where I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, IIT Madras on Image reconstruction.
+
+
+
+In my free time, I enjoy running and hiking.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

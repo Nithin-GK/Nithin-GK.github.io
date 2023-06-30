@@ -6,7 +6,7 @@ description: I'm interested in multiple research areas and my papers can be broa
 nav: true
 nav_order: 2
 ---
-
+<!-- 
 #### Efficient NLP
 With large language models becoming larger than ever, I believe efficiency of the architectures should be a constant question.
 I am interested in building parameter-efficient and fast throughput architectures [<a href="https://arxiv.org/pdf/2211.16634">1</a>,<a href="https://arxiv.org/pdf/2302.12441.pdf">2</a>]
@@ -26,4 +26,4 @@ We hope this can motivate improvement in this line of work.
 #### Reinforcement learning
 I am particularly interested in how to use RL for NLP, and vice-versa.
 We showed that using sentiment analysis to predict the sentiment of text observations can be useful for reward shaping <a href="https://arxiv.org/pdf/2010.02316">[1]</a>.
-Previously, I have worked on inferring options from offline expert trajectories <a href="https://arxiv.org/pdf/1812.00225">[2]</a> and improving hindsigh learning <a href="https://arxiv.org/pdf/1809.06719">[3]</a>.
+Previously, I have worked on inferring options from offline expert trajectories <a href="https://arxiv.org/pdf/1812.00225">[2]</a> and improving hindsigh learning <a href="https://arxiv.org/pdf/1809.06719">[3]</a>. -->
