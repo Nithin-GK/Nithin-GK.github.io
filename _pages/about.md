@@ -20,7 +20,7 @@ social: true  # includes social icons at the bottom of the page
 I am a second year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University, where I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel</a> .
 
 
-I work on problems in computer vision. My research primarily focuses on Deep generative modelling.  With a special emphasis on plug and play models and efficient architectures for generation. Enabling training and Infrence of generative models on low compute resources.
+I work on problems in Computer Vision. My research primarily focuses on Deep Generative Modelling.  With a special emphasis on Plug and Play models and efficient architectures for generation. Enabling training and inference of generative models on low compute resources.
 
 
 
