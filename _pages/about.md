@@ -6,7 +6,7 @@ subtitle: <b>NLP Ph.D. Candidate at Johns Hopkins University)</b>
 
 profile:
   align: right
-  image: SmallSize.jpg
+  image: SmallSize.png
   image_circular: false # crops the image to make it circular
   address: ngopala2@jhu.edu #>
     #<p>555 your office number</p>
