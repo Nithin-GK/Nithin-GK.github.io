@@ -6,19 +6,19 @@
     - title: PhD*
       institution: Johns Hopkins University
       year: In progress
-    - title: Masters in Electrical Engineering
+    - title: Master of Technology in Electrical Engineering
       institution: Indian Institute of Technology, Madras
-      year: 2021
-    - title: Indian Institute of Technology, Madras
+      year: 2020
+    - title: Bachelor of Technology in Electrical Engineering
       institution: Indian Institute of Technology, Madras
       year: 2019
 
 - title: Experience
   type: time_table
   contents:
-    - title: Student Researcher
-      institution: Allen Institite for AI (AI2)
-      year: 2022-Present
+    - title: Researcb Intern
+      institution: Adobe Research, Seattle
+      year: 2023-Present
     - title: Research Intern
-      institution: IBM Research, Yorktown Heights
-      year: 2021
+      institution: Mistubishi Electric Research Labs, Cambridge
+      year: 2022
