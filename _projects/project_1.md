@@ -53,13 +53,7 @@ category: work
 </head>
 
 <body>
-    <!-- <div class="banner">
-      <video class="video lazy"
-          poster="https://dreamfusion-cdn.ajayj.com/sept28/banner_1x6_customhue_A.jpg"
-          autoplay loop playsinline muted>
-        <source data-src="https://dreamfusion-cdn.ajayj.com/sept28/banner_1x6_customhue_A.mp4" type="video/mp4"></source>
-      </video>
-    </div> -->
+
     <div class="highlight-clean" style="padding-bottom: 10px;">
         <div class="container" style="max-width: 1250px;">: 
             <h1 class="text-center"><b>Unite and Conquer</b>: Cross Dataset Multimodal Synthesis using Diffusion Models</h1>
@@ -134,7 +128,6 @@ category: work
         <div class="row">
             <div class="col-md-12">
                 <h2>Method</h2>
-                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
     </div>
@@ -159,7 +152,6 @@ category: work
         <div class="row">
             <div class="col-md-12">
                 <h2>Multimodal face generation</h2>
-                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
     </div>
@@ -176,7 +168,6 @@ category: work
         <div class="row">
             <div class="col-md-12">
                 <h2>Multimodal generic scenes generation</h2>
-                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
     </div>
@@ -184,7 +175,6 @@ category: work
         <div class="row captioned_videos">
             <div class="col-md-12">
             <img src="assets/img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
-                <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
     </div>
@@ -193,7 +183,6 @@ category: work
         <div class="row">
             <div class="col-md-12">
                 <h2>Multimodal Interpolation</h2>
-                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
     </div>
