@@ -7,7 +7,7 @@ img: assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
-
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -141,7 +141,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
+            <img src="assets/img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -149,7 +149,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="assets/img/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -166,7 +166,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/paper_images/multimodal4.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="assets/img/paper_images/multimodal4.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -183,7 +183,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
+            <img src="assets/img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -200,7 +200,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
+            <img src="assets/img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -210,15 +210,14 @@ category: work
         <div class="row">
             <div class="col-md-12">
                 <h2>Demo Video</h2>
-                <!-- <p>Given a caption, DreamFusion uses a text-to-image generative model called Imagen to optimize a 3D scene. We propose <strong>Score Distillation Sampling (SDS)</strong>, a way to generate samples from a diffusion model by optimizing a loss function. SDS allows us to optimize samples in an arbitrary parameter space, such as a 3D space, as long as we can map back to images differentiably. We use a 3D scene parameterization similar to Neural Radiance Fields, or NeRFs, to define this differentiable mapping. SDS alone produces reasonable scene appearance, but DreamFusion adds additional regularizers and optimization strategies to improve geometry. The resulting trained NeRFs are coherent, with high-quality normals, surface geometry and depth, and are relightable with a Lambertian shading model.</p> -->
             </div>
         </div>
     </div>
 <!--    <div align="center" class="container" style="max-width: 512 px;">
     <div class="row">
             <div class="col-md-12">
-                <video class="video lazy" autoplay playsinline controls muted poster="assets/paper_images/demovideo.png">
-                    <source data-src="https://github.com/Nithin-GK/nithin-gk.github.io/blob/main/projectpages/Multidiff/assets/paper_images/demo_video.mp4?raw=true" type="video/mp4"></source>
+                <video class="video lazy" autoplay playsinline controls muted poster="assets/img/paper_images/demovideo.png">
+                    <source data-src="https://github.com/Nithin-GK/nithin-gk.github.io/blob/main/projectpages/Multidiff/assets/img/paper_images/demo_video.mp4?raw=true" type="video/mp4"></source>
                 </video>
             </div>
     </div>
