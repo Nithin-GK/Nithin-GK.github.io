@@ -117,7 +117,7 @@ category: work
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2> Method</h2>
+                <h2 style="color:black;"> Method</h2>
             </div>
         </div>
     </div>
