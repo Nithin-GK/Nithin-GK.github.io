@@ -229,19 +229,7 @@ category: work
             </div>
         </div>
     </div>
-    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
-    <script src="assets/js/yall.js"></script>
-    <script>
-        yall(
-            {
-                observeChanges: true
-            }
-        );
-    </script>
-    <script src="assets/js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
-    <!-- Import the component -->
+
+ 
 </body>
 
