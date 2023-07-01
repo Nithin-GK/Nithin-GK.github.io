@@ -7,7 +7,7 @@ subtitle: <b>Ph.D. Student at Johns Hopkins University</b>
 profile:
   align: right
   image: SmallSize.png
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   address: ngopala2@jhu.edu #>
     #<p>555 your office number</p>
     #<p>123 your address street</p>
@@ -17,14 +17,14 @@ news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a second year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University, where I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel</a> .
+I am a third year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University. I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel</a> .
 
 
-I work on problems in Computer Vision. My research primarily focuses on Deep Generative Modelling.  With a special emphasis on Plug and Play models and efficient architectures for generation. Enabling training and inference of generative models on low compute resources.
+I work on problems in Computer Vision. My research primarily focuses on Deep Generative Modelling with a special emphasis on Plug and Play models and efficient architectures for generation, enabling training and inference of generative models on low compute resources.
 
 
 
-Prior to joining JHU, I obtained a Bachelor's and Master's dual degree (B.Tech& M.Tech) with a major in Electrical Engineering from Indian Institute of Technology, Madras , where I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, IIT Madras on Image reconstruction.
+Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech& M.Tech)  in Electrical Engineering from Indian Institute of Technology, Madras. At IIT Madras, I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, on image reconstruction.
 
 
 
