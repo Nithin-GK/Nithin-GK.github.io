@@ -243,4 +243,14 @@ category: work
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
     <!-- Import the component -->
+    <footer>
+        <button class="button" onclick="darkmode()">Dark/Light mode</button>
+        <script>
+            function darkmode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+            }
+
+        </script>
+    </footer>
 </body>
