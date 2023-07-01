@@ -7,9 +7,7 @@ img: assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
-<!DOCTYPE html>
 <html>
-
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
@@ -155,6 +153,7 @@ category: work
             </div>
         </div>
     </div>
+    
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
