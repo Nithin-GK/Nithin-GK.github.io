@@ -22,8 +22,8 @@ category: work
     <title>Unite and Conquer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -45,7 +45,7 @@ category: work
     <meta name="twitter:image" content="https://dreamfusion3d.github.io/images/multi.png" />
     <!-- <meta name="twitter:site" content="" /> -->
 
-    <script src="assets/js/video_comparison.js"></script>
+    <script src="js/video_comparison.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
 </head>
 
@@ -108,11 +108,12 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/images/multi.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="images/multi.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
-    </div>    
+    </div>
+    
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
@@ -124,8 +125,16 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
-                <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
+            <img src="img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
+                <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
+            </div>
+        </div>
+    </div>
+    <div align="center" class="container" style="max-width: 768px;">
+        <div class="row captioned_videos">
+            <div class="col-md-12">
+            <img src="img/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
+                <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
     </div>
@@ -141,7 +150,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/img/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="img/paper_images/multimodal4.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -159,7 +168,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
+            <img src="img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
             </div>
         </div>
     </div>
@@ -176,7 +185,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="assets/img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
+            <img src="img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -186,20 +195,20 @@ category: work
    <div align="center" class="container" style="max-width: 768 px;">
         <div class="row">
             <div class="col-md-12">
-                <h2> Video Explanation</h2>
+                <h2>Demo Video</h2>
             </div>
         </div>
     </div>
-   <div align="center" class="container" style="max-width: 512 px;">
+<!--    <div align="center" class="container" style="max-width: 512 px;">
     <div class="row">
             <div class="col-md-12">
-            <iframe width="600" height="480"
-            src="https://www.youtube.com/embed/N4EOwnhNzIk">
-            </iframe>
+                <video class="video lazy" autoplay playsinline controls muted poster="img/paper_images/demovideo.png">
+                    <source data-src="https://github.com/Nithin-GK/nithin-gk.github.io/blob/main/projectpages/Multidiff/img/paper_images/demo_video.mp4?raw=true" type="video/mp4"></source>
+                </video>
             </div>
     </div>
     </div>
-
+ -->
     <hr class="divider" />
 
     <div class="container" style="max-width: 768px;">
@@ -207,12 +216,11 @@ category: work
             <div class="col-md-12">
                 <h2>Citation</h2>
                 <code>
-                 @article{nair2023unite,<br>
-                &nbsp;  title={Unite and Conquer: Plug \& Play Multi-Modal Synthesis Using Diffusion Models},<br>
+                 @article{nair2022unite,<br>
+                &nbsp;  title={Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models},<br>
                 &nbsp; author={Nair, Nithin Gopalakrishnan and Bandara, Wele Gedara Chaminda and Patel, Vishal M},<br>
-                &nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},<br>
-                &nbsp; pages={6070--6079},<br>
-                &nbsp; year={2023}<br>
+                &nbsp; journal={arXiv preprint arXiv:2212.00793},<br>
+                &nbsp; year={2022}<br>
                 &nbsp; }<br>
                 </code>
             </div>
@@ -230,7 +238,7 @@ category: work
         </div>
     </div>
     <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
-    <script src="assets/js/yall.js"></script>
+    <script src="/js/yall.js"></script>
     <script>
         yall(
             {
@@ -238,7 +246,7 @@ category: work
             }
         );
     </script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
