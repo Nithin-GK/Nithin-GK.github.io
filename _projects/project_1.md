@@ -45,7 +45,7 @@ category: work
     <meta name="twitter:image" content="https://dreamfusion3d.github.io/images/multi.png" />
     <!-- <meta name="twitter:site" content="" /> -->
 
-    <script src="/assets/js/video_comparison.js"></script>
+    <script src="assets/js/video_comparison.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
 </head>
 
@@ -190,7 +190,7 @@ category: work
             </div>
         </div>
     </div>
-   <!-- <div align="center" class="container" style="max-width: 512 px;">
+   <div align="center" class="container" style="max-width: 512 px;">
     <div class="row">
             <div class="col-md-12">
             <iframe width="600" height="480"
@@ -198,7 +198,7 @@ category: work
             </iframe>
             </div>
     </div>
-    </div> -->
+    </div>
 
     <hr class="divider" />
 
@@ -230,7 +230,7 @@ category: work
         </div>
     </div>
     <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
-    <script src="/assets/js/yall.js"></script>
+    <script src="assets/js/yall.js"></script>
     <script>
         yall(
             {
@@ -238,7 +238,7 @@ category: work
             }
         );
     </script>
-    <script src="/assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
