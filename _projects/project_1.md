@@ -7,7 +7,6 @@ img: assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
-<html>
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
@@ -260,4 +259,3 @@ category: work
     <!-- Import the component -->
 </body>
 
-</html>
