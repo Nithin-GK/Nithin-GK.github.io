@@ -1,7 +1,7 @@
 ---
 layout: page
 title: projects
-permalink: /projectpages/
+permalink: /projectpages/Multimodaldiff
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 2
