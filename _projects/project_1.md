@@ -96,8 +96,8 @@ category: work
     <div align="justify" class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2><center> Abstract </center></h2>
-                <p>
+                <h2 style="color:black;"><center> Abstract </center></h2>
+                <p style="color:black;">
                     <!-- <strong> -->
                         Generating photos satisfying multiple constraints finds broad utility in the content creation industry. A key hurdle to accomplishing this task is the need for paired data consisting of all modalities (i.e., constraints) and their corresponding output. Moreover, existing methods need retraining using paired data across all modalities to introduce a new condition. This paper proposes a solution to this problem based on denoising diffusion probabilistic models (DDPMs). Our motivation for choosing diffusion models over other generative models comes from the flexible internal structure of diffusion models. Since each sampling step in the DDPM follows a Gaussian distribution, we show that there exists a closed-form solution for generating an image given various constraints. Our method can unite multiple diffusion models trained on multiple sub-tasks and conquer the combined task through our proposed sampling strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets during sampling time alone to guide it to the desired outcome satisfying multiple constraints. We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of our approach. 
                     <!-- </strong> -->
@@ -109,7 +109,7 @@ category: work
         <div class="row captioned_videos">
             <div class="col-md-12">
             <img src="/assets/images/multi.png" alt="sym" width="700" height ="500" style="border-style: none" />
-                <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
+                <h6 style="color:black;" class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
     </div>    
@@ -117,7 +117,7 @@ category: work
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Method</h2>
+                <h2> Method</h2>
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@ category: work
         <div class="row captioned_videos">
             <div class="col-md-12">
             <img src="/assets/img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
-                <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
+                <h6 style="color:black;" class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
     </div>
@@ -133,7 +133,7 @@ category: work
    <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Multimodal face generation</h2>
+                <h2 style="color:black;">Multimodal face generation</h2>
             </div>
         </div>
     </div>
@@ -151,7 +151,7 @@ category: work
    <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Multimodal generic scenes generation</h2>
+                <h2 style="color:black;">>Multimodal generic scenes generation</h2>
             </div>
         </div>
     </div>
@@ -168,7 +168,7 @@ category: work
    <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Multimodal Interpolation</h2>
+                <h2 style="color:black;">Multimodal Interpolation</h2>
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@ category: work
         <div class="row captioned_videos">
             <div class="col-md-12">
             <img src="/assets/img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
-                <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
+                <!-- <h6 style="color:black;" class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
     </div>
@@ -186,7 +186,7 @@ category: work
    <div align="center" class="container" style="max-width: 768 px;">
         <div class="row">
             <div class="col-md-12">
-                <h2> Video Explanation</h2>
+                <h2 style="color:black;"> Video Explanation</h2>
             </div>
         </div>
     </div>
@@ -205,7 +205,7 @@ category: work
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Citation</h2>
+                <h2 style="color:black;">Citation</h2>
                 <code>
                  @article{nair2023unite,<br>
                 &nbsp;  title={Unite and Conquer: Plug \& Play Multi-Modal Synthesis Using Diffusion Models},<br>
@@ -243,7 +243,7 @@ category: work
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
     <!-- Import the component -->
-    <footer>
+    <!-- <footer>
         <button class="button" onclick="darkmode()">Dark/Light mode</button>
         <script>
             function darkmode() {
@@ -252,5 +252,5 @@ category: work
             }
 
         </script>
-    </footer>
+    </footer> -->
 </body>
