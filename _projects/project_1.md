@@ -115,7 +115,6 @@ category: work
     </div>
     <hr class="divider" />
     
-    </div>   
     <hr class="divider" />
     <div class="container" style="max-width: 768px;">
         <div class="row">
