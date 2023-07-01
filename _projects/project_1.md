@@ -2,15 +2,15 @@
 layout: page
 title: Unite and Conquer
 permalink: projectpages/Multidiff
-description: a project with a background image
+# description: a project with a background image
 img: assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
 
-<!-- <html> -->
+<html>
 
-<!-- <head>
+<head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,12 +47,12 @@ category: work
     <meta name="twitter:url" content="https://dreamfusion3d.github.io/" />
     <meta name="twitter:image" content="https://dreamfusion3d.github.io/assets/images/multi.png" />
     <!-- <meta name="twitter:site" content="" /> -->
-<!-- 
+
     <script src="assets/js/video_comparison.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
-</head> --> 
+</head>
 
-<!-- <body> -->
+<body>
     <!-- <div class="banner">
       <video class="video lazy"
           poster="https://dreamfusion-cdn.ajayj.com/sept28/banner_1x6_customhue_A.jpg"
@@ -266,6 +266,6 @@ category: work
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
     <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
     <!-- Import the component -->
-<!-- </body>
+</body>
 
-<!-- </html> --> 
+</html>
