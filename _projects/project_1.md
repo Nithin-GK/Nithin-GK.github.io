@@ -222,8 +222,8 @@ category: work
     <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2>Acknowledgement</h2>
-                <p>
+                <h2 style="color:black;">Acknowledgement</h2>
+                <p style="color:black;">
                     This template has been borrowed from https://dreamfusion3d.github.io/
                 </p>
             </div>
