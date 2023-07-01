@@ -1,6 +1,6 @@
 ---
 layout: page
-# title: Unite and Conquer
+title: Unite and Conquer: Plug & Play Multi-Modal Synthesis using Diffusion Models
 permalink: projectpages/Multidiff
 # description: a project with a background image
 img: assets/img/publication_preview/multi.png
