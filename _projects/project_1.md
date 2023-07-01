@@ -153,7 +153,7 @@ category: work
             </div>
         </div>
     </div>
-    
+
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
@@ -162,6 +162,7 @@ category: work
             </div>
         </div>
     </div>
+
     <hr class="divider" />
    <div class="container" style="max-width: 768px;">
         <div class="row">
@@ -170,6 +171,7 @@ category: work
             </div>
         </div>
     </div>
+
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
@@ -177,6 +179,7 @@ category: work
             </div>
         </div>
     </div>
+
    <hr class="divider" />
    <div class="container" style="max-width: 768px;">
         <div class="row">
@@ -185,6 +188,7 @@ category: work
             </div>
         </div>
     </div>
+
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
@@ -194,6 +198,7 @@ category: work
         </div>
     </div>
     <hr class="divider" />
+    
    <div align="center" class="container" style="max-width: 768 px;">
         <div class="row">
             <div class="col-md-12">
