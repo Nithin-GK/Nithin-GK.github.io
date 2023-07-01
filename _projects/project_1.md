@@ -1,9 +1,9 @@
 ---
 layout: page
 title: Unite and Conquer
-permalink: Multimodaldiff
+permalink: projectpages/Multidiff
 description: a project with a background image
-img: multi.png
+img: assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
