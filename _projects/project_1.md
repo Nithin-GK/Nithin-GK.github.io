@@ -190,7 +190,7 @@ category: work
             </div>
         </div>
     </div>
-   <div align="center" class="container" style="max-width: 512 px;">
+   <!-- <div align="center" class="container" style="max-width: 512 px;">
     <div class="row">
             <div class="col-md-12">
             <iframe width="600" height="480"
@@ -198,7 +198,7 @@ category: work
             </iframe>
             </div>
     </div>
-    </div>
+    </div> -->
 
     <hr class="divider" />
 
