@@ -52,26 +52,22 @@ category: work
 <body>
 
     <div class="highlight-clean" style="padding-bottom: 10px;">
-        <div class="container" style="max-width: 1250px;">: 
+        <!-- <div class="container" style="max-width: 1250px;">: 
             <h1 class="text-center"><b>Unite and Conquer</b>: Cross Dataset Multimodal Synthesis using Diffusion Models</h1>
-        </div>
+        </div> -->
         <div class="container" style="max-width: 1100px;">
             <div class="row authors">
              <div class="col-sm-2">
                     <!-- <h5 class="text-center"><a class="text-center" href="https://nithin-gk.github.io/">Nithin Gopalakrishnan Nair</a></h5> -->
-                    <!-- <h6 class="text-center">Google Research</h6> -->
                 </div>
                 <div class="col-sm-3">
                     <h5 class="text-center"><a class="text-center" href="https://nithin-gk.github.io/">Nithin Gopalakrishnan Nair</a></h5>
-                    <!-- <h6 class="text-center">Google Research</h6> -->
                 </div>
                 <div class="col-sm-3">
                     <h5 class="text-center"><a class="text-center" href="https://www.wgcban.com/">Chaminda Bandara</a></h5>
-                    <h6 class="text-center">Johns Hopkins University</h6>
                 </div>
                 <div class="col-sm-3">
                     <h5 class="text-center"><a class="text-center" href="https://engineering.jhu.edu/vpatel36/team/vishalpatel/">Vishal M Patel</a></h5>
-                    <!-- <h6 class="text-center">Google Research</h6> -->
                 </div>
             </div>    
         </div>
