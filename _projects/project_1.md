@@ -3,7 +3,7 @@ layout: page
 title: CVPR 2023
 permalink: projectpages/Multidiff
 # description: a project with a background image
-img: assets/img/publication_preview/multi.png
+img: /assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
@@ -22,8 +22,8 @@ category: work
     <title>Unite and Conquer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -108,7 +108,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="/assets/images/multi.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="assets/images/multi.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
@@ -124,7 +124,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="/assets/img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
+            <img src="assets/img/paper_images/method_train.png" alt="sym" width="500" height ="300" style="border-style: none" />
                 <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6>
             </div>
         </div>
@@ -141,7 +141,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="/assets/img/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
+            <img src="assets/img/paper_images/method.png" alt="sym" width="700" height ="500" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -159,7 +159,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="/assets/img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
+            <img src="assets/img/paper_images/comparison.png" alt="sym" width="700" height ="250" style="border-style: none" />
             </div>
         </div>
     </div>
@@ -176,7 +176,7 @@ category: work
     <div align="center" class="container" style="max-width: 768px;">
         <div class="row captioned_videos">
             <div class="col-md-12">
-            <img src="/assets/img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
+            <img src="assets/img/paper_images/interpolation.png" alt="sym" width="700" height ="700" style="border-style: none" />
                 <!-- <h6 class="caption">Our model can combine task spectific information learned by multiple models and perform composite generation during inference time without any explciit retraining.</h6> -->
             </div>
         </div>
@@ -229,7 +229,19 @@ category: work
             </div>
         </div>
     </div>
-
- 
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+    <!-- Import the component -->
 </body>
 
