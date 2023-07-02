@@ -7,47 +7,6 @@ img: /assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
-<head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-XB3PR2Y1TQ');
-    </script>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Unite and Conquer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
-    <meta property="og:site_name" content="Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models" />
-    <meta property="og:type" content="video.other" />
-    <meta property="og:title" content="Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models" />
-    <meta property="og:description" content="Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models, 2022." />
-    <meta property="og:url" content="https://dreamfusion3d.github.io/" />
-    <meta property="og:image" content="https://dreamfusion3d.github.io/images/multi.png" />
-
-    <meta property="article:publisher" content="https://dreamfusion3d.github.io/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Unite and Conquer: Cross Dataset Multimodal Synthesis using Diffusion Models" />
-    <meta name="twitter:description" content="We combine neural rendering with a multi-modal text-to-2D image diffusion generative model to synthesize diverse 3D objects from text." />
-    <meta name="twitter:url" content="https://dreamfusion3d.github.io/" />
-    <meta name="twitter:image" content="https://dreamfusion3d.github.io/images/multi.png" />
-    <!-- <meta name="twitter:site" content="" /> -->
-
-    <script src="/assets/js/video_comparison.js"></script>
-    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
-</head>
 
 <body>
 
@@ -151,7 +110,7 @@ category: work
    <div class="container" style="max-width: 768px;">
         <div class="row">
             <div class="col-md-12">
-                <h2 style="color:black;">>Multimodal generic scenes generation</h2>
+                <h2 style="color:black;">Multimodal generic scenes generation</h2>
             </div>
         </div>
     </div>
@@ -218,39 +177,5 @@ category: work
             </div>
         </div>
     </div>
- <hr class="divider" />
-    <div class="container" style="max-width: 768px;">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 style="color:black;">Acknowledgement</h2>
-                <p style="color:black;">
-                    This template has been borrowed from https://dreamfusion3d.github.io/
-                </p>
-            </div>
-        </div>
-    </div>
-    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
-    <script src="/assets/js/yall.js"></script>
-    <script>
-        yall(
-            {
-                observeChanges: true
-            }
-        );
-    </script>
-    <script src="/assets/js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
-    <!-- Import the component -->
-    <!-- <footer>
-        <button class="button" onclick="darkmode()">Dark/Light mode</button>
-        <script>
-            function darkmode() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
-            }
-
-        </script>
-    </footer> -->
+ 
 </body>
