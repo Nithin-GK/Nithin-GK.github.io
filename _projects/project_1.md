@@ -8,6 +8,7 @@ importance: 1
 category: work
 ---
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XB3PR2Y1TQ"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -19,18 +20,19 @@ category: work
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Unite and Conquer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,500,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-
     <link rel="manifest" href="/site.webmanifest">
     <script src="/assets/js/video_comparison.js"></script>
-
+    <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
 
     <div class="highlight-clean" style="padding-bottom: 10px;">
-        <div class="container" style="max-width: 1250px;"> 
+        <div class="container" style="max-width: 1250px;">: 
             <h1 style="color:black;" class="text-center"><b>Unite and Conquer</b>: Plug and Play Multimodal Synthesis using Diffusion Models</h1>
         </div>
         <div class="container" style="max-width: 1100px;">
@@ -196,5 +198,19 @@ category: work
             </div>
         </div>
     </div>
- 
+
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="/assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+
 </body>
