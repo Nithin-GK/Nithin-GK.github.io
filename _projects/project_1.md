@@ -30,7 +30,7 @@ category: work
 <body>
 
     <div class="highlight-clean" style="padding-bottom: 10px;">
-        <div class="container" style="max-width: 1250px;">: 
+        <div class="container" style="max-width: 1250px;"> 
             <h1 style="color:black;" class="text-center"><b>Unite and Conquer</b>: Plug and Play Multimodal Synthesis using Diffusion Models</h1>
         </div>
         <div class="container" style="max-width: 1100px;">
