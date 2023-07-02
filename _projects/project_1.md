@@ -7,6 +7,25 @@ img: /assets/img/publication_preview/multi.png
 importance: 1
 category: work
 ---
+<head>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XB3PR2Y1TQ');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Unite and Conquer</title>
+    <link rel="stylesheet" href="/assets/css/Highlight-Clean.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="/assets/js/video_comparison.js"></script>
+
+</head>
 
 <body>
 
