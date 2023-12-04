@@ -36,23 +36,38 @@ layout: default
           </div>
           {%- endif %}
 
+          {%- if page.social %}
+          <div class="social float-{%- if page.profile.align == 'left' -%}right{%- else -%}left{%- endif -%}">
+            <div class="contact-icons">
+              {% include social.html %}
+            </div>
+
+            <div class="contact-note">
+              {{ site.contact_note }}
+            </div>
+            
+          </div>
+        {%- endif %}  
+
+        {%- if page.social %}
+        <div class="social">
+          <div class="contact-icons">
+            {% include social.html %}
+          </div>
+
+          <div class="contact-note">
+            {{ site.contact_note }}
+          </div>
+          
+        </div>
+      {%- endif %}  
+
           <div class="clearfix">
             {{ content }}
           </div>
 
           <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-              
-            </div>
-          {%- endif %}          
+        
 
           <!-- News -->
           {% if page.news -%}
@@ -68,3 +83,4 @@ layout: default
         </article>
 
 </div>
+
