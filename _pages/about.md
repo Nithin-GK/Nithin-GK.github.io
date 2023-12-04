@@ -24,11 +24,7 @@ I work on problems in Computer Vision. My research areas include Face recognitio
 
 
 
-Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech& M.Tech)  in Electrical Engineering from Indian Institute of Technology, Madras. At IIT Madras, I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, on image reconstruction.
-
-
-
-In my free time, I enjoy running and hiking.
+Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech& M.Tech)  in Electrical Engineering from Indian Institute of Technology, Madras. At IIT Madras, I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, on image reconstruction. In my free time, I enjoy running and hiking.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
