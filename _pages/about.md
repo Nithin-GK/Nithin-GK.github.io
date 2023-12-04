@@ -5,7 +5,7 @@ permalink: /
 subtitle: <b>Ph.D. Student at Johns Hopkins University</b>
 
 profile:
-  align: right
+  align: left
   image: SmallSize.png
   image_circular: true # crops the image to make it circular
   address: ngopala2@jhu.edu #>
