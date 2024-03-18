@@ -85,7 +85,8 @@ dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
 contact_note: >
-  E-mail is usually the best way to reach me.
+ 
+# E-mail is usually the best way to reach me.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
