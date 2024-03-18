@@ -13,7 +13,7 @@ profile:
     #<p>Your City, State 12345</p>
 
 news: true  # includes a list of news items
-selected_papers: trrue # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 I am a third year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University. I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel</a> .
