@@ -17,8 +17,11 @@
   type: time_table
   contents:
     - title: Research Intern
+      institution: Nvidia Research, Santa Clara
+      year: 2024-Present
+    - title: Research Intern
       institution: Adobe Research, Seattle
-      year: 2023-Present
+      year: 2023
     - title: Research Intern
       institution: Mistubishi Electric Research Labs, Cambridge
       year: 2022
