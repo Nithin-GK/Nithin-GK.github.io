@@ -25,6 +25,9 @@ I work on problems in Computer Vision. My research areas include Face recognitio
 
 Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech& M.Tech)  in Electrical Engineering from Indian Institute of Technology, Madras. At IIT Madras, I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, on image reconstruction. In my free time, I enjoy running and hiking.
 
+<span style="color: green;">I am looking for a research position in industry. Please reach out if you think I could be a good fit!</span>
+
+
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
