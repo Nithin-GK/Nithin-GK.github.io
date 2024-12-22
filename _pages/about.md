@@ -29,7 +29,7 @@ A bit about myself. I was initially into analog integrated circuit design, and a
 
 I'm always open to collaborations, if you are excited about diffusion models and want to work with me please feel free to reach out.
 
-<span style="color: green;">I am looking for a research position in industry. Please reach out if you think I could be a good fit!</span>
+<span style="color: green;">I am looking for a research scientist position in industry. Please reach out if you think I could be a good fit!</span>
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
