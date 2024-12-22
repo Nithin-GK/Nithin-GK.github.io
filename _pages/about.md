@@ -27,7 +27,7 @@ Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech&
 
 A bit about myself. I was initially into analog integrated circuit design, and although it was going well, I did not enjoy it much. That is when I found out about computer vision. A topic that was fun, I was good at and what the world wanted. Moving forward, I found the theory behind diffusion models fascinating. (Fun fact: The basics of diffusion were proposed by Einstein himself). I have been working with diffusion models for the past 3 years. This spans Image, Video and 3-D generation using diffusion models.
 
-I'm always open to collaborations, if you are excited about diffusion models and want to work with me please feel free to reach out.
+Although I want to keep learning and growing. Coming from a rural village in Kerala, I'm extremely grateful to be where I'm now and this has been possible because of the guidance of multiple mentors ar different phases and I want to keep this loop going. I'm always open to collaborations, if you are excited about diffusion models and want to work with me please feel free to reach out.
 
 <span style="color: green;">I am looking for a research scientist position in industry. Please reach out if you think I could be a good fit!</span>
 
