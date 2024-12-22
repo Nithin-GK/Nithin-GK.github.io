@@ -17,8 +17,11 @@
   type: time_table
   contents:
     - title: Research Intern
+      institution: Google, Mountain View
+      year: Dec 2024-Present
+    - title: Research Intern
       institution: Nvidia Research, Santa Clara
-      year: 2024-Present
+      year: May-Dec 2024
     - title: Research Intern
       institution: Adobe Research, Seattle
       year: 2023
