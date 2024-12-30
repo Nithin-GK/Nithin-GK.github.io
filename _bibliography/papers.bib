@@ -12,7 +12,120 @@
   code={https://nithin-gk.github.io/maxfusion.github.io/}
 }
 
+@article{nair2024dreamguider,
+  title={Dreamguider: Improved Training free Diffusion-based Conditional Generation},
+  author={Nair, Nithin Gopalakrishnan and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2406.02549},
+  year={2024}
+  bibtex_show={true},
+  pdf={https://arxiv.org/pdf/2406.02549},
+  abstract={
+Diffusion models have emerged as a formidable tool for training-free conditional
+generation. However, a key hurdle in inference-time guidance techniques is the
+need for compute-heavy backpropagation through the diffusion network for estimating the guidance direction. Moreover, these techniques often require handcrafted
+parameter tuning on a case-by-case basis. Although some recent works have introduced minimal compute methods for linear inverse problems, a generic lightweight guidance solution to both linear and non-linear guidance problems is still missing.
+To this end, we propose Dreamguider, a method that enables inference-time guidance without compute-heavy backpropagation through the diffusion network. The
+key idea is to regulate the gradient flow through a time-varying factor. Moreover,
+we propose an empirical guidance scale that works for a wide variety of tasks,
+hence removing the need for handcrafted parameter tuning. We further introduce
+an effective lightweight augmentation strategy that significantly boosts the performance during inference-time guidance. We present experiments using Dreamguider
+on multiple tasks across multiple datasets and models to show the effectiveness of
+the proposed modules. To facilitate further research, we will make the code public
+after the review process.},
+  preview={dreamguider.png},
+  code={}
+}
 
+@article{nair2024diffscaler,
+  title={Diffscaler: Enhancing the Generative Prowess of Diffusion Transformers},
+  author={Nair, Nithin Gopalakrishnan and Valanarasu, Jeya Maria Jose and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2404.09976},
+  year={2024},
+  bibtex_show={true},
+  pdf={https://arxiv.org/pdf/2404.09976},
+  abstract={
+Recently, diffusion transformers have gained wide attention with the
+release of SORA from OpenAI, emphasizing the need for transformers as backbone for diffusion models. Transformer-based models have shown better generalization capability compared to CNN-based models for general vision tasks.
+However, much less has been explored in the existing literature regarding the capabilities of transformer-based diffusion backbones and expanding their generative prowess to other datasets. This paper focuses on enabling a single pre-trained
+diffusion transformer model to scale across multiple datasets swiftly, allowing for
+the completion of diverse generative tasks using just one model. To this end, we
+propose DiffScaler, an efficient scaling strategy for diffusion models where we
+train a minimal amount of parameters to adapt to different tasks. In particular,
+we learn task-specific transformations at each layer by incorporating the ability
+to utilize the learned subspaces of the pre-trained model, as well as the ability to
+learn additional task-specific subspaces, which may be absent in the pre-training
+dataset. As these parameters are independent, a single diffusion model with these
+task-specific parameters can be used to perform multiple tasks simultaneously.
+Moreover, we find that transformer-based diffusion models significantly outperform CNN-based diffusion models methods while performing fine-tuning over
+smaller datasets. We perform experiments on four unconditional image generation datasets. We show that using our proposed method, a single pre-trained
+model can scale up to perform these conditional and unconditional tasks, respectively, with minimal parameter tuning while performing as close as fine-tuning an
+entire diffusion model for that particular task.},
+  preview={diffscaler.png},
+  code={}
+}
+
+@inproceedings{paranjape2024adaptivesam,
+  title={Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation},
+  author={Paranjape, Jay N and Nair, Nithin Gopalakrishnan and Sikder, Shameema and Vedula, S Swaroop and Patel, Vishal M},
+  booktitle={Annual Conference on Medical Image Understanding and Analysis},
+  pages={187--201},
+  year={2024},
+  organization={Springer},
+    bibtex_show={true},
+pdf={https://arxiv.org/pdf/2308.03726},
+  abstract={Segmentation is a fundamental problem in
+surgical scene analysis using artificial intelligence. However, the inherent data scarcity in this domain makes it
+challenging to adapt traditional segmentation techniques
+for this task. To tackle this issue, current research employs
+pretrained models and finetunes them on the given data.
+Even so, these require training deep networks with millions
+of parameters every time new data becomes available. A
+recently published foundation model, Segment-Anything
+(SAM), generalizes well to a large variety of natural images, hence tackling this challenge to a reasonable extent.
+However, SAM does not generalize well to the medical
+domain as is without utilizing a large amount of compute
+resources for fine-tuning and using task-specific prompts.
+Moreover, these prompts are in the form of boundingboxes or foreground/background points that need to be
+annotated explicitly for every image, making this solution
+increasingly tedious with higher data size. In this work,
+we propose AdaptiveSAM - an adaptive modification of
+SAM that can adjust to new datasets quickly and efficiently,
+while enabling text-prompted segmentation. For finetuning
+AdaptiveSAM, we propose an approach called bias-tuning
+that requires a significantly smaller number of trainable
+parameters than SAM (less than 2%). At the same time,
+AdaptiveSAM requires negligible expert intervention since
+it uses free-form text as prompt and can segment the object
+of interest with just the label name as prompt. Our experiments show that AdaptiveSAM outperforms current stateof-the-art methods on various medical imaging datasets
+including surgery, ultrasound and X-ray.},
+  preview={jay_midl.png},
+code={https://github.com/JayParanjape/biastuning}
+}
+
+@inproceedings{suin2024diffuse,
+  title={Diffuse and Restore: A Region-Adaptive Diffusion Model for Identity-Preserving Blind Face Restoration},
+  author={Suin, Maitreya and Nair, Nithin Gopalakrishnan and Lau, Chun Pong and Patel, Vishal M and Chellappa, Rama},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={6343--6352},
+  year={2024},
+    bibtex_show={true},
+  pdf={https://openaccess.thecvf.com/content/WACV2024/papers/Suin_Diffuse_and_Restore_A_Region-Adaptive_Diffusion_Model_for_Identity-Preserving_Blind_WACV_2024_paper.pdf},
+  abstract={Although many long-range imaging systems are designed to support extended vision applications, a natural
+obstacle to their operation is degradation due to atmospheric turbulence. Atmospheric turbulence causes significant degradation to image quality by introducing blur
+and geometric distortion. In recent years, various deep
+learning-based single image atmospheric turbulence mitigation methods, including CNN-based and GAN inversionbased, have been proposed in the literature which attempt
+to remove the distortion in the image. However, some of
+these methods are difficult to train and often fail to reconstruct facial features and produce unrealistic results especially in the case of high turbulence. Denoising Diffusion Probabilistic Models (DDPMs) have recently gained
+some traction because of their stable training process and
+their ability to generate high quality images. In this paper,
+we propose the first DDPM-based solution for the problem of atmospheric turbulence mitigation. We also propose a fast sampling technique for reducing the inference
+times for conditional DDPMs. Extensive experiments are
+conducted on synthetic and real-world data to show the
+significance of our model. To facilitate further research,
+all codes and pretrained models are publically available at
+http://github.com/Nithin-GK/AT-DDPM},
+  preview={maitreya_wacv.png}
+}
 
 @inproceedings{Nair_2023_ICCV,
     author    = {Nair, Nithin Gopalakrishnan and Cherian, Anoop and Lohit, Suhas and Wang, Ye and Koike-Akino, Toshiaki and Patel, Vishal M. and Marks, Tim K.},
@@ -129,9 +242,9 @@ http://github.com/Nithin-GK/T2V-DDPM},
 @article{mei2022bi,
   title={Bi-Noising Diffusion: Towards Conditional Diffusion Models with Generative Restoration Priors},
   author={Mei, Kangfu and Nair, Nithin Gopalakrishnan and Patel, Vishal M},
-  journal={arXiv preprint arXiv:2212.07352},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   bibtex_show={true},
-  year={2022},
+  year={2024},
   pdf={https://arxiv.org/pdf/2212.07352.pdf},
   abstract={Conditional diffusion probabilistic models can model the
 distribution of natural images and can generate diverse and
@@ -209,8 +322,8 @@ github.com/dylran/DiffuseDenoiseCount},
 @article{bandara2022ddpm,
   title={DDPM-CD: Remote Sensing Change Detection using Denoising Diffusion Probabilistic Models},
   author={Bandara, Wele Gedara Chaminda and Nair, Nithin Gopalakrishnan and Patel, Vishal M},
-  journal={arXiv preprint arXiv:2206.11892},
-  year={2022},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+  year={2024},
   bibtex_show={true},
   pdf={https://arxiv.org/pdf/2206.11892.pdf},
   abstract={Human civilization has an increasingly powerful influence on the earth system,
