@@ -31,7 +31,7 @@ Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech&
 
 Coming from a rural village in Kerala, I am extremely grateful to be where I am now. This has been possible because of the guidance of multiple mentors at different phases of my journey, and I want to keep this cycle going.
 
-<!-- I am always open to collaborations. If you are excited about diffusion models and want to work with me, please feel free to reach out. -->
+I am always open to collaborations. If you are excited about diffusion models and want to work with me, please feel free to reach out.
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
