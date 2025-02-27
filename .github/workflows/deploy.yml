@@ -16,6 +16,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    - name: Stash changes
+      run: git stash -u
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
