@@ -1,56 +1,41 @@
-# # This workflow uses actions that are not certified by GitHub.
-# # They are provided by a third-party and are governed by
-# # separate terms of service, privacy policy, and support
-# # documentation.
 
-# # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 # name: Deploy Jekyll site to Pages
 
 # on:
-#   # Runs on pushes targeting the default branch
 #   push:
 #     branches: ["gh-pages"]
-
-#   # Allows you to run this workflow manually from the Actions tab
 #   workflow_dispatch:
 
-# # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 # permissions:
 #   contents: read
 #   pages: write
 #   id-token: write
 
-# # Allow one concurrent deployment
 # concurrency:
 #   group: "pages"
 #   cancel-in-progress: true
 
 # jobs:
-#   # Build job
 #   build:
 #     runs-on: ubuntu-latest
 #     steps:
 #       - name: Checkout
 #         uses: actions/checkout@v3
 #       - name: Setup Ruby
-#         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa
+#         uses: ruby/setup-ruby@v1
 #         with:
-#           ruby-version: '3.3.6' # Not needed with a .ruby-version file
-#           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-#           cache-version: 0 # Increment this number if you need to re-download cached gems
+#           ruby-version: '3.3.6'
+#           bundler-cache: true
 #       - name: Setup Pages
 #         id: pages
-#         uses: actions/configure-pages@v2
+#         uses: actions/configure-pages@v3
 #       - name: Build with Jekyll
-#         # Outputs to the './_site' directory by default
 #         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
 #         env:
 #           JEKYLL_ENV: production
 #       - name: Upload artifact
-#         # Automatically uploads an artifact from the './_site' directory by default
-#         uses: actions/upload-pages-artifact@v1
+#         uses: actions/upload-pages-artifact@v2  # Updated from v1
 
-#   # Deployment job
 #   deploy:
 #     environment:
 #       name: github-pages
@@ -61,52 +46,62 @@
 #       - name: Deploy to GitHub Pages
 #         id: deployment
 #         uses: actions/deploy-pages@v1
-
-
 name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["gh-pages"]
-  workflow_dispatch:
+    branches: [ main ]           # Run on pushes to the main branch (adjust as needed)
+  workflow_dispatch:            # Allow manual runs from the Actions tab
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: read                # Allow read access to repository contents (for checkout)
+  pages: write                  # Allow publishing to GitHub Pages
+  id-token: write               # Allow OIDC token usage (required for Pages deploy)
 
+# Limit to one Pages deployment at a time
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false     # Finish ongoing deployment, skip to latest queued run
 
 jobs:
+  # Build job – installs Ruby, builds the Jekyll site, and uploads the artifact
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout source
+        uses: actions/checkout@v4
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.6'
-          bundler-cache: true
-      - name: Setup Pages
+          ruby-version: '3.1'           # Use Ruby 3.1 (match your Jekyll Ruby version)
+          bundler-cache: true           # Cache gems to speed up builds
+
+      - name: Configure Pages
         id: pages
-        uses: actions/configure-pages@v3
-      - name: Build with Jekyll
+        uses: actions/configure-pages@v5
+
+      - name: Build site with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2  # Updated from v1
 
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "./_site"               # Path to the built site output directory
+
+  # Deploy job – waits for build, then deploys to GitHub Pages
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    environment:
+      name: github-pages             # Default Pages environment
+      url: ${{ steps.deployment.outputs.page_url }}  # Set the deployment URL output
+    permissions:
+      pages: write                   # Enable Pages publishing
+      id-token: write                # Enable OIDC for deployment
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
