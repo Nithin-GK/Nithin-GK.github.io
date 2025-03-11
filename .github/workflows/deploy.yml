@@ -40,11 +40,11 @@ jobs:
       run:  yes | bash bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }}
                     --src ${{ steps.setup.outputs.SRC_BRANCH }} 
                     --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }} 
-    - name: Deploy 
-      if: github.event_name != 'pull_request'
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: _site
+    # - name: Deploy 
+    #   if: github.event_name != 'pull_request'
+    #   uses: JamesIves/github-pages-deploy-action@v4
+    #   with:
+    #     folder: _site
 # name: Deploy site
 
 # on:
