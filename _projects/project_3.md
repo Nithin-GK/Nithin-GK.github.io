@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CVPR 2023
+title: ECCV 2024
 permalink: projectpages/Multidiff
 # description: a project with a background image
 img: /assets/img/publication_preview/multi.png
