@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Selected Projects
 permalink: /projectpages/
 # description: A growing collection of your cool projects.
 nav: true
