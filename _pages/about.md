@@ -17,35 +17,17 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-## Welcome!
 
-I am a third-year Ph.D. student in the Department of Electrical and Computer Engineering at VIU Lab, Johns Hopkins University, advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a>.
+I am a Research Engineer at Apple working on Multimodal LLMs. I was a PhD student at the Department of Electrical and Computer Engineering at VIU Lab, Johns Hopkins University, advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a>. Before joining JHU, I earned my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology, Madras. There, I worked with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab on image reconstruction.
 
----
 
-### Research Interests
+I work on problems in Computer Vision. My research focuses on deep generative modeling with diffusion models, with an emphasis on plug-and-play architectures and efficient generation on low-compute devices.
 
-I work on challenging problems in Computer Vision. My research focuses on deep generative modeling, especially diffusion models, with an emphasis on plug-and-play architectures and efficient generation on low-compute devices.
 
----
-
-### Background
-
-Before joining JHU, I earned my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology, Madras. There, I worked with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab on image reconstruction.
+I find the theory behind diffusion models fascinating—fun fact: the basics were proposed by Einstein! Over the past three years, I have worked on image, video, and 3D generation using diffusion models. I am always open to collaborations. If you are excited about diffusion models and want to work together, please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
 
 In my free time, I enjoy reading, running, and hiking.
 
----
-
-### About My Work
-
-I find the theory behind diffusion models fascinating—fun fact: the basics were proposed by Einstein! Over the past three years, I have worked on image, video, and 3D generation using diffusion models.
-
----
-
-### Let's Collaborate
-
-I am always open to collaborations. If you are excited about diffusion models and want to work together, please feel free to <a href="mailto:ngopala2@jhu.edu">reach out</a>.
 
 <!--A bit about myself. I was initially into analog integrated circuit design, and although it was going well, I did not enjoy it much. That is when I found out about computer vision. A topic that was fun, I was good at and what the world wanted. Moving forward, I found -->
 
