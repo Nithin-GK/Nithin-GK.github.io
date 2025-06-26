@@ -5,4 +5,4 @@ inline: true
 ---
 
 My internship work at Google, <b>Scaling Transformer-Based Novel View Synthesis Models
-with Token Disentanglement and Synthetic Data<\b> is accepted at ICCV 2025. Our work scales up 3D reconstruction using synthetic data and achieves state of the art results.
+with Token Disentanglement and Synthetic Data</b> is accepted at ICCV 2025. Our work scales up 3D reconstruction using synthetic data and achieves state of the art results.
