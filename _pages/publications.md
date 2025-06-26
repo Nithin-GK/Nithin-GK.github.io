@@ -7,14 +7,16 @@ years: [2025,2024,2023,2022,2021]
 nav: true
 nav_order: 1
 ---
-<!-- _pages/publications.md -->
-<!-- Look at /_layouts/bib.html for button options -->
-<!-- Colors for buttons are here: /Users/ameet/Stuff/Academics/Personal_Website/ameet-1997.github.io/_data/venues.yml -->
-<div class="publications">
 
+## Publications
+
+A selection of my recent publications, organized by year. For the full list, see my [Google Scholar](https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en).
+
+<div class="publications mt-4">
 {%- for y in page.years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
+  <h2 class="year border-bottom pb-2 mt-4">{{y}}</h2>
+  <div class="mb-4">
+    {% bibliography -f papers -q @*[year={{y}}]* %}
+  </div>
 {% endfor %}
-
 </div>

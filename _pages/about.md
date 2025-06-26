@@ -7,7 +7,7 @@ subtitle: <b>Ph.D. Student at Johns Hopkins University</b>
 profile:
   align: right
   image: SmallSize.png
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
     #<p>555 your office number</p>
     #<p>123 your address street</p>
     #<p>Your City, State 12345</p>
@@ -16,22 +16,40 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a third year PhD student in the Department of Electrical and Computer Engineering at VIU Lab , Johns Hopkins University. I am advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M Patel.</a>
 
+## Welcome!
 
-I work on problems in Computer Vision. My research areas include Deep Generative Modelling using diffusion models with a special emphasis on Plug and Play models and efficient architectures for generation, enabling training and inference of generative models on low compute resources.
+I am a third-year Ph.D. student in the Department of Electrical and Computer Engineering at VIU Lab, Johns Hopkins University, advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a>.
 
+---
 
+### Research Interests
 
-Prior to joining JHU, I obtained my Bachelor's and Master's dual degree (B.Tech& M.Tech)  in Electrical Engineering from Indian Institute of Technology, Madras. At IIT Madras, I worked with  <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr AN Rajagopalan</a> at the IPCV Lab, on image reconstruction. In my free time, I enjoy reading books, running and hiking.
+I work on challenging problems in Computer Vision. My research focuses on deep generative modeling, especially diffusion models, with an emphasis on plug-and-play architectures and efficient generation on low-compute devices.
+
+---
+
+### Background
+
+Before joining JHU, I earned my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology, Madras. There, I worked with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab on image reconstruction.
+
+In my free time, I enjoy reading, running, and hiking.
+
+---
+
+### About My Work
+
+I find the theory behind diffusion models fascinating—fun fact: the basics were proposed by Einstein! Over the past three years, I have worked on image, video, and 3D generation using diffusion models.
+
+---
+
+### Let's Collaborate
+
+I am always open to collaborations. If you are excited about diffusion models and want to work together, please feel free to <a href="mailto:ngopala2@jhu.edu">reach out</a>.
 
 <!--A bit about myself. I was initially into analog integrated circuit design, and although it was going well, I did not enjoy it much. That is when I found out about computer vision. A topic that was fun, I was good at and what the world wanted. Moving forward, I found -->
 
-I find the theory behind diffusion models fascinating. (Fun fact: The basics of diffusion were proposed by Einstein himself). I have been working with diffusion models for the past 3 years. This spans Image, Video and 3-D generation using diffusion models.
-
 <!-- Coming from a rural village in Kerala, I am extremely grateful to be where I am now. This has been possible because of the guidance of multiple mentors at different phases of my journey, and I want to keep this cycle going. -->
-
-I am always open to collaborations. If you are excited about diffusion models and want to work with me, please feel free to reach out.
 
 <!-- <span style="color: green;">I am looking for a research scientist position in industry. Please reach out if you think I could be a good fit!</span> -->
 
