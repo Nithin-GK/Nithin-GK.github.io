@@ -11,10 +11,18 @@ nav_order: 1
 A selection of my recent publications, organized by year. For the full list, see my [Google Scholar](https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en).
 
 <style>
+/* Year heading styling */
 h2.year {
   border-bottom: 2px solid #ccc;
-  padding-bottom: 0.25rem;
-  margin-bottom: 1rem; /* adds space so the line doesn’t overlap the first publication */
+  padding-bottom: 0.25rem; /* underline snug under text */
+  margin-bottom: 1rem;     /* gap before first pub */
+  margin-top: 2rem;        /* gap above each year block */
+}
+
+/* Add spacing between publication entries */
+.publications li {
+  margin-bottom: 0.75rem;  /* vertical gap between items */
+  line-height: 1.5;        /* better readability */
 }
 </style>
 
