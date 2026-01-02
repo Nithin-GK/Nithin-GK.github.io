@@ -1,0 +1,54 @@
+- title: Education
+  type: time_table
+  contents:
+    - title: Ph.D. in Electrical and Computer Engineering
+      institution: Johns Hopkins University
+      year: 2021-2025
+      description:
+        - Advisor: Dr. Vishal M. Patel
+        - Focus: Deep generative modeling with diffusion models
+    - title: Master of Technology in Electrical Engineering
+      institution: Indian Institute of Technology Madras
+      year: 2020
+    - title: Bachelor of Technology in Electrical Engineering
+      institution: Indian Institute of Technology Madras
+      year: 2019
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: Research Engineer
+      institution: Apple
+      year: 2025 - Present
+      description:
+        - Working on Multimodal LLMs
+    - title: Research Intern
+      institution: Google, Mountain View
+      year: Dec 2024 - Mar 2025
+    - title: Research Intern
+      institution: NVIDIA Research, Santa Clara
+      year: May - Dec 2024
+    - title: Research Intern
+      institution: Adobe Research, Seattle
+      year: 2023
+    - title: Research Intern
+      institution: Mitsubishi Electric Research Labs, Cambridge
+      year: 2022
+
+- title: Research Interests
+  type: nested_list
+  contents:
+    - title: Computer Vision
+      items:
+        - Deep generative modeling
+        - Diffusion models
+        - Image and video generation
+    - title: Efficient AI
+      items:
+        - Plug-and-play models
+        - Efficient generation on low-compute devices
+
+- title: Other Interests
+  type: list
+  contents:
+    - Reading, Running, Hiking

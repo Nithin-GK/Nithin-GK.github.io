@@ -1,0 +1,67 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Dimensions
+$max-content-width: {{ site.max_width }};
+
+@import
+  "variables",
+  "themes",
+  "layout",
+  "base",
+  "distill",
+  "cv",
+  "tabs",
+  "typograms",
+  "font-awesome/fontawesome",
+  "font-awesome/brands",
+  "font-awesome/solid",
+  "font-awesome/regular",
+  "tabler-icons/tabler-icons.scss",
+  "tabler-icons/tabler-icons-filled.scss",
+  "tabler-icons/tabler-icons-outline.scss"
+;
+
+// Custom styles for profile image with shadow and rounded corners
+.profile {
+  img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+  }
+}
+
+// Shadows for selected publication preview images
+.publications {
+  ol.bibliography {
+    li {
+      .preview {
+        img {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+
+// Social icons below name - larger size (2x)
+.social-below-name {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+
+  a {
+    margin-right: 1rem;
+    color: var(--global-text-color);
+
+    &:hover {
+      color: var(--global-theme-color);
+      text-decoration: none;
+    }
+
+    i::before {
+      transition: color 0.2s ease-in-out;
+    }
+  }
+}
