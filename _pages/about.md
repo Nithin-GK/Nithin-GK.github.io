@@ -28,4 +28,4 @@ I am a Research Engineer at Apple, where I develop agentic workflows for human i
 
 My research focuses on computer vision, with an emphasis on deep generative modeling using diffusion models, plug-and-play architectures, and efficient generation for resource-constrained devices. I also work on agentic systems and human interaction understanding.
 
-I am passionate about diffusion models—interestingly, their theoretical foundations trace back to Einstein's work on Brownian motion. Over the past several years, I have contributed to advances in image, video, and 3D generation using these models. I welcome collaborations with researchers who share an interest in generative modeling. Please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
+I find the theory behind diffusion models fascinating. Fun fact: the basics were proposed by Einstein! Over the past several years, I have contributed to advances in image, video, and 3D generation using these models. I welcome collaborations with researchers who share an interest in generative modeling. Please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
