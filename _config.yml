@@ -211,7 +211,7 @@ plugins:
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-tabs
-  - jekyll-terser
+  # - jekyll-terser  # Disabled - git source not compatible with Docker
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
