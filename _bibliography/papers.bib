@@ -8,6 +8,7 @@
   pdf={https://arxiv.org/abs/2509.22636},
   abstract={Visual Autoregressive (VAR) models have recently emerged as a powerful alternative to diffusion models for high-quality image generation. The VAR architecture generates visual tokens in a coarse-to-fine, scale-by-scale manner, which sets it apart from traditional raster-order autoregressive models. However, the inner mechanism behind VAR model's effectiveness is under-explored. In this paper, we present a novel perspective on VAR: we show that VAR models can be viewed through the lens of discrete diffusion models. Specifically, we demonstrate that VAR's generative process is functionally equivalent to a scale-wise discrete masked diffusion process, with slight variation in the learning objective. In this framework, VAR's next-scale predictions correspond to masked token recovery in a multi-scale latent space. Our findings reveal a deep connection between autoregressive visual generation and diffusion processes, offering new theoretical insights and opening the door for further exploration of hybrid generative architectures.},
   preview={SRDD.png},
+  selected={true},
   code={https://github.com/VIROBO-15/SRDD}
 }
 
@@ -83,6 +84,21 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   preview={maxfusion.png},
   selected=true,
   code={https://nithin-gk.github.io/maxfusion.github.io/}
+}
+
+@InProceedings{ranasinghe2024diffuse,
+  title={Diffuse-Denoise-Count: Accurate Crowd-Counting with Diffusion Models},
+  author={Ranasinghe, Yasiru and Nair, Nithin Gopalakrishnan and Bandara, Wele Gedara Chaminda and Patel, Vishal M},
+  abbr={CVPR 2024},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  month={March},
+  year={2024},
+  bibtex_show={true},
+  pdf={https://arxiv.org/pdf/2303.12790.pdf},
+  abstract={Crowd counting is a key aspect of crowd analysis and has been typically accomplished by estimating a crowd density map and summing over the density values. However, this approach suffers from background noise accumulation and loss of density due to the use of broad Gaussian kernels to create the ground truth density maps. This issue can be overcome by narrowing the Gaussian kernel. However, existing approaches perform poorly when trained with such ground truth density maps. To overcome this limitation, we propose using conditional diffusion models to predict density maps, as diffusion models are known to model complex distributions well and show high fidelity to training data during crowd-density map generation. Furthermore, as the intermediate time steps of the diffusion process are noisy, we incorporate a regression branch for direct crowd estimation only during training to improve the feature learning. In addition, owing to the stochastic nature of the diffusion model, we introduce producing multiple density maps to improve the counting performance contrary to the existing crowd counting pipelines. Further, we also differ from the density summation and introduce contour detection followed by summation as the counting operation, which is more immune to background noise. We conduct extensive experiments on public datasets to validate the effectiveness of our method. Specifically, our novel crowd-counting pipeline improves the error of crowd-counting by up to 6 percent on JHU-CROWD++ and up to 7 percent on UCF-QNRF.},
+  preview={binoising.png},
+  selected={false},
+  code={https://github.com/dylran/DiffuseDenoiseCount}
 }
 
 @article{nair2024dreamguider,
@@ -371,35 +387,6 @@ all codes and pretrained models are publically available at
 http://github.com/Nithin-GK/AT-DDPM},
   preview={wacv_img.png},
   code={https://github.com/Nithin-GK/AT-DDPM}
-}
-
-@InProceedings{ranasinghe2023diffuse,
-  title={Diffuse-Denoise-Count: Accurate Crowd-Counting with Diffusion Models},
-  author={Ranasinghe, Yasiru and Nair, Nithin Gopalakrishnan and Bandara, Wele Gedara Chaminda and Patel, Vishal M},
-  abbr={CVPR 2024},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  month     = {March},
-  year={2024},
-  bibtex_show={true},
-  pdf={https://arxiv.org/pdf/2303.12790.pdf},
-  abstract={Crowd counting is a key aspect of crowd analysis and
-has been typically accomplished by estimating a crowddensity map and summing over the density values. However, this approach suffers from background noise accumulation and loss of density due to the use of broad Gaussian
-kernels to create the ground truth density maps. This issue
-can be overcome by narrowing the Gaussian kernel. However, existing approaches perform poorly when trained with
-such ground truth density maps. To overcome this limitation, we propose using conditional diffusion models to predict density maps, as diffusion models are known to model
-complex distributions well and show high fidelity to training data during crowd-density map generation. Furthermore, as the intermediate time steps of the diffusion process are noisy, we incorporate a regression branch for direct crowd estimation only during training to improve the
-feature learning. In addition, owing to the stochastic nature of the diffusion model, we introduce producing multiple density maps to improve the counting performance
-contrary to the existing crowd counting pipelines. Further, we also differ from the density summation and introduce contour detection followed by summation as the
-counting operation, which is more immune to background
-noise. We conduct extensive experiments on public datasets
-to validate the effectiveness of our method. Specifically,
-our novel crowd-counting pipeline improves the error of
-crowd-counting by up to 6 percent on JHU-CROWD++ and up
-to 7 percent on UCF-QNRF. The project will be available at
-github.com/dylran/DiffuseDenoiseCount},
-  preview={binoising.png},
-  selected={true},
-  code={https://github.com/dylran/DiffuseDenoiseCount}
 }
 
 @article{bandara2022ddpm,
