@@ -34,14 +34,14 @@
       "name": "Apple",
       "position": "Research Engineer",
       "startDate": "2025-06-01",
-      "summary": "Working on multi-agent systems for human interaction understanding"
+      "summary": "Developing multi-agent systems for human interaction understanding."
     },
     {
       "name": "Google Beam",
       "position": "Research Intern",
       "startDate": "2024-12-01",
       "endDate": "2025-03-01",
-      "summary": "Training a transformer-based large 3D reconstruction model to synthesize novel views for scenes. Research on scaling up 3D synthesis using synthetic data. Paper accepted at ICCV 2025, patent submitted.",
+      "summary": "Developed a transformer-based large-scale 3D reconstruction model for novel view synthesis. Conducted research on scaling 3D synthesis using synthetic data. Work resulted in a paper accepted at ICCV 2025 and a patent submission.",
       "highlights": ["Hosts: Jungyeon Park, Srinivas Kaza"]
     },
     {
@@ -49,7 +49,7 @@
       "position": "Research Intern",
       "startDate": "2024-04-01",
       "endDate": "2024-12-01",
-      "summary": "Research on 3D perception using vision Foundation models and Multimodal LLMs. Led to a research paper and patent submission.",
+      "summary": "Conducted research on 3D perception leveraging Vision Foundation Models and Multimodal LLMs. Work resulted in a research paper and patent submission.",
       "highlights": ["Mentors: J.P. Lewis, Ming-Yu Liu"]
     },
     {
@@ -57,7 +57,7 @@
       "position": "Research Intern",
       "startDate": "2023-05-01",
       "endDate": "2023-08-01",
-      "summary": "Research on Diffusion-based Image Editing. Developed a training-free pipeline for interactive Image Editing.",
+      "summary": "Conducted research on diffusion-based image editing. Developed a training-free pipeline for interactive image editing.",
       "highlights": ["Mentor: Yuqian Zhou"]
     },
     {
@@ -65,7 +65,7 @@
       "position": "Research Intern",
       "startDate": "2022-05-01",
       "endDate": "2022-08-01",
-      "summary": "Research on Energy-based Conditional Generation. Developed a generalized framework for Plug & Play generation using unconditional diffusion models. Paper accepted at ICCV 2023.",
+      "summary": "Conducted research on energy-based conditional generation. Developed a generalized framework for plug-and-play generation using unconditional diffusion models. Work resulted in a paper accepted at ICCV 2023.",
       "highlights": ["Mentors: Tim Marks, Anoop Cherian"]
     }
   ],

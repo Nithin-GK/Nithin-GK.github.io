@@ -24,10 +24,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Research Engineer at Apple working on Agentic workflows for Human Interaction Understanding. I was a PhD student at the Department of Electrical and Computer Engineering at VIU Lab, Johns Hopkins University, advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a>. Before joining JHU, I earned my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology, Madras. There, I worked with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab on image reconstruction.
+I am a Research Engineer at Apple, where I develop agentic workflows for human interaction understanding. I completed my Ph.D. in Electrical and Computer Engineering at Johns Hopkins University, working under the supervision of <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a> at the VIU Lab. Prior to JHU, I obtained my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology Madras, where I conducted research on image reconstruction with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab.
 
-I work on problems in Computer Vision. My research focuses on deep generative modeling with diffusion models, with an emphasis on plug-and-play models and efficient generation on low-compute devices. I also work on agentic workflows and human interaction understanding.
+My research focuses on computer vision, with an emphasis on deep generative modeling using diffusion models, plug-and-play architectures, and efficient generation for resource-constrained devices. I also work on agentic systems and human interaction understanding.
 
-I find the theory behind diffusion models fascinating. Fun fact: the basics were proposed by Einstein! Over the past three years, I have worked on image, video, and 3D generation using diffusion models. I am always open to collaborations. If you are excited about diffusion models and want to work together, please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
-
-In my free time, I enjoy reading, running, and hiking.
+I am passionate about diffusion models—interestingly, their theoretical foundations trace back to Einstein's work on Brownian motion. Over the past several years, I have contributed to advances in image, video, and 3D generation using these models. I welcome collaborations with researchers who share an interest in generative modeling. Please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
