@@ -53,7 +53,7 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   bibtex_show={true},
   pdf={https://arxiv.org/abs/2412.07771},
   abstract={Pre-training on large-scale datasets and utilizing margin-based loss functions have been highly successful in training models for high-resolution face recognition. However, these models struggle with low-resolution face datasets, in which the faces lack the facial attributes necessary for distinguishing different faces. Full fine-tuning on low-resolution datasets, a naive method for adapting the model, yields inferior performance due to catastrophic forgetting of pre-trained knowledge. Additionally, the domain difference between high-resolution gallery images and low-resolution probe images leads to poor convergence. To address these issues, we propose PETALface, a Parameter-Efficient Transfer Learning approach for low-resolution face recognition. We utilize low-rank adaptation of attention layers to adapt the pretrained model to low-resolution datasets. We introduce two low-rank adaptation modules that are constrained during training and act as separate proxy encoders for high-resolution and low-resolution data, respectively. Extensive experiments demonstrate that PETALface outperforms full fine-tuning on low-resolution datasets while preserving performance on high-resolution and mixed-quality datasets, using only 0.48% of the parameters.},
-  preview={},
+  preview={petalface.png},
   url={https://kartik-3004.github.io/PETALface/},
   code={https://github.com/Kartik-3004/PETALface}
 }
