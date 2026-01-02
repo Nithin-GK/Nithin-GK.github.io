@@ -26,7 +26,7 @@ latest_posts:
 
 I am a Research Engineer at Apple working on Agentic workflows for Human Interaction Understanding. I was a PhD student at the Department of Electrical and Computer Engineering at VIU Lab, Johns Hopkins University, advised by <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a>. Before joining JHU, I earned my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology, Madras. There, I worked with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab on image reconstruction.
 
-I work on problems in Computer Vision. My research focuses on deep generative modeling with diffusion models, with an emphasis on plug-and-play models and efficient generation on low-compute devices.
+I work on problems in Computer Vision. My research focuses on deep generative modeling with diffusion models, with an emphasis on plug-and-play models and efficient generation on low-compute devices. I also work on agentic workflows and human interaction understanding.
 
 I find the theory behind diffusion models fascinating. Fun fact: the basics were proposed by Einstein! Over the past three years, I have worked on image, video, and 3D generation using diffusion models. I am always open to collaborations. If you are excited about diffusion models and want to work together, please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
 
