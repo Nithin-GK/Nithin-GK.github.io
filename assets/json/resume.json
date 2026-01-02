@@ -3,8 +3,6 @@
     "name": "Nithin Gopalakrishnan Nair",
     "label": "Research Engineer",
     "image": "",
-    "email": "ngopala2@jhu.edu",
-    "phone": "+1-667-212-9785",
     "url": "https://nithin-gk.github.io/",
     "summary": "I work on problems in Computer Vision. My research focus is on developing scalable computer vision algorithms. My research experience and interests are on generative models for video and image, Multimodal LLMs, Image foundation models and 3D perception.",
     "location": {
@@ -201,22 +199,6 @@
       "summary": "India's surveillance satellite - Built a Down-sampler and FFT-based Signal Analyzer",
       "startDate": "2017-05-01",
       "endDate": "2017-07-01"
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "National Service Scheme",
-      "position": "Volunteer",
-      "startDate": "2015-01-01",
-      "endDate": "2015-12-01",
-      "summary": "Worked on enriching Malayalam Wikipedia"
-    },
-    {
-      "organization": "National Service Scheme - Suyam Project",
-      "position": "Volunteer",
-      "startDate": "2016-01-01",
-      "endDate": "2016-12-01",
-      "summary": "Aimed at preliminary education for students in rural villages in India"
     }
   ],
   "references": [
