@@ -37,11 +37,11 @@
       "summary": "Working on multi-agent systems for human interaction understanding"
     },
     {
-      "name": "Google - Project Starline",
+      "name": "Google Beam",
       "position": "Research Intern",
       "startDate": "2024-12-01",
       "endDate": "2025-03-01",
-      "summary": "Training a transformer-based large 3D reconstruction model to synthesize novel views for scenes. Research on scaling up 3D synthesis using synthetic data. Paper accepted at ICCV 2025.",
+      "summary": "Training a transformer-based large 3D reconstruction model to synthesize novel views for scenes. Research on scaling up 3D synthesis using synthetic data. Paper accepted at ICCV 2025, patent submitted.",
       "highlights": ["Hosts: Jungyeon Park, Srinivas Kaza"]
     },
     {
@@ -49,7 +49,7 @@
       "position": "Research Intern",
       "startDate": "2024-04-01",
       "endDate": "2024-12-01",
-      "summary": "Research on 3D perception using vision Foundation models and Multimodal LLMs",
+      "summary": "Research on 3D perception using vision Foundation models and Multimodal LLMs. Led to a research paper and patent submission.",
       "highlights": ["Mentors: J.P. Lewis, Ming-Yu Liu"]
     },
     {
@@ -65,7 +65,7 @@
       "position": "Research Intern",
       "startDate": "2022-05-01",
       "endDate": "2022-08-01",
-      "summary": "Research on Energy-based Conditional Generation. Developed a generalized framework for Plug & Play generation using unconditional diffusion models.",
+      "summary": "Research on Energy-based Conditional Generation. Developed a generalized framework for Plug & Play generation using unconditional diffusion models. Paper accepted at ICCV 2023.",
       "highlights": ["Mentors: Tim Marks, Anoop Cherian"]
     }
   ],
@@ -185,7 +185,7 @@
   "projects": [
     {
       "name": "BRIAR",
-      "summary": "IARPA's face recognition program. Built the world's best face recognizer.",
+      "summary": "IARPA's low resolution face recognition program. Built the world's best face recognizer.",
       "startDate": "2021-08-01"
     },
     {
