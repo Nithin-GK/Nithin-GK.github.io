@@ -129,11 +129,11 @@ ninja.data = [{
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
             },},{
-        id: 'social-email',
-        title: 'email',
+        id: 'social-scholar',
+        title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%6E%67%6F%70%61%6C%61%32@%6A%68%75.%65%64%75", "_blank");
+          window.open("https://scholar.google.com/citations?user=_julgEYAAAAJ", "_blank");
         },
       },{
         id: 'social-github',
@@ -143,13 +143,6 @@ ninja.data = [{
           window.open("https://github.com/Nithin-GK", "_blank");
         },
       },{
-        id: 'social-x',
-        title: 'X',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://twitter.com/NithinGK10", "_blank");
-        },
-      },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
@@ -157,11 +150,18 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/nithin-gk-218174137", "_blank");
         },
       },{
-        id: 'social-scholar',
-        title: 'Google Scholar',
+        id: 'social-x',
+        title: 'X',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=_julgEYAAAAJ", "_blank");
+          window.open("https://twitter.com/NithinGK10", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6E%67%6F%70%61%6C%61%32@%6A%68%75.%65%64%75", "_blank");
         },
       },{
         id: 'social-rss',
