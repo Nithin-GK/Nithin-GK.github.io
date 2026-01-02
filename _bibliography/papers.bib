@@ -7,7 +7,7 @@
   bibtex_show={true},
   pdf={https://arxiv.org/abs/2509.22636},
   abstract={Visual Autoregressive (VAR) models have recently emerged as a powerful alternative to diffusion models for high-quality image generation. The VAR architecture generates visual tokens in a coarse-to-fine, scale-by-scale manner, which sets it apart from traditional raster-order autoregressive models. However, the inner mechanism behind VAR model's effectiveness is under-explored. In this paper, we present a novel perspective on VAR: we show that VAR models can be viewed through the lens of discrete diffusion models. Specifically, we demonstrate that VAR's generative process is functionally equivalent to a scale-wise discrete masked diffusion process, with slight variation in the learning objective. In this framework, VAR's next-scale predictions correspond to masked token recovery in a multi-scale latent space. Our findings reveal a deep connection between autoregressive visual generation and diffusion processes, offering new theoretical insights and opening the door for further exploration of hybrid generative architectures.},
-  preview={SRDD.png},
+  preview={srdd.gif},
   selected={true},
   code={https://github.com/VIROBO-15/SRDD}
 }
@@ -33,7 +33,7 @@ effective learning. This refinement not only improves re-construction quality ov
 enables scalable training with synthetic data. As a result,
 our method outperforms existing models on both in-dataset
 and cross-dataset evaluations, achieving state-of-the-art results across multiple benchmarks while significantly reducing computational costs},
-  preview={scalingtransformer.png},
+  preview={scaling_nvs.gif},
   archivePrefix={arXiv},
   primaryClass={cs.GR},
   selected=true,
@@ -79,7 +79,7 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   pdf={https://openaccess.thecvf.com/content/CVPR2025/papers/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.pdf},
   abstract={Deep learning-based models for All-In-One image Restoration (AIOR) have achieved significant advancements in recent years. However, their practical applicability is limited by poor generalization to samples outside the training distribution. This limitation arises primarily from insufficient diversity in degradation variations and scenes within existing datasets. In this paper, we leverage the generative capabilities of latent diffusion models to synthesize high-quality degraded images from their clean counterparts. Specifically, we introduce GenDeg, a degradation and intensity-aware conditional diffusion model, capable of producing diverse degradation patterns on clean images. Using GenDeg, we synthesize over 550k samples across six degradation types: haze, rain, snow, motion blur, low-light, and raindrops. These generated samples are integrated with existing datasets to form the GenDS dataset, comprising over 750k samples. Our experiments reveal that image restoration models trained on GenDS dataset exhibit significant improvements in out-of-distribution performance.},
   pages={28144--28154},
-  preview={gendeg.png},
+  preview={gendeg.gif},
   year={2025},
   bibtex_show={true},
   selected=true,
@@ -96,7 +96,7 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   bibtex_show={true},
   pdf={https://arxiv.org/pdf/2404.09977},
   abstract={Large diffusion-based Text-to-Image (T2I) models have shown impressive generative powers for text-to-image generation as well as spatially conditioned image generation. For most applications, we can train the model end-to-end with paired data to obtain photorealistic generation quality. However, to add an additional task, one often needs to retrain the model from scratch using paired data across all modalities to retain good generation performance. In this paper, we tackle this issue and propose a novel strategy to scale a generative model across new tasks with minimal compute. During our experiments, we discovered that the variance maps of intermediate feature maps of diffusion models capture the intensity of conditioning. Utilizing this prior information, we propose MaxFusion, an efficient strategy to scale up text-to-image generation models to accommodate new modality conditions. Specifically, we combine aligned features of multiple models, hence bringing a compositional effect. Our fusion strategy can be integrated into off-the-shelf models to enhance their generative prowess. We show the effectiveness of our method by utilizing off-the-shelf models for multi-modal generation.},
-  preview={maxfusion.png},
+  preview={maxfusion.gif},
   selected=true,
   code={https://nithin-gk.github.io/maxfusion.github.io/}
 }
@@ -111,7 +111,7 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   bibtex_show={true},
   pdf={https://arxiv.org/pdf/2303.12790.pdf},
   abstract={Crowd counting is a key aspect of crowd analysis and has been typically accomplished by estimating a crowd density map and summing over the density values. However, this approach suffers from background noise accumulation and loss of density due to the use of broad Gaussian kernels to create the ground truth density maps. This issue can be overcome by narrowing the Gaussian kernel. However, existing approaches perform poorly when trained with such ground truth density maps. To overcome this limitation, we propose using conditional diffusion models to predict density maps, as diffusion models are known to model complex distributions well and show high fidelity to training data during crowd-density map generation. Furthermore, as the intermediate time steps of the diffusion process are noisy, we incorporate a regression branch for direct crowd estimation only during training to improve the feature learning. In addition, owing to the stochastic nature of the diffusion model, we introduce producing multiple density maps to improve the counting performance contrary to the existing crowd counting pipelines. Further, we also differ from the density summation and introduce contour detection followed by summation as the counting operation, which is more immune to background noise. We conduct extensive experiments on public datasets to validate the effectiveness of our method. Specifically, our novel crowd-counting pipeline improves the error of crowd-counting by up to 6 percent on JHU-CROWD++ and up to 7 percent on UCF-QNRF.},
-  preview={crowdiff.png},
+  preview={crowdiff.gif},
   selected={false},
   code={https://github.com/dylran/DiffuseDenoiseCount}
 }
@@ -260,7 +260,7 @@ demonstrate clear qualitative and quantitative improvements
 over state-of-the-art diffusion-based plug-and-play models
 while adding negligible additional computational cost.
 },
-  preview={steered.png},
+  preview={steered_diffusion.gif},
   selected=true,
   code={https://github.com/merlresearch/SteeredDiffusion}
 }
@@ -294,7 +294,7 @@ the final published version of the proceedings is available on IEEE Xplore. 6070
 strategy. We also introduce a novel reliability parameter that allows using different off-the-shelf diffusion models trained across various datasets during sampling time
 alone to guide it to the desired outcome satisfying multiple constraints. We perform experiments on various standard multimodal tasks to demonstrate the effectiveness of
 our approach. More details can be found at: https://nithingk.github.io/projectpages/Multidiff},
-  preview={multi.png},
+  preview={unite_conquer.gif},
   selected=true,
   code={https://github.com/Nithin-GK/UniteandConquer}
 }
