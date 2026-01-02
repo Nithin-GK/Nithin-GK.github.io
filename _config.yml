@@ -203,7 +203,7 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
+  # - jekyll-jupyter-notebook  # Disabled - requires jupyter in PATH
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
