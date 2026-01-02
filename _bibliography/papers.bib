@@ -44,32 +44,47 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
 }
 
 
+@inproceedings{narayan2025petalface,
+  title={PETALface: Parameter Efficient Transfer Learning for Low-resolution Face Recognition},
+  author={Narayan, Kartik and Nair, Nithin Gopalakrishnan and Xu, Jennifer and Chellappa, Rama and Patel, Vishal M},
+  abbr={WACV 2025},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  year={2025},
+  bibtex_show={true},
+  pdf={https://arxiv.org/abs/2412.07771},
+  abstract={Pre-training on large-scale datasets and utilizing margin-based loss functions have been highly successful in training models for high-resolution face recognition. However, these models struggle with low-resolution face datasets, in which the faces lack the facial attributes necessary for distinguishing different faces. Full fine-tuning on low-resolution datasets, a naive method for adapting the model, yields inferior performance due to catastrophic forgetting of pre-trained knowledge. Additionally, the domain difference between high-resolution gallery images and low-resolution probe images leads to poor convergence. To address these issues, we propose PETALface, a Parameter-Efficient Transfer Learning approach for low-resolution face recognition. We utilize low-rank adaptation of attention layers to adapt the pretrained model to low-resolution datasets. We introduce two low-rank adaptation modules that are constrained during training and act as separate proxy encoders for high-resolution and low-resolution data, respectively. Extensive experiments demonstrate that PETALface outperforms full fine-tuning on low-resolution datasets while preserving performance on high-resolution and mixed-quality datasets, using only 0.48% of the parameters.},
+  preview={},
+  url={https://kartik-3004.github.io/PETALface/},
+  code={https://github.com/Kartik-3004/PETALface}
+}
+
+@inproceedings{nair2025improved,
+  title={Improved Representation Learning for Unconstrained Face Recognition},
+  author={Nair, Nithin Gopalakrishnan and Narayan, Kartik and Suin, Maitreya and Kathirvel, Ram Prabhakar and Xu, Jennifer and Stevens, Soraya and Gleason, Joshua and Shnidman, Nathan and Chellappa, Rama and Patel, Vishal M},
+  abbr={FG 2025},
+  booktitle={2025 IEEE 19th International Conference on Automatic Face and Gesture Recognition (FG)},
+  year={2025},
+  bibtex_show={true},
+  doi={10.1109/FG61629.2025.11099270},
+  abstract={Face recognition is a widely studied problem where the aim is to design a robust network that assigns higher similarity to the same face and reduces similarity between dissimilar faces. We address low-quality face recognition by reconsidering model choice, data input pipeline and fine-tuning schemes rather than solely focusing on loss functions. We achieve state-of-the-art results on medium and challenging benchmarks including IJB-B, IJB-C, Tinyface, IJB-S, and BRIAR.},
+  preview={},
+  code={}
+}
+
 @inproceedings{rajagopalan2025gendeg,
-  title={Gendeg: Diffusion-based degradation synthesis for generalizable all-in-one image restoration},
+  title={GenDeg: Diffusion-based Degradation Synthesis for Generalizable All-in-One Image Restoration},
   author={Rajagopalan, Sudarshan and Nair, Nithin Gopalakrishnan and Paranjape, Jay N and Patel, Vishal M},
   abbr={CVPR 2025},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-      pdf={https://openaccess.thecvf.com/content/CVPR2025/papers/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.pdf},
-      abstract={Large transformer-based models have made significant
-progress in generalizable novel view synthesis (NVS) from
-sparse input views, generating novel viewpoints without the
-need for test-time optimization. However, these models
-are constrained by the limited diversity of publicly available scene datasets, making most real-world (in-the-wild)
-scenes out-of-distribution. To overcome this, we incorporate synthetic training data generated from diffusion models, which improves generalization across unseen domains.
-While synthetic data offers scalability, we identify artifacts
-introduced during data generation as a key bottleneck affecting reconstruction quality. To address this, we propose
-a token disentanglement process within the transformer architecture, enhancing feature separation and ensuring more
-effective learning. This refinement not only improves re-construction quality over standard transformers but also
-enables scalable training with synthetic data. As a result,
-our method outperforms existing models on both in-dataset
-and cross-dataset evaluations, achieving state-of-the-art results across multiple benchmarks while significantly reducing computational costs},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pdf={https://openaccess.thecvf.com/content/CVPR2025/papers/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.pdf},
+  abstract={Deep learning-based models for All-In-One image Restoration (AIOR) have achieved significant advancements in recent years. However, their practical applicability is limited by poor generalization to samples outside the training distribution. This limitation arises primarily from insufficient diversity in degradation variations and scenes within existing datasets. In this paper, we leverage the generative capabilities of latent diffusion models to synthesize high-quality degraded images from their clean counterparts. Specifically, we introduce GenDeg, a degradation and intensity-aware conditional diffusion model, capable of producing diverse degradation patterns on clean images. Using GenDeg, we synthesize over 550k samples across six degradation types: haze, rain, snow, motion blur, low-light, and raindrops. These generated samples are integrated with existing datasets to form the GenDS dataset, comprising over 750k samples. Our experiments reveal that image restoration models trained on GenDS dataset exhibit significant improvements in out-of-distribution performance.},
   pages={28144--28154},
   preview={gendeg.png},
   year={2025},
   bibtex_show={true},
-      selected=true,
-      url={https://sudraj2002.github.io/gendegpage/},
-      code ={https://github.com/sudraj2002/GenDeg}
+  selected=true,
+  url={https://sudraj2002.github.io/gendegpage/},
+  code={https://github.com/sudraj2002/GenDeg}
 }
 @inproceedings{nair2025maxfusion,
   title={Maxfusion: Plug\&play multi-modal generation in text-to-image diffusion models},
@@ -96,7 +111,7 @@ and cross-dataset evaluations, achieving state-of-the-art results across multipl
   bibtex_show={true},
   pdf={https://arxiv.org/pdf/2303.12790.pdf},
   abstract={Crowd counting is a key aspect of crowd analysis and has been typically accomplished by estimating a crowd density map and summing over the density values. However, this approach suffers from background noise accumulation and loss of density due to the use of broad Gaussian kernels to create the ground truth density maps. This issue can be overcome by narrowing the Gaussian kernel. However, existing approaches perform poorly when trained with such ground truth density maps. To overcome this limitation, we propose using conditional diffusion models to predict density maps, as diffusion models are known to model complex distributions well and show high fidelity to training data during crowd-density map generation. Furthermore, as the intermediate time steps of the diffusion process are noisy, we incorporate a regression branch for direct crowd estimation only during training to improve the feature learning. In addition, owing to the stochastic nature of the diffusion model, we introduce producing multiple density maps to improve the counting performance contrary to the existing crowd counting pipelines. Further, we also differ from the density summation and introduce contour detection followed by summation as the counting operation, which is more immune to background noise. We conduct extensive experiments on public datasets to validate the effectiveness of our method. Specifically, our novel crowd-counting pipeline improves the error of crowd-counting by up to 6 percent on JHU-CROWD++ and up to 7 percent on UCF-QNRF.},
-  preview={binoising.png},
+  preview={crowdiff.png},
   selected={false},
   code={https://github.com/dylran/DiffuseDenoiseCount}
 }
@@ -201,22 +216,9 @@ code={https://github.com/JayParanjape/biastuning}
   booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
   pages={6343--6352},
   year={2024},
-    bibtex_show={true},
+  bibtex_show={true},
   pdf={https://openaccess.thecvf.com/content/WACV2024/papers/Suin_Diffuse_and_Restore_A_Region-Adaptive_Diffusion_Model_for_Identity-Preserving_Blind_WACV_2024_paper.pdf},
-  abstract={Although many long-range imaging systems are designed to support extended vision applications, a natural
-obstacle to their operation is degradation due to atmospheric turbulence. Atmospheric turbulence causes significant degradation to image quality by introducing blur
-and geometric distortion. In recent years, various deep
-learning-based single image atmospheric turbulence mitigation methods, including CNN-based and GAN inversionbased, have been proposed in the literature which attempt
-to remove the distortion in the image. However, some of
-these methods are difficult to train and often fail to reconstruct facial features and produce unrealistic results especially in the case of high turbulence. Denoising Diffusion Probabilistic Models (DDPMs) have recently gained
-some traction because of their stable training process and
-their ability to generate high quality images. In this paper,
-we propose the first DDPM-based solution for the problem of atmospheric turbulence mitigation. We also propose a fast sampling technique for reducing the inference
-times for conditional DDPMs. Extensive experiments are
-conducted on synthetic and real-world data to show the
-significance of our model. To facilitate further research,
-all codes and pretrained models are publically available at
-http://github.com/Nithin-GK/AT-DDPM},
+  abstract={Blind face restoration (BFR) from severely degraded face images in the wild is a highly ill-posed problem. Due to the complex unknown degradation, existing generative works typically struggle to restore realistic details when the input is of poor quality. Recently, diffusion-based approaches were successfully used for high-quality image synthesis. But, for BFR, maintaining a balance between the fidelity of the restored image and the reconstructed identity information is important. With this observation, we present a conditional diffusion-based framework for BFR. We alleviate the drawbacks of existing diffusion-based approaches and design a region-adaptive strategy. Specifically, we use an identity preserving conditioner network to recover the identity information from the input image and use that to guide the reverse diffusion process for important facial locations that contribute the most to the identity. This leads to a significant improvement in perceptual quality as well as face-recognition scores over existing GAN and diffusion-based restoration models.},
   preview={maitreya_wacv.png}
 }
 
@@ -338,10 +340,10 @@ http://github.com/Nithin-GK/T2V-DDPM},
 @article{mei2022bi,
   title={Bi-Noising Diffusion: Towards Conditional Diffusion Models with Generative Restoration Priors},
   author={Mei, Kangfu and Nair, Nithin Gopalakrishnan and Patel, Vishal M},
-  abbr={WACV 2024},
+  abbr={WACV 2025},
   booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
   bibtex_show={true},
-  year={2024},
+  year={2025},
   pdf={https://arxiv.org/pdf/2212.07352.pdf},
   abstract={Conditional diffusion probabilistic models can model the
 distribution of natural images and can generate diverse and
@@ -392,9 +394,9 @@ http://github.com/Nithin-GK/AT-DDPM},
 @article{bandara2022ddpm,
   title={DDPM-CD: Remote Sensing Change Detection using Denoising Diffusion Probabilistic Models},
   author={Bandara, Wele Gedara Chaminda and Nair, Nithin Gopalakrishnan and Patel, Vishal M},
-  abbr={WACV 2024},
+  abbr={WACV 2025},
   booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-  year={2024},
+  year={2025},
   bibtex_show={true},
   pdf={https://arxiv.org/pdf/2206.11892.pdf},
   abstract={Human civilization has an increasingly powerful influence on the earth system,
@@ -442,7 +444,7 @@ real SAR images demonstrate that the proposed method leads
 to significant improvements in both quantitative and qualitative
 results over the state-of-the-art despeckling methods. The code
 is available at: https://github.com/malshaV/SAR_DDPM},
-  preview={binoising.png},
+  preview={sar_despeckling.png},
   code={https://github.com/malshaV/SAR_DDPM}
 }
 
