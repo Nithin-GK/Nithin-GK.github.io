@@ -157,13 +157,6 @@ ninja.data = [{
           window.open("https://www.linkedin.com/in/nithin-gk-218174137", "_blank");
         },
       },{
-        id: 'social-cv',
-        title: 'CV',
-        section: 'Socials',
-        handler: () => {
-          window.open("/assets/pdf/cv.pdf", "_blank");
-        },
-      },{
         id: 'social-rss',
         title: 'RSS Feed',
         section: 'Socials',
