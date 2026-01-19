@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-01-09'
+  last_updated: '2026-01-19'
 papers:
   _julgEYAAAAJ:5Ul4iDaHHb8C:
     citations: 4
     title: 'NBD-GAP: non-blind image deblurring without clean target images'
     year: '2021'
   _julgEYAAAAJ:5ugPr518TE4C:
-    citations: 88
+    citations: 89
     title: 'AT-DDPM: Restoring faces degraded by atmospheric turbulence using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:9ZlFYXVOiuMC:
@@ -18,7 +18,7 @@ papers:
     title: 'MaxFusion: Plug-and-Play Multi-Modal Generation in Text-to-Image Diffusion Models'
     year: '2024'
   _julgEYAAAAJ:HE397vMXCloC:
-    citations: 96
+    citations: 97
     title: SAR despeckling using a denoising diffusion probabilistic model
     year: '2022'
   _julgEYAAAAJ:KUbvn5osdkgC:
@@ -58,11 +58,11 @@ papers:
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 61
+    citations: 63
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 174
+    citations: 175
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
