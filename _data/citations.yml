@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-01-19'
+  last_updated: '2026-01-21'
 papers:
   _julgEYAAAAJ:5Ul4iDaHHb8C:
     citations: 4
@@ -50,7 +50,7 @@ papers:
     title: Scaling Transformer-Based Novel View Synthesis Models with Token Disentanglement and Synthetic Data
     year: '2025'
   _julgEYAAAAJ:WA5NYHcadZ8C:
-    citations: 35
+    citations: 36
     title: 'T2V-DDPM: Thermal to visible face translation using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:Y5dfb0dijaUC:
