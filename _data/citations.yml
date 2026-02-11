@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-02-04'
+  last_updated: '2026-02-11'
 papers:
   _julgEYAAAAJ:5Ul4iDaHHb8C:
     citations: 4
@@ -18,7 +18,7 @@ papers:
     title: 'MaxFusion: Plug-and-Play Multi-Modal Generation in Text-to-Image Diffusion Models'
     year: '2024'
   _julgEYAAAAJ:HE397vMXCloC:
-    citations: 104
+    citations: 107
     title: SAR despeckling using a denoising diffusion probabilistic model
     year: '2022'
   _julgEYAAAAJ:KUbvn5osdkgC:
@@ -54,19 +54,19 @@ papers:
     title: 'T2V-DDPM: Thermal to visible face translation using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:Y5dfb0dijaUC:
-    citations: 19
+    citations: 18
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 66
+    citations: 68
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 183
+    citations: 188
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
-    citations: 31
+    citations: 32
     title: Confidence guided network for atmospheric turbulence mitigation
     year: '2021'
   _julgEYAAAAJ:k8Z6L05lTy4C:
@@ -90,6 +90,6 @@ papers:
     title: 'Petalface: Parameter efficient transfer learning for low-resolution face recognition'
     year: '2025'
   _julgEYAAAAJ:u-x6o8ySG0sC:
-    citations: 19
+    citations: 20
     title: Deep dynamic scene deblurring for unconstrained dual-lens cameras
     year: '2021'
