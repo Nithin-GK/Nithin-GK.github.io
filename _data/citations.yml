@@ -1,24 +1,28 @@
 metadata:
-  last_updated: '2026-02-18'
+  last_updated: '2026-03-13'
 papers:
+  _julgEYAAAAJ:-FonjvnnhkoC:
+    citations: 0
+    title: System and method of semantic segmentation and material identification of 3d objects
+    year: '2026'
   _julgEYAAAAJ:5Ul4iDaHHb8C:
     citations: 4
     title: 'NBD-GAP: non-blind image deblurring without clean target images'
     year: '2021'
   _julgEYAAAAJ:5ugPr518TE4C:
-    citations: 93
+    citations: 94
     title: 'AT-DDPM: Restoring faces degraded by atmospheric turbulence using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:9ZlFYXVOiuMC:
-    citations: 41
+    citations: 43
     title: 'Unite and Conquer: Plug-and-Play Multi-Modal Synthesis Using Diffusion Models'
     year: '2023'
   _julgEYAAAAJ:D03iK_w7-QYC:
-    citations: 24
+    citations: 25
     title: 'MaxFusion: Plug-and-Play Multi-Modal Generation in Text-to-Image Diffusion Models'
     year: '2024'
   _julgEYAAAAJ:HE397vMXCloC:
-    citations: 106
+    citations: 110
     title: SAR despeckling using a denoising diffusion probabilistic model
     year: '2022'
   _julgEYAAAAJ:KUbvn5osdkgC:
@@ -30,7 +34,7 @@ papers:
     title: 'Enabling Conditional Generation Without Training: Plug & Play Generative Modelling using Diffusion Models'
     year: '2025'
   _julgEYAAAAJ:MXK_kJrjxJIC:
-    citations: 23
+    citations: 25
     title: 'Steered Diffusion: A Generalized Framework for Plug-and-Play Conditional Image Synthesis'
     year: '2023'
   _julgEYAAAAJ:Mojj43d5GZwC:
@@ -42,31 +46,31 @@ papers:
     title: 'Dreamguider: Improved training free diffusion-based conditional generation'
     year: '2024'
   _julgEYAAAAJ:P5F9QuxV20EC:
-    citations: 13
+    citations: 14
     title: 'GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration'
     year: '2025'
   _julgEYAAAAJ:URolC5Kub84C:
-    citations: 1
+    citations: 2
     title: Scaling Transformer-Based Novel View Synthesis Models with Token Disentanglement and Synthetic Data
     year: '2025'
   _julgEYAAAAJ:WA5NYHcadZ8C:
-    citations: 37
+    citations: 38
     title: 'T2V-DDPM: Thermal to visible face translation using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:Y5dfb0dijaUC:
-    citations: 21
+    citations: 22
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 68
+    citations: 73
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 185
+    citations: 193
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
-    citations: 32
+    citations: 33
     title: Confidence guided network for atmospheric turbulence mitigation
     year: '2021'
   _julgEYAAAAJ:k8Z6L05lTy4C:
@@ -82,7 +86,7 @@ papers:
     title: 'Bi-noising diffusion: Towards conditional diffusion models with generative restoration priors'
     year: '2022'
   _julgEYAAAAJ:t6usbXjVLHcC:
-    citations: 80
+    citations: 81
     title: 'Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation'
     year: '2023'
   _julgEYAAAAJ:t7zJ5fGR-2UC:
