@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-03-13'
+  last_updated: '2026-03-16'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -62,7 +62,7 @@ papers:
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 73
+    citations: 74
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
