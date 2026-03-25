@@ -1,9 +1,9 @@
 metadata:
-  last_updated: '2026-03-18'
+  last_updated: '2026-03-25'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
-    title: System and method of semantic segmentation and material identification of 3d objects
+    title: System and method of part segmentation and material identification of 3D objects
     year: '2026'
   _julgEYAAAAJ:5Ul4iDaHHb8C:
     citations: 4
@@ -54,7 +54,7 @@ papers:
     title: Scaling Transformer-Based Novel View Synthesis Models with Token Disentanglement and Synthetic Data
     year: '2025'
   _julgEYAAAAJ:WA5NYHcadZ8C:
-    citations: 38
+    citations: 40
     title: 'T2V-DDPM: Thermal to visible face translation using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:Y5dfb0dijaUC:
@@ -66,7 +66,7 @@ papers:
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 193
+    citations: 195
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
@@ -86,13 +86,13 @@ papers:
     title: 'Bi-noising diffusion: Towards conditional diffusion models with generative restoration priors'
     year: '2022'
   _julgEYAAAAJ:t6usbXjVLHcC:
-    citations: 82
+    citations: 84
     title: 'Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation'
     year: '2023'
   _julgEYAAAAJ:t7zJ5fGR-2UC:
     citations: 9
     title: 'Petalface: Parameter efficient transfer learning for low-resolution face recognition'
-    year: '2025'
+    year: '2023'
   _julgEYAAAAJ:u-x6o8ySG0sC:
     citations: 20
     title: Deep dynamic scene deblurring for unconstrained dual-lens cameras
