@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-22'
+  last_updated: '2026-04-27'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -14,7 +14,7 @@ papers:
     title: 'AT-DDPM: Restoring faces degraded by atmospheric turbulence using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:9ZlFYXVOiuMC:
-    citations: 43
+    citations: 44
     title: 'Unite and Conquer: Plug-and-Play Multi-Modal Synthesis Using Diffusion Models'
     year: '2023'
   _julgEYAAAAJ:D03iK_w7-QYC:
@@ -22,7 +22,7 @@ papers:
     title: 'MaxFusion: Plug-and-Play Multi-Modal Generation in Text-to-Image Diffusion Models'
     year: '2024'
   _julgEYAAAAJ:HE397vMXCloC:
-    citations: 113
+    citations: 114
     title: SAR despeckling using a denoising diffusion probabilistic model
     year: '2022'
   _julgEYAAAAJ:KUbvn5osdkgC:
@@ -66,7 +66,7 @@ papers:
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 205
+    citations: 206
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
@@ -86,7 +86,7 @@ papers:
     title: 'Bi-noising diffusion: Towards conditional diffusion models with generative restoration priors'
     year: '2022'
   _julgEYAAAAJ:t6usbXjVLHcC:
-    citations: 86
+    citations: 87
     title: 'Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation'
     year: '2023'
   _julgEYAAAAJ:t7zJ5fGR-2UC:
