@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-04-27'
+  last_updated: '2026-05-06'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -10,7 +10,7 @@ papers:
     title: 'NBD-GAP: non-blind image deblurring without clean target images'
     year: '2021'
   _julgEYAAAAJ:5ugPr518TE4C:
-    citations: 98
+    citations: 100
     title: 'AT-DDPM: Restoring faces degraded by atmospheric turbulence using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:9ZlFYXVOiuMC:
@@ -46,7 +46,7 @@ papers:
     title: 'Dreamguider: Improved training free diffusion-based conditional generation'
     year: '2024'
   _julgEYAAAAJ:P5F9QuxV20EC:
-    citations: 17
+    citations: 18
     title: 'GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration'
     year: '2025'
   _julgEYAAAAJ:URolC5Kub84C:
@@ -62,11 +62,11 @@ papers:
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 76
+    citations: 77
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 206
+    citations: 209
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
@@ -90,7 +90,7 @@ papers:
     title: 'Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation'
     year: '2023'
   _julgEYAAAAJ:t7zJ5fGR-2UC:
-    citations: 11
+    citations: 12
     title: 'Petalface: Parameter efficient transfer learning for low-resolution face recognition'
     year: '2023'
   _julgEYAAAAJ:u-x6o8ySG0sC:
