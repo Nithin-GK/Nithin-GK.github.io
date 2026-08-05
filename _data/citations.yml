@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-03'
+  last_updated: '2026-08-05'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -66,7 +66,7 @@ papers:
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 235
+    citations: 236
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
@@ -82,7 +82,7 @@ papers:
     title: Improved Representation Learning for Unconstrained Face Recognition
     year: '2023'
   _julgEYAAAAJ:olpn-zPbct0C:
-    citations: 10
+    citations: 11
     title: 'Bi-noising diffusion: Towards conditional diffusion models with generative restoration priors'
     year: '2022'
   _julgEYAAAAJ:t6usbXjVLHcC:
