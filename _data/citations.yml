@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-21'
 papers:
   _julgEYAAAAJ:-FonjvnnhkoC:
     citations: 0
@@ -18,11 +18,11 @@ papers:
     title: 'Unite and Conquer: Plug-and-Play Multi-Modal Synthesis Using Diffusion Models'
     year: '2023'
   _julgEYAAAAJ:D03iK_w7-QYC:
-    citations: 25
+    citations: 27
     title: 'MaxFusion: Plug-and-Play Multi-Modal Generation in Text-to-Image Diffusion Models'
     year: '2024'
   _julgEYAAAAJ:HE397vMXCloC:
-    citations: 127
+    citations: 131
     title: SAR despeckling using a denoising diffusion probabilistic model
     year: '2022'
   _julgEYAAAAJ:KUbvn5osdkgC:
@@ -34,7 +34,7 @@ papers:
     title: 'Enabling Conditional Generation Without Training: Plug & Play Generative Modelling using Diffusion Models'
     year: '2025'
   _julgEYAAAAJ:MXK_kJrjxJIC:
-    citations: 26
+    citations: 27
     title: 'Steered Diffusion: A Generalized Framework for Plug-and-Play Conditional Image Synthesis'
     year: '2023'
   _julgEYAAAAJ:Mojj43d5GZwC:
@@ -54,7 +54,7 @@ papers:
     title: Scaling Transformer-Based Novel View Synthesis Models with Token Disentanglement and Synthetic Data
     year: '2025'
   _julgEYAAAAJ:WA5NYHcadZ8C:
-    citations: 42
+    citations: 44
     title: 'T2V-DDPM: Thermal to visible face translation using denoising diffusion probabilistic models'
     year: '2022'
   _julgEYAAAAJ:Y5dfb0dijaUC:
@@ -62,11 +62,11 @@ papers:
     title: 'Diffuse and restore: A region-adaptive diffusion model for identity-preserving blind face restoration'
     year: '2023'
   _julgEYAAAAJ:YFjsv_pBGBYC:
-    citations: 92
+    citations: 94
     title: 'CrowdDiff: Multi-hypothesis crowd density estimation using diffusion models'
     year: '2024'
   _julgEYAAAAJ:dshw04ExmUIC:
-    citations: 236
+    citations: 239
     title: 'DDPM-CD: Denoising Diffusion Probabilistic Models as Feature Extractors for Remote Sensing Change Detection'
     year: '2022'
   _julgEYAAAAJ:eMMeJKvmdy0C:
@@ -86,11 +86,11 @@ papers:
     title: 'Bi-noising diffusion: Towards conditional diffusion models with generative restoration priors'
     year: '2022'
   _julgEYAAAAJ:t6usbXjVLHcC:
-    citations: 99
+    citations: 100
     title: 'Adaptivesam: Towards efficient tuning of sam for surgical scene segmentation'
     year: '2023'
   _julgEYAAAAJ:t7zJ5fGR-2UC:
-    citations: 16
+    citations: 17
     title: 'Petalface: Parameter efficient transfer learning for low-resolution face recognition'
     year: '2023'
   _julgEYAAAAJ:u-x6o8ySG0sC:
