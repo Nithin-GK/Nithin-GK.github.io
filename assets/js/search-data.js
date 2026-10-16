@@ -120,6 +120,11 @@ ninja.data = [{
           description: "Token disentanglement lets transformer models learn from diffusion-generated views and generalize to unseen scenes.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/novel-view-synthesis/";
+            },},{id: "projects-physical-property-assignment-to-3d-meshes",
+          title: 'Physical-property assignment to 3D meshes',
+          description: "Foundation models for part segmentation and material identification of 3D assets.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/nvidia-mesh-properties/";
             },},{id: "projects-petalface",
           title: 'PETALface',
           description: "Quality-weighted low-rank adapters improve low-resolution recognition while retaining a strong pretrained backbone.",
