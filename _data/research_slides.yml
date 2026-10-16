@@ -271,9 +271,9 @@
     },
   "control2control-1":
     {
-      "src": "/assets/slides/control2control-1.webp",
+      "src": "/assets/slides/control2control-1-corgi.webp",
       "title": "Control2Control",
-      "alt": "Control2Control: consistent visual editing with pretrained diffusion models.",
+      "alt": "Control2Control: original corgi, a sketch adding glasses, and the edited corgi wearing sunglasses.",
     },
   "control2control-2":
     {
