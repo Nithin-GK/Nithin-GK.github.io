@@ -24,6 +24,12 @@ layout: default
     <h1>{{ project.title }}</h1>
     <p class="project-lede">{{ project.introduction | default: project.description }}</p>
   </header>
+  {% if project.slides.size > 0 %}
+    {% if project.presentation_status %}
+      <p class="project-meta">{{ project.presentation_status }}</p>
+    {% endif %}
+    {% include research-slides.liquid slides=project.slides label=project.title %}
+  {% endif %}
   {% if project.definition %}
     <section class="project-definition">
       <h2>{{ project.definition_title }}</h2>
@@ -45,12 +51,6 @@ layout: default
         <p>{{ project.definition_context }}</p>
       {% endif %}
     </section>
-  {% endif %}
-  {% if project.slides.size > 0 %}
-    {% if project.presentation_status %}
-      <p class="project-meta">{{ project.presentation_status }}</p>
-    {% endif %}
-    {% include research-slides.liquid slides=project.slides label=project.title %}
   {% endif %}
   {% if project.links.size > 0 %}
     <div class="project-links">
