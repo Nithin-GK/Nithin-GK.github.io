@@ -4,6 +4,7 @@
     const range = comparison.querySelector('input[type="range"]');
     range?.addEventListener("input", () => {
       comparison.style.setProperty("--compare-position", range.value + "%");
+      comparison.querySelector(".case-comparison-before").style.clipPath = "inset(0 " + (100 - Number(range.value)) + "% 0 0)";
       range.setAttribute("aria-valuetext", range.value + "% original, " + (100 - Number(range.value)) + "% edited");
     });
   });
