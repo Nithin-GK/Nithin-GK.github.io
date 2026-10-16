@@ -5,11 +5,11 @@ layout: default
 <link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
 <article class="research-project-page">
   {% if project.navigation_group == 'internships' %}
-    <a class="project-back" href="{{ '/internships/' | relative_url }}">Back to internships</a>
+    <a class="project-back" href="{{ '/projects/#internships' | relative_url }}">Back to projects</a>
   {% else %}
-    <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to papers</a>
+    <a class="project-back" href="{{ '/projects/#papers' | relative_url }}">Back to projects</a>
     {% if project.company %}
-      <a class="project-back project-back-secondary" href="{{ '/internships/' | relative_url }}">Internship work</a>
+      <a class="project-back project-back-secondary" href="{{ '/projects/#internships' | relative_url }}">Internship work</a>
     {% endif %}
   {% endif %}
   <header class="research-project-header">

@@ -59,8 +59,7 @@
           <!-- Other pages -->
           {% assign current_navigation_group = page.navigation_group %}
           {% if page.project_key %}
-            {% assign current_project = site.data.research_projects[page.project_key] %}
-            {% assign current_navigation_group = current_project.navigation_group %}
+            {% assign current_navigation_group = 'projects' %}
           {% endif %}
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
