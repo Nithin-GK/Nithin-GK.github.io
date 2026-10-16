@@ -41,7 +41,12 @@
             {% assign sentences = content.summary | split: '. ' %}
             {% for sentence in sentences %}
               {% if sentence != '' %}
-                <li><span class="item">{{ sentence }}{% unless sentence contains '.' %}.{% endunless %}</span></li>
+                <li>
+                  <span class="item">
+                    {{- sentence -}}
+                    {%- unless sentence contains '.' %}.{% endunless -%}
+                  </span>
+                </li>
               {% endif %}
             {% endfor %}
           </ul>

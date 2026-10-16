@@ -117,35 +117,17 @@
     {
       "name": "Computer Vision",
       "icon": "fa-solid fa-eye",
-      "keywords": [
-        "Generative Models",
-        "Video Generation",
-        "Image Editing",
-        "3D Perception",
-        "Diffusion Models"
-      ]
+      "keywords": ["Generative Models", "Video Generation", "Image Editing", "3D Perception", "Diffusion Models"]
     },
     {
       "name": "Multimodal AI",
       "icon": "fa-solid fa-brain",
-      "keywords": [
-        "Multimodal LLMs",
-        "Image Foundation Models",
-        "Vision-Language Models"
-      ]
+      "keywords": ["Multimodal LLMs", "Image Foundation Models", "Vision-Language Models"]
     },
     {
       "name": "Programming",
       "icon": "fa-solid fa-code",
-      "keywords": [
-        "Python",
-        "PyTorch",
-        "C",
-        "C++",
-        "SQL",
-        "Verilog",
-        "VHDL"
-      ]
+      "keywords": ["Python", "PyTorch", "C", "C++", "SQL", "Verilog", "VHDL"]
     }
   ],
   "languages": [
