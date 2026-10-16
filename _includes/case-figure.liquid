@@ -1,31 +1,57 @@
 {% assign figure = include.figure %}
-<figure class="case-figure" data-case-figure>
+<figure class="case-figure{% if figure.featured %} case-figure-featured{% endif %}{% if figure.wide %} case-figure-wide{% endif %}" data-case-figure>
   <h3>{{ figure.label }}</h3>
-  <div class="case-image-plate">
-    {% if figure.columns %}
-      <div
-        class="case-figure-columns"
-        {% if figure.column_widths %}
-          style="grid-template-columns: {{ figure.column_widths | join: ' ' }}"
-        {% endif %}
-      >
-        {% for column in figure.columns -%}
-          <span>{{ column }}</span>
-        {%- endfor %}
-      </div>
-    {% endif %}
-    <button class="case-image-button" type="button" data-expand-figure aria-label="Expand {{ figure.label | escape }}">
-      <img
-        src="{{ figure.preview | default: figure.src | relative_url }}"
-        data-full-src="{{ figure.src | relative_url }}"
-        alt="{{ figure.alt | escape }}"
-        data-case-image
-        loading="lazy"
-        decoding="async"
-      >
-      <span class="case-expand" aria-hidden="true">Expand figure ↗</span>
-    </button>
-  </div>
+  {% if figure.panels %}
+    <div class="case-demo-panels">
+      {% for panel in figure.panels %}
+        <figure class="case-demo-panel">
+          <button class="case-image-button" type="button" data-expand-figure aria-label="Expand {{ panel.alt | escape }}">
+            <img
+              src="{{ panel.src | relative_url }}"
+              data-full-src="{{ panel.src | relative_url }}"
+              alt="{{ panel.alt | escape }}"
+              data-case-image
+              loading="lazy"
+              decoding="async"
+            >
+          </button>
+          <figcaption>
+            {% if panel.prompt -%}
+              <q>{{ panel.prompt }}</q>
+            {%- else -%}
+              {{- panel.label -}}
+            {%- endif %}
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="case-image-plate">
+      {% if figure.columns %}
+        <div
+          class="case-figure-columns"
+          {% if figure.column_widths %}
+            style="grid-template-columns: {{ figure.column_widths | join: ' ' }}"
+          {% endif %}
+        >
+          {% for column in figure.columns -%}
+            <span>{{ column }}</span>
+          {%- endfor %}
+        </div>
+      {% endif %}
+      <button class="case-image-button" type="button" data-expand-figure aria-label="Expand {{ figure.label | escape }}">
+        <img
+          src="{{ figure.preview | default: figure.src | relative_url }}"
+          data-full-src="{{ figure.src | relative_url }}"
+          alt="{{ figure.alt | escape }}"
+          data-case-image
+          loading="lazy"
+          decoding="async"
+        >
+        <span class="case-expand" aria-hidden="true">Expand figure ↗</span>
+      </button>
+    </div>
+  {% endif %}
   {% if figure.caption %}
     <figcaption>{{ figure.caption }}</figcaption>
   {% endif %}

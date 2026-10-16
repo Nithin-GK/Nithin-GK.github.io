@@ -1,8 +1,10 @@
 {% assign project = site.data.research_projects[include.key] %}
 {% assign story = site.data.project_showcase[include.key] %}
+{% assign card_image = story.image %}
+{% if include.industry and story.industry_image %}{% assign card_image = story.industry_image %}{% endif %}
 <article class="showcase-card{% if include.featured %} showcase-card-featured{% endif %}" data-project-card data-theme="{{ story.theme | escape }}">
   <a class="showcase-card-media" href="{{ '/projects/' | append: include.key | append: '/' | relative_url }}" tabindex="-1" aria-hidden="true">
-    <img src="{{ story.image | relative_url }}" alt="" loading="lazy" decoding="async">
+    <img src="{{ card_image | relative_url }}" alt="" loading="lazy" decoding="async">
   </a>
   <div class="showcase-card-copy">
     <p class="showcase-eyebrow">

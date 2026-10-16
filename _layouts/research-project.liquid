@@ -45,7 +45,12 @@ layout: project-showcase
         </div>
         <p class="case-media-caption">{{ story.edit_caption }}</p>
       {% endif %}
-      <div class="case-example-grid">
+      <div
+        class="case-example-grid"
+        {% if story.media_ratio %}
+          style="--case-media-ratio: {{ story.media_ratio }}"
+        {% endif %}
+      >
         {% for figure in story.media -%}
           {%- include case-figure.liquid figure=figure -%}
         {%- endfor %}

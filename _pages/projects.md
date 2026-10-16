@@ -14,8 +14,8 @@ navigation_group: projects
     <p class="showcase-hero-lede">Selected work on large-scale training, generative models and multimodal learning.</p>
     <div class="showcase-hero-media" aria-label="Selected projects">
       <a href="{{ '/projects/novel-view-synthesis/' | relative_url }}"><div><img src="{{ site.data.project_showcase['novel-view-synthesis'].image | relative_url }}" alt="A Tok-D scene reconstruction from the Google project." fetchpriority="high"></div><span>Google: Novel view synthesis</span></a>
-      <a href="{{ '/projects/control2control/' | relative_url }}"><div><img src="{{ site.data.project_showcase.control2control.image | relative_url }}" alt="A sketch-guided corgi image edit from the Control2Control research draft."></div><span>Adobe: Control2Control</span></a>
-      <a href="{{ '/projects/nvidia-mesh-properties/' | relative_url }}"><div><img src="{{ site.data.project_showcase['nvidia-mesh-properties'].image | relative_url }}" alt="Colored 3D part segments and estimated materials from the NVIDIA research draft."></div><span>NVIDIA: 3D asset understanding</span></a>
+      <a href="{{ '/projects/control2control/' | relative_url }}"><div><img src="{{ site.data.project_showcase.control2control.hero_image | relative_url }}" alt="The edited corgi wearing sunglasses from the Control2Control research draft."></div><span>Adobe: Control2Control</span></a>
+      <a href="{{ '/projects/nvidia-mesh-properties/' | relative_url }}"><div><img src="{{ site.data.project_showcase['nvidia-mesh-properties'].hero_image | relative_url }}" alt="Estimated materials for 3D furniture from the NVIDIA research draft."></div><span>NVIDIA: 3D asset understanding</span></a>
     </div>
     <div class="showcase-proof"><p><strong>18</strong> peer-reviewed publications</p><p>Research internships at <strong>Google · NVIDIA · Adobe · MERL</strong></p></div>
   </div>

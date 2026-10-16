@@ -14,27 +14,20 @@
       "media":
         [
           {
-            "label": "Novel-view reconstruction comparison",
-            "src": "/assets/img/showcase/nvs-complete.webp",
-            "preview": "/assets/img/showcase/nvs-complete-preview.webp",
-            "caption": "Across three scenes, Tok-D (Ours) is compared with LVSM and ground truth. Input views appear on the left.",
-            "alt": "Published cross-dataset reconstruction comparison. Each row shows input views, LVSM, Tok-D (Ours) and ground truth; all three scenes and original detail boxes are retained.",
+            "label": "Novel-view reconstruction",
+            "src": "/assets/img/showcase/novel-view-synthesis-feature.webp",
+            "alt": "Tok-D reconstructs a new view from observations of the same scene.",
+            "caption": "Tok-D reconstructs a new view from observations of the same scene.",
+            "featured": true,
+          },
+          {
+            "label": "Published reconstruction comparison",
+            "src": "/assets/img/showcase/novel-view-synthesis-lead.webp",
+            "alt": "Input views, LVSM, Tok-D and ground truth for the red-car scene.",
+            "caption": "Input views, LVSM, Tok-D and ground truth for the red-car scene.",
+            "wide": true,
             "columns": ["Input views", "LVSM", "Tok-D", "Ground truth"],
-            "column_widths": ["0.145fr", "0.285fr", "0.285fr", "0.285fr"],
-          },
-          {
-            "label": "The architecture",
-            "src": "/assets/img/showcase/novel-view-synthesis-2.webp",
-            "caption": "Token disentanglement separates source observations from target queries.",
-            "alt": "Token disentanglement separates source observations from target queries.",
-            "preview": "/assets/img/showcase/novel-view-synthesis-2-preview.webp",
-          },
-          {
-            "label": "Synthetic training",
-            "src": "/assets/img/showcase/novel-view-synthesis-3.webp",
-            "caption": "Training with generated views and separate source/target token modulation.",
-            "alt": "Training and token-disentanglement details from the original paper.",
-            "preview": "/assets/img/showcase/novel-view-synthesis-3-preview.webp",
+            "column_widths": ["0.52fr", "1fr", "1fr", "1fr"],
           },
         ],
       "image": "/assets/img/showcase/novel-view-synthesis-feature-preview.webp",
@@ -59,6 +52,17 @@
             "body": "The paper reports training on eight H100 GPUs for 100,000 iterations. Its real-data architecture comparison and synthetic-augmentation experiment are separate: the +1.64 dB DL3DV result is from the real-data comparison, while generated views produce smaller cross-dataset gains.",
           },
         ],
+      "method_figures":
+        [
+          {
+            "label": "The architecture",
+            "src": "/assets/img/showcase/novel-view-synthesis-2.webp",
+            "caption": "Token disentanglement separates source observations from target queries.",
+            "alt": "Token disentanglement separates source observations from target queries.",
+            "preview": "/assets/img/showcase/novel-view-synthesis-2-preview.webp",
+          },
+        ],
+      "industry_image": "/assets/img/showcase/novel-view-synthesis-2-preview.webp",
     },
   "gendeg":
     {
@@ -75,21 +79,23 @@
       "media":
         [
           {
-            "label": "Restoration comparison",
-            "src": "/assets/img/showcase/gendeg-complete.webp",
-            "preview": "/assets/img/showcase/gendeg-complete-preview.webp",
-            "caption": "Restoration results across six degradation types. Columns marked GD use GenDS for training. Ground truth appears on the right.",
-            "alt": "Complete published restoration comparison: Input, PromptIR, PromptIR GD, Swin, Swin GD, NAFNet, NAFNet GD and ground truth. GD denotes training with GenDS. All degradation rows and detail insets are retained.",
+            "label": "Restoration with synthetic training data",
+            "src": "/assets/img/showcase/gendeg-building-focus.webp",
+            "alt": "Haze restoration using the same PromptIR architecture. GD denotes training with GenDS. Ground truth is shown at right.",
+            "caption": "Haze restoration using the same PromptIR architecture. GD denotes training with GenDS. Ground truth is shown at right.",
+            "preview": "/assets/img/showcase/gendeg-building-focus-preview.webp",
+            "featured": true,
           },
           {
-            "label": "Degradation synthesis and restoration",
-            "src": "/assets/img/showcase/gendeg-method-complete.webp",
-            "preview": "/assets/img/showcase/gendeg-method-complete-preview.webp",
-            "caption": "Train the degradation generator, generate and filter synthetic pairs, then train the restoration model.",
-            "alt": "Complete framework: (a) train the conditional degradation generator; (b) generate degraded pairs, correct structure and filter by intensity; (c) train the restoration model. The conditioning and operator legends are retained.",
+            "label": "Generalization to another scene",
+            "src": "/assets/img/showcase/gendeg-arch-focus.webp",
+            "alt": "Another published comparison of PromptIR with and without GenDS training.",
+            "caption": "Another published comparison of PromptIR with and without GenDS training.",
+            "preview": "/assets/img/showcase/gendeg-arch-focus-preview.webp",
+            "wide": true,
           },
         ],
-      "image": "/assets/img/showcase/gendeg-lead-preview.webp",
+      "image": "/assets/img/showcase/gendeg-building-focus-preview.webp",
       "evidence":
         {
           "headers": ["Test set", "LPIPS Existing", "LPIPS GenDS", "FID Existing", "FID GenDS"],
@@ -117,6 +123,16 @@
             "body": "Structure correction and intensity filtering retain suitable synthetic pairs. Combining these pairs with existing datasets forms GenDS, with more than 750,000 samples, for training all-in-one restoration models. The comparisons test the effect of this training data using the same restoration architecture.",
           },
         ],
+      "method_figures":
+        [
+          {
+            "label": "Degradation synthesis and restoration",
+            "src": "/assets/img/showcase/gendeg-method-complete.webp",
+            "preview": "/assets/img/showcase/gendeg-method-complete-preview.webp",
+            "caption": "Train the degradation generator, generate and filter synthetic pairs, then train the restoration model.",
+            "alt": "Complete framework: (a) train the conditional degradation generator; (b) generate degraded pairs, correct structure and filter by intensity; (c) train the restoration model. The conditioning and operator legends are retained.",
+          },
+        ],
     },
   "unite-and-conquer":
     {
@@ -133,56 +149,111 @@
       "media":
         [
           {
-            "label": "Semantic labels and text",
-            "src": "/assets/img/showcase/unite-semantic-controls-panel.webp",
-            "preview": "/assets/img/showcase/unite-semantic-controls-panel-preview.webp",
-            "caption": "Figure 1(b). Semantic maps and text guide face generation, with TediGAN shown for comparison.",
-            "alt": "Complete Figure 1(b) panel: face/hair semantic conditions, all text instructions, TediGAN comparisons and Unite and Conquer outputs. The colored maps are generation conditions, not edit masks.",
+            "label": "Semantic maps, sketches and text",
+            "src": "/assets/img/showcase/unite-curated-lead.webp",
+            "alt": "Unite and Conquer combines the input structure at left with each text instruction to generate the faces alongside it. Published results from Figure 1(b–c).",
+            "caption": "Unite and Conquer combines the input structure at left with each text instruction to generate the faces alongside it. Published results from Figure 1(b–c).",
+            "featured": true,
+            "panels":
+              [
+                {
+                  "name": "unite-curated-semantic-condition",
+                  "file": "Im31.png",
+                  "kind": "condition",
+                  "label": "Face and hair semantic condition",
+                  "sourcePanel": "Figure 1(b), semantic label map",
+                  "row": 1,
+                  "column": 1,
+                  "src": "/assets/img/showcase/unite-curated-semantic-condition.webp",
+                  "alt": "Face and hair semantic condition",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [258, 258],
+                },
+                {
+                  "name": "unite-curated-semantic-black-hair",
+                  "file": "Im40.png",
+                  "kind": "output",
+                  "method": "Unite and Conquer (OURS)",
+                  "prompt": "This person is chubby and has wavy black hair",
+                  "sourcePanel": "Figure 1(b), OURS, first result",
+                  "row": 1,
+                  "column": 2,
+                  "src": "/assets/img/showcase/unite-curated-semantic-black-hair.webp",
+                  "alt": "Published Unite and Conquer output for the prompt: This person is chubby and has wavy black hair.",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [258, 258],
+                },
+                {
+                  "name": "unite-curated-semantic-brown-hair",
+                  "file": "Im41.png",
+                  "kind": "output",
+                  "method": "Unite and Conquer (OURS)",
+                  "prompt": "An old person with brown hair",
+                  "sourcePanel": "Figure 1(b), OURS, second result",
+                  "row": 1,
+                  "column": 3,
+                  "src": "/assets/img/showcase/unite-curated-semantic-brown-hair.webp",
+                  "alt": "Published Unite and Conquer output for the prompt: An old person with brown hair.",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [258, 258],
+                },
+                {
+                  "name": "unite-curated-sketch-condition",
+                  "file": "Im44.jpg",
+                  "kind": "condition",
+                  "label": "Sketch condition",
+                  "sourcePanel": "Figure 1(c), lower sketch input",
+                  "row": 2,
+                  "column": 1,
+                  "src": "/assets/img/showcase/unite-curated-sketch-condition.webp",
+                  "alt": "Sketch condition",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [256, 256],
+                },
+                {
+                  "name": "unite-curated-sketch-blonde-hair",
+                  "file": "Im45.jpg",
+                  "kind": "output",
+                  "method": "Unite and Conquer (OURS)",
+                  "prompt": "This person has blonde hair and black eyebrows",
+                  "sourcePanel": "Figure 1(c), lower left result",
+                  "row": 2,
+                  "column": 2,
+                  "src": "/assets/img/showcase/unite-curated-sketch-blonde-hair.webp",
+                  "alt": "Published Unite and Conquer output for the prompt: This person has blonde hair and black eyebrows.",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [256, 256],
+                },
+                {
+                  "name": "unite-curated-sketch-brown-hair",
+                  "file": "Im46.jpg",
+                  "kind": "output",
+                  "method": "Unite and Conquer (OURS)",
+                  "prompt": "This person has brown hair and dark skin tone",
+                  "sourcePanel": "Figure 1(c), lower right result",
+                  "row": 2,
+                  "column": 3,
+                  "src": "/assets/img/showcase/unite-curated-sketch-brown-hair.webp",
+                  "alt": "Published Unite and Conquer output for the prompt: This person has brown hair and dark skin tone.",
+                  "source": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+                  "nativeSize": [256, 256],
+                },
+              ],
           },
           {
-            "label": "Sketches and text",
-            "src": "/assets/img/showcase/unite-sketch-controls-panel.webp",
-            "preview": "/assets/img/showcase/unite-sketch-controls-panel-preview.webp",
-            "caption": "Figure 1(c). The same sketch produces different faces when combined with different text instructions.",
-            "alt": "Complete Figure 1(c) panel. Each input sketch is combined with the displayed text instructions to generate faces with the requested attributes.",
+            "label": "Forest covered in snow",
+            "src": "/assets/img/showcase/unite-curated-snow-comparison.webp",
+            "alt": "Published Figure 1(a) comparison for the text condition “Forest covered in snow”. Columns: Teddy Bear, Triceratops and Tree frog. Top: GLIDE (text only). Bottom: Unite and Conquer (class + text).",
+            "caption": "Published Figure 1(a) comparison for the text condition “Forest covered in snow”. Columns: Teddy Bear, Triceratops and Tree frog. Top: GLIDE (text only). Bottom: Unite and Conquer (class + text).",
           },
           {
-            "label": "Class and text comparison",
-            "src": "/assets/img/showcase/unite-class-text-complete.webp",
-            "preview": "/assets/img/showcase/unite-class-text-complete-preview.webp",
-            "caption": "Figure 4. Class-and-text generation compared with CompGen for a flower-field scene and a beach scene.",
-            "alt": "Complete Figure 4: CompGen and Unite and Conquer, with all ImageNet class labels and both scene prompts—“A yellow flower field” and “Photo of a beach.”",
-          },
-          {
-            "label": "Class-conditioned scene generation",
-            "src": "/assets/img/showcase/unite-scene-complete.webp",
-            "preview": "/assets/img/showcase/unite-scene-complete-preview.webp",
-            "caption": "Figure 1(a). GLIDE and Unite and Conquer across five object classes and three scene descriptions.",
-            "alt": "Complete Figure 1(a): GLIDE and Unite and Conquer across all five classes and three text-defined scenes. Original class, scene and method labels are retained.",
-          },
-          {
-            "label": "Semantic structure and textual attributes",
-            "src": "/assets/img/showcase/unite-semantic-text-complete.webp",
-            "preview": "/assets/img/showcase/unite-semantic-text-complete-preview.webp",
-            "caption": "Semantic maps define the rows and text instructions define the columns. Each cell shows a generated face.",
-            "alt": "Complete semantic-map/text grid. Semantic maps define rows, text instructions define columns, and each cell is a generated image. All condition labels are retained.",
-          },
-          {
-            "label": "Reliability and guidance weights",
-            "src": "/assets/img/showcase/unite-reliability-complete.webp",
-            "preview": "/assets/img/showcase/unite-reliability-complete-preview.webp",
-            "caption": "Figure 6. For the class “Lion” and text “A mountain,” αₜ weights the text model’s unconditional estimate. The w꜀ and wₜ values control class and text guidance.",
-            "alt": "Complete Figure 6, including axes and caption. The text condition is “A mountain” and the class is “Lion.” Vertical αₜ changes the text model’s contribution to the unconditional estimate; horizontal w꜀ and wₜ change class and text guidance strengths.",
-          },
-          {
-            "label": "Interpolation across modalities",
-            "src": "/assets/img/showcase/unite-interpolation-complete.webp",
-            "preview": "/assets/img/showcase/unite-interpolation-complete-preview.webp",
-            "caption": "Figure 7. Text, Class and Mix specify which model supplies the unconditional estimate. Moving across each row changes the relative class/text weighting.",
-            "alt": "Complete Figure 7, including both example groups, row labels and weighting direction. Text, Class and Mix identify which model supplies the unconditional estimate; the horizontal direction changes the relative class/text weighting.",
+            "label": "A starry night",
+            "src": "/assets/img/showcase/unite-curated-night-comparison.webp",
+            "alt": "Published Figure 1(a) comparison for the text condition “A starry night SKY”. Columns: Teddy Bear, Triceratops and Tree frog. Top: GLIDE (text only). Bottom: Unite and Conquer (class + text).",
+            "caption": "Published Figure 1(a) comparison for the text condition “A starry night SKY”. Columns: Teddy Bear, Triceratops and Tree frog. Top: GLIDE (text only). Bottom: Unite and Conquer (class + text).",
           },
         ],
-      "image": "/assets/img/showcase/unite-face-controls-complete-preview.webp",
+      "image": "/assets/img/showcase/unite-curated-lead.webp",
       "evidence":
         {
           "headers": ["Method", "Conditioning", "Class accuracy", "NIQE", "CLIP"],
@@ -263,18 +334,11 @@
       "media":
         [
           {
-            "label": "Super-resolution",
-            "src": "/assets/img/showcase/steered-diffusion-1.webp",
-            "caption": "Published 8× face super-resolution comparison.",
-            "alt": "Published 8× face super-resolution comparison.",
-            "preview": "/assets/img/showcase/steered-diffusion-1-preview.webp",
-          },
-          {
-            "label": "Colorization",
-            "src": "/assets/img/showcase/steered-diffusion-2.webp",
-            "caption": "Grayscale-to-color comparison. “OURS multi” uses the multi-step sampling described in Section 4.2.",
-            "alt": "Complete published grayscale-to-color comparison. The “OURS multi” row uses multi-step sampling, as described in Section 4.2.",
-            "preview": "/assets/img/showcase/steered-diffusion-2-preview.webp",
+            "label": "Text-guided image editing",
+            "src": "/assets/img/showcase/steered-text-focus.webp",
+            "alt": "The same original image is steered toward wavy hair or an older appearance, using the instructions shown.",
+            "caption": "The same original image is steered toward wavy hair or an older appearance, using the instructions shown.",
+            "featured": true,
           },
           {
             "label": "Inpainting with masked inputs",
@@ -282,23 +346,18 @@
             "preview": "/assets/img/showcase/steered-inpainting-complete-preview.webp",
             "caption": "Figure 8. Thin, medium and thick missing regions. Each group shows the masked input, RePaint (labeled Reinpaint in the figure) and Steered Diffusion.",
             "alt": "Complete Figure 8 for thin, medium and thick masks. Each group retains the masked input (Degraded), RePaint (spelled Reinpaint in the original figure) and Steered Diffusion (Ours). The black regions are missing input regions, not a separately displayed mask.",
+            "wide": true,
           },
           {
-            "label": "Text-guided editing",
-            "src": "/assets/img/showcase/steered-diffusion-3.webp",
-            "caption": "Text-guided edits alongside the original image. The method combines text guidance with an identity-preserving network.",
-            "alt": "Complete original-image and text-edit panel, retaining every instruction. The paper combines text guidance with an identity-preserving network.",
-            "preview": "/assets/img/showcase/steered-diffusion-3-preview.webp",
-          },
-          {
-            "label": "How steering works",
-            "src": "/assets/img/showcase/steered-diffusion-4.webp",
-            "caption": "A schematic of conditional steering, rather than consecutive sampled frames.",
-            "alt": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
-            "preview": "/assets/img/showcase/steered-diffusion-4-preview.webp",
+            "label": "Super-resolution",
+            "src": "/assets/img/showcase/steered-diffusion-1.webp",
+            "caption": "Published 8× face super-resolution comparison.",
+            "alt": "Published 8× face super-resolution comparison.",
+            "preview": "/assets/img/showcase/steered-diffusion-1-preview.webp",
+            "wide": true,
           },
         ],
-      "image": "/assets/img/showcase/steered-diffusion-1-preview.webp",
+      "image": "/assets/img/showcase/steered-main-figure.webp",
       "evidence":
         {
           "headers": ["Task", "Metric", "Baseline", "Baseline score", "Steered Diffusion"],
@@ -315,6 +374,17 @@
       "outcome": "One generator, several tasks",
       "outcome_detail": "Use the same guidance framework for super-resolution, colorization, inpainting and conditional generation.",
       "evidence_intro": "Each row compares one task with its baseline. The 8× super-resolution test uses 300 CelebA images. Lower FID indicates better distributional image quality, while higher PSNR indicates closer agreement with the reference.",
+      "method_figures":
+        [
+          {
+            "label": "How steering works",
+            "src": "/assets/img/showcase/steered-diffusion-4.webp",
+            "caption": "A schematic of conditional steering, rather than consecutive sampled frames.",
+            "alt": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
+            "preview": "/assets/img/showcase/steered-diffusion-4-preview.webp",
+          },
+        ],
+      "industry_image": "/assets/img/showcase/steered-main-figure.webp",
     },
   "maxfusion":
     {
@@ -331,42 +401,21 @@
       "media":
         [
           {
-            "label": "Contradictory spatial conditions",
-            "src": "/assets/img/showcase/maxfusion-contradictory-complete.webp",
-            "preview": "/assets/img/showcase/maxfusion-contradictory-complete-preview.webp",
-            "caption": "Each group combines two spatial controls that describe different objects or disagree about their positions.",
-            "alt": "Complete contradictory-conditioning panel. Each group retains both spatial controls and two generated samples. The controls can describe different objects or disagree spatially; these are conditioning inputs, not edit masks.",
+            "label": "Depth and edges",
+            "src": "/assets/img/showcase/maxfusion-robot-focus.webp",
+            "alt": "Depth and edge controls at left guide two generated robot portraits.",
+            "caption": "Depth and edge controls at left guide two generated robot portraits.",
+            "preview": "/assets/img/showcase/maxfusion-robot-focus-preview.webp",
           },
           {
-            "label": "Complementary spatial conditions",
-            "src": "/assets/img/showcase/maxfusion-complementary-complete.webp",
-            "preview": "/assets/img/showcase/maxfusion-complementary-complete-preview.webp",
-            "caption": "Complementary controls such as depth, edges, pose and segmentation guide the same generated scene.",
-            "alt": "Complete complementary-conditioning panel. Depth, edges, pose and segmentation controls contribute to the same generated scene; the original task relationship and generated samples are retained.",
-          },
-          {
-            "label": "Complementary-condition comparison",
-            "src": "/assets/img/showcase/maxfusion-comparison-complete.webp",
-            "preview": "/assets/img/showcase/maxfusion-comparison-complete-preview.webp",
-            "caption": "Complementary-condition comparison with SPADE, PITI, Multi-T2I Adapter and Multi-ControlNet.",
-            "alt": "Complete comparison with both task inputs, SPADE, PITI, Multi-T2I Adapter, Multi-ControlNet and MaxFusion (Ours). All example rows and method labels are retained.",
-          },
-          {
-            "label": "Contradictory-condition comparison",
-            "src": "/assets/img/showcase/maxfusion-2.webp",
-            "preview": "/assets/img/showcase/maxfusion-2-preview.webp",
-            "caption": "Contradictory-condition comparison with Multi-T2I Adapter and Multi-ControlNet.",
-            "alt": "Published comparison with Task-1 and Task-2 inputs, Multi-T2I Adapter, Multi-ControlNet and MaxFusion (Ours). Both baseline and proposed-method samples are retained.",
-          },
-          {
-            "label": "Feature fusion",
-            "src": "/assets/img/showcase/maxfusion-3.webp",
-            "preview": "/assets/img/showcase/maxfusion-3-preview.webp",
-            "caption": "Aligned features are merged and unmerged between pretrained task models during denoising.",
-            "alt": "The full framework shows how aligned features are merged and unmerged between pretrained task models during denoising.",
+            "label": "Conflicting controls",
+            "src": "/assets/img/showcase/maxfusion-travel-focus.webp",
+            "alt": "Edge and pose controls at left guide two travel scenes, even when the controls disagree.",
+            "caption": "Edge and pose controls at left guide two travel scenes, even when the controls disagree.",
+            "preview": "/assets/img/showcase/maxfusion-travel-focus-preview.webp",
           },
         ],
-      "image": "/assets/img/showcase/maxfusion-lead-preview.webp",
+      "image": "/assets/img/showcase/maxfusion-robot-focus-preview.webp",
       "evidence":
         {
           "headers": ["Method", "Pose + segmentation FID", "Pose + depth FID"],
@@ -377,6 +426,17 @@
       "outcome": "Use several controls together",
       "outcome_detail": "Combine pretrained controllers during generation, without training a new model for every combination of conditions.",
       "evidence_intro": "This comparison uses 2,000 constructed COCO images and 50 sampling steps, with conflicting pose and scene controls. Lower FID indicates better image quality. Adherence to each control is evaluated separately, with mixed results.",
+      "method_figures":
+        [
+          {
+            "label": "Feature fusion",
+            "src": "/assets/img/showcase/maxfusion-3.webp",
+            "preview": "/assets/img/showcase/maxfusion-3-preview.webp",
+            "caption": "Aligned features are merged and unmerged between pretrained task models during denoising.",
+            "alt": "The full framework shows how aligned features are merged and unmerged between pretrained task models during denoising.",
+          },
+        ],
+      "media_ratio": "676 / 264",
     },
   "scale-wise-var":
     {
@@ -393,25 +453,23 @@
       "media":
         [
           {
-            "label": "Generation and zero-shot reconstruction",
-            "src": "/assets/img/showcase/var-complete.webp",
-            "preview": "/assets/img/showcase/var-complete-preview.webp",
-            "caption": "Figure 1. VAR and SRDD generation above, followed by inpainting, outpainting and super-resolution comparisons.",
-            "alt": "Complete Figure 1 from the preprint. The upper block compares VAR and SRDD generation. The lower block retains Input, VAR and Ours labels for inpainting, outpainting and super-resolution.",
+            "label": "Generated images",
+            "src": "/assets/img/showcase/scale-wise-var-1.webp",
+            "alt": "Published VAR and SRDD image-generation comparison.",
+            "caption": "Published VAR and SRDD image-generation comparison.",
+            "featured": true,
           },
           {
-            "label": "Iterative refinement",
-            "src": "/assets/img/showcase/scale-wise-var-2.webp",
-            "preview": "/assets/img/showcase/scale-wise-var-2-preview.webp",
-            "caption": "Figure 7. VAR, SDD, simple resampling (SDD + SR) and masked resampling (SDD + MR) across successive refinement steps.",
-            "alt": "Figure 7 compares VAR, SDD, simple resampling (SDD + SR) and mask resampling (SDD + MR). All four example rows, step labels and refinement directions are retained.",
+            "label": "Outpainting",
+            "src": "/assets/img/showcase/var-outpainting-focus.webp",
+            "alt": "Input, VAR and SRDD outpainting results from the paper.",
+            "caption": "Input, VAR and SRDD outpainting results from the paper.",
           },
           {
-            "label": "The autoregression–diffusion connection",
-            "src": "/assets/img/showcase/scale-wise-var-4.webp",
-            "preview": "/assets/img/showcase/scale-wise-var-4-preview.webp",
-            "caption": "Next-scale prediction and discrete diffusion are equivalent under a Markovian attention mask. Orange and blue notation identify the two formulations.",
-            "alt": "The full diagram and legend connect next-scale prediction with discrete diffusion under the Markovian attention mask. Orange and blue notation distinguish the scale-wise and diffusion formulations.",
+            "label": "Super-resolution",
+            "src": "/assets/img/showcase/var-superresolution-focus.webp",
+            "alt": "Input, VAR and SRDD super-resolution results from the paper.",
+            "caption": "Input, VAR and SRDD super-resolution results from the paper.",
           },
         ],
       "image": "/assets/img/showcase/scale-wise-var-1-preview.webp",
@@ -431,6 +489,16 @@
       "outcome": "Refine generated images",
       "outcome_detail": "Use the connection to bring diffusion-style refinement and reconstruction tools into a visual autoregressive model.",
       "evidence_intro": "The comparison uses a matched 200-epoch training study across four benchmarks. Lower FID indicates closer agreement between generated and reference image distributions.",
+      "method_figures":
+        [
+          {
+            "label": "The autoregression–diffusion connection",
+            "src": "/assets/img/showcase/scale-wise-var-4.webp",
+            "preview": "/assets/img/showcase/scale-wise-var-4-preview.webp",
+            "caption": "Next-scale prediction and discrete diffusion are equivalent under a Markovian attention mask. Orange and blue notation identify the two formulations.",
+            "alt": "The full diagram and legend connect next-scale prediction with discrete diffusion under the Markovian attention mask. Orange and blue notation distinguish the scale-wise and diffusion formulations.",
+          },
+        ],
     },
   "nvidia-mesh-properties":
     {
@@ -452,6 +520,7 @@
             "caption": "Original research-draft examples of 3D part segmentation and material estimation.",
             "alt": "Original research-draft examples of 3D part segmentation and material estimation.",
             "preview": "/assets/img/showcase/nvidia-mesh-properties-1-preview.webp",
+            "featured": true,
           },
           {
             "label": "Part comparisons",
@@ -459,20 +528,7 @@
             "caption": "Omniverse qualitative comparison with NeRF2Physics. This is a separate dataset from the mass-estimation benchmark.",
             "alt": "Omniverse qualitative comparison with NeRF2Physics. This is a separate dataset from the mass-estimation benchmark.",
             "preview": "/assets/img/showcase/nvidia-mesh-properties-2-preview.webp",
-          },
-          {
-            "label": "Cross-view features",
-            "src": "/assets/img/showcase/nvidia-mesh-properties-3.webp",
-            "caption": "Feature refinement within regions and across rendered views.",
-            "alt": "Feature refinement within regions and across rendered views.",
-            "preview": "/assets/img/showcase/nvidia-mesh-properties-3-preview.webp",
-          },
-          {
-            "label": "Material reasoning",
-            "src": "/assets/img/showcase/nvidia-mesh-properties-4.webp",
-            "caption": "Candidate parts are grouped and assigned estimated semantic and material labels.",
-            "alt": "Candidate parts are grouped and assigned estimated semantic and material labels.",
-            "preview": "/assets/img/showcase/nvidia-mesh-properties-4-preview.webp",
+            "wide": true,
           },
         ],
       "image": "/assets/img/showcase/nvidia-mesh-properties-1-preview.webp",
@@ -497,6 +553,17 @@
             "body": "This work is documented in the SmartTagger research draft. I am a co-inventor on U.S. Patent Application 19/024,394, published as US20260038283A1 on February 5, 2026. The mass-estimation benchmark is reported in the draft, separately from the patent application.",
           },
         ],
+      "method_figures":
+        [
+          {
+            "label": "Cross-view features",
+            "src": "/assets/img/showcase/nvidia-mesh-properties-3.webp",
+            "caption": "Feature refinement within regions and across rendered views.",
+            "alt": "Feature refinement within regions and across rendered views.",
+            "preview": "/assets/img/showcase/nvidia-mesh-properties-3-preview.webp",
+          },
+        ],
+      "hero_image": "/assets/img/showcase/nvidia-materials-feature.webp",
     },
   "control2control":
     {
@@ -525,13 +592,6 @@
             "preview": "/assets/img/showcase/control2control-3-preview.webp",
             "caption": "Original image, target pose and edited result.",
             "alt": "Original image, target pose skeleton and edited result. The pose is a spatial condition.",
-          },
-          {
-            "label": "Multiple-subject pose edit",
-            "src": "/assets/img/showcase/control2control-4.webp",
-            "preview": "/assets/img/showcase/control2control-4-preview.webp",
-            "caption": "A pose-guided edit with multiple subjects.",
-            "alt": "Original draft example with multiple subjects, a target pose condition and the edited result.",
           },
         ],
       "image": "/assets/img/showcase/control2control-1-preview.webp",
@@ -581,6 +641,8 @@
           },
         ],
       "qualitative_result": "The draft demonstrates adding an accessory with a sketch, moving objects and changing poses using pretrained models.",
+      "media_ratio": "728 / 240",
+      "hero_image": "/assets/img/showcase/control2control-edited.webp",
     },
   "briar":
     {
@@ -602,20 +664,7 @@
             "caption": "Original high- and low-quality face examples and UMAP feature visualizations.",
             "alt": "Original high- and low-quality face examples and UMAP feature visualizations.",
             "preview": "/assets/img/showcase/briar-1-preview.webp",
-          },
-          {
-            "label": "Staged adaptation",
-            "src": "/assets/img/showcase/briar-2.webp",
-            "caption": "Pretraining, linear probing and full-model fine-tuning.",
-            "alt": "Pretraining, linear probing and full-model fine-tuning.",
-            "preview": "/assets/img/showcase/briar-2-preview.webp",
-          },
-          {
-            "label": "Context-aware crops",
-            "src": "/assets/img/showcase/briar-3.webp",
-            "caption": "Enlarged aligned crops retain context before resizing the recognition input.",
-            "alt": "Enlarged aligned crops retain context before resizing the recognition input.",
-            "preview": "/assets/img/showcase/briar-3-preview.webp",
+            "featured": true,
           },
         ],
       "image": "/assets/img/showcase/briar-1-preview.webp",
@@ -640,6 +689,23 @@
             "body": "The BRIAR reported comparison uses WebFace12M with different architectures: AdaFace ResNet101 and Swin-B. A separate Swin-B model pretrained on WebFace42M reaches 81.38% Rank-1. The paper also evaluates TinyFace, IJB-S, IJB-B and IJB-C.",
           },
         ],
+      "method_figures":
+        [
+          {
+            "label": "Staged adaptation",
+            "src": "/assets/img/showcase/briar-2.webp",
+            "caption": "Pretraining, linear probing and full-model fine-tuning.",
+            "alt": "Pretraining, linear probing and full-model fine-tuning.",
+            "preview": "/assets/img/showcase/briar-2-preview.webp",
+          },
+          {
+            "label": "Context-aware crops",
+            "src": "/assets/img/showcase/briar-3.webp",
+            "caption": "Enlarged aligned crops retain context before resizing the recognition input.",
+            "alt": "Enlarged aligned crops retain context before resizing the recognition input.",
+            "preview": "/assets/img/showcase/briar-3-preview.webp",
+          },
+        ],
     },
   "petalface":
     {
@@ -661,20 +727,7 @@
             "caption": "Original BRIAR examples and image-quality analysis.",
             "alt": "Original BRIAR examples and image-quality analysis.",
             "preview": "/assets/img/showcase/petalface-1-preview.webp",
-          },
-          {
-            "label": "Quality-weighted adapters",
-            "src": "/assets/img/showcase/petalface-2.webp",
-            "caption": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
-            "alt": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
-            "preview": "/assets/img/showcase/petalface-2-preview.webp",
-          },
-          {
-            "label": "TinyFace evidence",
-            "src": "/assets/img/showcase/petalface-3.webp",
-            "caption": "Published TinyFace results. Protocol details remain in the source figure.",
-            "alt": "Published TinyFace results. Protocol details remain in the source figure.",
-            "preview": "/assets/img/showcase/petalface-3-preview.webp",
+            "featured": true,
           },
         ],
       "image": "/assets/img/showcase/petalface-1-preview.webp",
@@ -699,6 +752,16 @@
             "body": "Quality-dependent weighting addresses the mismatch between clear gallery images and degraded probes while retaining the pretrained representation. The reported BRIAR comparison uses Swin-B, WebFace4M and Protocol 3.1.",
           },
         ],
+      "method_figures":
+        [
+          {
+            "label": "Quality-weighted adapters",
+            "src": "/assets/img/showcase/petalface-2.webp",
+            "caption": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
+            "alt": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
+            "preview": "/assets/img/showcase/petalface-2-preview.webp",
+          },
+        ],
     },
   "crowddiff":
     {
@@ -720,6 +783,7 @@
             "caption": "One dense scene: ground truth 1,155, CrowdDiff 1,142, Chfl 1,187.6 and SUA 1,199.4. Parenthesized counts refer to the enlarged crop.",
             "alt": "Complete Figure 1: ground truth 1,155, CrowdDiff 1,142, Chfl 1,187.6 and SUA 1,199.4. Parenthesized values are counts in the enlarged crop. These are results for one image, not aggregate benchmark scores.",
             "preview": "/assets/img/showcase/crowddiff-1-preview.webp",
+            "featured": true,
           },
           {
             "label": "Density hypotheses",
@@ -727,13 +791,7 @@
             "caption": "Green detections enter the fused map. Red detections are rejected. GT is the ground-truth count, and Final is the fused count.",
             "alt": "Published fusion sequence with original count labels. Green detections are accepted into the fused map; red detections are rejected. GT is the ground-truth count, and Final is the count after combining the hypotheses.",
             "preview": "/assets/img/showcase/crowddiff-2-preview.webp",
-          },
-          {
-            "label": "The model",
-            "src": "/assets/img/showcase/crowddiff-3.webp",
-            "caption": "Image-conditioned density generation with a counting branch used during training.",
-            "alt": "Image-conditioned density generation with a training-only counting branch.",
-            "preview": "/assets/img/showcase/crowddiff-3-preview.webp",
+            "wide": true,
           },
         ],
       "image": "/assets/img/showcase/crowddiff-1-preview.webp",
@@ -753,5 +811,15 @@
       "outcome": "Resolve ambiguous crowd scenes",
       "outcome_detail": "Use complementary predictions to find missed people while rejecting repeated detections. More predictions improve accuracy but take longer.",
       "evidence_intro": "Sampling more density maps reduces counting error and increases runtime. MAE is the average absolute error in the estimated number of people.",
+      "method_figures":
+        [
+          {
+            "label": "The model",
+            "src": "/assets/img/showcase/crowddiff-3.webp",
+            "caption": "Image-conditioned density generation with a counting branch used during training.",
+            "alt": "Image-conditioned density generation with a training-only counting branch.",
+            "preview": "/assets/img/showcase/crowddiff-3-preview.webp",
+          },
+        ],
     },
 }
