@@ -1,0 +1,208 @@
+{
+  "novel-view-synthesis":
+    {
+      "title": "Novel view synthesis at scale",
+      "venue": "ICCV",
+      "year": 2025,
+      "slides": [2, 3],
+      "image_alt": "CAT3D generates training views, and Tok-D disentangles source and target tokens",
+      "description": "Token disentanglement lets transformer models learn from diffusion-generated views and generalize to unseen scenes.",
+      "paper_title": "Scaling Transformer-Based Novel View Synthesis with Token Disentanglement and Synthetic Data",
+      "contributions":
+        [
+          "Introduced source/target token disentanglement to reduce the effect of synthetic-view artifacts.",
+          "Improved PSNR over LVSM by 1.13 dB on RealEstate10K and 1.64 dB on DL3DV in the published in-distribution, real-data comparison.",
+          "Co-first author. The reported experiments use eight H100 GPUs.",
+        ],
+      "links":
+        [{ "label": "Project site", "url": "https://scaling3dnvs.github.io/" }, { "label": "Paper", "url": "https://arxiv.org/abs/2509.06950" }],
+      "image": "/assets/img/research-projects/novel-view-synthesis.webp",
+      "pdf": "/assets/slides/novel-view-synthesis.pdf",
+    },
+  "gendeg":
+    {
+      "title": "GenDeg",
+      "venue": "CVPR",
+      "year": 2025,
+      "slides": [4],
+      "image_alt": "Haze and rain restoration with PromptIR before and after training with GenDS",
+      "description": "Diffusion-generated degradations improve restoration on patterns that the model has not seen during training.",
+      "paper_title": "GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration",
+      "contributions":
+        [
+          "Developed degradation synthesis with control over degradation type and intensity.",
+          "Generated 550K+ synthetic image pairs spanning six degradation types, contributing to GenDS with 750K+ samples.",
+          "Improved the generalization of all-in-one restoration models to unseen degradation patterns.",
+        ],
+      "links":
+        [
+          { "label": "Project site", "url": "https://sudraj2002.github.io/gendegpage/" },
+          {
+            "label": "Paper",
+            "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.html",
+          },
+        ],
+      "image": "/assets/img/research-projects/gendeg.webp",
+      "pdf": "/assets/slides/gendeg.pdf",
+    },
+  "scale-wise-var":
+    {
+      "title": "Scale-Wise VAR",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "slides": [5],
+      "image_alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
+      "description": "A theoretical connection between scale-wise autoregressive generation and discrete diffusion motivates iterative visual refinement.",
+      "paper_title": "Scale-Wise VAR is Secretly Discrete Diffusion",
+      "contributions":
+        [
+          "Established an equivalence between scale-wise VAR and discrete diffusion under a Markovian attention mask.",
+          "Used the connection to develop Scalable Visual Refinement with Discrete Diffusion (SRDD).",
+          "Co-first author with Amandeep Kumar.",
+        ],
+      "links": [{ "label": "Paper", "url": "https://arxiv.org/abs/2509.22636" }],
+      "image": "/assets/img/research-projects/scale-wise-var.webp",
+      "pdf": "/assets/slides/scale-wise-var.pdf",
+    },
+  "steered-diffusion":
+    {
+      "title": "Steered Diffusion",
+      "venue": "ICCV",
+      "year": 2023,
+      "slides": [9],
+      "image_alt": "Steered Diffusion examples for inpainting and semantic generation",
+      "description": "A general framework steers pretrained diffusion models during sampling for image-to-image and label-conditioned generation.",
+      "paper_title": "Steered Diffusion: A Generalized Framework for Plug-and-Play Conditional Image Synthesis",
+      "contributions":
+        [
+          "Introduced the first plug-and-play framework applicable to both image-to-image translation and label-conditioned synthesis in the studied setting.",
+          "Used pretrained auxiliary networks and energy-based guidance to express new conditions at inference time.",
+          "Supported tasks including inpainting, colorization, super-resolution and semantic generation without task-specific generator training.",
+        ],
+      "links":
+        [
+          { "label": "Code", "url": "https://github.com/merlresearch/SteeredDiffusion" },
+          {
+            "label": "Paper",
+            "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Nair_Steered_Diffusion_A_Generalized_Framework_for_Plug-and-Play_Conditional_Image_Synthesis_ICCV_2023_paper.html",
+          },
+        ],
+      "image": "/assets/img/research-projects/steered-diffusion.webp",
+      "pdf": "/assets/slides/steered-diffusion.pdf",
+    },
+  "unite-and-conquer":
+    {
+      "title": "Unite and Conquer",
+      "venue": "CVPR",
+      "year": 2023,
+      "slides": [10],
+      "image_alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
+      "description": "Independently trained diffusion models compose at inference time to satisfy multiple conditions without joint multimodal training.",
+      "paper_title": "Unite and Conquer: Plug & Play Multi-Modal Synthesis Using Diffusion Models",
+      "contributions":
+        [
+          "Pioneered compositional multimodal generation by combining independent diffusion models through a generalized product of experts.",
+          "Introduced controllable modality weights to balance the influence of different models.",
+          "Demonstrated joint class-and-text constraints without training a new model for every modality combination.",
+        ],
+      "links":
+        [
+          {
+            "label": "Paper",
+            "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+          },
+        ],
+      "image": "/assets/img/research-projects/unite-and-conquer.webp",
+      "pdf": "/assets/slides/unite-and-conquer.pdf",
+    },
+  "maxfusion":
+    {
+      "title": "MaxFusion",
+      "venue": "ECCV",
+      "year": 2024,
+      "slides": [11],
+      "image_alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
+      "description": "Variance-guided feature fusion combines off-the-shelf controllers for generation with multiple spatial conditions.",
+      "paper_title": "MaxFusion: Plug&Play Multi-Modal Generation in Text-to-Image Diffusion Models",
+      "contributions":
+        [
+          "Composed features from pretrained conditional diffusion models without retraining.",
+          "Used feature variance to guide the combination of simultaneous conditions.",
+          "Handled complementary and conflicting controls with off-the-shelf ControlNet and T2I-Adapter models.",
+        ],
+      "links":
+        [
+          { "label": "Project site", "url": "https://nithin-gk.github.io/maxfusion.github.io/" },
+          { "label": "Paper", "url": "https://arxiv.org/abs/2404.09977" },
+        ],
+      "image": "/assets/img/research-projects/maxfusion.webp",
+      "pdf": "/assets/slides/maxfusion.pdf",
+    },
+  "briar":
+    {
+      "title": "Unconstrained face recognition",
+      "venue": "FG",
+      "year": 2025,
+      "slides": [7],
+      "image_alt": "BRIAR true accept rate at FAR 0.1%: AdaFace 39.41%, our method 70.84%, with WebFace12M pretraining and different architectures",
+      "description": "Large-scale pretraining and staged adaptation improve face recognition under long range, low resolution and other unconstrained conditions.",
+      "paper_title": "Improved Representation Learning for Unconstrained Face Recognition",
+      "contributions":
+        [
+          "Combined large-scale pretraining, staged fine-tuning and context-aware crops, achieving state-of-the-art results on five benchmarks in the 2025 study.",
+          "Improved BRIAR TAR at FAR 0.1% from 39.41% to 70.84% relative to AdaFace with WebFace12M pretraining. The compared architectures differ.",
+          "Reached 81.38% Rank-1 with a separate model pretrained on WebFace42M. Co-first author.",
+        ],
+      "links": [{ "label": "Paper", "url": "https://kartik-3004.github.io/portfolio/papers/FG2025_SwinFR.pdf" }],
+      "image": "/assets/img/research-projects/briar.webp",
+      "pdf": "/assets/slides/briar.pdf",
+    },
+  "petalface":
+    {
+      "title": "PETALface",
+      "venue": "WACV Oral",
+      "year": 2025,
+      "slides": [8],
+      "image_alt": "PETALface adapts a frozen recognition model with quality-weighted dual LoRA and 0.48% trainable parameters",
+      "description": "Quality-weighted low-rank adapters improve low-resolution recognition while retaining a strong pretrained backbone.",
+      "paper_title": "PETALface: Parameter Efficient Transfer Learning for Low-Resolution Face Recognition",
+      "contributions":
+        [
+          "Adapted a frozen face-recognition backbone with only 0.48% trainable parameters.",
+          "Weighted two LoRA branches using image quality to support mixed-resolution inputs.",
+          "Presented as an oral paper at WACV 2025.",
+        ],
+      "links":
+        [
+          { "label": "Project site", "url": "https://kartik-3004.github.io/PETALface/" },
+          { "label": "Code", "url": "https://github.com/kartik-3004/PETALface" },
+        ],
+      "image": "/assets/img/research-projects/petalface.webp",
+      "pdf": "/assets/slides/petalface.pdf",
+    },
+  "crowddiff":
+    {
+      "title": "CrowdDiff",
+      "venue": "CVPR",
+      "year": 2024,
+      "slides": [14],
+      "image_alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
+      "description": "Conditional diffusion predicts detailed crowd density maps, with multiple hypotheses to improve counting.",
+      "paper_title": "CrowdDiff: Multi-hypothesis Crowd Density Estimation using Diffusion Models",
+      "contributions":
+        [
+          "Applied conditional diffusion to crowd density estimation.",
+          "Used a regression branch during training to improve feature learning.",
+          "Combined multiple density-map hypotheses to improve counting under ambiguous visual conditions.",
+        ],
+      "links":
+        [
+          {
+            "label": "Paper",
+            "url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ranasinghe_CrowdDiff_Multi-hypothesis_Crowd_Density_Estimation_using_Diffusion_Models_CVPR_2024_paper.pdf",
+          },
+        ],
+      "image": "/assets/img/research-projects/crowddiff.webp",
+      "pdf": "/assets/slides/crowddiff.pdf",
+    },
+}

@@ -1,65 +1,42 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
-nav: false
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+description: Research in generative modeling, synthetic data and 3D vision.
+nav: true
+nav_order: 2.5
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
+<link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
+<div class="research-projects">
+  <p class="research-intro">I build generative models that learn from synthetic data and adapt to new conditions. Explore the projects below through visual summaries, presentation slides and the original papers.</p>
+  <section class="research-overview research-overview-link" aria-labelledby="research-overview-title">
+    <h2 id="research-overview-title">Research overview</h2>
+    <p>A visual introduction to my work on large-scale training and multimodal vision.</p>
+    <div class="project-links">
+      <a href="{{ '/projects/research-overview/' | relative_url }}">Browse presentation</a>
+      <a href="{{ '/assets/slides/research-overview.pdf' | relative_url }}" download>Download PDF</a>
+      <a href="{{ '/assets/slides/research-overview.pptx' | relative_url }}" download>Download PowerPoint</a>
     </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
+  </section>
+  <div class="project-list">
+    {% assign projects = site.projects | where: 'research_project', true | sort: 'importance' %}
+    {% for item in projects %}
+      {% assign project = site.data.research_projects[item.project_key] %}
+      <article class="project-entry">
+        <a class="project-entry-image" href="{{ item.url | relative_url }}" aria-label="View {{ project.title | escape }}">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="800" height="500" loading="lazy" decoding="async">
+        </a>
+        <div>
+          <p class="project-meta">{{ project.venue }} {{ project.year }}</p>
+          <h3><a href="{{ item.url | relative_url }}">{{ project.title }}</a></h3>
+          <p>{{ project.description }}</p>
+          <div class="project-links">
+            <a href="{{ item.url | relative_url }}">View project and slides</a>
+            <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">{{ project.links[0].label }}</a>
+          </div>
+        </div>
+      </article>
     {% endfor %}
   </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
 </div>

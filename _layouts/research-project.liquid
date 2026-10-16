@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% assign project = site.data.research_projects[page.project_key] %}
+<link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
+<article class="research-project-page">
+  <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  <header class="research-project-header">
+    <p class="project-meta">
+      {{ project.venue }}
+      {{ project.year }}
+    </p>
+    <h1>{{ project.title }}</h1>
+    <p class="project-lede">{{ project.description }}</p>
+  </header>
+  {% include research-slides.liquid slides=project.slides label=project.title %}
+  <div class="project-links">
+    <a href="{{ project.pdf | relative_url }}" download>Download slides (PDF)</a>
+    {% for link in project.links -%}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+    {%- endfor %}
+  </div>
+  <section class="project-contribution">
+    <h2>Contributions</h2>
+    <ul>
+      {% for contribution in project.contributions %}
+        <li>{{ contribution }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  <p class="project-citation">
+    {{ project.paper_title }}. {{ project.venue }}
+    {{ project.year }}.
+  </p>
+</article>
+<script src="{{ '/assets/js/research-slides.js' | relative_url }}" defer></script>

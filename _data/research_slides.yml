@@ -1,0 +1,74 @@
+{
+  "1":
+    {
+      "src": "/assets/slides/slide-01.webp",
+      "title": "Large-scale training and multimodal vision",
+      "alt": "Research overview by Nithin Gopalakrishnan Nair",
+    },
+  "2":
+    {
+      "src": "/assets/slides/slide-02.webp",
+      "title": "Novel view synthesis with synthetic data",
+      "alt": "CAT3D generates training views, and Tok-D disentangles source and target tokens",
+    },
+  "3":
+    {
+      "src": "/assets/slides/slide-03.webp",
+      "title": "Novel view synthesis results",
+      "alt": "Tok-D versus LVSM: PSNR improves from 28.89 to 30.02 on RealEstate10K and from 19.91 to 21.55 on DL3DV",
+    },
+  "4":
+    {
+      "src": "/assets/slides/slide-04.webp",
+      "title": "GenDeg",
+      "alt": "GenDeg generates 550K+ synthetic pairs across six degradations, forming GenDS with 750K+ total samples",
+    },
+  "5":
+    {
+      "src": "/assets/slides/slide-05.webp",
+      "title": "Scale-Wise VAR",
+      "alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
+    },
+  "7":
+    {
+      "src": "/assets/slides/slide-07.webp",
+      "title": "BRIAR",
+      "alt": "BRIAR true accept rate at FAR 0.1%: AdaFace 39.41%, our method 70.84%, with WebFace12M pretraining and different architectures",
+    },
+  "8":
+    {
+      "src": "/assets/slides/slide-08.webp",
+      "title": "PETALface",
+      "alt": "PETALface adapts a frozen recognition model with quality-weighted dual LoRA and 0.48% trainable parameters",
+    },
+  "9":
+    {
+      "src": "/assets/slides/slide-09.webp",
+      "title": "Steered Diffusion",
+      "alt": "Steered Diffusion examples for inpainting and semantic generation",
+    },
+  "10":
+    {
+      "src": "/assets/slides/slide-10.webp",
+      "title": "Unite and Conquer",
+      "alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
+    },
+  "11":
+    {
+      "src": "/assets/slides/slide-11.webp",
+      "title": "MaxFusion",
+      "alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
+    },
+  "14":
+    {
+      "src": "/assets/slides/slide-14.webp",
+      "title": "CrowdDiff",
+      "alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
+    },
+  "16":
+    {
+      "src": "/assets/slides/slide-16.webp",
+      "title": "Research direction",
+      "alt": "Research direction in large-scale training of generative and multimodal models, with 18 peer-reviewed publications",
+    },
+}
