@@ -1,52 +1,4 @@
 {
-  "4":
-    {
-      "src": "/assets/slides/slide-04.webp",
-      "title": "GenDeg",
-      "alt": "GenDeg generates 550K+ synthetic pairs across six degradations, forming GenDS with 750K+ total samples",
-    },
-  "5":
-    {
-      "src": "/assets/slides/slide-05.webp",
-      "title": "Scale-Wise VAR",
-      "alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
-    },
-  "7":
-    {
-      "src": "/assets/slides/slide-07.webp",
-      "title": "BRIAR",
-      "alt": "BRIAR true accept rate at FAR 0.1%: AdaFace 39.41%, our method 70.84%, with WebFace12M pretraining and different architectures",
-    },
-  "8":
-    {
-      "src": "/assets/slides/slide-08.webp",
-      "title": "PETALface",
-      "alt": "PETALface adapts a frozen recognition model with quality-weighted dual LoRA and 0.48% trainable parameters",
-    },
-  "9":
-    {
-      "src": "/assets/slides/slide-09.webp",
-      "title": "Steered Diffusion",
-      "alt": "Steered Diffusion examples for inpainting and semantic generation",
-    },
-  "10":
-    {
-      "src": "/assets/slides/slide-10.webp",
-      "title": "Unite and Conquer",
-      "alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
-    },
-  "11":
-    {
-      "src": "/assets/slides/slide-11.webp",
-      "title": "MaxFusion",
-      "alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
-    },
-  "14":
-    {
-      "src": "/assets/slides/slide-14.webp",
-      "title": "CrowdDiff",
-      "alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
-    },
   "google-nvs-1":
     {
       "src": "/assets/slides/google-nvs-1.webp",
@@ -76,5 +28,245 @@
       "src": "/assets/slides/google-nvs-5.webp",
       "title": "Generalization with synthetic data",
       "alt": "Qualitative cross-dataset reconstructions and small PSNR gains from synthetic augmentation in Table 2",
+    },
+  "gendeg-1":
+    {
+      "src": "/assets/slides/gendeg-1.webp",
+      "title": "GenDeg: synthetic data for restoration",
+      "alt": "GenDeg generates 550K+ synthetic pairs across six degradations, forming GenDS with 750K+ total samples",
+    },
+  "gendeg-2":
+    {
+      "src": "/assets/slides/gendeg-2.webp",
+      "title": "Learning degradation synthesis",
+      "alt": "Learning degradation synthesis. The generator learns a degraded image conditioned on its clean counterpart.",
+    },
+  "gendeg-3":
+    {
+      "src": "/assets/slides/gendeg-3.webp",
+      "title": "Degradation type and intensity",
+      "alt": "Degradation type and intensity. A single generator produces varied corruption patterns.",
+    },
+  "gendeg-4":
+    {
+      "src": "/assets/slides/gendeg-4.webp",
+      "title": "GenDS expands training diversity",
+      "alt": "GenDS expands training diversity. Synthetic pairs broaden the scenes and degradation patterns available for restoration.",
+    },
+  "gendeg-5":
+    {
+      "src": "/assets/slides/gendeg-5.webp",
+      "title": "Restoration on unseen patterns",
+      "alt": "Restoration on unseen patterns. Models trained with GenDS recover details across varied degradations.",
+    },
+  "scale-wise-var-1":
+    {
+      "src": "/assets/slides/scale-wise-var-1.webp",
+      "title": "Scale-Wise VAR is Secretly Discrete Diffusion",
+      "alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
+    },
+  "scale-wise-var-2":
+    {
+      "src": "/assets/slides/scale-wise-var-2.webp",
+      "title": "The Markovian attention mask",
+      "alt": "The Markovian attention mask. Condition on the immediately preceding scale",
+    },
+  "scale-wise-var-3":
+    {
+      "src": "/assets/slides/scale-wise-var-3.webp",
+      "title": "Iterative visual refinement",
+      "alt": "Iterative visual refinement. The diffusion interpretation supports resampling after an initial prediction.",
+    },
+  "scale-wise-var-4":
+    {
+      "src": "/assets/slides/scale-wise-var-4.webp",
+      "title": "Zero-shot image reconstruction",
+      "alt": "Zero-shot image reconstruction. The same model supports inpainting, outpainting and super-resolution.",
+    },
+  "scale-wise-var-5":
+    {
+      "src": "/assets/slides/scale-wise-var-5.webp",
+      "title": "Visual generation through diffusion",
+      "alt": "Visual generation through diffusion. Scale-wise autoregression admits diffusion sampling and refinement tools.",
+    },
+  "steered-diffusion-1":
+    {
+      "src": "/assets/slides/steered-diffusion-1.webp",
+      "title": "Steered Diffusion: inference-time control",
+      "alt": "Steered Diffusion examples for inpainting and semantic generation",
+    },
+  "steered-diffusion-2":
+    {
+      "src": "/assets/slides/steered-diffusion-2.webp",
+      "title": "Steering the implicit prediction",
+      "alt": "Steering the implicit prediction. A pretrained task function guides the clean-image estimate during denoising.",
+    },
+  "steered-diffusion-3":
+    {
+      "src": "/assets/slides/steered-diffusion-3.webp",
+      "title": "Image restoration at inference time",
+      "alt": "Image restoration at inference time. Predefined image transformations express restoration constraints.",
+    },
+  "steered-diffusion-4":
+    {
+      "src": "/assets/slides/steered-diffusion-4.webp",
+      "title": "Text-guided image editing",
+      "alt": "Text-guided image editing. Semantic and identity constraints can guide the same sampling process.",
+    },
+  "steered-diffusion-5":
+    {
+      "src": "/assets/slides/steered-diffusion-5.webp",
+      "title": "One framework, several conditions",
+      "alt": "One framework, several conditions. Task-specific control with a pretrained generator",
+    },
+  "unite-and-conquer-1":
+    {
+      "src": "/assets/slides/unite-and-conquer-1.webp",
+      "title": "Unite and Conquer: compositional generation",
+      "alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
+    },
+  "unite-and-conquer-2":
+    {
+      "src": "/assets/slides/unite-and-conquer-2.webp",
+      "title": "Composition of pretrained models",
+      "alt": "Composition of pretrained models. Independent modality-conditioned models contribute to a shared sampling process.",
+    },
+  "unite-and-conquer-3":
+    {
+      "src": "/assets/slides/unite-and-conquer-3.webp",
+      "title": "Cross-dataset multimodal generation",
+      "alt": "Cross-dataset multimodal generation. An ImageNet class model combines with a scene-conditioned generator.",
+    },
+  "unite-and-conquer-4":
+    {
+      "src": "/assets/slides/unite-and-conquer-4.webp",
+      "title": "Reliability and condition strength",
+      "alt": "Reliability and condition strength. The generalized product of experts balances information from the models.",
+    },
+  "unite-and-conquer-5":
+    {
+      "src": "/assets/slides/unite-and-conquer-5.webp",
+      "title": "Interpolation across modalities",
+      "alt": "Interpolation across modalities. The shared sampler expresses combinations of class and text constraints.",
+    },
+  "maxfusion-1":
+    {
+      "src": "/assets/slides/maxfusion-1.webp",
+      "title": "MaxFusion: multiple spatial conditions",
+      "alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
+    },
+  "maxfusion-2":
+    {
+      "src": "/assets/slides/maxfusion-2.webp",
+      "title": "Variance reveals conditioning intensity",
+      "alt": "Variance reveals conditioning intensity. Spatial variance maps indicate where a controller contributes information.",
+    },
+  "maxfusion-3":
+    {
+      "src": "/assets/slides/maxfusion-3.webp",
+      "title": "Features in the diffusion model",
+      "alt": "Features in the diffusion model. Intermediate diffusion features also reflect the text-conditioned content.",
+    },
+  "maxfusion-4":
+    {
+      "src": "/assets/slides/maxfusion-4.webp",
+      "title": "Fusion during denoising",
+      "alt": "Fusion during denoising. Aligned conditional features combine within off-the-shelf generation models.",
+    },
+  "maxfusion-5":
+    {
+      "src": "/assets/slides/maxfusion-5.webp",
+      "title": "Complementary spatial conditions",
+      "alt": "Complementary spatial conditions. Multiple controls contribute to a single generated image.",
+    },
+  "briar-1":
+    {
+      "src": "/assets/slides/briar-1.webp",
+      "title": "BRIAR: unconstrained face recognition",
+      "alt": "BRIAR true accept rate at FAR 0.1%: AdaFace 39.41%, our method 70.84%, with WebFace12M pretraining and different architectures",
+    },
+  "briar-2":
+    {
+      "src": "/assets/slides/briar-2.webp",
+      "title": "Staged adaptation",
+      "alt": "Staged adaptation. Large-scale supervised pretraining precedes adaptation to low-quality imagery.",
+    },
+  "briar-3":
+    {
+      "src": "/assets/slides/briar-3.webp",
+      "title": "Context-aware face crops",
+      "alt": "Context-aware face crops. Enlarged aligned crops preserve information around low-resolution faces.",
+    },
+  "briar-4":
+    {
+      "src": "/assets/slides/briar-4.webp",
+      "title": "The high- and low-quality gap",
+      "alt": "The high- and low-quality gap. Recognition features must remain discriminative as image quality changes.",
+    },
+  "briar-5":
+    {
+      "src": "/assets/slides/briar-5.webp",
+      "title": "Recognition across five benchmarks",
+      "alt": "Recognition across five benchmarks. State-of-the-art results in the 2025 study",
+    },
+  "petalface-1":
+    {
+      "src": "/assets/slides/petalface-1.webp",
+      "title": "PETALface: adapting to low-resolution faces",
+      "alt": "PETALface adapts a frozen recognition model with quality-weighted dual LoRA and 0.48% trainable parameters",
+    },
+  "petalface-2":
+    {
+      "src": "/assets/slides/petalface-2.webp",
+      "title": "Gallery and probe quality",
+      "alt": "Gallery and probe quality. High-quality reference images and low-quality probes occupy different domains.",
+    },
+  "petalface-3":
+    {
+      "src": "/assets/slides/petalface-3.webp",
+      "title": "Quality-weighted adapters",
+      "alt": "Quality-weighted adapters. Two LoRA branches adapt a frozen recognition backbone.",
+    },
+  "petalface-4":
+    {
+      "src": "/assets/slides/petalface-4.webp",
+      "title": "TinyFace adaptation",
+      "alt": "TinyFace adaptation. Rank-1 retrieval with ArcFace, Swin-B and WebFace4M. Higher is better. Pretrained: 73.31%, Full FT: 71.11%, LoRA: 75.64%, PETALface: 75.72%.",
+    },
+  "petalface-5":
+    {
+      "src": "/assets/slides/petalface-5.webp",
+      "title": "BRIAR adaptation",
+      "alt": "BRIAR adaptation. TAR at FAR 0.1%, BRIAR Protocol 3.1. Higher is better. Pretrained: 45.93%, Full FT: 29.68%, PETALface: 55.35%.",
+    },
+  "crowddiff-1":
+    {
+      "src": "/assets/slides/crowddiff-1.webp",
+      "title": "CrowdDiff: diffusion for crowd counting",
+      "alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
+    },
+  "crowddiff-2":
+    {
+      "src": "/assets/slides/crowddiff-2.webp",
+      "title": "Diffusion for density estimation",
+      "alt": "Diffusion for density estimation. An image-conditioned denoiser predicts a crowd density map.",
+    },
+  "crowddiff-3":
+    {
+      "src": "/assets/slides/crowddiff-3.webp",
+      "title": "Fusion of head locations",
+      "alt": "Fusion of head locations. A neighborhood-based rejection radius filters duplicate detections.",
+    },
+  "crowddiff-4":
+    {
+      "src": "/assets/slides/crowddiff-4.webp",
+      "title": "Multiple crowd hypotheses",
+      "alt": "Multiple crowd hypotheses. Different realizations provide complementary head-location estimates.",
+    },
+  "crowddiff-5":
+    {
+      "src": "/assets/slides/crowddiff-5.webp",
+      "title": "More hypotheses improve counting",
+      "alt": "More hypotheses improve counting. UCF-QNRF ablation. Mean absolute error is lower with more realizations. 1: 74.59, 2: 71.94, 4: 68.95, 8: 66.97.",
     },
 }
