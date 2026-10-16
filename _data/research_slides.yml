@@ -49,9 +49,9 @@
     },
   "gendeg-4":
     {
-      "src": "/assets/slides/gendeg-4.webp",
-      "title": "GenDS expands training diversity",
-      "alt": "GenDS expands training diversity. Synthetic pairs broaden the scenes and degradation patterns available for restoration.",
+      "src": "/assets/slides/gendeg-4-results.webp",
+      "title": "Out-of-distribution restoration",
+      "alt": "Out-of-distribution restoration. Swin restoration model trained with existing data or GenDS. Test set, LPIPS Existing, LPIPS GenDS, FID Existing, FID GenDS. O-Haze, 0.254, 0.165, 109.9, 74.6. LOLv1, 0.241, 0.167, 112.0, 73.1. RSVD, 0.143, 0.121, 21.7, 14.1. GoPro, 0.198, 0.170, 31.7, 36.2. Selected OoD test sets. GenDS combines existing and synthetic training pairs.",
     },
   "gendeg-5":
     {
@@ -85,9 +85,9 @@
     },
   "scale-wise-var-5":
     {
-      "src": "/assets/slides/scale-wise-var-5.webp",
-      "title": "Visual generation through diffusion",
-      "alt": "Visual generation through diffusion. Scale-wise autoregression admits diffusion sampling and refinement tools.",
+      "src": "/assets/slides/scale-wise-var-5-results.webp",
+      "title": "Generation benchmark results",
+      "alt": "Generation benchmark results. FID after 200 training epochs. Lower is better. Dataset, Generation, VAR, SRDD. MiniImageNet, Conditional, 21.01, 16.76. SUN, Conditional, 15.72, 13.26. FFHQ, Unconditional, 19.23, 17.37. AFHQ, Unconditional, 14.74, 13.14. All four comparisons use the training settings reported in the preprint.",
     },
   "steered-diffusion-1":
     {
@@ -115,9 +115,9 @@
     },
   "steered-diffusion-5":
     {
-      "src": "/assets/slides/steered-diffusion-5.webp",
-      "title": "One framework, several conditions",
-      "alt": "One framework, several conditions. Task-specific control with a pretrained generator",
+      "src": "/assets/slides/steered-diffusion-5-results.webp",
+      "title": "Conditional generation results",
+      "alt": "Conditional generation results. Reported face-generation and restoration benchmarks. Task, Metric, Baseline, Baseline score, Steered Diffusion. Semantic faces, FID (lower), ILVR, 107.46, 41.38. 8× super-resolution, PSNR dB (higher), ILVR, 20.54, 26.02. Colorization, FID (lower), ILVR, 67.66, 49.72. Thin-mask inpainting, FID (lower), RePaint, 43.35, 30.85. CelebA for the first three tasks. Inpainting uses thin masks.",
     },
   "unite-and-conquer-1":
     {
@@ -145,9 +145,9 @@
     },
   "unite-and-conquer-5":
     {
-      "src": "/assets/slides/unite-and-conquer-5.webp",
-      "title": "Interpolation across modalities",
-      "alt": "Interpolation across modalities. The shared sampler expresses combinations of class and text constraints.",
+      "src": "/assets/slides/unite-and-conquer-5-results.webp",
+      "title": "Class and text composition results",
+      "alt": "Class and text composition results. 500 generated images. Best of three reliability settings. Method, Conditioning, Class accuracy, NIQE, CLIP. GLIDE, Text only, 0.3%, 6.64, 0.317. CompGen, Text composition, 22.4%, 5.71, 0.282. Unite and Conquer, Class and text, 87.0%, 5.34, 0.286. Baselines receive text conditions. The proposed sampler also uses a class model.",
     },
   "maxfusion-1":
     {
@@ -163,15 +163,15 @@
     },
   "maxfusion-3":
     {
-      "src": "/assets/slides/maxfusion-3.webp",
-      "title": "Features in the diffusion model",
-      "alt": "Features in the diffusion model. Intermediate diffusion features also reflect the text-conditioned content.",
-    },
-  "maxfusion-4":
-    {
       "src": "/assets/slides/maxfusion-4.webp",
       "title": "Fusion during denoising",
       "alt": "Fusion during denoising. Aligned conditional features combine within off-the-shelf generation models.",
+    },
+  "maxfusion-4":
+    {
+      "src": "/assets/slides/maxfusion-4-results.webp",
+      "title": "Results with conflicting conditions",
+      "alt": "Results with conflicting conditions. COCO evaluation with 2,000 images and 50 sampling steps. Method, Pose + segmentation FID, Pose + depth FID. T2I-Adapter, 55.61, 51.47. ControlNet, 63.46, 48.18. MaxFusion, 46.72, 47.37. Condition adherence varies by metric. Results are for the constructed COCO test set.",
     },
   "maxfusion-5":
     {
@@ -325,8 +325,8 @@
     },
   "nvidia-mesh-properties-5":
     {
-      "src": "/assets/slides/nvidia-mesh-properties-5.webp",
-      "title": "Part segmentation and physical understanding",
-      "alt": "Part segmentation and physical understanding. Qualitative examples show semantic structure beyond the mesh geometry.",
+      "src": "/assets/slides/nvidia-mesh-properties-5-results.webp",
+      "title": "Physical-property estimation results",
+      "alt": "Physical-property estimation results. Omniverse part examples and ABO-500 mass-estimation results. Metric, NeRF2- Physics, Ours. ADE, 10.846, 9.752. ALDE, 1.489, 1.285. APE, 0.790, 0.834. MnRE, 0.300, 0.365. ADE, ALDE, APE: lower is better. MnRE: higher is better.",
     },
 }

@@ -75,8 +75,9 @@
         ],
       "results":
         [
-          "GenDeg contributes more than 550,000 synthetic image pairs across six degradation types. GenDS contains more than 750,000 samples after combining these with existing data.",
-          "Restoration models trained with GenDS improve on out-of-distribution degradation patterns. The slide compares PromptIR with and without GenDS training on haze and rain examples.",
+          "GenDS improves out-of-distribution restoration with the same Swin architecture. On O-Haze, LPIPS decreases from 0.254 to 0.165 and FID from 109.9 to 74.6 when existing-data training is replaced by GenDS training (Table 2).",
+          "The results slide also reports LOLv1, RSVD and GoPro. Gains vary by degradation: on GoPro, LPIPS improves from 0.198 to 0.170, while FID increases from 31.7 to 36.2. Both metrics are lower-is-better.",
+          "The qualitative comparison shows restoration examples with and without GenDS. GD denotes training with GenDS.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.html",
       "navigation_group": "papers",
@@ -110,8 +111,8 @@
         ],
       "results":
         [
-          "The main theoretical result is the equivalence under the specified attention mask.",
-          "The preprint reports improvements in generation and efficiency, and demonstrates iterative refinement and zero-shot reconstruction through the diffusion interpretation.",
+          "In the 200-epoch study, SRDD reduces MiniImageNet FID from 21.01 to 16.76, a 20.2% relative reduction. FID also decreases on SUN (15.72 to 13.26), FFHQ (19.23 to 17.37) and AFHQ (14.74 to 13.14). Lower FID is better (Table 1).",
+          "MiniImageNet and SUN use conditional generation; FFHQ and AFHQ use unconditional generation. The reconstruction examples separately illustrate zero-shot inpainting, outpainting and super-resolution. These results are from the 2025 preprint.",
         ],
       "source_url": "https://arxiv.org/abs/2509.22636",
       "navigation_group": "papers",
@@ -152,8 +153,8 @@
         ],
       "results":
         [
-          "The framework supports image-to-image and label-conditioned synthesis within the same plug-and-play formulation.",
-          "The paper demonstrates tasks including inpainting, colorization, super-resolution and semantic generation. The slide shows inpainting and semantic-generation samples.",
+          "The results slide reports the paper’s task-specific comparisons. Against ILVR, semantic-face FID improves from 107.46 to 41.38, 8× super-resolution PSNR from 20.54 to 26.02 dB, and colorization FID from 67.66 to 49.72 (Tables 2–4).",
+          "For thin-mask inpainting, FID decreases from 43.35 with RePaint to 30.85 with Steered Diffusion (Table 5). FID is lower-is-better; PSNR is higher-is-better. Each row uses its own task protocol.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Nair_Steered_Diffusion_A_Generalized_Framework_for_Plug-and-Play_Conditional_Image_Synthesis_ICCV_2023_paper.html",
       "company": "MERL",
@@ -196,8 +197,9 @@
         ],
       "results":
         [
-          "The method demonstrates multimodal synthesis without joint multimodal training or retraining for each new combination of conditions.",
-          "The slide pairs ImageNet classes with text-defined scenes. The composed samples retain the requested class while expressing scenes such as a starry night or a snowy forest.",
+          "On 500 generated images, ImageNet class accuracy is 87.0% for Unite and Conquer, compared with 22.4% for CompGen and 0.3% for GLIDE. The paper reports the best result over three reliability settings (Table 3).",
+          "The proposed sampler receives class and text conditions, while the baselines use text-based conditioning. Its NIQE is 5.34 versus 5.71 for CompGen and 6.64 for GLIDE. GLIDE retains the highest CLIP score in this comparison, so the gains are not uniform across metrics.",
+          "The visual examples show class labels composed with text-defined scenes without joint multimodal training.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
       "navigation_group": "papers",
@@ -235,8 +237,9 @@
         ],
       "results":
         [
-          "The paper demonstrates generation under both complementary and conflicting conditions without retraining the pretrained models.",
-          "The original examples combine controls such as pose, depth, edges and semantic layouts. They illustrate how spatial constraints from different models can influence the same output.",
+          "On the constructed 2,000-image COCO evaluation, pose-plus-segmentation FID is 46.72 for MaxFusion, compared with 55.61 for T2I-Adapter and 63.46 for ControlNet. Pose-plus-depth FID is 47.37, compared with 51.47 and 48.18, respectively (Table 1). Lower FID is better.",
+          "All comparisons use 50 sampling steps. Condition adherence varies by metric: pose-plus-depth MSE-D is 0.0410 for MaxFusion versus 0.0357 for ControlNet, where lower is better. The slide’s FID gains do not imply improvement in every conditioning metric.",
+          "The original qualitative examples show complementary spatial controls influencing the same output without retraining.",
         ],
       "source_url": "https://arxiv.org/abs/2404.09977",
       "navigation_group": "papers",
@@ -414,8 +417,13 @@
           "Refine and aggregate features into a consistent 3D feature field, then cluster the mesh into parts.",
           "Use multimodal reasoning to label parts and estimate materials, grounding those labels back onto the 3D asset.",
         ],
-      "results_title": "Outcome",
-      "results": ["Co-inventor on U.S. Patent Application 19/024,394, filed January 16, 2025 and published as US20260038283A1 on February 5, 2026."],
+      "results_title": "Results",
+      "results":
+        [
+          "The SmartTagger research draft reports ABO-500 mass-estimation ADE of 9.752 versus 10.846 for NeRF2Physics, ALDE of 1.285 versus 1.489, and MnRE of 0.365 versus 0.300 (Table 1). ADE and ALDE are lower-is-better; MnRE is higher-is-better.",
+          "APE increases from 0.790 to 0.834, so the draft does not improve every mass-estimation metric. The accompanying Omniverse examples are qualitative part-segmentation results from a separate dataset. Material labels and physical properties are estimates.",
+          "Co-inventor on U.S. Patent Application 19/024,394, filed January 16, 2025 and published as US20260038283A1 on February 5, 2026. The benchmark numbers above come from the research draft, not the patent record.",
+        ],
       "contributions":
         [
           "Developed a framework connecting 3D part segmentation with material identification.",
