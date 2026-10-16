@@ -1,5 +1,12 @@
 (() => {
   "use strict";
+  document.querySelectorAll("[data-image-comparison]").forEach((comparison) => {
+    const range = comparison.querySelector('input[type="range"]');
+    range?.addEventListener("input", () => {
+      comparison.style.setProperty("--compare-position", range.value + "%");
+      range.setAttribute("aria-valuetext", range.value + "% original, " + (100 - Number(range.value)) + "% edited");
+    });
+  });
   const filters = [...document.querySelectorAll("[data-project-filter]")];
   const cards = [...document.querySelectorAll("#papers [data-project-card]")];
   const status = document.querySelector("[data-filter-status]");

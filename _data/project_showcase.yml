@@ -643,6 +643,7 @@
       "qualitative_result": "The draft demonstrates adding an accessory with a sketch, moving objects and changing poses using pretrained models.",
       "media_ratio": "728 / 240",
       "hero_image": "/assets/img/showcase/control2control-edited.webp",
+      "comparison_slider": true,
     },
   "briar":
     {

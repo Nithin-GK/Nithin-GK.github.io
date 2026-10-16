@@ -38,11 +38,39 @@ layout: project-showcase
         <h2 id="examples-heading">Figures</h2>
       </div>
       {% if story.edit_panels %}
-        <div class="case-edit-grid">
-          {% for figure in story.edit_panels -%}
-            {%- include case-figure.liquid figure=figure -%}
-          {%- endfor %}
-        </div>
+        {% if story.comparison_slider %}
+          {% assign original = story.edit_panels[0] %}
+          {% assign sketch = story.edit_panels[1] %}
+          {% assign edited = story.edit_panels[2] %}
+          <div class="case-edit-grid case-edit-grid-slider">
+            <figure class="case-figure" data-case-figure>
+              <h3>Original / Edited</h3>
+              <div class="case-comparison" data-image-comparison style="--compare-position: 50%">
+                <img src="{{ edited.src | relative_url }}" alt="{{ edited.alt | escape }}">
+                <div class="case-comparison-before"><img src="{{ original.src | relative_url }}" alt="{{ original.alt | escape }}"></div>
+                <span class="case-comparison-label case-comparison-original">Original</span>
+                <span class="case-comparison-label case-comparison-edited">Edited</span>
+                <div class="case-comparison-handle" aria-hidden="true"><span>↔</span></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  aria-label="Compare original and edited image"
+                  aria-valuetext="50% original, 50% edited"
+                >
+              </div>
+              <figcaption>Drag to compare the original and edited image.</figcaption>
+            </figure>
+            {% include case-figure.liquid figure=sketch %}
+          </div>
+        {% else %}
+          <div class="case-edit-grid">
+            {% for figure in story.edit_panels -%}
+              {%- include case-figure.liquid figure=figure -%}
+            {%- endfor %}
+          </div>
+        {% endif %}
         <p class="case-media-caption">{{ story.edit_caption }}</p>
       {% endif %}
       <div
