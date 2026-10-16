@@ -41,7 +41,7 @@
       {% if include.industry %}{{ project.industry_description | default: project.description }}{% else %}{{ project.description }}{% endif %}
     </p>
     <div class="project-links">
-      <a href="{{ item.url | relative_url }}">{{ project.gallery_label | default: 'View project and slides' }}</a>
+      <a href="{{ item.url | relative_url }}">View project</a>
       {% if project.links.size > 0 %}
         <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">{{ project.links[0].label }}</a>
       {% endif %}

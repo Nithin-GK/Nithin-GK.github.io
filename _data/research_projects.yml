@@ -37,7 +37,6 @@
       "company": "Google",
       "role": "Research Intern",
       "period": "Dec 2024 – Mar 2025",
-      "gallery_label": "View project and five slides",
       "navigation_group": "papers",
     },
   "gendeg":
@@ -365,7 +364,6 @@
       "year": 2023,
       "slides": [],
       "links": [],
-      "gallery_label": "Read definition",
       "introduction": "Training-free diffusion editing with sketches, poses or layouts.",
       "description": "Revitalized attention transfer blends target self-attention keys and values inside an edit mask with source keys and values outside it, supporting spatial edits while helping preserve the surrounding scene.",
       "paper_title": "Control2Control: Revitalizing Attention Transfer for Consistent Visual Editing",
@@ -422,7 +420,6 @@
           "Developed a framework connecting 3D part segmentation with material identification.",
           "Combined visual foundation models and multimodal reasoning for physical-property assignment.",
         ],
-      "gallery_label": "Read project details",
       "paper_title": "System and method of semantic segmentation and material identification of 3D objects",
       "source_url": "https://patents.google.com/patent/US20260038283A1/en",
       "links": [{ "label": "Patent application", "url": "https://patents.google.com/patent/US20260038283A1/en" }],
