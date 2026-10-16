@@ -29,7 +29,7 @@
   });
   document.querySelectorAll("[data-expand-figure]").forEach((button) => {
     button.addEventListener("click", () => {
-      const figure = button.closest("[data-case-figure]");
+      const figure = button.closest(".case-demo-panel") || button.closest("[data-case-figure]");
       const image = figure?.querySelector("[data-case-image]");
       if (!dialog || !dialogImage || !image) return;
       dialogImage.src = image.dataset.fullSrc || image.currentSrc || image.src;
