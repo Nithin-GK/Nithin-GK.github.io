@@ -36,6 +36,7 @@
     }
     const image = gallery.querySelector("[data-case-image]");
     const caption = gallery.querySelector("[data-case-caption]");
+    const columns = gallery.querySelector("[data-figure-columns]");
     const buttons = [...gallery.querySelectorAll("[data-figure-index]")];
     let request = 0;
     buttons.forEach((button) =>
@@ -52,6 +53,16 @@
           image.dataset.fullSrc = figure.src;
           image.alt = figure.alt;
           caption.textContent = figure.caption;
+          if (columns) {
+            columns.hidden = !figure.columns?.length;
+            columns.replaceChildren(
+              ...(figure.columns || []).map((label) => {
+                const span = document.createElement("span");
+                span.textContent = label;
+                return span;
+              })
+            );
+          }
           image.classList.remove("is-loading");
         };
         preload.onerror = () => {

@@ -28,8 +28,9 @@ layout: project-showcase
           </p>
         </div>
         <div class="case-impact">
-          <strong>{{ story.metric }}</strong><span>{{ story.metric_label }}</span>
-          <p>{{ story.context }}</p>
+          <p class="case-impact-label">What this enables</p>
+          <h2>{{ story.outcome }}</h2>
+          <p>{{ story.outcome_detail }}</p>
         </div>
       </div>
       <nav class="case-section-nav" aria-label="Case study sections">
@@ -76,6 +77,17 @@ layout: project-showcase
         {% assign first_figure = story.media | first %}
         <figure class="case-figure">
           <div class="case-image-plate">
+            <div
+              class="case-figure-columns"
+              data-figure-columns
+              {% unless first_figure.columns %}
+                hidden
+              {% endunless %}
+            >
+              {% for column in first_figure.columns -%}
+                <span>{{ column }}</span>
+              {%- endfor %}
+            </div>
             <img
               src="{{ first_figure.preview | default: first_figure.src | relative_url }}"
               data-full-src="{{ first_figure.src | relative_url }}"
@@ -111,6 +123,7 @@ layout: project-showcase
           {% if story.evidence %}The results.{% else %}What the examples show.{% endif %}
         </h2>
       </div>
+      <p class="case-evidence-intro">{{ story.evidence_intro }}</p>
       {% if page.project_key == 'crowddiff' %}
         <div class="crowd-explorer" data-crowd-explorer>
           <div>
@@ -126,7 +139,7 @@ layout: project-showcase
             </div>
           </div>
           <div class="crowd-readouts" role="status" aria-live="polite">
-            <p><strong data-crowd-mae>68.95</strong><span>MAE · lower is better</span></p>
+            <p><strong data-crowd-mae>68.95</strong><span>Average counting error (people)</span></p>
             <p><strong data-crowd-time>770 ms</strong><span>Reported inference time</span></p>
           </div>
         </div>

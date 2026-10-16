@@ -1239,3 +1239,56 @@
 .showcase-proof p {
   color: inherit;
 }
+
+.case-impact > h2 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 550;
+  line-height: 1.35;
+  color: #f3a16e;
+  margin: 0 0 15px;
+  letter-spacing: -0.025em;
+}
+.case-impact > .case-impact-label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.68rem;
+  color: #b5c0ae;
+  margin: 0 0 12px;
+}
+.showcase-card-outcome {
+  margin: 24px 0;
+}
+.showcase-card-outcome > span {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8d492e;
+  margin-bottom: 6px;
+}
+.showcase-card-outcome > strong {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+.case-evidence-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  color: #47563d;
+  margin: 0 0 28px;
+}
+.case-figure-columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 550;
+  padding-bottom: 15px;
+}
+.case-figure-columns[hidden] {
+  display: none;
+}

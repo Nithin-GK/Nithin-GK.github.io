@@ -17,10 +17,9 @@
       <a href="{{ '/projects/' | append: include.key | append: '/' | relative_url }}">{{ project.title }}</a>
     </h3>
     <p>{{ story.pitch }}</p>
-    <div class="showcase-card-impact">
-      <strong>{{ story.metric }}</strong><span>{{ story.metric_label }}</span>
+    <div class="showcase-card-outcome">
+      <span>What it enables</span><strong>{{ story.outcome }}</strong>
     </div>
-    <p class="showcase-card-context">{{ story.context }}</p>
     <a class="showcase-project-link" href="{{ '/projects/' | append: include.key | append: '/' | relative_url }}"
       >View project<span aria-hidden="true"> ↗</span></a
     >
