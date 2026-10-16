@@ -34,6 +34,9 @@
         ],
       "results_context": "The first comparison is Table 1 at 256 × 256 resolution with real-data training. Table 2 studies synthetic augmentation separately. The paper reports training our models on eight H100 GPUs for 100,000 iterations.",
       "source_url": "https://arxiv.org/abs/2509.06950",
+      "company": "Google",
+      "role": "Research Intern",
+      "period": "Dec 2024 – Mar 2025",
     },
   "gendeg":
     {
@@ -150,6 +153,9 @@
           "The paper demonstrates tasks including inpainting, colorization, super-resolution and semantic generation. The slide shows inpainting and semantic-generation samples.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Nair_Steered_Diffusion_A_Generalized_Framework_for_Plug-and-Play_Conditional_Image_Synthesis_ICCV_2023_paper.html",
+      "company": "MERL",
+      "role": "Research Intern",
+      "period": "May – Aug 2022",
     },
   "unite-and-conquer":
     {
@@ -375,5 +381,39 @@
           "The working draft illustrates interactive edits with sketches, pose skeletons and object layouts using pretrained spatial controllers.",
           "Large changes in pose or scene semantics can also require an updated text prompt.",
         ],
+      "company": "Adobe",
+      "role": "Research Intern",
+      "period": "May – Aug 2023",
+      "industry_description": "Built a training-free diffusion editing pipeline, using revitalized attention transfer to apply spatial edits while preserving the surrounding scene.",
+    },
+  "nvidia-mesh-properties":
+    {
+      "title": "Physical-property assignment to 3D meshes",
+      "company": "NVIDIA",
+      "role": "Research Intern",
+      "period": "2024",
+      "venue": "Published patent application",
+      "year": 2026,
+      "description": "Combine foundation-model features and multimodal reasoning to segment 3D assets into meaningful parts and identify their materials.",
+      "introduction": "At NVIDIA Research, I developed a foundation-model framework for physical-property assignment to 3D meshes through part segmentation and multimodal material identification.",
+      "definition_title": "From geometry to material-aware parts",
+      "definition": "The framework links 2D foundation-model features across rendered views of a 3D asset, producing consistent parts that can be assigned semantic and material labels.",
+      "method_steps":
+        [
+          "Render the mesh from multiple views and extract image features and segmentation masks.",
+          "Refine and aggregate features into a consistent 3D feature field, then cluster the mesh into parts.",
+          "Use multimodal reasoning to label parts and estimate materials, grounding those labels back onto the 3D asset.",
+        ],
+      "results_title": "Outcome",
+      "results": ["Co-inventor on U.S. Patent Application 19/024,394, filed January 16, 2025 and published as US20260038283A1 on February 5, 2026."],
+      "contributions":
+        [
+          "Developed a framework connecting 3D part segmentation with material identification.",
+          "Combined visual foundation models and multimodal reasoning for physical-property assignment.",
+        ],
+      "gallery_label": "Read project details",
+      "paper_title": "System and method of semantic segmentation and material identification of 3D objects",
+      "source_url": "https://patents.google.com/patent/US20260038283A1/en",
+      "links": [{ "label": "Patent application", "url": "https://patents.google.com/patent/US20260038283A1/en" }],
     },
 }

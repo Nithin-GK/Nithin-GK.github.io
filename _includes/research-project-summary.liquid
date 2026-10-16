@@ -1,0 +1,40 @@
+{% assign item = include.item %}
+{% assign project = include.project %}
+<article class="{% if include.industry %}industry-entry{% else %}project-entry{% unless project.image %} project-entry--text{% endunless %}{% endif %}">
+  {% if include.industry %}
+    <header class="industry-company">
+      <h3>{{ project.company }}</h3>
+      <p class="project-meta">
+        <span>{{ project.role }}</span><span>{{ project.period }}</span>
+      </p>
+    </header>
+  {% elsif project.image %}
+    <a class="project-entry-image" href="{{ item.url | relative_url }}" aria-label="View {{ project.title | escape }}">
+      <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="800" height="500" loading="lazy" decoding="async">
+    </a>
+  {% endif %}
+  <div>
+    {% if include.industry %}
+      <h4>
+        <a href="{{ item.url | relative_url }}">{{ project.title }}</a>
+      </h4>
+    {% else %}
+      <p class="project-meta">
+        {{ project.venue }}
+        {{ project.year }}
+      </p>
+      <h3>
+        <a href="{{ item.url | relative_url }}">{{ project.title }}</a>
+      </h3>
+    {% endif %}
+    <p>
+      {% if include.industry %}{{ project.industry_description | default: project.description }}{% else %}{{ project.description }}{% endif %}
+    </p>
+    <div class="project-links">
+      <a href="{{ item.url | relative_url }}">{{ project.gallery_label | default: 'View project and slides' }}</a>
+      {% if project.links.size > 0 %}
+        <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">{{ project.links[0].label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

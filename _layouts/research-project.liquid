@@ -7,8 +7,12 @@ layout: default
   <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to projects</a>
   <header class="research-project-header">
     <p class="project-meta">
-      {{ project.venue }}
-      {{ project.year }}
+      {% if project.company %}
+        {{ project.company }} · {{ project.role }} · {{ project.period }}
+      {% else %}
+        {{ project.venue }}
+        {{ project.year }}
+      {% endif %}
     </p>
     <h1>{{ project.title }}</h1>
     <p class="project-lede">{{ project.introduction | default: project.description }}</p>
@@ -60,7 +64,7 @@ layout: default
   {% endif %}
   {% if project.results %}
     <section class="project-results">
-      <h2>Results</h2>
+      <h2>{{ project.results_title | default: 'Results' }}</h2>
       {% for result in project.results %}
         <p>{{ result }}</p>
       {% endfor %}
@@ -70,21 +74,23 @@ layout: default
     </section>
   {% endif %}
   <section class="project-contribution">
-    <h2>Contributions</h2>
+    <h2>{{ project.contributions_title | default: 'Contributions' }}</h2>
     <ul>
       {% for contribution in project.contributions %}
         <li>{{ contribution }}</li>
       {% endfor %}
     </ul>
   </section>
-  <p class="project-citation">
-    {% if project.source_url -%}
-      <a href="{{ project.source_url }}" target="_blank" rel="noopener noreferrer">{{ project.paper_title }}</a>
-    {%- else -%}
-      {{- project.paper_title -}}
-    {%- endif -%}
-    . {{ project.venue }}
-    {{ project.year }}.
-  </p>
+  {% if project.paper_title %}
+    <p class="project-citation">
+      {% if project.source_url -%}
+        <a href="{{ project.source_url }}" target="_blank" rel="noopener noreferrer">{{ project.paper_title }}</a>
+      {%- else -%}
+        {{- project.paper_title -}}
+      {%- endif -%}
+      . {{ project.venue }}
+      {{ project.year }}.
+    </p>
+  {% endif %}
 </article>
 <script src="{{ '/assets/js/research-slides.js' | relative_url }}" defer></script>

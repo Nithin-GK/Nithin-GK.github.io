@@ -4,13 +4,69 @@
 }
 .research-projects p,
 .research-project-page p,
-.research-project-page li {
+.research-project-page li,
+.industry-entry p {
   text-wrap: pretty;
 }
 .project-entry h3,
 .research-project-header h1,
 .project-definition h2 {
   text-wrap: balance;
+}
+.project-section-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin: -1rem 0 2.5rem;
+  font-size: 0.95rem;
+}
+.project-section-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.project-section {
+  margin: 3rem 0;
+  scroll-margin-top: 6rem;
+}
+.project-section > h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-wrap: balance;
+}
+.project-section-intro {
+  max-width: 45rem;
+  color: var(--global-text-color-light);
+  line-height: 1.7;
+}
+.industry-entry {
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  gap: 2rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--global-divider-color);
+}
+.industry-entry h3,
+.industry-entry h4 {
+  font-size: 1.3rem;
+  line-height: 1.35;
+  font-weight: 500;
+  margin: 0 0 0.7rem;
+  text-wrap: balance;
+}
+.industry-entry h4 a {
+  color: var(--global-text-color);
+}
+.industry-entry p {
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+.industry-entry .project-links {
+  margin-top: 0.7rem;
+}
+.industry-company .project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 .research-intro {
   max-width: 48rem;
@@ -238,6 +294,16 @@
   padding-top: 1.3rem;
 }
 @media (max-width: 640px) {
+  .industry-entry {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1.5rem 0;
+  }
+  .industry-company .project-meta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.8rem;
+  }
   .project-entry {
     grid-template-columns: 1fr;
     gap: 1rem;
