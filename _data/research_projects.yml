@@ -18,6 +18,22 @@
         [{ "label": "Project site", "url": "https://scaling3dnvs.github.io/" }, { "label": "Paper", "url": "https://arxiv.org/abs/2509.06950" }],
       "image": "/assets/img/research-projects/novel-view-synthesis.webp",
       "pdf": "/assets/slides/novel-view-synthesis.pdf",
+      "definition_title": "Token disentanglement",
+      "definition": "Tok-D is a transformer block for novel view synthesis that distinguishes source-image tokens from target-view tokens through layer-wise modulation. It addresses feature alignment that can make a reconstruction model sensitive to artifacts in synthetic views.",
+      "definition_context": "The goal is to learn a model that reconstructs new camera views across scenes, without optimizing a separate representation for every test scene.",
+      "method_steps":
+        [
+          "Generate additional camera-conditioned views with CAT3D, a pretrained multi-view diffusion model.",
+          "Use separate modulation for source and target tokens to improve feature alignment when training with synthetic views.",
+          "Train the view-synthesis transformer on real and generated observations, then evaluate reconstruction on both familiar and unseen scene distributions.",
+        ],
+      "results":
+        [
+          "In the published in-distribution comparison, Tok-D reaches 30.02 dB PSNR on RealEstate10K and 21.55 dB on DL3DV. These are gains of 1.13 dB and 1.64 dB over the reported LVSM baseline.",
+          "A separate synthetic-data experiment shows small cross-dataset PSNR gains for Tok-D when generated views are added, while LVSM's PSNR decreases under the same augmentation setting.",
+        ],
+      "results_context": "The first comparison is Table 1 at 256 × 256 resolution with real-data training. Table 2 studies synthetic augmentation separately. The paper reports training our models on eight H100 GPUs for 100,000 iterations.",
+      "source_url": "https://arxiv.org/abs/2509.06950",
     },
   "gendeg":
     {
@@ -44,6 +60,21 @@
         ],
       "image": "/assets/img/research-projects/gendeg.webp",
       "pdf": "/assets/slides/gendeg.pdf",
+      "definition_title": "Controlled degradation synthesis",
+      "definition": "GenDeg is a conditional diffusion model that turns clean images into realistically degraded images. Conditioning specifies both the degradation type and its intensity, so a single clean image can produce varied training examples for restoration.",
+      "definition_context": "The clean input remains the restoration target. This creates paired training data without collecting a new real-world degraded/clean pair for every corruption pattern.",
+      "method_steps":
+        [
+          "Condition degradation synthesis on a clean image, a degradation type and an intensity level.",
+          "Generate paired examples across haze, rain, snow, motion blur, low light and raindrops.",
+          "Combine the synthetic pairs with existing paired datasets to form GenDS, then train all-in-one restoration models on the expanded data.",
+        ],
+      "results":
+        [
+          "GenDeg contributes more than 550,000 synthetic image pairs across six degradation types. GenDS contains more than 750,000 samples after combining these with existing data.",
+          "Restoration models trained with GenDS improve on out-of-distribution degradation patterns. The slide compares PromptIR with and without GenDS training on haze and rain examples.",
+        ],
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.html",
     },
   "scale-wise-var":
     {
@@ -63,6 +94,21 @@
       "links": [{ "label": "Paper", "url": "https://arxiv.org/abs/2509.22636" }],
       "image": "/assets/img/research-projects/scale-wise-var.webp",
       "pdf": "/assets/slides/scale-wise-var.pdf",
+      "definition_title": "Scale-wise generation as discrete diffusion",
+      "definition": "Scale-wise VAR generates visual tokens from coarse scales to finer scales. This work shows that, under a Markovian attention mask, its generation process is mathematically equivalent to a discrete diffusion process.",
+      "definition_context": "The attention-mask condition is central to the equivalence. It provides a principled way to connect autoregressive token prediction with diffusion-style refinement.",
+      "method_steps":
+        [
+          "Express next-scale prediction as a transition between discrete visual-token representations.",
+          "Apply the Markovian attention mask and relate the resulting transitions and training objective to discrete diffusion.",
+          "Use this interpretation in Scalable Visual Refinement with Discrete Diffusion (SRDD) to bring iterative refinement into the scale-wise generation framework.",
+        ],
+      "results":
+        [
+          "The main theoretical result is the equivalence under the specified attention mask.",
+          "The preprint reports improvements in generation and efficiency, and demonstrates iterative refinement and zero-shot reconstruction through the diffusion interpretation.",
+        ],
+      "source_url": "https://arxiv.org/abs/2509.22636",
     },
   "steered-diffusion":
     {
@@ -89,6 +135,21 @@
         ],
       "image": "/assets/img/research-projects/steered-diffusion.webp",
       "pdf": "/assets/slides/steered-diffusion.pdf",
+      "definition_title": "Energy-based diffusion steering",
+      "definition": "Steered Diffusion turns a pretrained diffusion generator into a conditional generator at inference time. A pretrained inverse model defines a loss for the requested condition, and that loss steers the denoising trajectory toward an image that satisfies it.",
+      "definition_context": "For example, an inverse model can estimate a semantic label or a degraded observation from the current image. Comparing that prediction with the desired condition supplies a guidance signal.",
+      "method_steps":
+        [
+          "Choose a pretrained diffusion generator and an auxiliary model that represents the desired task or condition.",
+          "Construct a task loss that measures agreement with the input condition during sampling.",
+          "Use the guidance signal to steer denoising, adapting the generator to the task without training a separate task-specific generator.",
+        ],
+      "results":
+        [
+          "The framework supports image-to-image and label-conditioned synthesis within the same plug-and-play formulation.",
+          "The paper demonstrates tasks including inpainting, colorization, super-resolution and semantic generation. The slide shows inpainting and semantic-generation samples.",
+        ],
+      "source_url": "https://openaccess.thecvf.com/content/ICCV2023/html/Nair_Steered_Diffusion_A_Generalized_Framework_for_Plug-and-Play_Conditional_Image_Synthesis_ICCV_2023_paper.html",
     },
   "unite-and-conquer":
     {
@@ -114,6 +175,21 @@
         ],
       "image": "/assets/img/research-projects/unite-and-conquer.webp",
       "pdf": "/assets/slides/unite-and-conquer.pdf",
+      "definition_title": "Composing independent diffusion models",
+      "definition": "Unite and Conquer combines independently trained, modality-conditioned diffusion models into a single sampling process. A generalized product of experts provides a way to combine their information without jointly training a new model on every modality combination.",
+      "definition_context": "Each model contributes a conditional prediction. Reliability-weighted predictions with a null condition estimate the shared unconditional density used in the composition.",
+      "method_steps":
+        [
+          "Select diffusion models trained for the individual conditions, such as an object class and a text description.",
+          "Combine their conditional and null-condition predictions using the product-of-experts formulation and reliability weights.",
+          "Sample one image with the combined guidance so the result can express the conditions together.",
+        ],
+      "results":
+        [
+          "The method demonstrates multimodal synthesis without joint multimodal training or retraining for each new combination of conditions.",
+          "The slide pairs ImageNet classes with text-defined scenes. The composed samples retain the requested class while expressing scenes such as a starry night or a snowy forest.",
+        ],
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
     },
   "maxfusion":
     {
@@ -137,6 +213,21 @@
         ],
       "image": "/assets/img/research-projects/maxfusion.webp",
       "pdf": "/assets/slides/maxfusion.pdf",
+      "definition_title": "Variance-guided feature fusion",
+      "definition": "MaxFusion combines intermediate features from pretrained conditional diffusion models. It uses feature variance as a signal of conditioning intensity, allowing different spatial controls to contribute where they are informative.",
+      "definition_context": "The models already know how to respond to their individual conditions. Feature fusion lets a generation use several controls without training a new controller for every combination.",
+      "method_steps":
+        [
+          "Run off-the-shelf conditional models, including ControlNet or T2I-Adapter, for the requested spatial conditions.",
+          "Measure variance in their aligned intermediate features to identify the strength of each condition across spatial locations.",
+          "Fuse the conditional features and use them to guide text-to-image generation with multiple simultaneous controls.",
+        ],
+      "results":
+        [
+          "The paper demonstrates generation under both complementary and conflicting conditions without retraining the pretrained models.",
+          "The original examples combine controls such as pose, depth, edges and semantic layouts. They illustrate how spatial constraints from different models can influence the same output.",
+        ],
+      "source_url": "https://arxiv.org/abs/2404.09977",
     },
   "briar":
     {
@@ -156,6 +247,22 @@
       "links": [{ "label": "Paper", "url": "https://kartik-3004.github.io/portfolio/papers/FG2025_SwinFR.pdf" }],
       "image": "/assets/img/research-projects/briar.webp",
       "pdf": "/assets/slides/briar.pdf",
+      "definition_title": "Staged adaptation for unconstrained recognition",
+      "definition": "This work treats low-quality face recognition as an adaptation problem. A transformer first learns discriminative representations from a large clean dataset, then adapts to low-resolution and unconstrained imagery through staged fine-tuning.",
+      "definition_context": "Larger face crops retain information from the head and hair outline that a tight face crop may discard. Alignment keeps the facial region consistent across pretraining and adaptation.",
+      "method_steps":
+        [
+          "Pretrain a transformer face-recognition backbone on a large aligned face dataset.",
+          "Freeze the backbone and train a new classification head through linear probing, then fine-tune the full model on low-quality data.",
+          "Use enlarged, aligned crops to preserve additional context, alongside the training choices studied in the paper.",
+        ],
+      "results":
+        [
+          "The 2025 study reports state-of-the-art results on BRIAR, TinyFace, IJB-S, IJB-B and IJB-C.",
+          "At FAR 0.1%, BRIAR true accept rate increases from 39.41% for AdaFace to 70.84% for our method, a gain of 31.4 percentage points. Both use WebFace12M pretraining, with different architectures: ResNet101 and Swin-B.",
+          "A separate Swin-B model pretrained on WebFace42M reaches 81.38% Rank-1.",
+        ],
+      "source_url": "https://kartik-3004.github.io/portfolio/papers/FG2025_SwinFR.pdf",
     },
   "petalface":
     {
@@ -179,6 +286,21 @@
         ],
       "image": "/assets/img/research-projects/petalface.webp",
       "pdf": "/assets/slides/petalface.pdf",
+      "definition_title": "Quality-weighted low-rank adaptation",
+      "definition": "PETALface adapts a frozen face-recognition backbone using two low-rank adapter branches. An image-quality estimate weights their contributions for each input, allowing adaptation to low-resolution faces while retaining the pretrained representation.",
+      "definition_context": "Quality-dependent weighting accounts for the mismatch between clear gallery images and degraded probe images by adapting the contribution of each branch to the input.",
+      "method_steps":
+        [
+          "Keep the pretrained backbone frozen and attach two trainable low-rank adapter branches.",
+          "Estimate input image quality and use it to weight the two branches.",
+          "Train the adapters for low-resolution recognition and evaluate across low-, high- and mixed-quality datasets.",
+        ],
+      "results":
+        [
+          "The adaptation trains only 0.48% of the parameters.",
+          "The paper reports stronger low-resolution recognition with competitive performance on high-resolution and mixed-quality benchmarks. PETALface was presented as an oral paper at WACV 2025.",
+        ],
+      "source_url": "https://arxiv.org/abs/2412.07771",
     },
   "crowddiff":
     {
@@ -204,6 +326,21 @@
         ],
       "image": "/assets/img/research-projects/crowddiff.webp",
       "pdf": "/assets/slides/crowddiff.pdf",
+      "definition_title": "Multi-hypothesis density estimation",
+      "definition": "CrowdDiff models a crowd density map as a conditional diffusion output. Repeated sampling produces multiple plausible maps, whose head-location estimates can be fused to improve counting.",
+      "definition_context": "The method uses narrow density kernels to retain localized head structure. Its fusion procedure adds new head detections and rejects repeated locations across hypotheses.",
+      "method_steps":
+        [
+          "Train an image-conditioned denoising model on noisy density maps made with narrow kernels. A regression branch supports feature learning during training.",
+          "Sample multiple density-map hypotheses and convert them into crowd maps containing estimated head locations.",
+          "Order the maps by structural similarity and fuse their detections, rejecting duplicate locations using a neighborhood-based radius. Count the resulting head locations.",
+        ],
+      "results":
+        [
+          "The paper evaluates diffusion-based density estimation and multi-hypothesis fusion for crowd counting.",
+          "The displayed example has 1,155 people in the ground truth and a CrowdDiff estimate of 1,142. These are counts for one image, not an aggregate benchmark score.",
+        ],
+      "source_url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ranasinghe_CrowdDiff_Multi-hypothesis_Crowd_Density_Estimation_using_Diffusion_Models_CVPR_2024_paper.pdf",
     },
   "control2control":
     {
@@ -225,6 +362,18 @@
           "Built a training-free diffusion pipeline for interactive edits using sketches, poses or layouts.",
           "Estimated edit masks from source/target self-attention differences using low-rank filtering.",
           "Used masked key/value transfer to support changes while retaining source content in unchanged regions.",
+        ],
+      "attention_transfer_equations": true,
+      "method_steps":
+        [
+          "Run source and target diffusion branches with the original and user-edited spatial conditions.",
+          "Accumulate self-attention features over intermediate denoising steps. Filter their source/target difference with a low-rank decomposition and threshold it to estimate the edit mask.",
+          "Blend target keys and values inside the mask with source keys and values outside it at selected layers, then complete denoising.",
+        ],
+      "results":
+        [
+          "The working draft illustrates interactive edits with sketches, pose skeletons and object layouts using pretrained spatial controllers.",
+          "Large changes in pose or scene semantics can also require an updated text prompt.",
         ],
     },
 }

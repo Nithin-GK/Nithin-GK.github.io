@@ -8,7 +8,8 @@
   text-wrap: pretty;
 }
 .project-entry h3,
-.research-project-header h1 {
+.research-project-header h1,
+.project-definition h2 {
   text-wrap: balance;
 }
 .research-intro {
@@ -203,21 +204,31 @@
   margin-top: 0.2rem;
   font-size: 0.95rem;
 }
-.project-contribution {
+.project-contribution,
+.project-method,
+.project-results {
   margin: 3rem 0 2rem;
   max-width: 49rem;
 }
-.project-contribution h2 {
+.project-contribution h2,
+.project-method h2,
+.project-results h2 {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.project-contribution ul {
+.project-contribution ul,
+.project-method ol {
   padding-left: 1.2rem;
 }
-.project-contribution li {
+.project-contribution li,
+.project-method li {
   padding-left: 0.15rem;
   line-height: 1.8;
   margin: 0.6rem 0;
+}
+.project-method,
+.project-results {
+  line-height: 1.8;
 }
 .project-citation {
   color: var(--global-text-color-light);
