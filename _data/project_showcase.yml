@@ -1,0 +1,555 @@
+{
+  "novel-view-synthesis":
+    {
+      "headline": "Scale 3D learning with generated views.",
+      "pitch": "Token disentanglement helps view-synthesis transformers learn from diffusion-generated observations while reducing their sensitivity to synthetic artifacts.",
+      "theme": "Training at scale",
+      "metric": "+1.64 dB",
+      "metric_label": "PSNR on DL3DV",
+      "context": "Tok-D 21.55 vs LVSM 19.91 dB. Real-data training, 256 × 256 evaluation.",
+      "caveat": "The headline result tests the architecture with real-data training. Synthetic augmentation is a separate experiment with smaller cross-dataset gains. LVSM values come from its original paper.",
+      "role": "Co-first author",
+      "problem": "Training views are scarce, but generated views can contain artifacts. A transformer can carry those artifacts into its target predictions when it treats source observations and target queries alike.",
+      "idea": "Separate the source and target token representations. This lets the model use synthetic observations while reducing the feature alignment that can propagate their errors.",
+      "media":
+        [
+          {
+            "label": "Published examples",
+            "src": "/assets/img/showcase/novel-view-synthesis-1.webp",
+            "caption": "Cross-dataset reconstruction examples. Original method and ground-truth labels are retained.",
+            "alt": "Cross-dataset reconstruction examples. Original method and ground-truth labels are retained.",
+            "preview": "/assets/img/showcase/novel-view-synthesis-1-preview.webp",
+          },
+          {
+            "label": "The architecture",
+            "src": "/assets/img/showcase/novel-view-synthesis-2.webp",
+            "caption": "Token disentanglement separates source observations from target queries.",
+            "alt": "Token disentanglement separates source observations from target queries.",
+            "preview": "/assets/img/showcase/novel-view-synthesis-2-preview.webp",
+          },
+          {
+            "label": "Synthetic training",
+            "src": "/assets/img/showcase/novel-view-synthesis-3.webp",
+            "caption": "Training and token-disentanglement details from the original paper.",
+            "alt": "Training and token-disentanglement details from the original paper.",
+            "preview": "/assets/img/showcase/novel-view-synthesis-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/novel-view-synthesis-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Dataset", "LVSM PSNR", "Tok-D PSNR"],
+          "rows": [["RealEstate10K", "28.89 dB", "30.02 dB"], ["ACID", "29.19 dB", "29.47 dB"], ["DL3DV", "19.91 dB", "21.55 dB"]],
+          "source": "ICCV 2025, Table 1. Real-data training, 256 × 256.",
+          "note": "Higher PSNR is better. LVSM values are taken from its original paper.",
+        },
+    },
+  "gendeg":
+    {
+      "headline": "Generate the degradation. Expand the training world.",
+      "pitch": "A controllable diffusion model creates paired restoration data across six degradation types, improving generalization beyond the original training distribution.",
+      "theme": "Training at scale",
+      "metric": "550K+",
+      "metric_label": "synthetic image pairs",
+      "context": "Six degradation types. More than 750K samples in the combined GenDS dataset.",
+      "caveat": "Benefits vary by degradation. On GoPro, motion-blur LPIPS improves while FID worsens. The evidence compares the same Swin architecture with different training data.",
+      "role": "Co-author",
+      "problem": "Restoration models see limited scenes and degradation patterns during training. Collecting paired clean and degraded photographs at scale is difficult, leaving a gap when the model meets new conditions.",
+      "idea": "Train a diffusion model to generate degraded observations from clean images, with control over degradation type and intensity. Use the resulting pairs to expand restoration training.",
+      "media":
+        [
+          {
+            "label": "Restoration results",
+            "src": "/assets/img/showcase/gendeg-1.webp",
+            "caption": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
+            "alt": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
+            "preview": "/assets/img/showcase/gendeg-1-preview.webp",
+          },
+          {
+            "label": "Degradation synthesis",
+            "src": "/assets/img/showcase/gendeg-2.webp",
+            "caption": "Examples of degradations generated from clean inputs.",
+            "alt": "Examples of degradations generated from clean inputs.",
+            "preview": "/assets/img/showcase/gendeg-2-preview.webp",
+          },
+          {
+            "label": "The generator",
+            "src": "/assets/img/showcase/gendeg-3.webp",
+            "caption": "Content features, text and degradation statistics condition the generator.",
+            "alt": "Content features, text and degradation statistics condition the generator.",
+            "preview": "/assets/img/showcase/gendeg-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/gendeg-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Test set", "LPIPS Existing", "LPIPS GenDS", "FID Existing", "FID GenDS"],
+          "rows":
+            [
+              ["O-Haze", "0.254", "0.165", "109.9", "74.6"],
+              ["LOLv1", "0.241", "0.167", "112.0", "73.1"],
+              ["RSVD", "0.143", "0.121", "21.7", "14.1"],
+              ["GoPro", "0.198", "0.170", "31.7", "36.2"],
+            ],
+          "source": "CVPR 2025, GenDeg, Table 2",
+          "note": "Lower is better for both metrics. Motion-blur FID does not improve.",
+        },
+    },
+  "unite-and-conquer":
+    {
+      "headline": "Independent models. One composed generation.",
+      "pitch": "A generalized product of experts brings class- and text-conditioned diffusion models into a shared sampler without joint multimodal training.",
+      "theme": "Control and composition",
+      "metric": "87.0%",
+      "metric_label": "class accuracy",
+      "context": "500 generated images. Best of three reliability settings. Class-and-text conditioning.",
+      "caveat": "The proposed sampler receives class and text conditions; the displayed baselines use text conditioning. GLIDE retains the highest CLIP score in this comparison.",
+      "role": "First author",
+      "problem": "A model trained for one condition does not automatically understand another. Joint multimodal training needs paired data across the conditions and repeated training for new combinations.",
+      "idea": "Compose independently trained conditional diffusion models at inference time. Reliability weights balance their shared unconditional estimate, while guidance strengths control the individual conditions.",
+      "media":
+        [
+          {
+            "label": "Composed scenes",
+            "src": "/assets/img/showcase/unite-and-conquer-1.webp",
+            "caption": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
+            "alt": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
+            "preview": "/assets/img/showcase/unite-and-conquer-1-preview.webp",
+          },
+          {
+            "label": "Cross-dataset comparison",
+            "src": "/assets/img/showcase/unite-and-conquer-2.webp",
+            "caption": "Original multimodal scene-generation comparison.",
+            "alt": "Original multimodal scene-generation comparison.",
+            "preview": "/assets/img/showcase/unite-and-conquer-2-preview.webp",
+          },
+          {
+            "label": "The shared sampler",
+            "src": "/assets/img/showcase/unite-and-conquer-3.webp",
+            "caption": "Independent conditional models contribute to a generalized product-of-experts sampler.",
+            "alt": "Independent conditional models contribute to a generalized product-of-experts sampler.",
+            "preview": "/assets/img/showcase/unite-and-conquer-3-preview.webp",
+          },
+          {
+            "label": "Condition strength",
+            "src": "/assets/img/showcase/unite-and-conquer-4.webp",
+            "caption": "Interpolation across text and class guidance in the published examples.",
+            "alt": "Interpolation across text and class guidance in the published examples.",
+            "preview": "/assets/img/showcase/unite-and-conquer-4-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/unite-and-conquer-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Method", "Conditioning", "Class accuracy", "NIQE", "CLIP"],
+          "rows":
+            [
+              ["GLIDE", "Text only", "0.3%", "6.64", "0.317"],
+              ["CompGen", "Text composition", "22.4%", "5.71", "0.282"],
+              ["Unite and Conquer", "Class and text", "87.0%", "5.34", "0.286"],
+            ],
+          "source": "CVPR 2023, Unite and Conquer, Table 3",
+          "note": "Class accuracy and CLIP: higher is better. NIQE: lower is better.",
+        },
+    },
+  "steered-diffusion":
+    {
+      "headline": "Steer the model you already have.",
+      "pitch": "Inference-time guidance adapts a pretrained diffusion generator to restoration and conditional synthesis without training a new task-specific generator.",
+      "theme": "Control and composition",
+      "metric": "+5.48 dB",
+      "metric_label": "8× super-resolution PSNR",
+      "context": "CelebA: 20.54 dB with ILVR, 26.02 dB with Steered Diffusion. 300 evaluation images.",
+      "caveat": "Each task has its own metric and protocol. The displayed super-resolution improvement is specific to the paper’s CelebA evaluation.",
+      "role": "First author",
+      "problem": "Conditional generation often requires a dedicated model for each task. A strong unconditional diffusion generator already contains useful image knowledge, but needs a way to follow new constraints.",
+      "idea": "Guide the implicit clean-image prediction with a pretrained task function during denoising. The same formulation supports image restoration, semantic conditions and combined guidance.",
+      "media":
+        [
+          {
+            "label": "Super-resolution",
+            "src": "/assets/img/showcase/steered-diffusion-1.webp",
+            "caption": "Published 8× face super-resolution comparison.",
+            "alt": "Published 8× face super-resolution comparison.",
+            "preview": "/assets/img/showcase/steered-diffusion-1-preview.webp",
+          },
+          {
+            "label": "Colorization",
+            "src": "/assets/img/showcase/steered-diffusion-2.webp",
+            "caption": "Published grayscale-to-color examples using the pretrained generator.",
+            "alt": "Published grayscale-to-color examples using the pretrained generator.",
+            "preview": "/assets/img/showcase/steered-diffusion-2-preview.webp",
+          },
+          {
+            "label": "Text-guided editing",
+            "src": "/assets/img/showcase/steered-diffusion-3.webp",
+            "caption": "Published examples combine semantic editing with identity constraints.",
+            "alt": "Published examples combine semantic editing with identity constraints.",
+            "preview": "/assets/img/showcase/steered-diffusion-3-preview.webp",
+          },
+          {
+            "label": "How steering works",
+            "src": "/assets/img/showcase/steered-diffusion-4.webp",
+            "caption": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
+            "alt": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
+            "preview": "/assets/img/showcase/steered-diffusion-4-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/steered-diffusion-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Task", "Metric", "Baseline", "Baseline score", "Steered Diffusion"],
+          "rows":
+            [
+              ["Semantic faces", "FID (lower)", "ILVR", "107.46", "41.38"],
+              ["8× super-resolution", "PSNR dB (higher)", "ILVR", "20.54", "26.02"],
+              ["Colorization", "FID (lower)", "ILVR", "67.66", "49.72"],
+              ["Thin-mask inpainting", "FID (lower)", "RePaint", "43.35", "30.85"],
+            ],
+          "source": "ICCV 2023, Steered Diffusion, Tables 2–5",
+          "note": "The pretrained generator is guided at inference time.",
+        },
+    },
+  "maxfusion":
+    {
+      "headline": "Make multiple controls work together.",
+      "pitch": "Variance-guided feature fusion combines off-the-shelf diffusion controllers for complementary and conflicting spatial conditions without retraining.",
+      "theme": "Control and composition",
+      "metric": "46.72",
+      "metric_label": "FID with pose + segmentation",
+      "context": "T2I-Adapter: 55.61. ControlNet: 63.46. Constructed COCO evaluation, 2,000 images.",
+      "caveat": "Lower FID does not imply better adherence on every conditioning metric. Pose-plus-depth MSE-D is worse than ControlNet in the reported comparison.",
+      "role": "First author",
+      "problem": "Several spatial controls can describe different parts of a scene, or disagree at the same location. Naively combining controllers can discard important details or weaken one condition.",
+      "idea": "Use spatial feature variance as a signal of conditioning intensity. Fuse aligned intermediate features so pretrained controllers can contribute where they carry useful information.",
+      "media":
+        [
+          {
+            "label": "Complementary controls",
+            "src": "/assets/img/showcase/maxfusion-1.webp",
+            "caption": "Original comparisons combine the spatial tasks shown at the left.",
+            "alt": "Original comparisons combine the spatial tasks shown at the left.",
+            "preview": "/assets/img/showcase/maxfusion-1-preview.webp",
+          },
+          {
+            "label": "Conflicting controls",
+            "src": "/assets/img/showcase/maxfusion-2.webp",
+            "caption": "Published examples with contradictory spatial conditions.",
+            "alt": "Published examples with contradictory spatial conditions.",
+            "preview": "/assets/img/showcase/maxfusion-2-preview.webp",
+          },
+          {
+            "label": "Feature fusion",
+            "src": "/assets/img/showcase/maxfusion-3.webp",
+            "caption": "Aligned conditional features are merged and unmerged during denoising.",
+            "alt": "Aligned conditional features are merged and unmerged during denoising.",
+            "preview": "/assets/img/showcase/maxfusion-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/maxfusion-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Method", "Pose + segmentation FID", "Pose + depth FID"],
+          "rows": [["T2I-Adapter", "55.61", "51.47"], ["ControlNet", "63.46", "48.18"], ["MaxFusion", "46.72", "47.37"]],
+          "source": "ECCV 2024, MaxFusion, Table 1",
+          "note": "Lower FID indicates improved image quality in these comparisons.",
+        },
+    },
+  "scale-wise-var":
+    {
+      "headline": "Autoregression meets diffusion refinement.",
+      "pitch": "A connection between scale-wise generation and discrete diffusion provides a principled route to iterative refinement and zero-shot reconstruction.",
+      "theme": "Training at scale",
+      "metric": "20.2%",
+      "metric_label": "lower MiniImageNet FID",
+      "context": "VAR: 21.01. SRDD: 16.76. Matching 200-epoch training study.",
+      "caveat": "The equivalence requires a Markovian attention mask. These results are from the 2025 preprint, and MiniImageNet is a reduced benchmark.",
+      "role": "Co-first author",
+      "problem": "Scale-wise autoregressive generation attends to a history of earlier scales. That history can introduce redundancy, while diffusion methods offer useful ways to refine an imperfect prediction.",
+      "idea": "Apply a Markovian attention mask that conditions each scale on its immediate predecessor. The resulting discrete-diffusion interpretation motivates resampling and refinement.",
+      "media":
+        [
+          {
+            "label": "Generation",
+            "src": "/assets/img/showcase/scale-wise-var-1.webp",
+            "caption": "Original VAR and proposed-method generation examples.",
+            "alt": "Original VAR and proposed-method generation examples.",
+            "preview": "/assets/img/showcase/scale-wise-var-1-preview.webp",
+          },
+          {
+            "label": "Iterative refinement",
+            "src": "/assets/img/showcase/scale-wise-var-2.webp",
+            "caption": "Original examples distinguish initial prediction, simple refinement and mask refinement.",
+            "alt": "Original examples distinguish initial prediction, simple refinement and mask refinement.",
+            "preview": "/assets/img/showcase/scale-wise-var-2-preview.webp",
+          },
+          {
+            "label": "Zero-shot reconstruction",
+            "src": "/assets/img/showcase/scale-wise-var-3.webp",
+            "caption": "Published inpainting, outpainting and super-resolution examples.",
+            "alt": "Published inpainting, outpainting and super-resolution examples.",
+            "preview": "/assets/img/showcase/scale-wise-var-3-preview.webp",
+          },
+          {
+            "label": "The connection",
+            "src": "/assets/img/showcase/scale-wise-var-4.webp",
+            "caption": "The Markovian attention formulation connects scale-wise generation with discrete diffusion.",
+            "alt": "The Markovian attention formulation connects scale-wise generation with discrete diffusion.",
+            "preview": "/assets/img/showcase/scale-wise-var-4-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/scale-wise-var-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Dataset", "Generation", "VAR", "SRDD"],
+          "rows":
+            [
+              ["MiniImageNet", "Conditional", "21.01", "16.76"],
+              ["SUN", "Conditional", "15.72", "13.26"],
+              ["FFHQ", "Unconditional", "19.23", "17.37"],
+              ["AFHQ", "Unconditional", "14.74", "13.14"],
+            ],
+          "source": "Scale-Wise VAR, arXiv preprint 2025, Table 1",
+          "note": "MiniImageNet FID decreases by 20.2% relative to VAR.",
+        },
+    },
+  "nvidia-mesh-properties":
+    {
+      "headline": "Give 3D geometry material meaning.",
+      "pitch": "Multi-view foundation-model features and multimodal reasoning connect mesh parts with semantic labels, material estimates and physical-property estimates.",
+      "theme": "3D and visual understanding",
+      "metric": "9.752",
+      "metric_label": "mass-estimation ADE",
+      "context": "NeRF2Physics: 10.846. ABO-500 evaluation in the SmartTagger research draft.",
+      "caveat": "Research-draft results improve ADE, ALDE and MnRE, but APE worsens. Material properties are inferred estimates. The patent is a published application.",
+      "role": "Research intern",
+      "problem": "A mesh describes geometry and appearance, but many downstream tasks need meaningful parts and an estimate of what those parts are made of.",
+      "idea": "Aggregate visual foundation-model features across rendered views into a consistent 3D feature field. Use part grouping and multimodal reasoning to estimate semantic and material labels.",
+      "media":
+        [
+          {
+            "label": "Parts and materials",
+            "src": "/assets/img/showcase/nvidia-mesh-properties-1.webp",
+            "caption": "Original research-draft examples of 3D part segmentation and material estimation.",
+            "alt": "Original research-draft examples of 3D part segmentation and material estimation.",
+            "preview": "/assets/img/showcase/nvidia-mesh-properties-1-preview.webp",
+          },
+          {
+            "label": "Part comparisons",
+            "src": "/assets/img/showcase/nvidia-mesh-properties-2.webp",
+            "caption": "Omniverse qualitative comparison with NeRF2Physics. This is a separate dataset from the mass-estimation benchmark.",
+            "alt": "Omniverse qualitative comparison with NeRF2Physics. This is a separate dataset from the mass-estimation benchmark.",
+            "preview": "/assets/img/showcase/nvidia-mesh-properties-2-preview.webp",
+          },
+          {
+            "label": "Cross-view features",
+            "src": "/assets/img/showcase/nvidia-mesh-properties-3.webp",
+            "caption": "Feature refinement within regions and across rendered views.",
+            "alt": "Feature refinement within regions and across rendered views.",
+            "preview": "/assets/img/showcase/nvidia-mesh-properties-3-preview.webp",
+          },
+          {
+            "label": "Material reasoning",
+            "src": "/assets/img/showcase/nvidia-mesh-properties-4.webp",
+            "caption": "Candidate parts are grouped and assigned estimated semantic and material labels.",
+            "alt": "Candidate parts are grouped and assigned estimated semantic and material labels.",
+            "preview": "/assets/img/showcase/nvidia-mesh-properties-4-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/nvidia-mesh-properties-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Metric", "NeRF2- Physics", "Ours"],
+          "rows": [["ADE", "10.846", "9.752"], ["ALDE", "1.489", "1.285"], ["APE", "0.790", "0.834"], ["MnRE", "0.300", "0.365"]],
+          "source": "NVIDIA research draft, SmartTagger, Table 1",
+          "note": "Lower ADE, ALDE and higher MnRE. APE does not improve.",
+        },
+    },
+  "control2control":
+    {
+      "headline": "Move the object. Preserve the scene.",
+      "pitch": "Revitalized attention transfer uses estimated edit masks to support changes through sketches, poses and layouts while helping retain surrounding content.",
+      "theme": "Control and composition",
+      "metric": "No retraining",
+      "metric_label": "for the spatial editing pipeline",
+      "context": "Qualitative sketch, pose and layout examples from the Adobe research draft.",
+      "caveat": "The draft provides qualitative evidence, not a completed quantitative benchmark. Large edits and imperfect masks can change identity or background.",
+      "role": "Research intern",
+      "problem": "Changing an object’s shape or position can inadvertently regenerate the rest of the image. Spatial controls need to support the requested edit while retaining content elsewhere.",
+      "idea": "Estimate the changed region from source/target attention features. Transfer target keys and values inside the mask and source keys and values outside it while denoising.",
+      "media":
+        [
+          {
+            "label": "Sketch-guided edit",
+            "src": "/assets/img/showcase/control2control-1.webp",
+            "caption": "Original input, spatial condition and edited output. The prompt also adds “wearing sunglasses.”",
+            "alt": "Original input, spatial condition and edited output. The prompt also adds “wearing sunglasses.”",
+            "preview": "/assets/img/showcase/control2control-1-preview.webp",
+          },
+          {
+            "label": "Object movement",
+            "src": "/assets/img/showcase/control2control-2.webp",
+            "caption": "Original draft examples of spatial object movement.",
+            "alt": "Original draft examples of spatial object movement.",
+            "preview": "/assets/img/showcase/control2control-2-preview.webp",
+          },
+          {
+            "label": "Pose edits",
+            "src": "/assets/img/showcase/control2control-3.webp",
+            "caption": "Original draft pose-controlled edits.",
+            "alt": "Original draft pose-controlled edits.",
+            "preview": "/assets/img/showcase/control2control-3-preview.webp",
+          },
+          {
+            "label": "Multiple subjects",
+            "src": "/assets/img/showcase/control2control-4.webp",
+            "caption": "Original draft examples with multiple pose conditions.",
+            "alt": "Original draft examples with multiple pose conditions.",
+            "preview": "/assets/img/showcase/control2control-4-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/control2control-1-preview.webp",
+      "comparison": "/assets/img/showcase/control2control-comparison.webp",
+    },
+  "briar":
+    {
+      "headline": "Recognition beyond the close-up.",
+      "pitch": "Large-scale pretraining, staged adaptation and context-aware crops strengthen face recognition in low resolution and other unconstrained conditions.",
+      "theme": "3D and visual understanding",
+      "metric": "70.84%",
+      "metric_label": "BRIAR TAR at FAR 0.1%",
+      "context": "WebFace12M pretraining. AdaFace baseline: 39.41%, a 31.4-point difference.",
+      "caveat": "Architectures differ: AdaFace ResNet101 versus Swin-B. The separate 81.38% Rank-1 result uses WebFace42M.",
+      "role": "Co-first author",
+      "problem": "Recognition features trained on clean close-ups can lose their discriminative structure when faces become small, distant or degraded.",
+      "idea": "Combine large-scale pretraining with linear probing and staged fine-tuning. Preserve useful context with enlarged, aligned face crops.",
+      "media":
+        [
+          {
+            "label": "The quality gap",
+            "src": "/assets/img/showcase/briar-1.webp",
+            "caption": "Original high- and low-quality face examples and UMAP feature visualizations.",
+            "alt": "Original high- and low-quality face examples and UMAP feature visualizations.",
+            "preview": "/assets/img/showcase/briar-1-preview.webp",
+          },
+          {
+            "label": "Staged adaptation",
+            "src": "/assets/img/showcase/briar-2.webp",
+            "caption": "Pretraining, linear probing and full-model fine-tuning.",
+            "alt": "Pretraining, linear probing and full-model fine-tuning.",
+            "preview": "/assets/img/showcase/briar-2-preview.webp",
+          },
+          {
+            "label": "Context-aware crops",
+            "src": "/assets/img/showcase/briar-3.webp",
+            "caption": "Enlarged aligned crops retain context before resizing the recognition input.",
+            "alt": "Enlarged aligned crops retain context before resizing the recognition input.",
+            "preview": "/assets/img/showcase/briar-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/briar-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Method", "Backbone", "TAR at FAR 0.1%"],
+          "rows": [["AdaFace", "ResNet101", "39.41%"], ["Proposed method", "Swin-B", "70.84%"]],
+          "source": "FG 2025, Table II. BRIAR, WebFace12M pretraining.",
+          "note": "Architectures differ. The separate Rank-1 result uses WebFace42M.",
+        },
+    },
+  "petalface":
+    {
+      "headline": "Adapt less. Recognize more.",
+      "pitch": "Quality-weighted low-rank adapters adapt a frozen recognition backbone to degraded probes while retaining its pretrained representation.",
+      "theme": "3D and visual understanding",
+      "metric": "0.48%",
+      "metric_label": "of parameters trained",
+      "context": "BRIAR TAR: 45.93% pretrained, 55.35% with PETALface. Swin-B / WebFace4M.",
+      "caveat": "The comparison uses BRIAR Protocol 3.1 and differs from the FG 2025 BRIAR study. Full fine-tuning reaches 29.68% under this protocol.",
+      "role": "Co-author",
+      "problem": "A high-quality gallery and a degraded probe occupy different visual domains. Full fine-tuning can weaken a strong pretrained recognition model.",
+      "idea": "Keep the backbone frozen and train two low-rank adapter branches. Weight their contributions with an image-quality estimate for each input.",
+      "media":
+        [
+          {
+            "label": "Gallery and probe",
+            "src": "/assets/img/showcase/petalface-1.webp",
+            "caption": "Original BRIAR examples and image-quality analysis.",
+            "alt": "Original BRIAR examples and image-quality analysis.",
+            "preview": "/assets/img/showcase/petalface-1-preview.webp",
+          },
+          {
+            "label": "Quality-weighted adapters",
+            "src": "/assets/img/showcase/petalface-2.webp",
+            "caption": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
+            "alt": "Two LoRA branches adapt a frozen backbone using quality-dependent weighting.",
+            "preview": "/assets/img/showcase/petalface-2-preview.webp",
+          },
+          {
+            "label": "TinyFace evidence",
+            "src": "/assets/img/showcase/petalface-3.webp",
+            "caption": "Published TinyFace results. Protocol details remain in the source figure.",
+            "alt": "Published TinyFace results. Protocol details remain in the source figure.",
+            "preview": "/assets/img/showcase/petalface-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/petalface-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Adaptation", "BRIAR TAR at FAR 0.1%"],
+          "rows": [["Pretrained", "45.93%"], ["Full fine-tuning", "29.68%"], ["PETALface", "55.35%"]],
+          "source": "WACV 2025, Table 2. Swin-B, WebFace4M, BRIAR Protocol 3.1.",
+          "note": "Higher TAR is better. Only 0.48% of parameters are trained by PETALface.",
+        },
+    },
+  "crowddiff":
+    {
+      "headline": "Count through multiple possibilities.",
+      "pitch": "Diffusion generates complementary crowd-density hypotheses whose head detections are fused to improve counting in ambiguous scenes.",
+      "theme": "3D and visual understanding",
+      "metric": "66.97",
+      "metric_label": "UCF-QNRF counting MAE",
+      "context": "Eight hypotheses versus 74.59 MAE with one. Lower is better.",
+      "caveat": "Runtime increases from 210 to 1,360 ms. The paper selects four hypotheses as its quality/runtime tradeoff.",
+      "role": "Co-author",
+      "problem": "Dense crowds contain occlusions, ambiguous head locations and background structure. A single density prediction cannot express every plausible interpretation.",
+      "idea": "Sample several detailed density maps, convert them into head-location hypotheses, and fuse complementary detections while rejecting duplicate locations.",
+      "media":
+        [
+          {
+            "label": "A dense scene",
+            "src": "/assets/img/showcase/crowddiff-1.webp",
+            "caption": "One published example: ground truth 1,155, prediction 1,142. These are per-image counts, not an aggregate benchmark.",
+            "alt": "One published example: ground truth 1,155, prediction 1,142. These are per-image counts, not an aggregate benchmark.",
+            "preview": "/assets/img/showcase/crowddiff-1-preview.webp",
+          },
+          {
+            "label": "Density hypotheses",
+            "src": "/assets/img/showcase/crowddiff-2.webp",
+            "caption": "Original examples show accepted and rejected detections across hypotheses.",
+            "alt": "Original examples show accepted and rejected detections across hypotheses.",
+            "preview": "/assets/img/showcase/crowddiff-2-preview.webp",
+          },
+          {
+            "label": "The model",
+            "src": "/assets/img/showcase/crowddiff-3.webp",
+            "caption": "Image-conditioned density generation with a training-only counting branch.",
+            "alt": "Image-conditioned density generation with a training-only counting branch.",
+            "preview": "/assets/img/showcase/crowddiff-3-preview.webp",
+          },
+        ],
+      "image": "/assets/img/showcase/crowddiff-1-preview.webp",
+      "evidence":
+        {
+          "headers": ["Hypotheses", "MAE", "MSE", "Runtime"],
+          "rows":
+            [
+              ["1", "74.59", "134.78", "210 ms"],
+              ["2", "71.94", "130.49", "430 ms"],
+              ["4", "68.95", "125.65", "770 ms"],
+              ["8", "66.97", "122.44", "1,360 ms"],
+            ],
+          "source": "CVPR 2024, Table 6. UCF-QNRF ablation.",
+          "note": "Lower error is better. More hypotheses increase inference time; the paper selects four.",
+        },
+    },
+}

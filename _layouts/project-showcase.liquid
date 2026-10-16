@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head.liquid %}
+    <link rel="stylesheet" href="{{ '/assets/css/project-showcase.css?v=1' | relative_url }}">
+  </head>
+  <body class="showcase-body {% if site.navbar_fixed %}fixed-top-nav{% endif %}">
+    {% include header.liquid %}
+    <main class="showcase-main" id="main-content">{{ content }}</main>
+    {% include footer.liquid %}
+    {% include scripts.liquid %}
+    <script src="{{ '/assets/js/project-showcase.js?v=1' | relative_url }}" defer></script>
+  </body>
+</html>

@@ -1,103 +1,240 @@
 ---
-layout: default
+layout: project-showcase
 ---
 {% assign project = site.data.research_projects[page.project_key] %}
-<link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
-<article class="research-project-page">
-  {% if project.navigation_group == 'internships' %}
-    <a class="project-back" href="{{ '/projects/#internships' | relative_url }}">Back to projects</a>
-  {% else %}
-    <a class="project-back" href="{{ '/projects/#papers' | relative_url }}">Back to projects</a>
-    {% if project.company %}
-      <a class="project-back project-back-secondary" href="{{ '/projects/#internships' | relative_url }}">Internship work</a>
-    {% endif %}
-  {% endif %}
-  <header class="research-project-header">
-    <p class="project-meta">
-      {% if project.company %}
-        {{ project.company }} · {{ project.role }} · {{ project.period }}
-      {% else %}
-        {{ project.venue }}
-        {{ project.year }}
-      {% endif %}
-    </p>
-    <h1>{{ project.title }}</h1>
-    <p class="project-lede">{{ project.introduction | default: project.description }}</p>
-  </header>
-  {% if project.slides.size > 0 %}
-    {% if project.presentation_status %}
-      <p class="project-meta">{{ project.presentation_status }}</p>
-    {% endif %}
-    {% include research-slides.liquid slides=project.slides label=project.title %}
-  {% endif %}
-  {% if project.definition %}
-    <section class="project-definition">
-      <h2>{{ project.definition_title }}</h2>
-      <p>{{ project.definition }}</p>
-      {% if project.attention_transfer_equations %}
-        <div class="attention-equations">
-          <p role="math" aria-label="Edited target keys equal the mask times target keys plus one minus the mask times source keys">
-            <var>K̂</var><sub>t</sub> = <var>M</var> ⊙ <var>K</var><sub>t</sub> + (1 − <var>M</var>) ⊙ <var>K</var><sub>s</sub>
+{% assign story = site.data.project_showcase[page.project_key] %}
+<article class="case-study">
+  <header class="case-hero">
+    <div class="showcase-container">
+      <a class="case-back" href="{{ '/projects/' | relative_url }}">← All projects</a>
+      <p class="showcase-eyebrow">
+        {{ project.title }} ·
+        {% if project.presentation_status and project.company -%}
+          {{- project.company }}
+          {{ project.period -}}
+        {%- else -%}
+          {{- project.venue }}
+          {{ project.year -}}
+        {%- endif %}
+        {%- if project.presentation_status %} · {{ project.presentation_status }}{% endif %}
+      </p>
+      <div class="case-hero-grid">
+        <div>
+          <h1>{{ story.headline }}</h1>
+          <p class="case-pitch">{{ story.pitch }}</p>
+          <p class="case-role">
+            {{ story.role -}}
+            {%- if project.company %} · {{ project.company }} · {{ project.period }}{% endif %}
           </p>
-          <p role="math" aria-label="Edited target values equal the mask times target values plus one minus the mask times source values">
-            <var>V̂</var><sub>t</sub> = <var>M</var> ⊙ <var>V</var><sub>t</sub> + (1 − <var>M</var>) ⊙ <var>V</var><sub>s</sub>
+        </div>
+        <div class="case-impact">
+          <strong>{{ story.metric }}</strong><span>{{ story.metric_label }}</span>
+          <p>{{ story.context }}</p>
+        </div>
+      </div>
+      <nav class="case-section-nav" aria-label="Case study sections">
+        <a href="#examples">Examples</a><a href="#idea">The idea</a><a href="#results">Results</a><a href="#method">Method</a
+        ><a href="#slides">Slides</a>
+        {%- for link in project.links -%}
+          <a class="case-source-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>
+        {%- endfor %}
+      </nav>
+    </div>
+  </header>
+  <div class="showcase-container case-body">
+    <section class="case-examples" id="examples" aria-labelledby="examples-heading">
+      <div class="case-section-heading">
+        <p class="showcase-eyebrow">See the work</p>
+        <h2 id="examples-heading">
+          {% if project.presentation_status %}Research examples{% else %}Published examples{% endif %}
+        </h2>
+      </div>
+      {% if story.comparison %}
+        <div class="case-comparison" data-comparison style="--reveal:50%">
+          <div class="comparison-images">
+            <div class="comparison-before"><img src="{{ story.comparison | relative_url }}" alt="Original corgi image." decoding="async"></div>
+            <div class="comparison-after">
+              <img src="{{ story.comparison | relative_url }}" alt="Edited corgi wearing sunglasses." decoding="async">
+            </div>
+            <span class="comparison-label comparison-label-before">Original</span><span class="comparison-label comparison-label-after">Edited</span
+            ><span class="comparison-divider" aria-hidden="true"></span>
+          </div>
+          <label for="edit-reveal">Reveal the edit</label><input id="edit-reveal" type="range" min="0" max="100" value="50" data-comparison-range>
+          <p class="case-media-caption">
+            A sketch-guided edit from the research draft. The prompt also adds “wearing sunglasses.” Drag to compare the original and edited images.
           </p>
         </div>
       {% endif %}
-      {% if project.definition_mask %}
-        <p>{{ project.definition_mask }}</p>
-      {% endif %}
-      {% if project.definition_context %}
-        <p>{{ project.definition_context }}</p>
-      {% endif %}
+      <div class="case-gallery" data-case-gallery>
+        <div class="case-media-tabs" role="group" aria-label="Research figures">
+          {% for figure in story.media -%}
+            <button type="button" data-figure-index="{{ forloop.index0 }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+              {{ figure.label }}
+            </button>
+          {%- endfor %}
+        </div>
+        {% assign first_figure = story.media | first %}
+        <figure class="case-figure">
+          <div class="case-image-plate">
+            <img
+              src="{{ first_figure.preview | default: first_figure.src | relative_url }}"
+              data-full-src="{{ first_figure.src | relative_url }}"
+              alt="{{ first_figure.alt | escape }}"
+              data-case-image
+              decoding="async"
+
+            ><button type="button" class="case-expand" data-expand-figure>Expand figure ↗</button>
+          </div>
+          <figcaption data-case-caption>{{ first_figure.caption }}</figcaption>
+        </figure>
+        <script type="application/json" data-case-media>
+          {{ story.media | jsonify }}
+        </script>
+      </div>
     </section>
-  {% endif %}
-  {% if project.links.size > 0 %}
-    <div class="project-links">
-      {% for link in project.links -%}
-        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
-      {%- endfor %}
-    </div>
-  {% endif %}
-  {% if project.method_steps %}
-    <section class="project-method">
-      <h2>How it works</h2>
-      <ol>
+    <section class="case-idea case-section" id="idea">
+      <div>
+        <p class="showcase-eyebrow">The question</p>
+        <h2>The challenge.</h2>
+        <p>{{ story.problem }}</p>
+      </div>
+      <div>
+        <p class="showcase-eyebrow">The approach</p>
+        <h2>The central idea.</h2>
+        <p>{{ story.idea }}</p>
+      </div>
+    </section>
+    <section class="case-section case-evidence" id="results" aria-labelledby="results-heading">
+      <div class="case-section-heading">
+        <p class="showcase-eyebrow">Measured impact</p>
+        <h2 id="results-heading">
+          {% if story.evidence %}The results.{% else %}What the examples show.{% endif %}
+        </h2>
+      </div>
+      {% if page.project_key == 'crowddiff' %}
+        <div class="crowd-explorer" data-crowd-explorer>
+          <div>
+            <h3>Explore the quality–runtime tradeoff</h3>
+            <p>Choose the number of sampled hypotheses from the published ablation.</p>
+            <div class="crowd-choices" role="group" aria-label="Number of crowd hypotheses">
+              {% assign hypotheses = '1,2,4,8' | split: ',' -%}
+              {%- for count in hypotheses -%}
+                <button type="button" data-hypotheses="{{ count }}" aria-pressed="{% if count == '4' %}true{% else %}false{% endif %}">
+                  {{ count }}
+                </button>
+              {%- endfor %}
+            </div>
+          </div>
+          <div class="crowd-readouts" role="status" aria-live="polite">
+            <p><strong data-crowd-mae>68.95</strong><span>MAE · lower is better</span></p>
+            <p><strong data-crowd-time>770 ms</strong><span>Reported inference time</span></p>
+          </div>
+        </div>
+      {% endif %}
+      {% if story.evidence %}
+        <div class="case-table-scroll" tabindex="0" role="region" aria-label="{{ project.title | escape }} result table">
+          <table class="case-results-table">
+            <thead>
+              <tr>
+                {% for heading in story.evidence.headers %}
+                  <th scope="col">{{ heading }}</th>
+                {% endfor %}
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in story.evidence.rows %}
+                <tr>
+                  {% for value in row -%}
+                    {%- if forloop.first %}
+                      <th scope="row">{{ value }}</th>
+                    {% else %}
+                      <td>{{ value }}</td>
+                    {% endif -%}
+                  {%- endfor %}
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        <p class="case-evidence-source">{{ story.evidence.source }}</p>
+        <p class="case-evidence-note">{{ story.evidence.note }}</p>
+      {% else %}
+        <p class="case-readable">
+          The draft illustrates sketch-guided changes, object movement and pose edits using pretrained spatial controllers. The examples demonstrate
+          the pipeline’s behavior; a completed quantitative benchmark is not available.
+        </p>
+      {% endif %}
+      <div class="case-context">
+        <h3>Evaluation context</h3>
+        <p>{{ story.caveat }}</p>
+      </div>
+    </section>
+    <section class="case-section" id="method">
+      <div class="case-section-heading">
+        <p class="showcase-eyebrow">Behind the result</p>
+        <h2>How it works.</h2>
+      </div>
+      <ol class="case-method-steps">
         {% for step in project.method_steps %}
-          <li>{{ step }}</li>
+          <li>
+            <span class="case-step-number" aria-hidden="true">0{{ forloop.index }}</span>
+            <p>{{ step }}</p>
+          </li>
         {% endfor %}
       </ol>
-    </section>
-  {% endif %}
-  {% if project.results %}
-    <section class="project-results">
-      <h2>{{ project.results_title | default: 'Results' }}</h2>
-      {% for result in project.results %}
-        <p>{{ result }}</p>
-      {% endfor %}
-      {% if project.results_context %}
-        <p>{{ project.results_context }}</p>
+      {% if project.definition %}
+        <details class="case-technical">
+          <summary>{{ project.definition_title }}</summary>
+          <p>{{ project.definition }}</p>
+          {% if project.attention_transfer_equations %}
+            <div class="case-equations">
+              <p role="math" aria-label="Target keys inside the mask, source keys outside it">
+                K̂<sub>t</sub> = M ⊙ K<sub>t</sub> + (1 − M) ⊙ K<sub>s</sub>
+              </p>
+              <p role="math" aria-label="Target values inside the mask, source values outside it">
+                V̂<sub>t</sub> = M ⊙ V<sub>t</sub> + (1 − M) ⊙ V<sub>s</sub>
+              </p>
+            </div>
+            <p>{{ project.definition_mask }}</p>
+          {% endif -%}
+          {%- if project.definition_context %}
+            <p>{{ project.definition_context }}</p>
+          {% endif %}
+        </details>
       {% endif %}
+      <div class="case-contributions">
+        <h3>Research contributions</h3>
+        <ul>
+          {% for contribution in project.contributions %}
+            <li>{{ contribution }}</li>
+          {% endfor %}
+        </ul>
+      </div>
     </section>
-  {% endif %}
-  <section class="project-contribution">
-    <h2>{{ project.contributions_title | default: 'Contributions' }}</h2>
-    <ul>
-      {% for contribution in project.contributions %}
-        <li>{{ contribution }}</li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% if project.paper_title %}
-    <p class="project-citation">
+    <section class="case-section case-slides" id="slides">
+      <div class="case-section-heading">
+        <p class="showcase-eyebrow">Another way to explore</p>
+        <h2>The five-slide overview.</h2>
+      </div>
+      {% include research-slides.liquid slides=project.slides label=project.title %}
+    </section>
+    <footer class="case-reference">
       {% if project.source_url -%}
-        <a href="{{ project.source_url }}" target="_blank" rel="noopener noreferrer">{{ project.paper_title }}</a>
+        <a href="{{ project.source_url }}" target="_blank" rel="noopener noreferrer">{{ project.paper_title }} ↗</a>
       {%- else -%}
         {{- project.paper_title -}}
-      {%- endif -%}
-      . {{ project.venue }}
-      {{ project.year }}.
-    </p>
-  {% endif %}
+      {%- endif %}
+      <p>
+        {{ project.venue }}
+        {{ project.year -}}
+        {%- if project.presentation_status %} · {{ project.presentation_status }}{% endif %}
+      </p>
+      <a class="showcase-project-link" href="{{ '/projects/' | relative_url }}">Explore more projects ↗</a>
+    </footer>
+  </div>
 </article>
+<dialog class="case-lightbox" aria-label="Expanded research figure" data-figure-dialog>
+  <button type="button" data-close-figure aria-label="Close expanded figure">Close ×</button><img alt="" data-dialog-image>
+  <p data-dialog-caption></p>
+</dialog>
 <script src="{{ '/assets/js/research-slides.js' | relative_url }}" defer></script>
