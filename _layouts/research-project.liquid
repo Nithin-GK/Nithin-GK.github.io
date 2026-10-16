@@ -47,7 +47,9 @@ layout: project-showcase
               <h3>Original / Edited</h3>
               <div class="case-comparison" data-image-comparison style="--compare-position: 50%">
                 <img src="{{ edited.src | relative_url }}" alt="{{ edited.alt | escape }}">
-                <div class="case-comparison-before"><img src="{{ original.src | relative_url }}" alt="{{ original.alt | escape }}"></div>
+                <div class="case-comparison-before" style="clip-path: inset(0 50% 0 0)">
+                  <img src="{{ original.src | relative_url }}" alt="{{ original.alt | escape }}">
+                </div>
                 <span class="case-comparison-label case-comparison-original">Original</span>
                 <span class="case-comparison-label case-comparison-edited">Edited</span>
                 <div class="case-comparison-handle" aria-hidden="true"><span>↔</span></div>
