@@ -16,8 +16,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/internships/";
           },
-        },{id: "nav-papers",
-          title: "Papers",
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "Projects",
           description: "Generative modeling and computer vision.",
           section: "Navigation",
           handler: () => {
