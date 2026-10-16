@@ -19,7 +19,6 @@ nav_order: 2.5
     <p>A visual introduction to my work on large-scale training and multimodal vision.</p>
     <div class="project-links">
       <a href="{{ '/projects/research-overview/' | relative_url }}">Browse presentation</a>
-      <a href="{{ '/assets/slides/research-overview.pdf' | relative_url }}" download>Download PDF</a>
       <a href="{{ '/assets/slides/research-overview.pptx' | relative_url }}" download>Download PowerPoint</a>
     </div>
   </section>

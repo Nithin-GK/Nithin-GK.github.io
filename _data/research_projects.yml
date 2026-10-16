@@ -4,7 +4,7 @@
       "title": "Novel view synthesis at scale",
       "venue": "ICCV",
       "year": 2025,
-      "slides": [2, 3],
+      "slides": ["google-nvs-1", "google-nvs-2", "google-nvs-3", "google-nvs-4", "google-nvs-5"],
       "image_alt": "CAT3D generates training views, and Tok-D disentangles source and target tokens",
       "description": "Token disentanglement lets transformer models learn from diffusion-generated views and generalize to unseen scenes.",
       "paper_title": "Scaling Transformer-Based Novel View Synthesis with Token Disentanglement and Synthetic Data",
@@ -37,6 +37,7 @@
       "company": "Google",
       "role": "Research Intern",
       "period": "Dec 2024 – Mar 2025",
+      "gallery_label": "View project and five slides",
     },
   "gendeg":
     {

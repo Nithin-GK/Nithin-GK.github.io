@@ -71,4 +71,34 @@
       "title": "Research direction",
       "alt": "Research direction in large-scale training of generative and multimodal models, with 18 peer-reviewed publications",
     },
+  "google-nvs-1":
+    {
+      "src": "/assets/slides/google-nvs-1.webp",
+      "title": "Novel view synthesis at scale",
+      "alt": "Three scenes comparing input views, LVSM and Tok-D reconstructions",
+    },
+  "google-nvs-2":
+    {
+      "src": "/assets/slides/google-nvs-2.webp",
+      "title": "Synthetic training views",
+      "alt": "CAT3D generates source views, while the original conditioning image provides target supervision",
+    },
+  "google-nvs-3":
+    {
+      "src": "/assets/slides/google-nvs-3.webp",
+      "title": "Token disentanglement",
+      "alt": "Tok-D and Tok-D Plus distinguish source and target tokens through style embeddings and modulation",
+    },
+  "google-nvs-4":
+    {
+      "src": "/assets/slides/google-nvs-4.webp",
+      "title": "Reconstruction quality",
+      "alt": "Real-data Table 1 PSNR: LVSM versus Tok-D on RealEstate10K, ACID and DL3DV",
+    },
+  "google-nvs-5":
+    {
+      "src": "/assets/slides/google-nvs-5.webp",
+      "title": "Generalization with synthetic data",
+      "alt": "Qualitative cross-dataset reconstructions and small PSNR gains from synthetic augmentation in Table 2",
+    },
 }
