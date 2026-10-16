@@ -15,14 +15,6 @@ navigation_group: papers
     <a href="{{ '/publications/' | relative_url }}">Full publication list</a>
     <a href="{{ '/internships/' | relative_url }}">Internship work</a>
   </div>
-  <section class="research-overview research-overview-link" aria-labelledby="research-overview-title">
-    <h2 id="research-overview-title">Research overview</h2>
-    <p>A visual introduction to my work on large-scale training and multimodal vision.</p>
-    <div class="project-links">
-      <a href="{{ '/projects/research-overview/' | relative_url }}">Browse presentation</a>
-      <a href="{{ '/assets/slides/research-overview.pptx' | relative_url }}" download>Download PowerPoint</a>
-    </div>
-  </section>
   <div class="project-list">
     {% assign projects = site.projects | where: 'research_project', true | sort: 'importance' %}
     {% for item in projects %}

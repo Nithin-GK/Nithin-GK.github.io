@@ -1,22 +1,4 @@
 {
-  "1":
-    {
-      "src": "/assets/slides/slide-01.webp",
-      "title": "Large-scale training and multimodal vision",
-      "alt": "Research overview by Nithin Gopalakrishnan Nair",
-    },
-  "2":
-    {
-      "src": "/assets/slides/slide-02.webp",
-      "title": "Novel view synthesis with synthetic data",
-      "alt": "CAT3D generates training views, and Tok-D disentangles source and target tokens",
-    },
-  "3":
-    {
-      "src": "/assets/slides/slide-03.webp",
-      "title": "Novel view synthesis results",
-      "alt": "Tok-D versus LVSM: PSNR improves from 28.89 to 30.02 on RealEstate10K and from 19.91 to 21.55 on DL3DV",
-    },
   "4":
     {
       "src": "/assets/slides/slide-04.webp",
@@ -64,12 +46,6 @@
       "src": "/assets/slides/slide-14.webp",
       "title": "CrowdDiff",
       "alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
-    },
-  "16":
-    {
-      "src": "/assets/slides/slide-16.webp",
-      "title": "Research direction",
-      "alt": "Research direction in large-scale training of generative and multimodal models, with 18 peer-reviewed publications",
     },
   "google-nvs-1":
     {
