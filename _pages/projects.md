@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Papers
+title: Projects
 permalink: /projects/
 description: Generative modeling and computer vision.
 nav: true
-nav_order: 2
+nav_order: 2.5
 navigation_group: papers
 ---
 
