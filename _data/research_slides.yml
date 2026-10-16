@@ -1,9 +1,9 @@
 {
   "google-nvs-1":
     {
-      "src": "/assets/slides/google-nvs-1-visual.webp",
+      "src": "/assets/slides/google-nvs-1-context.webp",
       "title": "Large-scale 3D training",
-      "alt": "Large-scale 3D training with synthetic data, featuring a Tok-D red-car reconstruction from the paper.",
+      "alt": "Large-scale 3D training with synthetic data. Complete published comparison with input, LVSM, Tok-D and ground truth.",
     },
   "google-nvs-2":
     {
@@ -13,13 +13,13 @@
     },
   "google-nvs-3":
     {
-      "src": "/assets/slides/google-nvs-3.webp",
+      "src": "/assets/slides/google-nvs-3-context.webp",
       "title": "Token disentanglement",
       "alt": "Tok-D and Tok-D Plus distinguish source and target tokens through style embeddings and modulation",
     },
   "google-nvs-4":
     {
-      "src": "/assets/slides/google-nvs-4.webp",
+      "src": "/assets/slides/google-nvs-4-context.webp",
       "title": "Reconstruction quality",
       "alt": "Real-data Table 1 PSNR: LVSM versus Tok-D on RealEstate10K, ACID and DL3DV",
     },
@@ -31,15 +31,15 @@
     },
   "gendeg-1":
     {
-      "src": "/assets/slides/gendeg-1-visual.webp",
+      "src": "/assets/slides/gendeg-1-context.webp",
       "title": "GenDeg: synthetic data for restoration",
-      "alt": "GenDeg haze and rain restoration examples: Input, PromptIR and PromptIR GD, with original labels and detail insets.",
+      "alt": "GenDeg restoration results across all six degradation types, including original inputs, baseline methods, GenDS-trained variants and ground truth.",
     },
   "gendeg-2":
     {
-      "src": "/assets/slides/gendeg-2.webp",
+      "src": "/assets/slides/gendeg-2-context.webp",
       "title": "Learning degradation synthesis",
-      "alt": "Learning degradation synthesis. The generator learns a degraded image conditioned on its clean counterpart.",
+      "alt": "Complete GenDeg degradation synthesis method, including input and conditioning, sampling, and degradation-type and intensity control.",
     },
   "gendeg-3":
     {
@@ -61,9 +61,9 @@
     },
   "scale-wise-var-1":
     {
-      "src": "/assets/slides/scale-wise-var-1-visual.webp",
+      "src": "/assets/slides/scale-wise-var-1-context.webp",
       "title": "Scale-Wise VAR is Secretly Discrete Diffusion",
-      "alt": "Scale-Wise VAR and proposed-method image-generation samples, with original VAR and Ours labels.",
+      "alt": "Scale-Wise VAR Figure 1, including the reconstruction and image-generation comparisons.",
     },
   "scale-wise-var-2":
     {
@@ -73,7 +73,7 @@
     },
   "scale-wise-var-3":
     {
-      "src": "/assets/slides/scale-wise-var-3.webp",
+      "src": "/assets/slides/scale-wise-var-3-context.webp",
       "title": "Iterative visual refinement",
       "alt": "Iterative visual refinement. The diffusion interpretation supports resampling after an initial prediction.",
     },
@@ -103,7 +103,7 @@
     },
   "steered-diffusion-3":
     {
-      "src": "/assets/slides/steered-diffusion-3.webp",
+      "src": "/assets/slides/steered-diffusion-3-context.webp",
       "title": "Image restoration at inference time",
       "alt": "Image restoration at inference time. Predefined image transformations express restoration constraints.",
     },
@@ -121,13 +121,13 @@
     },
   "unite-and-conquer-1":
     {
-      "src": "/assets/slides/unite-and-conquer-1-visual.webp",
-      "title": "Unite and Conquer: compositional generation",
-      "alt": "Unite and Conquer class-and-text compositions in a yellow flower field and on a beach.",
+      "src": "/assets/slides/unite-and-conquer-1-context.webp",
+      "title": "Unite and Conquer",
+      "alt": "Complete semantic-map and sketch-conditioned face-generation panels, with text prompts, conditions and TediGAN baseline where applicable.",
     },
   "unite-and-conquer-2":
     {
-      "src": "/assets/slides/unite-and-conquer-2.webp",
+      "src": "/assets/slides/unite-and-conquer-2-context.webp",
       "title": "Composition of pretrained models",
       "alt": "Composition of pretrained models. Independent modality-conditioned models contribute to a shared sampling process.",
     },
@@ -139,7 +139,7 @@
     },
   "unite-and-conquer-4":
     {
-      "src": "/assets/slides/unite-and-conquer-4.webp",
+      "src": "/assets/slides/unite-and-conquer-4-context.webp",
       "title": "Reliability and condition strength",
       "alt": "Reliability and condition strength. The generalized product of experts balances information from the models.",
     },
@@ -151,7 +151,7 @@
     },
   "maxfusion-1":
     {
-      "src": "/assets/slides/maxfusion-1.webp",
+      "src": "/assets/slides/maxfusion-1-context.webp",
       "title": "MaxFusion: multiple spatial conditions",
       "alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
     },
@@ -283,9 +283,9 @@
     },
   "control2control-3":
     {
-      "src": "/assets/slides/control2control-3.webp",
+      "src": "/assets/slides/control2control-3-context.webp",
       "title": "Automatic masks and attention transfer",
-      "alt": "Automatic masks and revitalized attention transfer use source content outside the edited region.",
+      "alt": "Complete revitalized attention-transfer diagram, showing masked source and target keys and values and the retained target queries.",
     },
   "control2control-4":
     {

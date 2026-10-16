@@ -8,33 +8,24 @@ layout: project-showcase
     <div class="showcase-container">
       <a class="case-back" href="{{ '/projects/' | relative_url }}">← All projects</a>
       <p class="showcase-eyebrow">
-        {{ project.title }} ·
-        {% if project.presentation_status and project.company -%}
+        {% if project.company -%}
           {{- project.company }}
           {{ project.period -}}
+          {%- unless project.presentation_status %}
+            · {{ project.venue }}
+            {{ project.year -}}
+          {%- endunless -%}
         {%- else -%}
           {{- project.venue }}
           {{ project.year -}}
         {%- endif %}
         {%- if project.presentation_status %} · {{ project.presentation_status }}{% endif %}
       </p>
-      <div class="case-hero-grid">
-        <div>
-          <h1>{{ story.headline }}</h1>
-          <p class="case-pitch">{{ story.pitch }}</p>
-          <p class="case-role">
-            {{ story.role -}}
-            {%- if project.company %} · {{ project.company }} · {{ project.period }}{% endif %}
-          </p>
-        </div>
-        <div class="case-impact">
-          <h2>Overview</h2>
-          <p>{{ story.outcome_detail }}</p>
-        </div>
-      </div>
+      <h1>{{ project.title }}</h1>
+      <p class="case-pitch">{{ story.pitch }}</p>
+      <p class="case-role">{{ story.role }}</p>
       <nav class="case-section-nav" aria-label="Case study sections">
-        <a href="#examples">Examples</a><a href="#idea">Approach</a><a href="#results">Results</a><a href="#method">Method</a
-        ><a href="#slides">Slides</a>
+        <a href="#examples">Figures</a><a href="#method">How it works</a><a href="#results">Results</a><a href="#slides">Presentation</a>
         {%- for link in project.links -%}
           <a class="case-source-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>
         {%- endfor %}
@@ -44,7 +35,7 @@ layout: project-showcase
   <div class="showcase-container case-body">
     <section class="case-examples" id="examples" aria-labelledby="examples-heading">
       <div class="case-section-heading">
-        <h2 id="examples-heading">Examples</h2>
+        <h2 id="examples-heading">Figures</h2>
       </div>
       {% if story.edit_panels %}
         <div class="case-edit-grid">
@@ -60,25 +51,66 @@ layout: project-showcase
         {%- endfor %}
       </div>
     </section>
-    <section class="case-idea case-section" id="idea">
-      <div>
-        <h2>Problem</h2>
-        <p>{{ story.problem }}</p>
+    <section class="case-section" id="method">
+      <div class="case-section-heading">
+        <h2>How it works</h2>
       </div>
-      <div>
-        <h2>Approach</h2>
-        <p>{{ story.idea }}</p>
-      </div>
+      {% if story.method_details %}
+        {% for detail in story.method_details %}
+          <div class="case-method-detail">
+            <h3>{{ detail.title }}</h3>
+            <p>{{ detail.body }}</p>
+          </div>
+        {% endfor %}
+        {% if story.composition_equations %}{% include unite-equations.liquid %}{% endif %}
+      {% else %}
+        <ol class="case-method-steps">
+          {% for step in project.method_steps %}
+            <li>
+              <p>{{ step }}</p>
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+      {% if story.method_figures %}
+        <div class="case-method-figures">
+          {% for figure in story.method_figures -%}
+            {%- include case-figure.liquid figure=figure -%}
+          {%- endfor %}
+        </div>
+      {% endif %}
+      {% if project.definition and story.method_details == null or project.attention_transfer_equations %}
+        <div class="case-technical">
+          <h3>{{ project.definition_title }}</h3>
+          <p>{{ project.definition }}</p>
+          {% if project.attention_transfer_equations %}
+            <div class="case-equations">
+              <p role="math" aria-label="Target keys inside the mask, source keys outside it">
+                K̂<sub>t</sub> = M ⊙ K<sub>t</sub> + (1 − M) ⊙ K<sub>s</sub>
+              </p>
+              <p role="math" aria-label="Target values inside the mask, source values outside it">
+                V̂<sub>t</sub> = M ⊙ V<sub>t</sub> + (1 − M) ⊙ V<sub>s</sub>
+              </p>
+            </div>
+            <p>{{ project.definition_mask }}</p>
+          {% endif -%}
+          {%- if project.definition_context %}
+            <p>{{ project.definition_context }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
     </section>
     <section class="case-section case-evidence" id="results" aria-labelledby="results-heading">
       <div class="case-section-heading">
         <h2 id="results-heading">Results</h2>
       </div>
-      <p class="case-evidence-intro">{{ story.evidence_intro }}</p>
+      {% if story.evidence %}
+        <p class="case-evidence-intro">{{ story.evidence_intro }}</p>
+      {% endif %}
       {% if page.project_key == 'crowddiff' %}
         <div class="crowd-explorer" data-crowd-explorer>
           <div>
-            <h3>Explore the quality–runtime tradeoff</h3>
+            <h3>Counting accuracy and runtime</h3>
             <p>Choose the number of sampled hypotheses from the published ablation.</p>
             <div class="crowd-choices" role="group" aria-label="Number of crowd hypotheses">
               {% assign hypotheses = '1,2,4,8' | split: ',' -%}
@@ -101,65 +133,10 @@ layout: project-showcase
           {%- include case-evidence.liquid evidence=evidence label=project.title -%}
         {%- endfor %}
       {% else %}
-        <p class="case-readable">
-          The draft illustrates sketch-guided changes, object movement and pose edits using pretrained spatial controllers. The examples demonstrate
-          the pipeline’s behavior; a completed quantitative benchmark is not available.
-        </p>
+        <p class="case-readable">{{ story.qualitative_result | default: story.evidence_intro }}</p>
       {% endif %}
       <div class="case-context">
-        <h3>Evaluation context</h3>
         <p>{{ story.caveat }}</p>
-      </div>
-    </section>
-    <section class="case-section" id="method">
-      <div class="case-section-heading">
-        <h2>Method</h2>
-      </div>
-      {% if story.method_details %}
-        {% for detail in story.method_details %}
-          <div class="case-method-detail">
-            <h3>{{ detail.title }}</h3>
-            <p>{{ detail.body }}</p>
-          </div>
-        {% endfor %}
-        {% if story.composition_equations %}{% include unite-equations.liquid %}{% endif %}
-      {% else %}
-        <ol class="case-method-steps">
-          {% for step in project.method_steps %}
-            <li>
-              <span class="case-step-number" aria-hidden="true">0{{ forloop.index }}</span>
-              <p>{{ step }}</p>
-            </li>
-          {% endfor %}
-        </ol>
-      {% endif %}
-      {% if project.definition %}
-        <details class="case-technical">
-          <summary>{{ project.definition_title }}</summary>
-          <p>{{ project.definition }}</p>
-          {% if project.attention_transfer_equations %}
-            <div class="case-equations">
-              <p role="math" aria-label="Target keys inside the mask, source keys outside it">
-                K̂<sub>t</sub> = M ⊙ K<sub>t</sub> + (1 − M) ⊙ K<sub>s</sub>
-              </p>
-              <p role="math" aria-label="Target values inside the mask, source values outside it">
-                V̂<sub>t</sub> = M ⊙ V<sub>t</sub> + (1 − M) ⊙ V<sub>s</sub>
-              </p>
-            </div>
-            <p>{{ project.definition_mask }}</p>
-          {% endif -%}
-          {%- if project.definition_context %}
-            <p>{{ project.definition_context }}</p>
-          {% endif %}
-        </details>
-      {% endif %}
-      <div class="case-contributions">
-        <h3>Contributions</h3>
-        <ul>
-          {% for contribution in project.contributions %}
-            <li>{{ contribution }}</li>
-          {% endfor %}
-        </ul>
       </div>
     </section>
     <section class="case-section case-slides" id="slides">

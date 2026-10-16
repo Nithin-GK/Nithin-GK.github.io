@@ -14,20 +14,11 @@
       "media":
         [
           {
-            "label": "Red-car reconstruction",
-            "src": "/assets/img/showcase/novel-view-synthesis-lead.webp",
-            "preview": "/assets/img/showcase/novel-view-synthesis-lead-preview.webp",
-            "caption": "A selected red-car reconstruction from the published comparison. Columns: input views, LVSM, Tok-D and ground truth.",
-            "alt": "A selected red-car reconstruction from the published comparison. Columns: input views, LVSM, Tok-D and ground truth.",
-            "columns": ["Input views", "LVSM", "Tok-D", "Ground truth"],
-            "column_widths": ["0.145fr", "0.285fr", "0.285fr", "0.285fr"],
-          },
-          {
-            "label": "More reconstruction examples",
-            "src": "/assets/img/showcase/novel-view-synthesis-1.webp",
-            "caption": "Cross-dataset reconstruction examples. Columns from left: input views, LVSM, Tok-D and ground truth.",
-            "alt": "Cross-dataset reconstruction examples. Columns from left: input views, LVSM, Tok-D and ground truth.",
-            "preview": "/assets/img/showcase/novel-view-synthesis-1-preview.webp",
+            "label": "Novel-view reconstruction comparison",
+            "src": "/assets/img/showcase/nvs-complete.webp",
+            "preview": "/assets/img/showcase/nvs-complete-preview.webp",
+            "caption": "Across three scenes, Tok-D (Ours) is compared with LVSM and ground truth. Input views appear on the left.",
+            "alt": "Published cross-dataset reconstruction comparison. Each row shows input views, LVSM, Tok-D (Ours) and ground truth; all three scenes and original detail boxes are retained.",
             "columns": ["Input views", "LVSM", "Tok-D", "Ground truth"],
             "column_widths": ["0.145fr", "0.285fr", "0.285fr", "0.285fr"],
           },
@@ -41,7 +32,7 @@
           {
             "label": "Synthetic training",
             "src": "/assets/img/showcase/novel-view-synthesis-3.webp",
-            "caption": "Training and token-disentanglement details from the original paper.",
+            "caption": "Training with generated views and separate source/target token modulation.",
             "alt": "Training and token-disentanglement details from the original paper.",
             "preview": "/assets/img/showcase/novel-view-synthesis-3-preview.webp",
           },
@@ -56,7 +47,18 @@
         },
       "outcome": "Learn from generated views",
       "outcome_detail": "Diffusion-generated images provide more training examples. Token disentanglement helps the model learn from them while reducing the visual errors that carry into the reconstructed scene.",
-      "evidence_intro": "Tok-D produces views closer to the reference images in the paper’s reconstruction tests. The table reports PSNR, an image-fidelity measure where higher is better.",
+      "evidence_intro": "This table compares reconstruction quality after training on real data, evaluated at 256 × 256 resolution. PSNR measures image fidelity, with higher values indicating closer agreement with the reference image. Synthetic-data augmentation is a separate experiment in the paper.",
+      "method_details":
+        [
+          {
+            "title": "Training with generated views",
+            "body": "CAT3D generates additional camera-conditioned observations. Tok-D separates source-image tokens from target-view tokens through layer-wise modulation, reducing the effect of artifacts in generated views on reconstruction.",
+          },
+          {
+            "title": "Training and evaluation",
+            "body": "The paper reports training on eight H100 GPUs for 100,000 iterations. Its real-data architecture comparison and synthetic-augmentation experiment are separate: the +1.64 dB DL3DV result is from the real-data comparison, while generated views produce smaller cross-dataset gains.",
+          },
+        ],
     },
   "gendeg":
     {
@@ -73,25 +75,18 @@
       "media":
         [
           {
-            "label": "Restoration examples",
-            "src": "/assets/img/showcase/gendeg-lead.webp",
-            "preview": "/assets/img/showcase/gendeg-lead-preview.webp",
-            "caption": "Selected haze and rain restoration comparisons from Figure 5. Input, PromptIR and PromptIR GD are shown with the original labels and detail insets. GD denotes training with GenDS.",
-            "alt": "Selected haze and rain restoration comparisons from Figure 5. Input, PromptIR and PromptIR GD are shown with the original labels and detail insets. GD denotes training with GenDS.",
+            "label": "Restoration comparison",
+            "src": "/assets/img/showcase/gendeg-complete.webp",
+            "preview": "/assets/img/showcase/gendeg-complete-preview.webp",
+            "caption": "Restoration results across six degradation types. Columns marked GD use GenDS for training. Ground truth appears on the right.",
+            "alt": "Complete published restoration comparison: Input, PromptIR, PromptIR GD, Swin, Swin GD, NAFNet, NAFNet GD and ground truth. GD denotes training with GenDS. All degradation rows and detail insets are retained.",
           },
           {
-            "label": "Full comparison",
-            "src": "/assets/img/showcase/gendeg-1.webp",
-            "caption": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
-            "alt": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
-            "preview": "/assets/img/showcase/gendeg-1-preview.webp",
-          },
-          {
-            "label": "The generator",
-            "src": "/assets/img/showcase/gendeg-3.webp",
-            "caption": "Content features, text and degradation statistics condition the generator.",
-            "alt": "Content features, text and degradation statistics condition the generator.",
-            "preview": "/assets/img/showcase/gendeg-3-preview.webp",
+            "label": "Degradation synthesis and restoration",
+            "src": "/assets/img/showcase/gendeg-method-complete.webp",
+            "preview": "/assets/img/showcase/gendeg-method-complete-preview.webp",
+            "caption": "Train the degradation generator, generate and filter synthetic pairs, then train the restoration model.",
+            "alt": "Complete framework: (a) train the conditional degradation generator; (b) generate degraded pairs, correct structure and filter by intensity; (c) train the restoration model. The conditioning and operator legends are retained.",
           },
         ],
       "image": "/assets/img/showcase/gendeg-lead-preview.webp",
@@ -111,58 +106,83 @@
       "outcome": "Broader restoration training",
       "outcome_detail": "Generate paired training images with different types and strengths of degradation, then use them to help restoration models handle unfamiliar conditions.",
       "evidence_intro": "Training the same restoration model with GenDS improves several out-of-distribution results. LPIPS and FID measure different aspects of visual quality; lower is better for both.",
+      "method_details":
+        [
+          {
+            "title": "Controllable paired data",
+            "body": "GenDeg conditions a diffusion generator on a clean image, text and degradation statistics. It generated more than 550,000 paired examples across haze, rain, snow, motion blur, low light and raindrops, with control over degradation type and intensity.",
+          },
+          {
+            "title": "From synthesis to restoration",
+            "body": "Structure correction and intensity filtering retain suitable synthetic pairs. Combining these pairs with existing datasets forms GenDS, with more than 750,000 samples, for training all-in-one restoration models. The comparisons test the effect of this training data using the same restoration architecture.",
+          },
+        ],
     },
   "unite-and-conquer":
     {
-      "headline": "Combine diffusion models without joint training.",
-      "pitch": "Bring separately trained models together so one generated image can follow both an object class and a text description.",
+      "headline": "Compose models, modalities and datasets.",
+      "pitch": "Generate images from combinations of text, class labels, semantic maps and sketches. Models learn each condition separately and combine them during sampling.",
       "theme": "Control and composition",
       "metric": "87.0%",
       "metric_label": "class accuracy",
       "context": "500 generated images. Best of three reliability settings. Class-and-text conditioning.",
-      "caveat": "The proposed sampler receives class and text conditions; the displayed baselines use text conditioning. GLIDE retains the highest CLIP score in this comparison.",
+      "caveat": "The scene sampler receives class and text conditions, while its displayed baselines use text conditioning. GLIDE has the highest CLIP score. In the face comparison, FID and semantic adherence improve, while LPIPS and SSIM do not improve over every baseline.",
       "role": "First author",
-      "problem": "A model trained for one condition does not automatically understand another. Joint multimodal training needs paired data across the conditions and repeated training for new combinations.",
-      "idea": "Compose independently trained conditional diffusion models at inference time. Reliability weights balance their shared unconditional estimate, while guidance strengths control the individual conditions.",
+      "problem": "Training a model for every combination of conditions requires jointly labeled data. A model that handles one condition also needs a sampling strategy that can satisfy several conditions together.",
+      "idea": "Learn individual conditions separately, using independent models or one model trained on alternating conditions. Compose their predictions during sampling, with separate controls for the shared unconditional estimate and the influence of each requested condition.",
       "media":
         [
           {
-            "label": "Composed samples",
-            "src": "/assets/img/showcase/unite-and-conquer-lead.webp",
-            "preview": "/assets/img/showcase/unite-and-conquer-lead-preview.webp",
-            "caption": "Selected outputs from Unite and Conquer. Top: a yellow flower field. Bottom: a beach. Classes from left: Tibetan terrier, teddy bear, triceratops, tree frog and otterhound. The full baseline comparison follows.",
-            "alt": "Selected outputs from Unite and Conquer. Top: a yellow flower field. Bottom: a beach. Classes from left: Tibetan terrier, teddy bear, triceratops, tree frog and otterhound. The full baseline comparison follows.",
+            "label": "Semantic labels and text",
+            "src": "/assets/img/showcase/unite-semantic-controls-panel.webp",
+            "preview": "/assets/img/showcase/unite-semantic-controls-panel-preview.webp",
+            "caption": "Figure 1(b). Semantic maps and text guide face generation, with TediGAN shown for comparison.",
+            "alt": "Complete Figure 1(b) panel: face/hair semantic conditions, all text instructions, TediGAN comparisons and Unite and Conquer outputs. The colored maps are generation conditions, not edit masks.",
           },
           {
-            "label": "Scene comparisons",
-            "src": "/assets/img/showcase/unite-and-conquer-1.webp",
-            "caption": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
-            "alt": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
-            "preview": "/assets/img/showcase/unite-and-conquer-1-preview.webp",
+            "label": "Sketches and text",
+            "src": "/assets/img/showcase/unite-sketch-controls-panel.webp",
+            "preview": "/assets/img/showcase/unite-sketch-controls-panel-preview.webp",
+            "caption": "Figure 1(c). The same sketch produces different faces when combined with different text instructions.",
+            "alt": "Complete Figure 1(c) panel. Each input sketch is combined with the displayed text instructions to generate faces with the requested attributes.",
           },
           {
-            "label": "Cross-dataset comparison",
-            "src": "/assets/img/showcase/unite-and-conquer-2.webp",
-            "caption": "Original multimodal scene-generation comparison.",
-            "alt": "Original multimodal scene-generation comparison.",
-            "preview": "/assets/img/showcase/unite-and-conquer-2-preview.webp",
+            "label": "Class and text comparison",
+            "src": "/assets/img/showcase/unite-class-text-complete.webp",
+            "preview": "/assets/img/showcase/unite-class-text-complete-preview.webp",
+            "caption": "Figure 4. Class-and-text generation compared with CompGen for a flower-field scene and a beach scene.",
+            "alt": "Complete Figure 4: CompGen and Unite and Conquer, with all ImageNet class labels and both scene prompts—“A yellow flower field” and “Photo of a beach.”",
           },
           {
-            "label": "The shared sampler",
-            "src": "/assets/img/showcase/unite-and-conquer-3.webp",
-            "caption": "Independent conditional models contribute to a generalized product-of-experts sampler.",
-            "alt": "Independent conditional models contribute to a generalized product-of-experts sampler.",
-            "preview": "/assets/img/showcase/unite-and-conquer-3-preview.webp",
+            "label": "Class-conditioned scene generation",
+            "src": "/assets/img/showcase/unite-scene-complete.webp",
+            "preview": "/assets/img/showcase/unite-scene-complete-preview.webp",
+            "caption": "Figure 1(a). GLIDE and Unite and Conquer across five object classes and three scene descriptions.",
+            "alt": "Complete Figure 1(a): GLIDE and Unite and Conquer across all five classes and three text-defined scenes. Original class, scene and method labels are retained.",
           },
           {
-            "label": "Condition strength",
-            "src": "/assets/img/showcase/unite-and-conquer-4.webp",
-            "caption": "Interpolation across text and class guidance in the published examples.",
-            "alt": "Interpolation across text and class guidance in the published examples.",
-            "preview": "/assets/img/showcase/unite-and-conquer-4-preview.webp",
+            "label": "Semantic structure and textual attributes",
+            "src": "/assets/img/showcase/unite-semantic-text-complete.webp",
+            "preview": "/assets/img/showcase/unite-semantic-text-complete-preview.webp",
+            "caption": "Semantic maps define the rows and text instructions define the columns. Each cell shows a generated face.",
+            "alt": "Complete semantic-map/text grid. Semantic maps define rows, text instructions define columns, and each cell is a generated image. All condition labels are retained.",
+          },
+          {
+            "label": "Reliability and guidance weights",
+            "src": "/assets/img/showcase/unite-reliability-complete.webp",
+            "preview": "/assets/img/showcase/unite-reliability-complete-preview.webp",
+            "caption": "Figure 6. For the class “Lion” and text “A mountain,” αₜ weights the text model’s unconditional estimate. The w꜀ and wₜ values control class and text guidance.",
+            "alt": "Complete Figure 6, including axes and caption. The text condition is “A mountain” and the class is “Lion.” Vertical αₜ changes the text model’s contribution to the unconditional estimate; horizontal w꜀ and wₜ change class and text guidance strengths.",
+          },
+          {
+            "label": "Interpolation across modalities",
+            "src": "/assets/img/showcase/unite-interpolation-complete.webp",
+            "preview": "/assets/img/showcase/unite-interpolation-complete-preview.webp",
+            "caption": "Figure 7. Text, Class and Mix specify which model supplies the unconditional estimate. Moving across each row changes the relative class/text weighting.",
+            "alt": "Complete Figure 7, including both example groups, row labels and weighting direction. Text, Class and Mix identify which model supplies the unconditional estimate; the horizontal direction changes the relative class/text weighting.",
           },
         ],
-      "image": "/assets/img/showcase/unite-and-conquer-lead-preview.webp",
+      "image": "/assets/img/showcase/unite-face-controls-complete-preview.webp",
       "evidence":
         {
           "headers": ["Method", "Conditioning", "Class accuracy", "NIQE", "CLIP"],
@@ -175,9 +195,58 @@
           "source": "CVPR 2023, Unite and Conquer, Table 3",
           "note": "Class accuracy and CLIP: higher is better. NIQE: lower is better.",
         },
-      "outcome": "Combine what models know",
-      "outcome_detail": "Compose existing models during generation, without collecting a new jointly labeled dataset or retraining them together.",
-      "evidence_intro": "The combined model more reliably produces the requested object in the tested scenes. The table also reports text alignment and image-quality measures, which do not all improve.",
+      "outcome": "Compose separately learned conditions",
+      "outcome_detail": "Use compatible conditional models across datasets and input representations, without jointly training every modality combination.",
+      "evidence_intro": "The paper evaluates class-and-text scenes and semantic face generation. The scene comparison uses 500 generated images and reports the best result over reliability settings of 0, 0.5 and 1.",
+      "method_figures":
+        [
+          {
+            "label": "Condition combinations",
+            "src": "/assets/img/showcase/unite-method-complete.webp",
+            "preview": "/assets/img/showcase/unite-method-complete-preview.webp",
+            "caption": "Figure 3. Separate conditional models, or one model trained on individual conditions, can generate from different combinations at sampling time.",
+            "alt": "Complete Figure 3 and original caption. Individual conditions can be learned by separate models or by one model trained on one condition at a time; the sampler then composes the requested conditions.",
+          },
+        ],
+      "method_details":
+        [
+          {
+            "title": "Conditions with different representations",
+            "body": "The paper combines class labels with language for generic scenes, and face/hair semantic maps, sketches and textual attributes for faces. Each conditional model translates its own input representation into a prediction in a common image-generation space.",
+          },
+          {
+            "title": "Two ways to train",
+            "body": "Use separately trained conditional models, including compatible off-the-shelf models, or train one model by alternating individual conditions across batches. Both routes avoid requiring every training image to have all modalities labeled together. A new condition still needs a suitable conditional model.",
+          },
+          {
+            "title": "Learning across datasets",
+            "body": "The face experiments use hair labels from CelebA-HQ and skin labels from FFHQ, with 27,000 training images from each. At evaluation, desired face and hair conditions are taken from the same held-out image. The generic-scene experiments compose an ImageNet class model with a text-conditioned model.",
+          },
+          {
+            "title": "Reliability and guidance",
+            "body": "Reliability weights combine the models’ null-condition predictions into the shared unconditional estimate. Guidance strengths separately control how strongly the requested class, text or other condition affects the sample. They are different controls, as Figures 6 and 7 show.",
+          },
+          {
+            "title": "Compatible models",
+            "body": "The participating models must predict compatible dimensions and channels. The main derivation also assumes a shared variance schedule. The paper could not use Stable Diffusion because its latent dimensions differed. Contradictory conditions and large differences in model capabilities can make composition difficult.",
+          },
+        ],
+      "composition_equations": true,
+      "additional_evidence":
+        [
+          {
+            "title": "Semantic face generation",
+            "headers": ["Method", "FID ↓", "LPIPS ↓", "SSIM ↑", "mIoU ↑", "F1 ↑"],
+            "rows":
+              [
+                ["INADE (combined)", "54.27", "0.552", "0.332", "0.887", "0.933"],
+                ["TediGAN", "69.51", "0.4823", "0.417", "0.834", "0.905"],
+                ["Unite and Conquer", "26.09", "0.519", "0.416", "0.911", "0.948"],
+              ],
+            "source": "CVPR 2023, Unite and Conquer, Table 1. Selected CelebA evaluation rows.",
+            "note": "Lower FID/LPIPS and higher SSIM/mIoU/F1 are better. The proposed method improves FID and semantic adherence in these rows; TediGAN retains lower LPIPS and slightly higher SSIM. TediGAN uses paired data across modalities.",
+          },
+        ],
     },
   "steered-diffusion":
     {
@@ -203,21 +272,28 @@
           {
             "label": "Colorization",
             "src": "/assets/img/showcase/steered-diffusion-2.webp",
-            "caption": "Published grayscale-to-color examples using the pretrained generator.",
-            "alt": "Published grayscale-to-color examples using the pretrained generator.",
+            "caption": "Grayscale-to-color comparison. “OURS multi” uses the multi-step sampling described in Section 4.2.",
+            "alt": "Complete published grayscale-to-color comparison. The “OURS multi” row uses multi-step sampling, as described in Section 4.2.",
             "preview": "/assets/img/showcase/steered-diffusion-2-preview.webp",
+          },
+          {
+            "label": "Inpainting with masked inputs",
+            "src": "/assets/img/showcase/steered-inpainting-complete.webp",
+            "preview": "/assets/img/showcase/steered-inpainting-complete-preview.webp",
+            "caption": "Figure 8. Thin, medium and thick missing regions. Each group shows the masked input, RePaint (labeled Reinpaint in the figure) and Steered Diffusion.",
+            "alt": "Complete Figure 8 for thin, medium and thick masks. Each group retains the masked input (Degraded), RePaint (spelled Reinpaint in the original figure) and Steered Diffusion (Ours). The black regions are missing input regions, not a separately displayed mask.",
           },
           {
             "label": "Text-guided editing",
             "src": "/assets/img/showcase/steered-diffusion-3.webp",
-            "caption": "Published examples combine semantic editing with identity constraints.",
-            "alt": "Published examples combine semantic editing with identity constraints.",
+            "caption": "Text-guided edits alongside the original image. The method combines text guidance with an identity-preserving network.",
+            "alt": "Complete original-image and text-edit panel, retaining every instruction. The paper combines text guidance with an identity-preserving network.",
             "preview": "/assets/img/showcase/steered-diffusion-3-preview.webp",
           },
           {
             "label": "How steering works",
             "src": "/assets/img/showcase/steered-diffusion-4.webp",
-            "caption": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
+            "caption": "A schematic of conditional steering, rather than consecutive sampled frames.",
             "alt": "A schematic of conditional steering. The illustration is not a sequence of actual sampled frames.",
             "preview": "/assets/img/showcase/steered-diffusion-4-preview.webp",
           },
@@ -238,7 +314,7 @@
         },
       "outcome": "One generator, several tasks",
       "outcome_detail": "Use the same guidance framework for super-resolution, colorization, inpainting and conditional generation.",
-      "evidence_intro": "The framework was tested on several generation and restoration tasks. Each row compares one task with its baseline. FID is lower-is-better; PSNR measures image fidelity and is higher-is-better.",
+      "evidence_intro": "Each row compares one task with its baseline. The 8× super-resolution test uses 300 CelebA images. Lower FID indicates better distributional image quality, while higher PSNR indicates closer agreement with the reference.",
     },
   "maxfusion":
     {
@@ -255,32 +331,39 @@
       "media":
         [
           {
-            "label": "Multiple controls",
-            "src": "/assets/img/showcase/maxfusion-lead.webp",
-            "preview": "/assets/img/showcase/maxfusion-lead-preview.webp",
-            "caption": "Published examples combining complementary and conflicting spatial controls. Each group retains its conditioning inputs and generated samples.",
-            "alt": "Published examples combining complementary and conflicting spatial controls. Each group retains its conditioning inputs and generated samples.",
+            "label": "Contradictory spatial conditions",
+            "src": "/assets/img/showcase/maxfusion-contradictory-complete.webp",
+            "preview": "/assets/img/showcase/maxfusion-contradictory-complete-preview.webp",
+            "caption": "Each group combines two spatial controls that describe different objects or disagree about their positions.",
+            "alt": "Complete contradictory-conditioning panel. Each group retains both spatial controls and two generated samples. The controls can describe different objects or disagree spatially; these are conditioning inputs, not edit masks.",
           },
           {
-            "label": "Baseline comparison",
-            "src": "/assets/img/showcase/maxfusion-1.webp",
-            "caption": "Original comparisons combine the spatial tasks shown at the left.",
-            "alt": "Original comparisons combine the spatial tasks shown at the left.",
-            "preview": "/assets/img/showcase/maxfusion-1-preview.webp",
+            "label": "Complementary spatial conditions",
+            "src": "/assets/img/showcase/maxfusion-complementary-complete.webp",
+            "preview": "/assets/img/showcase/maxfusion-complementary-complete-preview.webp",
+            "caption": "Complementary controls such as depth, edges, pose and segmentation guide the same generated scene.",
+            "alt": "Complete complementary-conditioning panel. Depth, edges, pose and segmentation controls contribute to the same generated scene; the original task relationship and generated samples are retained.",
           },
           {
-            "label": "Conflicting controls",
+            "label": "Complementary-condition comparison",
+            "src": "/assets/img/showcase/maxfusion-comparison-complete.webp",
+            "preview": "/assets/img/showcase/maxfusion-comparison-complete-preview.webp",
+            "caption": "Complementary-condition comparison with SPADE, PITI, Multi-T2I Adapter and Multi-ControlNet.",
+            "alt": "Complete comparison with both task inputs, SPADE, PITI, Multi-T2I Adapter, Multi-ControlNet and MaxFusion (Ours). All example rows and method labels are retained.",
+          },
+          {
+            "label": "Contradictory-condition comparison",
             "src": "/assets/img/showcase/maxfusion-2.webp",
-            "caption": "Published examples with contradictory spatial conditions.",
-            "alt": "Published examples with contradictory spatial conditions.",
             "preview": "/assets/img/showcase/maxfusion-2-preview.webp",
+            "caption": "Contradictory-condition comparison with Multi-T2I Adapter and Multi-ControlNet.",
+            "alt": "Published comparison with Task-1 and Task-2 inputs, Multi-T2I Adapter, Multi-ControlNet and MaxFusion (Ours). Both baseline and proposed-method samples are retained.",
           },
           {
             "label": "Feature fusion",
             "src": "/assets/img/showcase/maxfusion-3.webp",
-            "caption": "Aligned conditional features are merged and unmerged during denoising.",
-            "alt": "Aligned conditional features are merged and unmerged during denoising.",
             "preview": "/assets/img/showcase/maxfusion-3-preview.webp",
+            "caption": "Aligned features are merged and unmerged between pretrained task models during denoising.",
+            "alt": "The full framework shows how aligned features are merged and unmerged between pretrained task models during denoising.",
           },
         ],
       "image": "/assets/img/showcase/maxfusion-lead-preview.webp",
@@ -293,7 +376,7 @@
         },
       "outcome": "Use several controls together",
       "outcome_detail": "Combine pretrained controllers during generation, without training a new model for every combination of conditions.",
-      "evidence_intro": "This comparison measures image quality when pose and scene controls conflict. Lower FID is better. Following the individual controls is evaluated separately, with mixed results.",
+      "evidence_intro": "This comparison uses 2,000 constructed COCO images and 50 sampling steps, with conflicting pose and scene controls. Lower FID indicates better image quality. Adherence to each control is evaluated separately, with mixed results.",
     },
   "scale-wise-var":
     {
@@ -310,32 +393,25 @@
       "media":
         [
           {
-            "label": "Generation",
-            "src": "/assets/img/showcase/scale-wise-var-1.webp",
-            "caption": "Original VAR and proposed-method generation examples.",
-            "alt": "Original VAR and proposed-method generation examples.",
-            "preview": "/assets/img/showcase/scale-wise-var-1-preview.webp",
+            "label": "Generation and zero-shot reconstruction",
+            "src": "/assets/img/showcase/var-complete.webp",
+            "preview": "/assets/img/showcase/var-complete-preview.webp",
+            "caption": "Figure 1. VAR and SRDD generation above, followed by inpainting, outpainting and super-resolution comparisons.",
+            "alt": "Complete Figure 1 from the preprint. The upper block compares VAR and SRDD generation. The lower block retains Input, VAR and Ours labels for inpainting, outpainting and super-resolution.",
           },
           {
             "label": "Iterative refinement",
             "src": "/assets/img/showcase/scale-wise-var-2.webp",
-            "caption": "Original examples distinguish initial prediction, simple refinement and mask refinement.",
-            "alt": "Original examples distinguish initial prediction, simple refinement and mask refinement.",
             "preview": "/assets/img/showcase/scale-wise-var-2-preview.webp",
+            "caption": "Figure 7. VAR, SDD, simple resampling (SDD + SR) and masked resampling (SDD + MR) across successive refinement steps.",
+            "alt": "Figure 7 compares VAR, SDD, simple resampling (SDD + SR) and mask resampling (SDD + MR). All four example rows, step labels and refinement directions are retained.",
           },
           {
-            "label": "Zero-shot reconstruction",
-            "src": "/assets/img/showcase/scale-wise-var-3.webp",
-            "caption": "Published inpainting, outpainting and super-resolution examples.",
-            "alt": "Published inpainting, outpainting and super-resolution examples.",
-            "preview": "/assets/img/showcase/scale-wise-var-3-preview.webp",
-          },
-          {
-            "label": "The connection",
+            "label": "The autoregression–diffusion connection",
             "src": "/assets/img/showcase/scale-wise-var-4.webp",
-            "caption": "The Markovian attention formulation connects scale-wise generation with discrete diffusion.",
-            "alt": "The Markovian attention formulation connects scale-wise generation with discrete diffusion.",
             "preview": "/assets/img/showcase/scale-wise-var-4-preview.webp",
+            "caption": "Next-scale prediction and discrete diffusion are equivalent under a Markovian attention mask. Orange and blue notation identify the two formulations.",
+            "alt": "The full diagram and legend connect next-scale prediction with discrete diffusion under the Markovian attention mask. Orange and blue notation distinguish the scale-wise and diffusion formulations.",
           },
         ],
       "image": "/assets/img/showcase/scale-wise-var-1-preview.webp",
@@ -354,7 +430,7 @@
         },
       "outcome": "Refine generated images",
       "outcome_detail": "Use the connection to bring diffusion-style refinement and reconstruction tools into a visual autoregressive model.",
-      "evidence_intro": "Refinement improves the reported generation-quality score across four benchmarks. Lower FID means the generated image distribution is closer to the reference dataset.",
+      "evidence_intro": "The comparison uses a matched 200-epoch training study across four benchmarks. Lower FID indicates closer agreement between generated and reference image distributions.",
     },
   "nvidia-mesh-properties":
     {
@@ -409,49 +485,53 @@
         },
       "outcome": "Add meaning to 3D geometry",
       "outcome_detail": "Connect a mesh with estimated part names, materials and physical properties that go beyond its shape and appearance.",
-      "evidence_intro": "The framework’s material estimates were used to estimate object mass. These research-draft results improve some error measures and worsen another.",
+      "evidence_intro": "These research-draft results compare mass estimates on ABO-500. The framework improves some error measures and worsens another.",
+      "method_details":
+        [
+          {
+            "title": "From rendered views to parts",
+            "body": "Foundation-model features and region masks from multiple rendered views are refined into a consistent 3D feature field. Clustering and multimodal reasoning produce part groups and estimated material labels.",
+          },
+          {
+            "title": "Research and invention",
+            "body": "This work is documented in the SmartTagger research draft. I am a co-inventor on U.S. Patent Application 19/024,394, published as US20260038283A1 on February 5, 2026. The mass-estimation benchmark is reported in the draft, separately from the patent application.",
+          },
+        ],
     },
   "control2control":
     {
       "headline": "Edit images while keeping the scene consistent.",
-      "pitch": "Use a sketch, pose or layout to change part of an image while helping preserve the surrounding scene.",
+      "pitch": "I worked on Control2Control during my Adobe internship. The project uses sketches, poses and layouts to edit an image while helping preserve the surrounding scene.",
       "theme": "Control and composition",
       "metric": "No retraining",
       "metric_label": "for the spatial editing pipeline",
       "context": "Qualitative sketch, pose and layout examples from the Adobe research draft.",
-      "caveat": "The draft provides qualitative evidence, not a completed quantitative benchmark. Large edits and imperfect masks can change identity or background.",
+      "caveat": "Large edits can shift object identity, and errors in the estimated mask can change background details. These results are from the research draft.",
       "role": "Research intern",
       "problem": "Changing an object’s shape or position can inadvertently regenerate the rest of the image. Spatial controls need to support the requested edit while retaining content elsewhere.",
       "idea": "Estimate the changed region from source/target attention features. Transfer target keys and values inside the mask and source keys and values outside it while denoising.",
       "media":
         [
           {
-            "label": "Sketch-guided edit",
-            "src": "/assets/img/showcase/control2control-1.webp",
-            "caption": "Spatial condition, original input and edited output. The prompt also adds “wearing sunglasses.”",
-            "alt": "Spatial condition, original input and edited output. The prompt also adds “wearing sunglasses.”",
-            "preview": "/assets/img/showcase/control2control-1-preview.webp",
-          },
-          {
             "label": "Object movement",
             "src": "/assets/img/showcase/control2control-2.webp",
-            "caption": "Original draft examples of spatial object movement.",
-            "alt": "Original draft examples of spatial object movement.",
             "preview": "/assets/img/showcase/control2control-2-preview.webp",
+            "caption": "Original image, movement layout and edited result. Bounding boxes specify the requested positions.",
+            "alt": "Original image, source/target movement layout and edited result. The bounding boxes specify the requested move; they are not the method’s estimated edit mask.",
           },
           {
-            "label": "Pose edits",
+            "label": "Pose-controlled edit",
             "src": "/assets/img/showcase/control2control-3.webp",
-            "caption": "Original draft pose-controlled edits.",
-            "alt": "Original draft pose-controlled edits.",
             "preview": "/assets/img/showcase/control2control-3-preview.webp",
+            "caption": "Original image, target pose and edited result.",
+            "alt": "Original image, target pose skeleton and edited result. The pose is a spatial condition.",
           },
           {
-            "label": "Multiple subjects",
+            "label": "Multiple-subject pose edit",
             "src": "/assets/img/showcase/control2control-4.webp",
-            "caption": "Original draft examples with multiple pose conditions.",
-            "alt": "Original draft examples with multiple pose conditions.",
             "preview": "/assets/img/showcase/control2control-4-preview.webp",
+            "caption": "A pose-guided edit with multiple subjects.",
+            "alt": "Original draft example with multiple subjects, a target pose condition and the edited result.",
           },
         ],
       "image": "/assets/img/showcase/control2control-1-preview.webp",
@@ -459,6 +539,48 @@
       "outcome": "Change the intended region",
       "outcome_detail": "Apply spatial edits with pretrained models. Attention transfer helps retain content outside the region being changed.",
       "evidence_intro": "The draft shows qualitative edits rather than a completed quantitative benchmark.",
+      "edit_panels":
+        [
+          {
+            "label": "Original",
+            "src": "/assets/img/showcase/control2control-original.webp",
+            "alt": "Original generated corgi on a road, before the accessory edit.",
+          },
+          {
+            "label": "Edit sketch",
+            "src": "/assets/img/showcase/control2control-sketch.webp",
+            "preview": "/assets/img/showcase/control2control-sketch-preview.webp",
+            "alt": "User-drawn sketch specifying glasses for the corgi.",
+          },
+          {
+            "label": "Edited",
+            "src": "/assets/img/showcase/control2control-edited.webp",
+            "alt": "Edited generated corgi wearing sunglasses, with the surrounding road scene largely preserved.",
+          },
+        ],
+      "edit_caption": "The sketch requests glasses, and the text prompt adds “wearing sunglasses.” Control2Control estimates the edit region internally.",
+      "method_details":
+        [
+          {
+            "title": "Source and edited branches",
+            "body": "The source branch uses the original spatial condition, while the target branch uses the edited sketch, pose or layout. Both use pretrained diffusion and spatial-control models; a new editor is not trained for each requested change.",
+          },
+          {
+            "title": "Estimate the changed region",
+            "body": "The method accumulates source and target self-attention features over intermediate denoising steps. Low-rank filtering of their difference and thresholding produce an edit mask, which selects where the target is allowed to change.",
+          },
+        ],
+      "method_figures":
+        [
+          {
+            "label": "Attention-transfer diagram",
+            "src": "/assets/img/showcase/control2control-attention-complete.webp",
+            "preview": "/assets/img/showcase/control2control-attention-complete-preview.webp",
+            "caption": "The target keeps its own queries. The mask selects target keys and values inside the edit region and source keys and values elsewhere.",
+            "alt": "Complete attention-transfer diagram. The target keeps its own queries; the mask chooses target keys and values inside the edit region and source keys and values elsewhere.",
+          },
+        ],
+      "qualitative_result": "The draft demonstrates adding an accessory with a sketch, moving objects and changing poses using pretrained models.",
     },
   "briar":
     {
@@ -507,6 +629,17 @@
       "outcome": "Recognize difficult face images",
       "outcome_detail": "Large-scale pretraining, staged adaptation and wider face crops improve recognition under the paper’s unconstrained-image tests.",
       "evidence_intro": "The system accepts more genuine face matches while holding the false-accept rate at 0.1%. Both compared models use WebFace12M pretraining, but their architectures differ.",
+      "method_details":
+        [
+          {
+            "title": "Large-scale pretraining and adaptation",
+            "body": "A transformer learns face representations from large aligned datasets, then adapts to low-quality imagery through linear probing and full-model fine-tuning. Enlarged aligned crops preserve context around the face.",
+          },
+          {
+            "title": "Separate pretraining settings",
+            "body": "The BRIAR reported comparison uses WebFace12M with different architectures: AdaFace ResNet101 and Swin-B. A separate Swin-B model pretrained on WebFace42M reaches 81.38% Rank-1. The paper also evaluates TinyFace, IJB-S, IJB-B and IJB-C.",
+          },
+        ],
     },
   "petalface":
     {
@@ -555,6 +688,17 @@
       "outcome": "Adapt a small part of the model",
       "outcome_detail": "Keep the pretrained backbone frozen and adjust two lightweight adapters according to the quality of each face image.",
       "evidence_intro": "The adapters improve face verification compared with the pretrained model and full fine-tuning in this test. TAR is the proportion of genuine matches accepted at a fixed false-accept rate.",
+      "method_details":
+        [
+          {
+            "title": "Quality-weighted adapters",
+            "body": "PETALface keeps the recognition backbone frozen and trains two LoRA branches, using only 0.48% of the parameters. An image-quality estimate weights their contributions for each input.",
+          },
+          {
+            "title": "Adapting across image quality",
+            "body": "Quality-dependent weighting addresses the mismatch between clear gallery images and degraded probes while retaining the pretrained representation. The reported BRIAR comparison uses Swin-B, WebFace4M and Protocol 3.1.",
+          },
+        ],
     },
   "crowddiff":
     {
@@ -573,21 +717,21 @@
           {
             "label": "A dense scene",
             "src": "/assets/img/showcase/crowddiff-1.webp",
-            "caption": "One published example: ground truth 1,155, prediction 1,142. These are per-image counts, not an aggregate benchmark.",
-            "alt": "One published example: ground truth 1,155, prediction 1,142. These are per-image counts, not an aggregate benchmark.",
+            "caption": "One dense scene: ground truth 1,155, CrowdDiff 1,142, Chfl 1,187.6 and SUA 1,199.4. Parenthesized counts refer to the enlarged crop.",
+            "alt": "Complete Figure 1: ground truth 1,155, CrowdDiff 1,142, Chfl 1,187.6 and SUA 1,199.4. Parenthesized values are counts in the enlarged crop. These are results for one image, not aggregate benchmark scores.",
             "preview": "/assets/img/showcase/crowddiff-1-preview.webp",
           },
           {
             "label": "Density hypotheses",
             "src": "/assets/img/showcase/crowddiff-2.webp",
-            "caption": "Original examples show accepted and rejected detections across hypotheses.",
-            "alt": "Original examples show accepted and rejected detections across hypotheses.",
+            "caption": "Green detections enter the fused map. Red detections are rejected. GT is the ground-truth count, and Final is the fused count.",
+            "alt": "Published fusion sequence with original count labels. Green detections are accepted into the fused map; red detections are rejected. GT is the ground-truth count, and Final is the count after combining the hypotheses.",
             "preview": "/assets/img/showcase/crowddiff-2-preview.webp",
           },
           {
             "label": "The model",
             "src": "/assets/img/showcase/crowddiff-3.webp",
-            "caption": "Image-conditioned density generation with a training-only counting branch.",
+            "caption": "Image-conditioned density generation with a counting branch used during training.",
             "alt": "Image-conditioned density generation with a training-only counting branch.",
             "preview": "/assets/img/showcase/crowddiff-3-preview.webp",
           },
@@ -608,6 +752,6 @@
         },
       "outcome": "Resolve ambiguous crowd scenes",
       "outcome_detail": "Use complementary predictions to find missed people while rejecting repeated detections. More predictions improve accuracy but take longer.",
-      "evidence_intro": "Sampling more candidate crowd maps reduces counting error but increases runtime. Explore that tradeoff below. MAE is the average absolute error in the estimated number of people.",
+      "evidence_intro": "Sampling more density maps reduces counting error and increases runtime. MAE is the average absolute error in the estimated number of people.",
     },
 }

@@ -69,9 +69,9 @@
       "definition_context": "The clean input remains the restoration target. This creates paired training data without collecting a new real-world degraded/clean pair for every corruption pattern.",
       "method_steps":
         [
-          "Condition degradation synthesis on a clean image, a degradation type and an intensity level.",
-          "Generate paired examples across haze, rain, snow, motion blur, low light and raindrops.",
-          "Combine the synthetic pairs with existing paired datasets to form GenDS, then train all-in-one restoration models on the expanded data.",
+          "Condition the diffusion generator on a clean image, text and degradation statistics to control degradation type and intensity.",
+          "Generate paired examples across six degradation types, apply structure correction and retain samples that meet the intensity criteria.",
+          "Combine the 550K+ synthetic pairs with existing data to form GenDS with 750K+ samples, then train all-in-one restoration models.",
         ],
       "results":
         [
@@ -168,14 +168,14 @@
       "venue": "CVPR",
       "year": 2023,
       "slides": ["unite-and-conquer-1", "unite-and-conquer-2", "unite-and-conquer-3", "unite-and-conquer-4", "unite-and-conquer-5"],
-      "image_alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
-      "description": "Independently trained diffusion models compose at inference time to satisfy multiple conditions without joint multimodal training.",
+      "image_alt": "Complete semantic-map, sketch and text-conditioned face-generation panels with original conditions and TediGAN comparisons.",
+      "description": "Compose separately learned class, text, semantic-map and sketch conditions during diffusion sampling, including conditions learned across different datasets.",
       "paper_title": "Unite and Conquer: Plug & Play Multi-Modal Synthesis Using Diffusion Models",
       "contributions":
         [
-          "Pioneered compositional multimodal generation by combining independent diffusion models through a generalized product of experts.",
-          "Introduced controllable modality weights to balance the influence of different models.",
-          "Demonstrated joint class-and-text constraints without training a new model for every modality combination.",
+          "Developed compositional diffusion sampling for conditions learned separately, including across datasets.",
+          "Supported class/text scene generation and faces conditioned on semantic maps, sketches and attributes.",
+          "Separated reliability of the shared unconditional estimate from the guidance strengths of the individual conditions.",
         ],
       "links":
         [
@@ -183,23 +183,25 @@
             "label": "Paper",
             "url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
           },
+          { "label": "Code", "url": "https://github.com/Nithin-GK/UniteandConquer" },
         ],
       "image": "/assets/img/research-projects/unite-and-conquer.webp",
       "pdf": "/assets/slides/unite-and-conquer.pdf",
-      "definition_title": "Composing independent diffusion models",
-      "definition": "Unite and Conquer combines independently trained, modality-conditioned diffusion models into a single sampling process. A generalized product of experts provides a way to combine their information without jointly training a new model on every modality combination.",
-      "definition_context": "Each model contributes a conditional prediction. Reliability-weighted predictions with a null condition estimate the shared unconditional density used in the composition.",
+      "definition_title": "Composing separately learned conditions",
+      "definition": "Unite and Conquer composes conditional diffusion predictions during sampling. The conditions can be learned by independently trained models or by one model trained on individual conditions in alternating batches, without fully paired data across all modalities.",
+      "definition_context": "Reliability weights combine null-condition predictions into the shared unconditional estimate. Guidance strengths separately control the requested conditions. The models must use compatible latent dimensions and channels.",
       "method_steps":
         [
-          "Select diffusion models trained for the individual conditions, such as an object class and a text description.",
-          "Combine their conditional and null-condition predictions using the product-of-experts formulation and reliability weights.",
-          "Sample one image with the combined guidance so the result can express the conditions together.",
+          "Learn individual conditions using separate compatible conditional models or one model trained on alternating conditions.",
+          "Choose the requested conditions, including class/text scenes or semantic-map/sketch/text face generation.",
+          "Combine conditional predictions and a reliability-weighted null-condition estimate during sampling, with separate guidance strengths.",
         ],
       "results":
         [
-          "On 500 generated images, ImageNet class accuracy is 87.0% for Unite and Conquer, compared with 22.4% for CompGen and 0.3% for GLIDE. The paper reports the best result over three reliability settings (Table 3).",
-          "The proposed sampler receives class and text conditions, while the baselines use text-based conditioning. Its NIQE is 5.34 versus 5.71 for CompGen and 6.64 for GLIDE. GLIDE retains the highest CLIP score in this comparison, so the gains are not uniform across metrics.",
-          "The visual examples show class labels composed with text-defined scenes without joint multimodal training.",
+          "On 500 scene images, class accuracy is 87.0%, versus 22.4% for CompGen and 0.3% for GLIDE. Table 3 reports the best result over three reliability settings. The proposed method receives class and text conditions; the baselines use text conditioning.",
+          "Scene NIQE is 5.34, versus 5.71 for CompGen and 6.64 for GLIDE. GLIDE has the highest CLIP score in this comparison.",
+          "For semantic face generation on CelebA, Table 1 reports FID 26.09, mIoU 0.911 and F1 0.948. TediGAN has lower LPIPS (0.4823 versus 0.519) and slightly higher SSIM (0.417 versus 0.416).",
+          "The figures demonstrate face/hair semantic maps with text, sketches with text, and class labels with scene descriptions.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
       "navigation_group": "papers",
@@ -387,11 +389,7 @@
           "Accumulate self-attention features over intermediate denoising steps. Filter their source/target difference with a low-rank decomposition and threshold it to estimate the edit mask.",
           "Blend target keys and values inside the mask with source keys and values outside it at selected layers, then complete denoising.",
         ],
-      "results":
-        [
-          "The working draft illustrates interactive edits with sketches, pose skeletons and object layouts using pretrained spatial controllers.",
-          "Large changes in pose or scene semantics can also require an updated text prompt.",
-        ],
+      "results": ["The draft demonstrates adding an accessory with a sketch, moving objects and changing poses using pretrained models."],
       "company": "Adobe",
       "role": "Research Intern",
       "period": "May – Aug 2023",
