@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
+        },{id: "nav-projects",
+          title: "Projects",
+          description: "Research in generative modeling, synthetic data and 3D vision.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
         },{id: "nav-cv",
           title: "CV",
           description: "",
@@ -83,51 +90,51 @@ ninja.data = [{
           section: "News",},{id: "news-my-internship-work-at-google-scaling-transformer-based-novel-view-synthesis-models-with-token-disentanglement-and-synthetic-data-was-accepted-at-iccv-2025-our-work-scales-up-3d-reconstruction-using-synthetic-data-and-achieves-state-of-the-art-results",
           title: 'My internship work at Google, Scaling Transformer-Based Novel View Synthesis Models with Token...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-unconstrained-face-recognition",
+          title: 'Unconstrained face recognition',
+          description: "Large-scale pretraining and staged adaptation improve face recognition under long range, low resolution and other unconstrained conditions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/briar/";
+            },},{id: "projects-crowddiff",
+          title: 'CrowdDiff',
+          description: "Conditional diffusion predicts detailed crowd density maps, with multiple hypotheses to improve counting.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/crowddiff/";
+            },},{id: "projects-gendeg",
+          title: 'GenDeg',
+          description: "Diffusion-generated degradations improve restoration on patterns that the model has not seen during training.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/gendeg/";
+            },},{id: "projects-maxfusion",
+          title: 'MaxFusion',
+          description: "Variance-guided feature fusion combines off-the-shelf controllers for generation with multiple spatial conditions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/maxfusion/";
+            },},{id: "projects-novel-view-synthesis-at-scale",
+          title: 'Novel view synthesis at scale',
+          description: "Token disentanglement lets transformer models learn from diffusion-generated views and generalize to unseen scenes.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/novel-view-synthesis/";
+            },},{id: "projects-petalface",
+          title: 'PETALface',
+          description: "Quality-weighted low-rank adapters improve low-resolution recognition while retaining a strong pretrained backbone.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+              window.location.href = "/projects/petalface/";
+            },},{id: "projects-scale-wise-var",
+          title: 'Scale-Wise VAR',
+          description: "A theoretical connection between scale-wise autoregressive generation and discrete diffusion motivates iterative visual refinement.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+              window.location.href = "/projects/scale-wise-var/";
+            },},{id: "projects-steered-diffusion",
+          title: 'Steered Diffusion',
+          description: "A general framework steers pretrained diffusion models during sampling for image-to-image and label-conditioned generation.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
+              window.location.href = "/projects/steered-diffusion/";
+            },},{id: "projects-unite-and-conquer",
+          title: 'Unite and Conquer',
+          description: "Independently trained diffusion models compose at inference time to satisfy multiple conditions without joint multimodal training.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/unite-and-conquer/";
             },},{
         id: 'social-scholar',
         title: 'Google Scholar',
