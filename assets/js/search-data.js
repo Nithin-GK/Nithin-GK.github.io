@@ -95,6 +95,11 @@ ninja.data = [{
           description: "Large-scale pretraining and staged adaptation improve face recognition under long range, low resolution and other unconstrained conditions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/briar/";
+            },},{id: "projects-control2control",
+          title: 'Control2Control',
+          description: "Revitalized attention transfer for consistent diffusion image editing.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/control2control/";
             },},{id: "projects-crowddiff",
           title: 'CrowdDiff',
           description: "Conditional diffusion predicts detailed crowd density maps, with multiple hypotheses to improve counting.",
