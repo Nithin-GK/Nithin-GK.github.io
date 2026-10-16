@@ -9,16 +9,16 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
-          description: "",
+  },{id: "nav-internships",
+          title: "Internships",
+          description: "Research internships at Google, NVIDIA, Adobe and MERL.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/publications/";
+            window.location.href = "/internships/";
           },
-        },{id: "nav-projects",
-          title: "Projects",
-          description: "Research in generative modeling, synthetic data and 3D vision.",
+        },{id: "nav-papers",
+          title: "Papers",
+          description: "Generative modeling and computer vision.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
