@@ -4,7 +4,14 @@ layout: default
 {% assign project = site.data.research_projects[page.project_key] %}
 <link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
 <article class="research-project-page">
-  <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  {% if project.navigation_group == 'internships' %}
+    <a class="project-back" href="{{ '/internships/' | relative_url }}">Back to internships</a>
+  {% else %}
+    <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to papers</a>
+    {% if project.company %}
+      <a class="project-back project-back-secondary" href="{{ '/internships/' | relative_url }}">Internship work</a>
+    {% endif %}
+  {% endif %}
   <header class="research-project-header">
     <p class="project-meta">
       {% if project.company %}

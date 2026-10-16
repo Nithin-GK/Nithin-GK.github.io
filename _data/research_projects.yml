@@ -38,6 +38,7 @@
       "role": "Research Intern",
       "period": "Dec 2024 – Mar 2025",
       "gallery_label": "View project and five slides",
+      "navigation_group": "papers",
     },
   "gendeg":
     {
@@ -79,6 +80,7 @@
           "Restoration models trained with GenDS improve on out-of-distribution degradation patterns. The slide compares PromptIR with and without GenDS training on haze and rain examples.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2025/html/Rajagopalan_GenDeg_Diffusion-based_Degradation_Synthesis_for_Generalizable_All-In-One_Image_Restoration_CVPR_2025_paper.html",
+      "navigation_group": "papers",
     },
   "scale-wise-var":
     {
@@ -113,6 +115,7 @@
           "The preprint reports improvements in generation and efficiency, and demonstrates iterative refinement and zero-shot reconstruction through the diffusion interpretation.",
         ],
       "source_url": "https://arxiv.org/abs/2509.22636",
+      "navigation_group": "papers",
     },
   "steered-diffusion":
     {
@@ -157,6 +160,7 @@
       "company": "MERL",
       "role": "Research Intern",
       "period": "May – Aug 2022",
+      "navigation_group": "papers",
     },
   "unite-and-conquer":
     {
@@ -197,6 +201,7 @@
           "The slide pairs ImageNet classes with text-defined scenes. The composed samples retain the requested class while expressing scenes such as a starry night or a snowy forest.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf",
+      "navigation_group": "papers",
     },
   "maxfusion":
     {
@@ -235,6 +240,7 @@
           "The original examples combine controls such as pose, depth, edges and semantic layouts. They illustrate how spatial constraints from different models can influence the same output.",
         ],
       "source_url": "https://arxiv.org/abs/2404.09977",
+      "navigation_group": "papers",
     },
   "briar":
     {
@@ -270,6 +276,7 @@
           "A separate Swin-B model pretrained on WebFace42M reaches 81.38% Rank-1.",
         ],
       "source_url": "https://kartik-3004.github.io/portfolio/papers/FG2025_SwinFR.pdf",
+      "navigation_group": "papers",
     },
   "petalface":
     {
@@ -308,6 +315,7 @@
           "The paper reports stronger low-resolution recognition with competitive performance on high-resolution and mixed-quality benchmarks. PETALface was presented as an oral paper at WACV 2025.",
         ],
       "source_url": "https://arxiv.org/abs/2412.07771",
+      "navigation_group": "papers",
     },
   "crowddiff":
     {
@@ -348,6 +356,7 @@
           "The displayed example has 1,155 people in the ground truth and a CrowdDiff estimate of 1,142. These are counts for one image, not an aggregate benchmark score.",
         ],
       "source_url": "https://openaccess.thecvf.com/content/CVPR2024/papers/Ranasinghe_CrowdDiff_Multi-hypothesis_Crowd_Density_Estimation_using_Diffusion_Models_CVPR_2024_paper.pdf",
+      "navigation_group": "papers",
     },
   "control2control":
     {
@@ -386,6 +395,7 @@
       "role": "Research Intern",
       "period": "May – Aug 2023",
       "industry_description": "Built a training-free diffusion editing pipeline, using revitalized attention transfer to apply spatial edits while preserving the surrounding scene.",
+      "navigation_group": "internships",
     },
   "nvidia-mesh-properties":
     {
@@ -416,5 +426,6 @@
       "paper_title": "System and method of semantic segmentation and material identification of 3D objects",
       "source_url": "https://patents.google.com/patent/US20260038283A1/en",
       "links": [{ "label": "Patent application", "url": "https://patents.google.com/patent/US20260038283A1/en" }],
+      "navigation_group": "internships",
     },
 }

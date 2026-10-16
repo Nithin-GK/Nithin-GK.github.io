@@ -3,7 +3,7 @@
 <article class="{% if include.industry %}industry-entry{% else %}project-entry{% unless project.image %} project-entry--text{% endunless %}{% endif %}">
   {% if include.industry %}
     <header class="industry-company">
-      <h3>{{ project.company }}</h3>
+      <h2>{{ project.company }}</h2>
       <p class="project-meta">
         <span>{{ project.role }}</span><span>{{ project.period }}</span>
       </p>
@@ -15,17 +15,17 @@
   {% endif %}
   <div>
     {% if include.industry %}
-      <h4>
+      <h3>
         <a href="{{ item.url | relative_url }}">{{ project.title }}</a>
-      </h4>
+      </h3>
     {% else %}
       <p class="project-meta">
         {{ project.venue }}
         {{ project.year }}
       </p>
-      <h3>
+      <h2>
         <a href="{{ item.url | relative_url }}">{{ project.title }}</a>
-      </h3>
+      </h2>
     {% endif %}
     <p>
       {% if include.industry %}{{ project.industry_description | default: project.description }}{% else %}{{ project.description }}{% endif %}

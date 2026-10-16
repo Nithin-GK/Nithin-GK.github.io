@@ -4,11 +4,12 @@ title: Research overview
 permalink: /projects/research-overview/
 description: Large-scale training and multimodal vision.
 nav: false
+navigation_group: papers
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/research-projects.css' | relative_url }}">
 <article class="research-project-page">
-  <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to projects</a>
+  <a class="project-back" href="{{ '/projects/' | relative_url }}">Back to papers</a>
   {% assign overview_slides = "1,2,3,4,5,7,8,9,10,11,14,16" | split: ',' %}
   {% include research-slides.liquid slides=overview_slides label="Research overview presentation" %}
   <div class="project-links">

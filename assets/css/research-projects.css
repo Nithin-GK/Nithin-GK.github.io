@@ -8,7 +8,7 @@
 .industry-entry p {
   text-wrap: pretty;
 }
-.project-entry h3,
+.project-entry h2,
 .research-project-header h1,
 .project-definition h2 {
   text-wrap: balance;
@@ -45,15 +45,15 @@
   padding: 1.75rem 0;
   border-top: 1px solid var(--global-divider-color);
 }
-.industry-entry h3,
-.industry-entry h4 {
+.industry-entry h2,
+.industry-entry h3 {
   font-size: 1.3rem;
   line-height: 1.35;
   font-weight: 500;
   margin: 0 0 0.7rem;
   text-wrap: balance;
 }
-.industry-entry h4 a {
+.industry-entry h3 a {
   color: var(--global-text-color);
 }
 .industry-entry p {
@@ -73,6 +73,13 @@
   font-size: 1.12rem;
   line-height: 1.7;
   margin: 0 0 2.5rem;
+}
+.project-links.paper-list-links {
+  margin-top: -1.2rem;
+  margin-bottom: 2.5rem;
+}
+.project-back-secondary {
+  margin-left: 1.5rem;
 }
 .research-overview {
   margin-bottom: 4rem;
@@ -226,13 +233,13 @@
   font-size: 0.85rem;
   margin-bottom: 0.55rem;
 }
-.project-entry h3 {
+.project-entry h2 {
   font-size: 1.45rem;
   line-height: 1.25;
   font-weight: 500;
   margin: 0 0 0.75rem;
 }
-.project-entry h3 a {
+.project-entry h2 a {
   color: var(--global-text-color);
 }
 .project-entry p {
