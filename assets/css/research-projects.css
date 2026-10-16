@@ -138,6 +138,25 @@
   display: block;
   background: #fff;
 }
+.project-entry--text {
+  grid-template-columns: 1fr;
+}
+.project-definition {
+  margin: 2.25rem 0;
+  max-width: 49rem;
+  line-height: 1.8;
+}
+.project-definition h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.attention-equations {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  margin: 1.5rem 0;
+}
+.attention-equations p {
+  margin: 0.4rem 0;
+}
 .project-entry-image img {
   display: block;
   width: 100%;

@@ -205,4 +205,26 @@
       "image": "/assets/img/research-projects/crowddiff.webp",
       "pdf": "/assets/slides/crowddiff.pdf",
     },
+  "control2control":
+    {
+      "title": "Control2Control",
+      "venue": "Adobe research draft",
+      "year": 2023,
+      "slides": [],
+      "links": [],
+      "gallery_label": "Read definition",
+      "introduction": "Training-free diffusion editing with sketches, poses or layouts.",
+      "description": "Revitalized attention transfer blends target self-attention keys and values inside an edit mask with source keys and values outside it, supporting spatial edits while helping preserve the surrounding scene.",
+      "paper_title": "Control2Control: Revitalizing Attention Transfer for Consistent Visual Editing",
+      "definition_title": "Revitalized attention transfer",
+      "definition": "Revitalized attention transfer is a mask-guided self-attention operation for diffusion image editing. At selected layers, it uses the target branch's keys and values within the edit region and the source branch's keys and values elsewhere.",
+      "definition_context": "The target branch retains its own queries. This lets the edited object attend to the original scene while giving the changed region freedom to follow the new spatial condition.",
+      "definition_mask": "M is the edit mask: 1 inside the changed region and 0 outside it. The subscripts t and s denote the target and source branches, respectively.",
+      "contributions":
+        [
+          "Built a training-free diffusion pipeline for interactive edits using sketches, poses or layouts.",
+          "Estimated edit masks from source/target self-attention differences using low-rank filtering.",
+          "Used masked key/value transfer to support changes while retaining source content in unchanged regions.",
+        ],
+    },
 }

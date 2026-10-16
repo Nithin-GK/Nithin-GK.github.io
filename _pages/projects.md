@@ -23,17 +23,21 @@ nav_order: 2.5
     {% assign projects = site.projects | where: 'research_project', true | sort: 'importance' %}
     {% for item in projects %}
       {% assign project = site.data.research_projects[item.project_key] %}
-      <article class="project-entry">
+      <article class="project-entry{% unless project.image %} project-entry--text{% endunless %}">
+        {% if project.image %}
         <a class="project-entry-image" href="{{ item.url | relative_url }}" aria-label="View {{ project.title | escape }}">
           <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | escape }}" width="800" height="500" loading="lazy" decoding="async">
         </a>
+        {% endif %}
         <div>
           <p class="project-meta">{{ project.venue }} {{ project.year }}</p>
           <h3><a href="{{ item.url | relative_url }}">{{ project.title }}</a></h3>
           <p>{{ project.description }}</p>
           <div class="project-links">
-            <a href="{{ item.url | relative_url }}">View project and slides</a>
+            <a href="{{ item.url | relative_url }}">{{ project.gallery_label | default: 'View project and slides' }}</a>
+            {% if project.links.size > 0 %}
             <a href="{{ project.links[0].url }}" target="_blank" rel="noopener noreferrer">{{ project.links[0].label }}</a>
+            {% endif %}
           </div>
         </div>
       </article>

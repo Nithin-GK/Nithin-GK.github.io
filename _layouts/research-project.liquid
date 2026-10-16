@@ -11,15 +11,37 @@ layout: default
       {{ project.year }}
     </p>
     <h1>{{ project.title }}</h1>
-    <p class="project-lede">{{ project.description }}</p>
+    <p class="project-lede">{{ project.introduction | default: project.description }}</p>
   </header>
-  {% include research-slides.liquid slides=project.slides label=project.title %}
-  <div class="project-links">
-    <a href="{{ project.pdf | relative_url }}" download>Download slides (PDF)</a>
-    {% for link in project.links -%}
-      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
-    {%- endfor %}
-  </div>
+  {% if project.definition %}
+    <section class="project-definition">
+      <h2>{{ project.definition_title }}</h2>
+      <p>{{ project.definition }}</p>
+      <div class="attention-equations">
+        <p role="math" aria-label="Edited target keys equal the mask times target keys plus one minus the mask times source keys">
+          <var>K̂</var><sub>t</sub> = <var>M</var> ⊙ <var>K</var><sub>t</sub> + (1 − <var>M</var>) ⊙ <var>K</var><sub>s</sub>
+        </p>
+        <p role="math" aria-label="Edited target values equal the mask times target values plus one minus the mask times source values">
+          <var>V̂</var><sub>t</sub> = <var>M</var> ⊙ <var>V</var><sub>t</sub> + (1 − <var>M</var>) ⊙ <var>V</var><sub>s</sub>
+        </p>
+      </div>
+      <p>{{ project.definition_mask }}</p>
+      <p>{{ project.definition_context }}</p>
+    </section>
+  {% endif %}
+  {% if project.slides.size > 0 %}
+    {% include research-slides.liquid slides=project.slides label=project.title %}
+  {% endif %}
+  {% if project.pdf or project.links.size > 0 %}
+    <div class="project-links">
+      {% if project.pdf %}
+        <a href="{{ project.pdf | relative_url }}" download>Download slides (PDF)</a>
+      {% endif %}
+      {% for link in project.links -%}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      {%- endfor %}
+    </div>
+  {% endif %}
   <section class="project-contribution">
     <h2>Contributions</h2>
     <ul>
