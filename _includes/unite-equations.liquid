@@ -1,0 +1,17 @@
+<div class="case-method-detail">
+  <h3>Sampling rule</h3>
+  <div class="case-equation-scroll" tabindex="0" aria-label="Unite and Conquer sampling equations">
+    <p role="math">
+      p<sub>0</sub>(z<sub>t</sub>) ∝ ∏<sub>j</sub> p<sub>δⱼ</sub>(z<sub>t</sub> | φ)<sup>aⱼ</sup>, &nbsp; ∑<sub>j</sub> a<sub>j</sub> = 1
+    </p>
+    <p role="math">
+      ε<sub>comp</sub> = ∑<sub>i</sub> w<sub>i</sub> ε<sub>i</sub>(z<sub>t</sub>, x<sub>i</sub>, t) − (∑<sub>i</sub> w<sub>i</sub> − 1) ∑<sub>j</sub>
+      a<sub>j</sub> ε<sub>j</sub>(z<sub>t</sub>, φ, t)
+    </p>
+  </div>
+  <p>
+    The null condition is φ. Reliability weights a<sub>j</sub> combine the experts’ unconditional estimates. Guidance strengths w<sub>i</sub> control
+    the individual conditions. They serve different roles. With all guidance strengths equal to one, the rule subtracts N − 1 copies of the shared
+    unconditional estimate. For one expert, it reduces to classifier-free guidance. See Equations 5–9 in the paper.
+  </p>
+</div>

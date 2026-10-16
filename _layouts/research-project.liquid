@@ -28,13 +28,12 @@ layout: project-showcase
           </p>
         </div>
         <div class="case-impact">
-          <p class="case-impact-label">What this enables</p>
-          <h2>{{ story.outcome }}</h2>
+          <h2>Overview</h2>
           <p>{{ story.outcome_detail }}</p>
         </div>
       </div>
       <nav class="case-section-nav" aria-label="Case study sections">
-        <a href="#examples">Examples</a><a href="#idea">The idea</a><a href="#results">Results</a><a href="#method">Method</a
+        <a href="#examples">Examples</a><a href="#idea">Approach</a><a href="#results">Results</a><a href="#method">Method</a
         ><a href="#slides">Slides</a>
         {%- for link in project.links -%}
           <a class="case-source-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>
@@ -45,86 +44,35 @@ layout: project-showcase
   <div class="showcase-container case-body">
     <section class="case-examples" id="examples" aria-labelledby="examples-heading">
       <div class="case-section-heading">
-        <p class="showcase-eyebrow">See the work</p>
-        <h2 id="examples-heading">
-          {% if project.presentation_status %}Research examples{% else %}Published examples{% endif %}
-        </h2>
+        <h2 id="examples-heading">Examples</h2>
       </div>
-      {% if story.comparison %}
-        <div class="case-comparison" data-comparison style="--reveal:50%">
-          <div class="comparison-images">
-            <div class="comparison-before"><img src="{{ story.comparison | relative_url }}" alt="Original corgi image." decoding="async"></div>
-            <div class="comparison-after">
-              <img src="{{ story.comparison | relative_url }}" alt="Edited corgi wearing sunglasses." decoding="async">
-            </div>
-            <span class="comparison-label comparison-label-before">Original</span><span class="comparison-label comparison-label-after">Edited</span
-            ><span class="comparison-divider" aria-hidden="true"></span>
-          </div>
-          <label for="edit-reveal">Reveal the edit</label><input id="edit-reveal" type="range" min="0" max="100" value="50" data-comparison-range>
-          <p class="case-media-caption">
-            A sketch-guided edit from the research draft. The prompt also adds “wearing sunglasses.” Drag to compare the original and edited images.
-          </p>
-        </div>
-      {% endif %}
-      <div class="case-gallery" data-case-gallery>
-        <div class="case-media-tabs" role="group" aria-label="Research figures">
-          {% for figure in story.media -%}
-            <button type="button" data-figure-index="{{ forloop.index0 }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
-              {{ figure.label }}
-            </button>
+      {% if story.edit_panels %}
+        <div class="case-edit-grid">
+          {% for figure in story.edit_panels -%}
+            {%- include case-figure.liquid figure=figure -%}
           {%- endfor %}
         </div>
-        {% assign first_figure = story.media | first %}
-        <figure class="case-figure">
-          <div class="case-image-plate">
-            <div
-              class="case-figure-columns"
-              data-figure-columns
-              {% if first_figure.column_widths %}
-                style="grid-template-columns: {{ first_figure.column_widths | join: ' ' }}"
-              {% endif %}
-              {% unless first_figure.columns %}
-                hidden
-              {% endunless %}
-            >
-              {% for column in first_figure.columns -%}
-                <span>{{ column }}</span>
-              {%- endfor %}
-            </div>
-            <img
-              src="{{ first_figure.preview | default: first_figure.src | relative_url }}"
-              data-full-src="{{ first_figure.src | relative_url }}"
-              alt="{{ first_figure.alt | escape }}"
-              data-case-image
-              decoding="async"
-
-            ><button type="button" class="case-expand" data-expand-figure>Expand figure ↗</button>
-          </div>
-          <figcaption data-case-caption>{{ first_figure.caption }}</figcaption>
-        </figure>
-        <script type="application/json" data-case-media>
-          {{ story.media | jsonify }}
-        </script>
+        <p class="case-media-caption">{{ story.edit_caption }}</p>
+      {% endif %}
+      <div class="case-example-grid">
+        {% for figure in story.media -%}
+          {%- include case-figure.liquid figure=figure -%}
+        {%- endfor %}
       </div>
     </section>
     <section class="case-idea case-section" id="idea">
       <div>
-        <p class="showcase-eyebrow">The question</p>
-        <h2>The challenge.</h2>
+        <h2>Problem</h2>
         <p>{{ story.problem }}</p>
       </div>
       <div>
-        <p class="showcase-eyebrow">The approach</p>
-        <h2>The central idea.</h2>
+        <h2>Approach</h2>
         <p>{{ story.idea }}</p>
       </div>
     </section>
     <section class="case-section case-evidence" id="results" aria-labelledby="results-heading">
       <div class="case-section-heading">
-        <p class="showcase-eyebrow">Measured impact</p>
-        <h2 id="results-heading">
-          {% if story.evidence %}The results.{% else %}What the examples show.{% endif %}
-        </h2>
+        <h2 id="results-heading">Results</h2>
       </div>
       <p class="case-evidence-intro">{{ story.evidence_intro }}</p>
       {% if page.project_key == 'crowddiff' %}
@@ -148,32 +96,10 @@ layout: project-showcase
         </div>
       {% endif %}
       {% if story.evidence %}
-        <div class="case-table-scroll" tabindex="0" role="region" aria-label="{{ project.title | escape }} result table">
-          <table class="case-results-table">
-            <thead>
-              <tr>
-                {% for heading in story.evidence.headers %}
-                  <th scope="col">{{ heading }}</th>
-                {% endfor %}
-              </tr>
-            </thead>
-            <tbody>
-              {% for row in story.evidence.rows %}
-                <tr>
-                  {% for value in row -%}
-                    {%- if forloop.first %}
-                      <th scope="row">{{ value }}</th>
-                    {% else %}
-                      <td>{{ value }}</td>
-                    {% endif -%}
-                  {%- endfor %}
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
-        <p class="case-evidence-source">{{ story.evidence.source }}</p>
-        <p class="case-evidence-note">{{ story.evidence.note }}</p>
+        {% include case-evidence.liquid evidence=story.evidence label=project.title %}
+        {% for evidence in story.additional_evidence -%}
+          {%- include case-evidence.liquid evidence=evidence label=project.title -%}
+        {%- endfor %}
       {% else %}
         <p class="case-readable">
           The draft illustrates sketch-guided changes, object movement and pose edits using pretrained spatial controllers. The examples demonstrate
@@ -187,17 +113,26 @@ layout: project-showcase
     </section>
     <section class="case-section" id="method">
       <div class="case-section-heading">
-        <p class="showcase-eyebrow">Behind the result</p>
-        <h2>How it works.</h2>
+        <h2>Method</h2>
       </div>
-      <ol class="case-method-steps">
-        {% for step in project.method_steps %}
-          <li>
-            <span class="case-step-number" aria-hidden="true">0{{ forloop.index }}</span>
-            <p>{{ step }}</p>
-          </li>
+      {% if story.method_details %}
+        {% for detail in story.method_details %}
+          <div class="case-method-detail">
+            <h3>{{ detail.title }}</h3>
+            <p>{{ detail.body }}</p>
+          </div>
         {% endfor %}
-      </ol>
+        {% if story.composition_equations %}{% include unite-equations.liquid %}{% endif %}
+      {% else %}
+        <ol class="case-method-steps">
+          {% for step in project.method_steps %}
+            <li>
+              <span class="case-step-number" aria-hidden="true">0{{ forloop.index }}</span>
+              <p>{{ step }}</p>
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
       {% if project.definition %}
         <details class="case-technical">
           <summary>{{ project.definition_title }}</summary>
@@ -219,7 +154,7 @@ layout: project-showcase
         </details>
       {% endif %}
       <div class="case-contributions">
-        <h3>Research contributions</h3>
+        <h3>Contributions</h3>
         <ul>
           {% for contribution in project.contributions %}
             <li>{{ contribution }}</li>
@@ -229,8 +164,7 @@ layout: project-showcase
     </section>
     <section class="case-section case-slides" id="slides">
       <div class="case-section-heading">
-        <p class="showcase-eyebrow">Another way to explore</p>
-        <h2>The five-slide overview.</h2>
+        <h2>Presentation</h2>
       </div>
       {% include research-slides.liquid slides=project.slides label=project.title %}
     </section>
@@ -245,7 +179,8 @@ layout: project-showcase
         {{ project.year -}}
         {%- if project.presentation_status %} · {{ project.presentation_status }}{% endif %}
       </p>
-      <a class="showcase-project-link" href="{{ '/projects/' | relative_url }}">Explore more projects ↗</a>
+      <a class="showcase-project-link" href="{{ '/projects/' | relative_url }}">All projects ↗</a>
+      {% include showcase-credit.liquid %}
     </footer>
   </div>
 </article>

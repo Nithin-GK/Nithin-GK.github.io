@@ -1,0 +1,32 @@
+{% assign evidence = include.evidence %}
+<div class="case-evidence-block">
+  {% if evidence.title %}
+    <h3>{{ evidence.title }}</h3>
+  {% endif %}
+  <div class="case-table-scroll" tabindex="0" role="region" aria-label="{{ evidence.title | default: include.label | escape }}">
+    <table class="case-results-table">
+      <thead>
+        <tr>
+          {% for heading in evidence.headers %}
+            <th scope="col">{{ heading }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in evidence.rows %}
+          <tr>
+            {% for value in row -%}
+              {%- if forloop.first %}
+                <th scope="row">{{ value }}</th>
+              {% else %}
+                <td>{{ value }}</td>
+              {% endif -%}
+            {%- endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <p class="case-evidence-source">{{ evidence.source }}</p>
+  <p class="case-evidence-note">{{ evidence.note }}</p>
+</div>

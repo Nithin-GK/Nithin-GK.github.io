@@ -1296,3 +1296,116 @@
 .case-figure-columns[hidden] {
   display: none;
 }
+
+.showcase-card-media,
+.showcase-card-featured .showcase-card-media {
+  height: auto;
+  padding: 8px;
+}
+.showcase-card-media img {
+  height: auto;
+  max-height: none;
+}
+.showcase-section-heading {
+  display: block;
+}
+.showcase-credit {
+  font-size: 0.8rem;
+  color: #67705f;
+  margin: 30px 0 0;
+}
+.case-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 22px;
+  margin-top: 24px;
+  align-items: start;
+}
+.case-figure h3 {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  font-weight: 550;
+  margin: 0 0 10px;
+}
+.case-image-plate {
+  padding: 8px;
+}
+.case-image-button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: zoom-in;
+}
+.case-image-button img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+.case-image-button .case-expand {
+  min-height: 28px;
+  padding: 6px 0 0;
+}
+.case-figure figcaption {
+  margin-top: 8px;
+  font-size: 0.83rem;
+  line-height: 1.6;
+}
+.case-edit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.case-edit-grid img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+.case-edit-grid + .case-media-caption {
+  margin-bottom: 30px;
+}
+.case-method-detail {
+  max-width: 1000px;
+  margin: 24px 0;
+}
+.case-method-detail h3 {
+  font-size: 1.15rem;
+  font-weight: 550;
+  margin: 0 0 9px;
+}
+.case-method-detail p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #47563d;
+  margin: 0;
+}
+.case-equation-scroll {
+  overflow-x: auto;
+  padding: 18px 0;
+}
+.case-equation-scroll p {
+  white-space: nowrap;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+.case-evidence-block + .case-evidence-block {
+  margin-top: 34px;
+}
+.case-evidence-block h3 {
+  font-size: 1.15rem;
+  margin: 0 0 14px;
+}
+@media (max-width: 599px) {
+  .case-example-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-edit-grid .case-figure h3 {
+    font-size: 0.82rem;
+  }
+  .case-edit-grid .case-expand {
+    font-size: 0.65rem;
+  }
+}
