@@ -1074,8 +1074,12 @@
   }
   .showcase-card-media,
   .showcase-card-featured .showcase-card-media {
-    height: 280px;
+    height: auto;
     padding: 16px;
+  }
+  .showcase-card-media img {
+    height: auto;
+    max-height: 280px;
   }
   .showcase-card h3 {
     font-size: 1.8rem;
