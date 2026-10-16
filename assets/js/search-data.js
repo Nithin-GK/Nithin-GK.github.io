@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Selected papers and internship research.",
+          description: "Generative vision, large-scale training and multimodal intelligence.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
