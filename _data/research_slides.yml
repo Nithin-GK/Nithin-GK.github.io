@@ -269,4 +269,64 @@
       "title": "More hypotheses improve counting",
       "alt": "More hypotheses improve counting. UCF-QNRF ablation. Mean absolute error is lower with more realizations. 1: 74.59, 2: 71.94, 4: 68.95, 8: 66.97.",
     },
+  "control2control-1":
+    {
+      "src": "/assets/slides/control2control-1.webp",
+      "title": "Control2Control",
+      "alt": "Control2Control: consistent visual editing with pretrained diffusion models.",
+    },
+  "control2control-2":
+    {
+      "src": "/assets/slides/control2control-2.webp",
+      "title": "Interactive spatial editing",
+      "alt": "Interactive spatial editing: a sketch, pose or layout specifies the requested change.",
+    },
+  "control2control-3":
+    {
+      "src": "/assets/slides/control2control-3.webp",
+      "title": "Automatic masks and attention transfer",
+      "alt": "Automatic masks and revitalized attention transfer use source content outside the edited region.",
+    },
+  "control2control-4":
+    {
+      "src": "/assets/slides/control2control-4.webp",
+      "title": "Object movement with scene consistency",
+      "alt": "Object movement examples show a cup on a reflective table and multiple subjects in one scene.",
+    },
+  "control2control-5":
+    {
+      "src": "/assets/slides/control2control-5.webp",
+      "title": "Pose-controlled editing",
+      "alt": "Pose skeletons guide single-person and multi-person edits using a pretrained spatial controller.",
+    },
+  "nvidia-mesh-properties-1":
+    {
+      "src": "/assets/slides/nvidia-mesh-properties-1.webp",
+      "title": "NVIDIA: physical properties of 3D meshes",
+      "alt": "Research draft: SmartTagger combines 3D part segmentation and estimated material labels.",
+    },
+  "nvidia-mesh-properties-2":
+    {
+      "src": "/assets/slides/nvidia-mesh-properties-2.webp",
+      "title": "Material-aware 3D assets",
+      "alt": "Material-aware 3D assets. Multi-view foundation-model features connect geometry with physical properties.",
+    },
+  "nvidia-mesh-properties-3":
+    {
+      "src": "/assets/slides/nvidia-mesh-properties-3.webp",
+      "title": "Consistent features across views",
+      "alt": "Consistent features across views. SAM labels help aggregate the features projected onto the 3D surface.",
+    },
+  "nvidia-mesh-properties-4":
+    {
+      "src": "/assets/slides/nvidia-mesh-properties-4.webp",
+      "title": "Multimodal part analysis",
+      "alt": "Multimodal part analysis. A multimodal model groups parts and proposes material labels.",
+    },
+  "nvidia-mesh-properties-5":
+    {
+      "src": "/assets/slides/nvidia-mesh-properties-5.webp",
+      "title": "Part segmentation and physical understanding",
+      "alt": "Part segmentation and physical understanding. Qualitative examples show semantic structure beyond the mesh geometry.",
+    },
 }

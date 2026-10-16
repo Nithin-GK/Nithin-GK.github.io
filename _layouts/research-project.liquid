@@ -47,6 +47,9 @@ layout: default
     </section>
   {% endif %}
   {% if project.slides.size > 0 %}
+    {% if project.presentation_status %}
+      <p class="project-meta">{{ project.presentation_status }}</p>
+    {% endif %}
     {% include research-slides.liquid slides=project.slides label=project.title %}
   {% endif %}
   {% if project.links.size > 0 %}

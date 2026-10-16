@@ -362,7 +362,7 @@
       "title": "Control2Control",
       "venue": "Adobe research draft",
       "year": 2023,
-      "slides": [],
+      "slides": ["control2control-1", "control2control-2", "control2control-3", "control2control-4", "control2control-5"],
       "links": [],
       "introduction": "Training-free diffusion editing with sketches, poses or layouts.",
       "description": "Revitalized attention transfer blends target self-attention keys and values inside an edit mask with source keys and values outside it, supporting spatial edits while helping preserve the surrounding scene.",
@@ -394,6 +394,7 @@
       "period": "May – Aug 2023",
       "industry_description": "Built a training-free diffusion editing pipeline, using revitalized attention transfer to apply spatial edits while preserving the surrounding scene.",
       "navigation_group": "internships",
+      "presentation_status": "Research draft",
     },
   "nvidia-mesh-properties":
     {
@@ -424,5 +425,8 @@
       "source_url": "https://patents.google.com/patent/US20260038283A1/en",
       "links": [{ "label": "Patent application", "url": "https://patents.google.com/patent/US20260038283A1/en" }],
       "navigation_group": "internships",
+      "slides":
+        ["nvidia-mesh-properties-1", "nvidia-mesh-properties-2", "nvidia-mesh-properties-3", "nvidia-mesh-properties-4", "nvidia-mesh-properties-5"],
+      "presentation_status": "Research draft",
     },
 }
