@@ -1,9 +1,9 @@
 {
   "google-nvs-1":
     {
-      "src": "/assets/slides/google-nvs-1.webp",
-      "title": "Novel view synthesis at scale",
-      "alt": "Three scenes comparing input views, LVSM and Tok-D reconstructions",
+      "src": "/assets/slides/google-nvs-1-visual.webp",
+      "title": "Large-scale 3D training",
+      "alt": "Large-scale 3D training with synthetic data, featuring a Tok-D red-car reconstruction from the paper.",
     },
   "google-nvs-2":
     {
@@ -31,9 +31,9 @@
     },
   "gendeg-1":
     {
-      "src": "/assets/slides/gendeg-1.webp",
+      "src": "/assets/slides/gendeg-1-visual.webp",
       "title": "GenDeg: synthetic data for restoration",
-      "alt": "GenDeg generates 550K+ synthetic pairs across six degradations, forming GenDS with 750K+ total samples",
+      "alt": "GenDeg haze and rain restoration examples: Input, PromptIR and PromptIR GD, with original labels and detail insets.",
     },
   "gendeg-2":
     {
@@ -61,9 +61,9 @@
     },
   "scale-wise-var-1":
     {
-      "src": "/assets/slides/scale-wise-var-1.webp",
+      "src": "/assets/slides/scale-wise-var-1-visual.webp",
       "title": "Scale-Wise VAR is Secretly Discrete Diffusion",
-      "alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
+      "alt": "Scale-Wise VAR and proposed-method image-generation samples, with original VAR and Ours labels.",
     },
   "scale-wise-var-2":
     {
@@ -121,9 +121,9 @@
     },
   "unite-and-conquer-1":
     {
-      "src": "/assets/slides/unite-and-conquer-1.webp",
+      "src": "/assets/slides/unite-and-conquer-1-visual.webp",
       "title": "Unite and Conquer: compositional generation",
-      "alt": "Unite and Conquer combines class labels and scene descriptions through independent diffusion models",
+      "alt": "Unite and Conquer class-and-text compositions in a yellow flower field and on a beach.",
     },
   "unite-and-conquer-2":
     {
@@ -211,9 +211,9 @@
     },
   "petalface-1":
     {
-      "src": "/assets/slides/petalface-1.webp",
+      "src": "/assets/slides/petalface-1-visual.webp",
       "title": "PETALface: adapting to low-resolution faces",
-      "alt": "PETALface adapts a frozen recognition model with quality-weighted dual LoRA and 0.48% trainable parameters",
+      "alt": "PETALface gallery/probe input examples and measured recognition results. The photographs are research inputs.",
     },
   "petalface-2":
     {

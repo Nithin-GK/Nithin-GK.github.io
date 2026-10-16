@@ -15,7 +15,7 @@ navigation_group: projects
     <p class="showcase-hero-lede">I build generative and multimodal models, with a focus on large-scale training, synthetic data and 3D understanding.</p>
     <div class="showcase-actions"><a class="showcase-button showcase-button-primary" href="#papers">Explore the research</a><a class="showcase-button showcase-button-outline" href="#internships">Internship work</a></div>
     <div class="showcase-hero-media" aria-label="Research in action">
-      <a href="{{ '/projects/novel-view-synthesis/' | relative_url }}"><div><img src="{{ site.data.project_showcase['novel-view-synthesis'].image | relative_url }}" alt="Published reconstruction examples from the Google novel view synthesis project." fetchpriority="high"></div><span>Learning from generated views</span></a>
+      <a href="{{ '/projects/novel-view-synthesis/' | relative_url }}"><div><img src="{{ site.data.project_showcase['novel-view-synthesis'].image | relative_url }}" alt="A Tok-D scene reconstruction from the Google project." fetchpriority="high"></div><span>Learning from generated views</span></a>
       <a href="{{ '/projects/control2control/' | relative_url }}"><div><img src="{{ site.data.project_showcase.control2control.image | relative_url }}" alt="A sketch-guided corgi image edit from the Control2Control research draft."></div><span>Controlling what changes</span></a>
       <a href="{{ '/projects/nvidia-mesh-properties/' | relative_url }}"><div><img src="{{ site.data.project_showcase['nvidia-mesh-properties'].image | relative_url }}" alt="Colored 3D part segments and estimated materials from the NVIDIA research draft."></div><span>Understanding 3D materials</span></a>
     </div>

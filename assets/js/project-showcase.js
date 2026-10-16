@@ -55,6 +55,7 @@
           caption.textContent = figure.caption;
           if (columns) {
             columns.hidden = !figure.columns?.length;
+            columns.style.gridTemplateColumns = figure.column_widths?.join(" ") || "";
             columns.replaceChildren(
               ...(figure.columns || []).map((label) => {
                 const span = document.createElement("span");

@@ -14,12 +14,22 @@
       "media":
         [
           {
-            "label": "Published examples",
+            "label": "Red-car reconstruction",
+            "src": "/assets/img/showcase/novel-view-synthesis-lead.webp",
+            "preview": "/assets/img/showcase/novel-view-synthesis-lead-preview.webp",
+            "caption": "A selected red-car reconstruction from the published comparison. Columns: input views, LVSM, Tok-D and ground truth.",
+            "alt": "A selected red-car reconstruction from the published comparison. Columns: input views, LVSM, Tok-D and ground truth.",
+            "columns": ["Input views", "LVSM", "Tok-D", "Ground truth"],
+            "column_widths": ["0.145fr", "0.285fr", "0.285fr", "0.285fr"],
+          },
+          {
+            "label": "More reconstruction examples",
             "src": "/assets/img/showcase/novel-view-synthesis-1.webp",
             "caption": "Cross-dataset reconstruction examples. Columns from left: input views, LVSM, Tok-D and ground truth.",
             "alt": "Cross-dataset reconstruction examples. Columns from left: input views, LVSM, Tok-D and ground truth.",
             "preview": "/assets/img/showcase/novel-view-synthesis-1-preview.webp",
             "columns": ["Input views", "LVSM", "Tok-D", "Ground truth"],
+            "column_widths": ["0.145fr", "0.285fr", "0.285fr", "0.285fr"],
           },
           {
             "label": "The architecture",
@@ -36,7 +46,7 @@
             "preview": "/assets/img/showcase/novel-view-synthesis-3-preview.webp",
           },
         ],
-      "image": "/assets/img/showcase/novel-view-synthesis-1-preview.webp",
+      "image": "/assets/img/showcase/novel-view-synthesis-feature-preview.webp",
       "evidence":
         {
           "headers": ["Dataset", "LVSM PSNR", "Tok-D PSNR"],
@@ -63,18 +73,18 @@
       "media":
         [
           {
-            "label": "Restoration results",
+            "label": "Restoration examples",
+            "src": "/assets/img/showcase/gendeg-lead.webp",
+            "preview": "/assets/img/showcase/gendeg-lead-preview.webp",
+            "caption": "Selected haze and rain restoration comparisons from Figure 5. Input, PromptIR and PromptIR GD are shown with the original labels and detail insets. GD denotes training with GenDS.",
+            "alt": "Selected haze and rain restoration comparisons from Figure 5. Input, PromptIR and PromptIR GD are shown with the original labels and detail insets. GD denotes training with GenDS.",
+          },
+          {
+            "label": "Full comparison",
             "src": "/assets/img/showcase/gendeg-1.webp",
             "caption": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
             "alt": "Models with the GD suffix are trained with GenDS. The original input, baseline, GenDS and ground-truth columns are preserved.",
             "preview": "/assets/img/showcase/gendeg-1-preview.webp",
-          },
-          {
-            "label": "Degradation synthesis",
-            "src": "/assets/img/showcase/gendeg-2.webp",
-            "caption": "Examples of degradations generated from clean inputs.",
-            "alt": "Examples of degradations generated from clean inputs.",
-            "preview": "/assets/img/showcase/gendeg-2-preview.webp",
           },
           {
             "label": "The generator",
@@ -84,7 +94,7 @@
             "preview": "/assets/img/showcase/gendeg-3-preview.webp",
           },
         ],
-      "image": "/assets/img/showcase/gendeg-1-preview.webp",
+      "image": "/assets/img/showcase/gendeg-lead-preview.webp",
       "evidence":
         {
           "headers": ["Test set", "LPIPS Existing", "LPIPS GenDS", "FID Existing", "FID GenDS"],
@@ -117,7 +127,14 @@
       "media":
         [
           {
-            "label": "Composed scenes",
+            "label": "Composed samples",
+            "src": "/assets/img/showcase/unite-and-conquer-lead.webp",
+            "preview": "/assets/img/showcase/unite-and-conquer-lead-preview.webp",
+            "caption": "Selected outputs from Unite and Conquer. Top: a yellow flower field. Bottom: a beach. Classes from left: Tibetan terrier, teddy bear, triceratops, tree frog and otterhound. The full baseline comparison follows.",
+            "alt": "Selected outputs from Unite and Conquer. Top: a yellow flower field. Bottom: a beach. Classes from left: Tibetan terrier, teddy bear, triceratops, tree frog and otterhound. The full baseline comparison follows.",
+          },
+          {
+            "label": "Scene comparisons",
             "src": "/assets/img/showcase/unite-and-conquer-1.webp",
             "caption": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
             "alt": "Class-conditioned objects appear in text-defined scenes. These are published examples, not live inference.",
@@ -145,7 +162,7 @@
             "preview": "/assets/img/showcase/unite-and-conquer-4-preview.webp",
           },
         ],
-      "image": "/assets/img/showcase/unite-and-conquer-1-preview.webp",
+      "image": "/assets/img/showcase/unite-and-conquer-lead-preview.webp",
       "evidence":
         {
           "headers": ["Method", "Conditioning", "Class accuracy", "NIQE", "CLIP"],
@@ -238,7 +255,14 @@
       "media":
         [
           {
-            "label": "Complementary controls",
+            "label": "Multiple controls",
+            "src": "/assets/img/showcase/maxfusion-lead.webp",
+            "preview": "/assets/img/showcase/maxfusion-lead-preview.webp",
+            "caption": "Published examples combining complementary and conflicting spatial controls. Each group retains its conditioning inputs and generated samples.",
+            "alt": "Published examples combining complementary and conflicting spatial controls. Each group retains its conditioning inputs and generated samples.",
+          },
+          {
+            "label": "Baseline comparison",
             "src": "/assets/img/showcase/maxfusion-1.webp",
             "caption": "Original comparisons combine the spatial tasks shown at the left.",
             "alt": "Original comparisons combine the spatial tasks shown at the left.",
@@ -259,7 +283,7 @@
             "preview": "/assets/img/showcase/maxfusion-3-preview.webp",
           },
         ],
-      "image": "/assets/img/showcase/maxfusion-1-preview.webp",
+      "image": "/assets/img/showcase/maxfusion-lead-preview.webp",
       "evidence":
         {
           "headers": ["Method", "Pose + segmentation FID", "Pose + depth FID"],
@@ -404,8 +428,8 @@
           {
             "label": "Sketch-guided edit",
             "src": "/assets/img/showcase/control2control-1.webp",
-            "caption": "Original input, spatial condition and edited output. The prompt also adds “wearing sunglasses.”",
-            "alt": "Original input, spatial condition and edited output. The prompt also adds “wearing sunglasses.”",
+            "caption": "Spatial condition, original input and edited output. The prompt also adds “wearing sunglasses.”",
+            "alt": "Spatial condition, original input and edited output. The prompt also adds “wearing sunglasses.”",
             "preview": "/assets/img/showcase/control2control-1-preview.webp",
           },
           {

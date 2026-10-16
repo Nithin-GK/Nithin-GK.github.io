@@ -80,6 +80,9 @@ layout: project-showcase
             <div
               class="case-figure-columns"
               data-figure-columns
+              {% if first_figure.column_widths %}
+                style="grid-template-columns: {{ first_figure.column_widths | join: ' ' }}"
+              {% endif %}
               {% unless first_figure.columns %}
                 hidden
               {% endunless %}
