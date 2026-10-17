@@ -583,14 +583,45 @@
             "label": "Object movement",
             "src": "/assets/img/showcase/control2control-2.webp",
             "preview": "/assets/img/showcase/control2control-2-preview.webp",
-            "caption": "Original image, movement layout and edited result. Bounding boxes specify the requested positions.",
+            "comparison":
+              {
+                "aspect_ratio": "187 / 234",
+                "original":
+                  { "src": "/assets/img/showcase/control2control-movement-original.webp", "alt": "Original cup on the left of a wooden table." },
+                "edited":
+                  { "src": "/assets/img/showcase/control2control-movement-edited.webp", "alt": "Edited cup moved to the right of the same table." },
+                "condition":
+                  {
+                    "label": "Movement layout",
+                    "src": "/assets/img/showcase/control2control-movement-layout.webp",
+                    "alt": "Source and target boxes specify where to move the cup.",
+                  },
+              },
+            "caption": "Move the cup to the requested position.",
             "alt": "Original image, source/target movement layout and edited result. The bounding boxes specify the requested move; they are not the method’s estimated edit mask.",
           },
           {
             "label": "Pose-controlled edit",
             "src": "/assets/img/showcase/control2control-3.webp",
             "preview": "/assets/img/showcase/control2control-3-preview.webp",
-            "caption": "Original image, target pose and edited result.",
+            "comparison":
+              {
+                "aspect_ratio": "187 / 234",
+                "original":
+                  {
+                    "src": "/assets/img/showcase/control2control-pose-original.webp",
+                    "alt": "Original illustrated person standing in a sunlit café.",
+                  },
+                "edited":
+                  { "src": "/assets/img/showcase/control2control-pose-edited.webp", "alt": "Edited person in the requested pose, in the same café." },
+                "condition":
+                  {
+                    "label": "Target pose",
+                    "src": "/assets/img/showcase/control2control-pose-condition.webp",
+                    "alt": "Pose skeleton specifying the requested body position.",
+                  },
+              },
+            "caption": "Change the pose while retaining the surrounding scene.",
             "alt": "Original image, target pose skeleton and edited result. The pose is a spatial condition.",
           },
         ],

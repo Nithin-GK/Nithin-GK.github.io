@@ -1,7 +1,53 @@
 {% assign figure = include.figure %}
 <figure class="case-figure{% if figure.featured %} case-figure-featured{% endif %}{% if figure.wide %} case-figure-wide{% endif %}" data-case-figure>
   <h3>{{ figure.label }}</h3>
-  {% if figure.panels %}
+  {% if figure.comparison %}
+    <div class="case-comparison-pair" style="--case-media-ratio: {{ figure.comparison.aspect_ratio | default: '1' }}">
+      <div class="case-demo-panel">
+        <div class="case-comparison" data-image-comparison style="--compare-position: 50%">
+          <img
+            src="{{ figure.comparison.edited.src | relative_url }}"
+            alt="{{ figure.comparison.edited.alt | escape }}"
+            loading="lazy"
+            decoding="async"
+          >
+          <div class="case-comparison-before" style="clip-path: inset(0 50% 0 0)">
+            <img
+              src="{{ figure.comparison.original.src | relative_url }}"
+              alt="{{ figure.comparison.original.alt | escape }}"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+          <span class="case-comparison-label case-comparison-original">Original</span>
+          <span class="case-comparison-label case-comparison-edited">Edited</span>
+          <div class="case-comparison-handle" aria-hidden="true"><span>↔</span></div>
+          <input
+            type="range"
+            min="0"
+            max="100"
+            value="50"
+            aria-label="Compare {{ figure.label | escape }} original and edited image"
+            aria-valuetext="50% original, 50% edited"
+          >
+        </div>
+        <p class="case-comparison-hint">Drag to compare</p>
+      </div>
+      <figure class="case-demo-panel">
+        <button class="case-image-button" type="button" data-expand-figure aria-label="Expand {{ figure.comparison.condition.label | escape }}">
+          <img
+            src="{{ figure.comparison.condition.src | relative_url }}"
+            data-full-src="{{ figure.comparison.condition.src | relative_url }}"
+            alt="{{ figure.comparison.condition.alt | escape }}"
+            data-case-image
+            loading="lazy"
+            decoding="async"
+          >
+        </button>
+        <figcaption>{{ figure.comparison.condition.label }}</figcaption>
+      </figure>
+    </div>
+  {% elsif figure.panels %}
     <div class="case-demo-panels">
       {% for panel in figure.panels %}
         <figure class="case-demo-panel">
