@@ -25,7 +25,7 @@ layout: project-showcase
       <p class="case-pitch">{{ story.pitch }}</p>
       <p class="case-role">{{ story.role }}</p>
       <nav class="case-section-nav" aria-label="Case study sections">
-        <a href="#examples">Figures</a><a href="#method">How it works</a><a href="#results">Results</a><a href="#slides">Presentation</a>
+        <a href="#method">How it works</a><a href="#results">Results</a><a href="#slides">Presentation</a>
         {%- for link in project.links -%}
           <a class="case-source-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }} ↗</a>
         {%- endfor %}
@@ -33,10 +33,7 @@ layout: project-showcase
     </div>
   </header>
   <div class="showcase-container case-body">
-    <section class="case-examples" id="examples" aria-labelledby="examples-heading">
-      <div class="case-section-heading">
-        <h2 id="examples-heading">Figures</h2>
-      </div>
+    <section class="case-examples" id="examples" aria-label="Project images">
       {% if story.edit_panels %}
         {% if story.comparison_slider %}
           {% assign original = story.edit_panels[0] %}
