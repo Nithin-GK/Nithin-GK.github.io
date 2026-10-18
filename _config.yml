@@ -6,11 +6,11 @@ title: Nithin Gopalakrishnan Nair # the website title (if blank, full name will 
 first_name: Nithin
 middle_name:
 last_name: Gopalakrishnan Nair
-email: ngopala2@jhu.edu
+email: iamnithingk@gmail.com
 contact_note: >
   E-mail would be the best way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Personal website of Nithin GK - Research Engineer at Apple working on Multimodal LLMs. PhD from Johns Hopkins University.
+  Personal website of Nithin Gopalakrishnan Nair, Research Engineer at Apple working on multimodal agents and human interaction understanding. Ph.D. from Johns Hopkins University.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

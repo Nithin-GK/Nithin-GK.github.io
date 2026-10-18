@@ -85,8 +85,8 @@
   "scale-wise-var":
     {
       "title": "Scale-Wise VAR",
-      "venue": "arXiv preprint",
-      "year": 2025,
+      "venue": "Accepted to WACV",
+      "year": 2027,
       "slides": ["scale-wise-var-1", "scale-wise-var-2", "scale-wise-var-3", "scale-wise-var-4", "scale-wise-var-5"],
       "image_alt": "A Markovian attention mask connects scale-wise visual autoregression with discrete diffusion",
       "description": "A theoretical connection between scale-wise autoregressive generation and discrete diffusion motivates iterative visual refinement.",

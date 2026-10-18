@@ -5,48 +5,144 @@
       institution: Johns Hopkins University
       year: 2021-2025
       description:
-        - Advisor: Dr. Vishal M. Patel
-        - Focus: Deep generative modeling with diffusion models
-    - title: Master of Technology in Electrical Engineering
+        - "Advisor: Prof. Vishal M. Patel"
+        - "GPA: 3.96/4.0"
+    - title: B.Tech. and M.Tech. Dual Degree in Electrical Engineering
       institution: Indian Institute of Technology Madras
-      year: 2020
-    - title: Bachelor of Technology in Electrical Engineering
-      institution: Indian Institute of Technology Madras
-      year: 2019
+      year: 2015-2020
+      description:
+        - "CGPA: 9.0/10.0"
 
 - title: Experience
   type: time_table
   contents:
-    - title: Research Engineer
-      institution: Apple
-      year: 2025 - Present
+    - title: "Research Engineer"
+      institution: "Apple"
+      year: "2025-06 - Present"
       description:
-        - Working on Multimodal LLMs
-    - title: Research Intern
-      institution: Google, Mountain View
-      year: Dec 2024 - Mar 2025
-    - title: Research Intern
-      institution: Deep Imagination Research, NVIDIA, Santa Clara
-      year: May - Dec 2024
-    - title: Research Intern
-      institution: Adobe Research, Seattle
-      year: 2023
-    - title: Research Intern
-      institution: Mitsubishi Electric Research Labs, Cambridge
-      year: 2022
+        - "Designed an auto-improvement pipeline to improve the performance of long-horizon agents on human interaction understanding tasks."
+        - "Owned agent development infrastructure, integrating simulation and evaluation workflows."
+        - "Defined evaluation protocols and scoring rubrics to assess the quality and behavior of multimodal agents and guide model improvements."
+    - title: "Research Intern"
+      institution: "Google Beam (Hosts: Jungyeon Park, Srinivas Kaza)"
+      year: "2024-12 - 2025-03"
+      description:
+        - "Designed a novel transformer architecture for scaling novel view synthesis using diffusion-generated views (ICCV 2025; patent application filed)."
+        - "Achieved state-of-the-art novel view synthesis on Re10K, ACID, and DL3DV, and improved cross-dataset generalization using synthetic training data."
+    - title: "Research Intern"
+      institution: "Deep Imagination Research, NVIDIA (Mentors: J.P. Lewis, Ming-Yu Liu)"
+      year: "2024-04 - 2024-12"
+      description:
+        - "Built a zero-shot pipeline to segment 3D mesh parts and estimate materials and physical properties using multi-view foundation-model features and multimodal reasoning."
+        - "Patent filed."
+    - title: "Research Intern"
+      institution: "Adobe Inc (Mentor: Yuqian Zhou)"
+      year: "2023-05 - 2023-08"
+      description:
+        - "Developed Control2Control for training-free image editing from sketches, poses, and layouts."
+        - "Designed a novel attention transfer method for identity-preserving editing using human-drawn control signals."
+    - title: "Research Intern"
+      institution: "Mitsubishi Electric Research Labs (Mentors: Tim Marks, Anoop Cherian)"
+      year: "2022-05 - 2022-08"
+      description:
+        - "Developed Steered Diffusion, an energy-based approach for zero-shot conditioning of diffusion models through inference-time guidance (ICCV 2023)."
+
+- title: Selected Publications
+  type: time_table
+  contents:
+    - title: "Scale-Wise VAR is Secretly Discrete Diffusion"
+      institution: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), accepted"
+      year: "2027"
+      description:
+        - "Amandeep Kumar*, Nithin Gopalakrishnan Nair*, Vishal M. Patel. * Equal contribution."
+      linkitems:
+        - link: "https://arxiv.org/abs/2509.22636"
+          linkname: Paper
+    - title: "Scaling Transformer-Based Novel View Synthesis Models with Token Disentanglement and Synthetic Data"
+      institution: "IEEE/CVF International Conference on Computer Vision (ICCV)"
+      year: "2025"
+      description:
+        - "Nithin Gopalakrishnan Nair*, Srinivas Kaza*, Xuan Luo, Vishal M. Patel, Stephen Lombardi, Jungyeon Park. * Equal contribution."
+      linkitems:
+        - link: "https://scaling3dnvs.github.io/"
+          linkname: Paper
+    - title: "GenDeg: Diffusion-Based Degradation Synthesis for Generalizable All-in-One Image Restoration"
+      institution: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+      year: "2025"
+      description:
+        - "Sudarshan Rajagopalan, Nithin Gopalakrishnan Nair, Jay N. Paranjape, Vishal M. Patel."
+      linkitems:
+        - link: "https://sudraj2002.github.io/gendegpage/"
+          linkname: Paper
+    - title: "MaxFusion: Plug&Play Multi-Modal Generation in Text-to-Image Diffusion Models"
+      institution: "European Conference on Computer Vision (ECCV)"
+      year: "2024"
+      description:
+        - "Nithin Gopalakrishnan Nair, Jeya Maria Jose Valanarasu, Vishal M. Patel."
+      linkitems:
+        - link: "https://arxiv.org/abs/2404.09977"
+          linkname: Paper
+    - title: "CrowdDiff: Multi-hypothesis Crowd Density Estimation using Diffusion Models"
+      institution: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+      year: "2024"
+      description:
+        - "Yasiru Ranasinghe, Nithin Gopalakrishnan Nair, Wele Gedara Chaminda Bandara, Vishal M. Patel."
+      linkitems:
+        - link: "https://openaccess.thecvf.com/content/CVPR2024/html/Ranasinghe_CrowdDiff_Multi-hypothesis_Crowd_Density_Estimation_using_Diffusion_Models_CVPR_2024_paper.html"
+          linkname: Paper
+    - title: "Steered Diffusion: A Generalized Framework for Plug-and-Play Conditional Image Synthesis"
+      institution: "IEEE/CVF International Conference on Computer Vision (ICCV)"
+      year: "2023"
+      description:
+        - "Nithin Gopalakrishnan Nair, Anoop Cherian, Suhas Lohit, Ye Wang, Toshiaki Koike-Akino, Vishal M. Patel, Tim K. Marks."
+      linkitems:
+        - link: "https://openaccess.thecvf.com/content/ICCV2023/html/Nair_Steered_Diffusion_A_Generalized_Framework_for_Plug-and-Play_Conditional_Image_Synthesis_ICCV_2023_paper.html"
+          linkname: Paper
+    - title: "Unite and Conquer: Plug&Play Multi-Modal Synthesis Using Diffusion Models"
+      institution: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+      year: "2023"
+      description:
+        - "Nithin Gopalakrishnan Nair, Wele Gedara Chaminda Bandara, Vishal M. Patel."
+      linkitems:
+        - link: "https://openaccess.thecvf.com/content/CVPR2023/papers/Nair_Unite_and_Conquer_Plug__Play_Multi-Modal_Synthesis_Using_Diffusion_CVPR_2023_paper.pdf"
+          linkname: Paper
+    - title: "PETALface: Parameter Efficient Transfer Learning for Low-Resolution Face Recognition"
+      institution: "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), Oral"
+      year: "2025"
+      description:
+        - "Kartik Narayan, Nithin Gopalakrishnan Nair, Jennifer Xu, Rama Chellappa, Vishal M. Patel."
+      linkitems:
+        - link: "https://arxiv.org/abs/2412.07771"
+          linkname: Paper
 
 - title: Research Interests
+  type: list
+  contents:
+    - "Large-scale model training"
+    - "Generative modeling"
+    - "Multimodal learning"
+    - "Synthetic data"
+    - "3D understanding"
+
+- title: Technical Skills
   type: nested_list
   contents:
-    - title: Computer Vision
+    - title: "Languages"
       items:
-        - Deep generative modeling
-        - Diffusion models
-        - Image and video generation
-    - title: Efficient AI
+        - "Python"
+        - "C"
+        - "C++"
+        - "MATLAB"
+    - title: "Frameworks"
       items:
-        - Plug-and-play models
-        - Efficient generation on low-compute devices
+        - "PyTorch"
+        - "JAX"
+    - title: "Generative Models"
+      items:
+        - "Diffusion models"
+        - "Autoregressive models"
+        - "VAEs"
+        - "GANs"
 
 - title: Other Interests
   type: list
