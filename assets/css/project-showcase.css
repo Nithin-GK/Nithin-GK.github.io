@@ -12,9 +12,10 @@
   line-height: 1.65;
 }
 .showcase-body #navbar {
-  background: #131716 !important;
+  background: #fff !important;
   box-shadow: none;
-  border-bottom: 1px solid #ffffff20;
+  opacity: 1;
+  border-bottom: 1px solid #d9e1e7;
 }
 .showcase-body #navbar .container {
   max-width: 1256px;
@@ -23,13 +24,20 @@
 }
 .showcase-body #navbar .navbar-brand,
 .showcase-body #navbar .nav-link {
-  color: #f6f5ef !important;
+  color: #182735 !important;
+}
+.showcase-body #navbar .navbar-brand {
+  font: 500 clamp(1.05rem, 2vw, 1.3rem)/1.25 "STIX Two Text", Georgia, serif !important;
+  letter-spacing: -0.035em;
 }
 .showcase-body #navbar .active .nav-link {
-  color: var(--showcase-accent) !important;
+  color: #245792 !important;
+}
+.showcase-body #progress {
+  display: none;
 }
 .showcase-body #navbar .icon-bar {
-  background: #fff;
+  background: #182735;
 }
 .showcase-body > footer {
   position: static !important;
@@ -709,7 +717,7 @@
   color: #485f35;
 }
 .case-slides {
-  border-top: 1px solid #c4d4af;
+  border-top: 1px solid #d9e1e7;
   padding-top: 55px;
 }
 .slide-viewer {
@@ -781,7 +789,7 @@
 }
 .case-reference {
   margin: 60px 0 0;
-  border-top: 1px solid #c4d4ae;
+  border-top: 1px solid #d9e1e7;
   padding-top: 28px;
   font-size: 0.92rem;
   line-height: 1.8;

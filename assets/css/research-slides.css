@@ -1,0 +1,179 @@
+.research-deck {
+  --deck-paper: #fff;
+  --deck-ink: #192537;
+  --deck-muted: #4f6074;
+  --deck-accent: #245aa0;
+  --deck-rule: #d6dee8;
+  --deck-tint: #f1f5fa;
+  border: 1px solid var(--deck-rule);
+  border-radius: 6px;
+  color: var(--deck-ink);
+  background: var(--deck-paper);
+}
+html[data-theme="dark"] .research-deck {
+  --deck-paper: #151e2b;
+  --deck-ink: #f1f5fa;
+  --deck-muted: #bdcadb;
+  --deck-accent: #a6cafa;
+  --deck-rule: #3a4859;
+  --deck-tint: #202d3d;
+}
+.research-deck [hidden] {
+  display: none !important;
+}
+.research-deck-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 0.75rem;
+  padding: 0.45rem clamp(0.65rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--deck-rule);
+}
+.research-deck-count {
+  color: var(--deck-muted);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+.research-deck-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+}
+.research-deck-buttons button {
+  border: 0;
+  background: transparent;
+  color: var(--deck-accent);
+  padding: 0.5rem 0.65rem;
+  font-size: 0.9rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+.research-deck-buttons button:hover:enabled,
+.research-slide-original:hover {
+  text-decoration: underline;
+}
+.research-deck-buttons button:disabled {
+  color: var(--deck-muted);
+  opacity: 0.55;
+  cursor: default;
+}
+.research-slide {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1rem, 4vw, 2.8rem);
+  row-gap: clamp(1.1rem, 2.4vw, 1.8rem);
+}
+.research-slide + .research-slide:not([hidden]) {
+  border-top: 1px solid var(--deck-rule);
+}
+.research-deck-toolbar:not([hidden]) + .research-deck-stage .research-slide {
+  border-top: 0;
+}
+.research-slide header h3 {
+  color: var(--deck-ink);
+  font-size: clamp(1.45rem, 3vw, 2.55rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 0.55rem;
+}
+.research-slide header p {
+  margin: 0;
+  max-width: 72ch;
+  color: var(--deck-muted);
+  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  line-height: 1.55;
+}
+.research-slide-figure {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.research-slide-figure a {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0.25rem;
+  cursor: zoom-in;
+}
+.research-slide-figure img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: clamp(13rem, 37vw, 25rem);
+  touch-action: pan-y pinch-zoom;
+}
+.research-slide .case-evidence-block {
+  min-width: 0;
+}
+.research-slide .case-table-scroll {
+  border: 1px solid var(--deck-rule);
+  background: var(--deck-paper);
+}
+.research-slide .case-results-table {
+  min-width: 0;
+  color: var(--deck-ink);
+  font-variant-numeric: tabular-nums;
+}
+.research-slide .case-results-table thead th {
+  color: var(--deck-ink);
+  background: var(--deck-tint);
+}
+.research-slide .case-results-table th,
+.research-slide .case-results-table td {
+  padding: 0.75rem clamp(0.7rem, 2vw, 1.5rem);
+  border-color: var(--deck-rule);
+}
+.research-slide .case-results-table td:last-child {
+  color: var(--deck-ink);
+}
+.research-slide .case-evidence-source,
+.research-slide .case-evidence-note {
+  color: var(--deck-muted);
+}
+.research-slide .research-slide-original {
+  align-self: flex-start;
+  color: var(--deck-accent);
+  font-size: 0.88rem;
+  text-underline-offset: 0.2em;
+}
+.research-deck:focus-visible,
+.research-deck :focus-visible {
+  outline: 2px solid var(--deck-accent) !important;
+  outline-offset: 2px;
+}
+.research-deck:fullscreen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  overflow: auto;
+}
+.research-deck:fullscreen .research-deck-stage {
+  width: min(100%, 78rem);
+  margin: auto;
+}
+.research-deck:fullscreen .research-slide-figure img {
+  max-height: 56vh;
+}
+@media (max-width: 540px) {
+  .research-deck-buttons button {
+    padding-inline: 0.4rem;
+  }
+  .research-slide .case-results-table,
+  .research-slide .case-results-table thead th {
+    font-size: 0.875rem;
+  }
+  .research-slide .case-results-table th,
+  .research-slide .case-results-table td {
+    padding: 0.55rem 0.25rem;
+  }
+}

@@ -20,6 +20,8 @@
             {{- site.title -}}
           {% endif %}
         </a>
+      {% elsif page.layout == 'about' %}
+        <a class="navbar-brand home-signature" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">N. G. Nair</a>
       {% elsif site.enable_navbar_social %}
         <!-- Social Icons -->
         <div class="navbar-brand social">{% include social.liquid %}</div>

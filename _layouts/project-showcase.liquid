@@ -2,7 +2,10 @@
 <html lang="{{ site.lang }}">
   <head>
     {% include head.liquid %}
-    <link rel="stylesheet" href="{{ '/assets/css/project-showcase.css?v=8' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/project-showcase.css' | relative_url | bust_file_cache }}">
+    {% if page.layout == 'research-project' %}
+      <link rel="stylesheet" href="{{ '/assets/css/research-slides.css' | relative_url | bust_file_cache }}">
+    {% endif %}
   </head>
   <body class="showcase-body {% if site.navbar_fixed %}fixed-top-nav{% endif %}">
     {% include header.liquid %}

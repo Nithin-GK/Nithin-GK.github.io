@@ -1,0 +1,45 @@
+---
+---
+{% assign preview = site.data.home_previews[entry.key] %}
+{% assign project = site.projects | where: 'project_key', preview.project | first %}
+<article class="home-paper" id="{{ entry.key }}">
+  {% if preview.poster %}
+    <div class="paper-preview" data-paper-preview>
+      <img src="{{ preview.poster | relative_url }}" alt="{{ preview.alt | escape }}" width="480" height="320" loading="lazy" decoding="async">
+      {% if preview.motion %}
+        <a class="preview-control" href="{{ preview.motion | relative_url }}" data-preview-control aria-label="Play preview for {{ entry.title | strip_html | escape }}" title="Play preview">
+          <span aria-hidden="true" class="preview-symbol"></span>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="paper-copy">
+    <p class="paper-venue">{{ entry.abbr | default: entry.year }}{% if entry.note %}<span class="paper-note"> · {{ entry.note }}</span>{% endif %}</p>
+    <h3><a href="{% if project %}{{ project.url | relative_url }}{% elsif entry.pdf %}{{ entry.pdf }}{% else %}{{ '/publications/' | relative_url }}#{{ entry.key }}{% endif %}">{{ entry.title }}</a></h3>
+    <p class="paper-authors">
+      {%- for author in entry.author_array -%}
+        {% unless forloop.first %}, {% endunless %}
+        {%- assign last_name = author.last | remove: '*' -%}
+        {%- if site.scholar.last_name contains last_name and site.scholar.first_name contains author.first -%}
+          <strong>{{ author.first }} {{ last_name }}</strong>
+        {%- else -%}
+          {{ author.first }} {{ last_name }}
+        {%- endif -%}
+        {%- if author.last contains '*' -%}<sup title="Equal contribution">*</sup>{%- endif -%}
+      {%- endfor -%}
+    </p>
+    {% if preview.summary %}<p class="paper-summary">{{ preview.summary }}</p>{% endif %}
+    <div class="paper-links">
+      {% if entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">Paper</a>{% endif %}
+      {% if project %}<a href="{{ project.url | relative_url }}#slides">Slides</a>{% endif %}
+      {% if entry.code %}<a href="{{ entry.code }}">{% if entry.code contains 'github.com/' %}Code{% else %}Project site{% endif %}</a>{% endif %}
+      {% if entry.abstract or entry.bibtex_show %}
+        <details class="paper-details">
+          <summary>{% if entry.abstract and entry.bibtex_show %}Abstract &amp; citation{% elsif entry.abstract %}Abstract{% else %}Citation{% endif %}</summary>
+          {% if entry.abstract %}<p>{{ entry.abstract }}</p>{% endif %}
+          {% if entry.bibtex_show %}<pre aria-label="BibTeX citation"><code>{{ entry.bibtex | hideCustomBibtex | escape }}</code></pre>{% endif %}
+        </details>
+      {% endif %}
+    </div>
+  </div>
+</article>

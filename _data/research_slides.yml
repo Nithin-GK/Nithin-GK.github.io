@@ -1,332 +1,455 @@
-{
-  "google-nvs-1":
-    {
-      "src": "/assets/slides/google-nvs-1-context.webp",
-      "title": "Large-scale 3D training",
-      "alt": "Large-scale 3D training with synthetic data. Complete published comparison with input, LVSM, Tok-D and ground truth.",
-    },
-  "google-nvs-2":
-    {
-      "src": "/assets/slides/google-nvs-2.webp",
-      "title": "Synthetic training views",
-      "alt": "CAT3D generates source views, while the original conditioning image provides target supervision",
-    },
-  "google-nvs-3":
-    {
-      "src": "/assets/slides/google-nvs-3-context.webp",
-      "title": "Token disentanglement",
-      "alt": "Tok-D and Tok-D Plus distinguish source and target tokens through style embeddings and modulation",
-    },
-  "google-nvs-4":
-    {
-      "src": "/assets/slides/google-nvs-4-context.webp",
-      "title": "Reconstruction quality",
-      "alt": "Real-data Table 1 PSNR: LVSM versus Tok-D on RealEstate10K, ACID and DL3DV",
-    },
-  "google-nvs-5":
-    {
-      "src": "/assets/slides/google-nvs-5.webp",
-      "title": "Generalization with synthetic data",
-      "alt": "Qualitative cross-dataset reconstructions and small PSNR gains from synthetic augmentation in Table 2",
-    },
-  "gendeg-1":
-    {
-      "src": "/assets/slides/gendeg-1-context.webp",
-      "title": "GenDeg: synthetic data for restoration",
-      "alt": "GenDeg restoration results across all six degradation types, including original inputs, baseline methods, GenDS-trained variants and ground truth.",
-    },
-  "gendeg-2":
-    {
-      "src": "/assets/slides/gendeg-2-context.webp",
-      "title": "Learning degradation synthesis",
-      "alt": "Complete GenDeg degradation synthesis method, including input and conditioning, sampling, and degradation-type and intensity control.",
-    },
-  "gendeg-3":
-    {
-      "src": "/assets/slides/gendeg-3.webp",
-      "title": "Degradation type and intensity",
-      "alt": "Degradation type and intensity. A single generator produces varied corruption patterns.",
-    },
-  "gendeg-4":
-    {
-      "src": "/assets/slides/gendeg-4-results.webp",
-      "title": "Out-of-distribution restoration",
-      "alt": "Out-of-distribution restoration. Swin restoration model trained with existing data or GenDS. Test set, LPIPS Existing, LPIPS GenDS, FID Existing, FID GenDS. O-Haze, 0.254, 0.165, 109.9, 74.6. LOLv1, 0.241, 0.167, 112.0, 73.1. RSVD, 0.143, 0.121, 21.7, 14.1. GoPro, 0.198, 0.170, 31.7, 36.2. Selected OoD test sets. GenDS combines existing and synthetic training pairs.",
-    },
-  "gendeg-5":
-    {
-      "src": "/assets/slides/gendeg-5.webp",
-      "title": "Restoration on unseen patterns",
-      "alt": "Restoration on unseen patterns. Models trained with GenDS recover details across varied degradations.",
-    },
-  "scale-wise-var-1":
-    {
-      "src": "/assets/slides/scale-wise-var-1-context.webp",
-      "title": "Scale-Wise VAR is Secretly Discrete Diffusion",
-      "alt": "Scale-Wise VAR Figure 1, including the reconstruction and image-generation comparisons.",
-    },
-  "scale-wise-var-2":
-    {
-      "src": "/assets/slides/scale-wise-var-2.webp",
-      "title": "The Markovian attention mask",
-      "alt": "The Markovian attention mask. Condition on the immediately preceding scale",
-    },
-  "scale-wise-var-3":
-    {
-      "src": "/assets/slides/scale-wise-var-3-context.webp",
-      "title": "Iterative visual refinement",
-      "alt": "Iterative visual refinement. The diffusion interpretation supports resampling after an initial prediction.",
-    },
-  "scale-wise-var-4":
-    {
-      "src": "/assets/slides/scale-wise-var-4.webp",
-      "title": "Zero-shot image reconstruction",
-      "alt": "Zero-shot image reconstruction. The same model supports inpainting, outpainting and super-resolution.",
-    },
-  "scale-wise-var-5":
-    {
-      "src": "/assets/slides/scale-wise-var-5-results.webp",
-      "title": "Generation benchmark results",
-      "alt": "Generation benchmark results. FID after 200 training epochs. Lower is better. Dataset, Generation, VAR, SRDD. MiniImageNet, Conditional, 21.01, 16.76. SUN, Conditional, 15.72, 13.26. FFHQ, Unconditional, 19.23, 17.37. AFHQ, Unconditional, 14.74, 13.14. All four comparisons use the training settings reported in the preprint.",
-    },
-  "steered-diffusion-1":
-    {
-      "src": "/assets/slides/steered-diffusion-1.webp",
-      "title": "Steered Diffusion: inference-time control",
-      "alt": "Steered Diffusion examples for inpainting and semantic generation",
-    },
-  "steered-diffusion-2":
-    {
-      "src": "/assets/slides/steered-diffusion-2.webp",
-      "title": "Steering the implicit prediction",
-      "alt": "Steering the implicit prediction. A pretrained task function guides the clean-image estimate during denoising.",
-    },
-  "steered-diffusion-3":
-    {
-      "src": "/assets/slides/steered-diffusion-3-context.webp",
-      "title": "Image restoration at inference time",
-      "alt": "Image restoration at inference time. Predefined image transformations express restoration constraints.",
-    },
-  "steered-diffusion-4":
-    {
-      "src": "/assets/slides/steered-diffusion-4.webp",
-      "title": "Text-guided image editing",
-      "alt": "Text-guided image editing. Semantic and identity constraints can guide the same sampling process.",
-    },
-  "steered-diffusion-5":
-    {
-      "src": "/assets/slides/steered-diffusion-5-results.webp",
-      "title": "Conditional generation results",
-      "alt": "Conditional generation results. Reported face-generation and restoration benchmarks. Task, Metric, Baseline, Baseline score, Steered Diffusion. Semantic faces, FID (lower), ILVR, 107.46, 41.38. 8× super-resolution, PSNR dB (higher), ILVR, 20.54, 26.02. Colorization, FID (lower), ILVR, 67.66, 49.72. Thin-mask inpainting, FID (lower), RePaint, 43.35, 30.85. CelebA for the first three tasks. Inpainting uses thin masks.",
-    },
-  "unite-and-conquer-1":
-    {
-      "src": "/assets/slides/unite-and-conquer-1-context.webp",
-      "title": "Unite and Conquer",
-      "alt": "Complete semantic-map and sketch-conditioned face-generation panels, with text prompts, conditions and TediGAN baseline where applicable.",
-    },
-  "unite-and-conquer-2":
-    {
-      "src": "/assets/slides/unite-and-conquer-2-context.webp",
-      "title": "Composition of pretrained models",
-      "alt": "Composition of pretrained models. Independent modality-conditioned models contribute to a shared sampling process.",
-    },
-  "unite-and-conquer-3":
-    {
-      "src": "/assets/slides/unite-and-conquer-3.webp",
-      "title": "Cross-dataset multimodal generation",
-      "alt": "Cross-dataset multimodal generation. An ImageNet class model combines with a scene-conditioned generator.",
-    },
-  "unite-and-conquer-4":
-    {
-      "src": "/assets/slides/unite-and-conquer-4-context.webp",
-      "title": "Reliability and condition strength",
-      "alt": "Reliability and condition strength. The generalized product of experts balances information from the models.",
-    },
-  "unite-and-conquer-5":
-    {
-      "src": "/assets/slides/unite-and-conquer-5-results.webp",
-      "title": "Class and text composition results",
-      "alt": "Class and text composition results. 500 generated images. Best of three reliability settings. Method, Conditioning, Class accuracy, NIQE, CLIP. GLIDE, Text only, 0.3%, 6.64, 0.317. CompGen, Text composition, 22.4%, 5.71, 0.282. Unite and Conquer, Class and text, 87.0%, 5.34, 0.286. Baselines receive text conditions. The proposed sampler also uses a class model.",
-    },
-  "maxfusion-1":
-    {
-      "src": "/assets/slides/maxfusion-1-context.webp",
-      "title": "MaxFusion: multiple spatial conditions",
-      "alt": "MaxFusion combines multiple spatial conditions in text-to-image generation",
-    },
-  "maxfusion-2":
-    {
-      "src": "/assets/slides/maxfusion-2.webp",
-      "title": "Variance reveals conditioning intensity",
-      "alt": "Variance reveals conditioning intensity. Spatial variance maps indicate where a controller contributes information.",
-    },
-  "maxfusion-3":
-    {
-      "src": "/assets/slides/maxfusion-4.webp",
-      "title": "Fusion during denoising",
-      "alt": "Fusion during denoising. Aligned conditional features combine within off-the-shelf generation models.",
-    },
-  "maxfusion-4":
-    {
-      "src": "/assets/slides/maxfusion-4-results.webp",
-      "title": "Results with conflicting conditions",
-      "alt": "Results with conflicting conditions. COCO evaluation with 2,000 images and 50 sampling steps. Method, Pose + segmentation FID, Pose + depth FID. T2I-Adapter, 55.61, 51.47. ControlNet, 63.46, 48.18. MaxFusion, 46.72, 47.37. Condition adherence varies by metric. Results are for the constructed COCO test set.",
-    },
-  "maxfusion-5":
-    {
-      "src": "/assets/slides/maxfusion-5.webp",
-      "title": "Complementary spatial conditions",
-      "alt": "Complementary spatial conditions. Multiple controls contribute to a single generated image.",
-    },
-  "briar-1":
-    {
-      "src": "/assets/slides/briar-1.webp",
-      "title": "BRIAR: unconstrained face recognition",
-      "alt": "BRIAR true accept rate at FAR 0.1%: AdaFace 39.41%, our method 70.84%, with WebFace12M pretraining and different architectures",
-    },
-  "briar-2":
-    {
-      "src": "/assets/slides/briar-2.webp",
-      "title": "Staged adaptation",
-      "alt": "Staged adaptation. Large-scale supervised pretraining precedes adaptation to low-quality imagery.",
-    },
-  "briar-3":
-    {
-      "src": "/assets/slides/briar-3.webp",
-      "title": "Context-aware face crops",
-      "alt": "Context-aware face crops. Enlarged aligned crops preserve information around low-resolution faces.",
-    },
-  "briar-4":
-    {
-      "src": "/assets/slides/briar-4.webp",
-      "title": "The high- and low-quality gap",
-      "alt": "The high- and low-quality gap. Recognition features must remain discriminative as image quality changes.",
-    },
-  "briar-5":
-    {
-      "src": "/assets/slides/briar-5.webp",
-      "title": "Recognition across five benchmarks",
-      "alt": "Recognition across five benchmarks. State-of-the-art results in the 2025 study",
-    },
-  "petalface-1":
-    {
-      "src": "/assets/slides/petalface-1-visual.webp",
-      "title": "PETALface: adapting to low-resolution faces",
-      "alt": "PETALface gallery/probe input examples and measured recognition results. The photographs are research inputs.",
-    },
-  "petalface-2":
-    {
-      "src": "/assets/slides/petalface-2.webp",
-      "title": "Gallery and probe quality",
-      "alt": "Gallery and probe quality. High-quality reference images and low-quality probes occupy different domains.",
-    },
-  "petalface-3":
-    {
-      "src": "/assets/slides/petalface-3.webp",
-      "title": "Quality-weighted adapters",
-      "alt": "Quality-weighted adapters. Two LoRA branches adapt a frozen recognition backbone.",
-    },
-  "petalface-4":
-    {
-      "src": "/assets/slides/petalface-4.webp",
-      "title": "TinyFace adaptation",
-      "alt": "TinyFace adaptation. Rank-1 retrieval with ArcFace, Swin-B and WebFace4M. Higher is better. Pretrained: 73.31%, Full FT: 71.11%, LoRA: 75.64%, PETALface: 75.72%.",
-    },
-  "petalface-5":
-    {
-      "src": "/assets/slides/petalface-5.webp",
-      "title": "BRIAR adaptation",
-      "alt": "BRIAR adaptation. TAR at FAR 0.1%, BRIAR Protocol 3.1. Higher is better. Pretrained: 45.93%, Full FT: 29.68%, PETALface: 55.35%.",
-    },
-  "crowddiff-1":
-    {
-      "src": "/assets/slides/crowddiff-1.webp",
-      "title": "CrowdDiff: diffusion for crowd counting",
-      "alt": "CrowdDiff predicts detailed density maps and uses multiple hypotheses for crowd counting",
-    },
-  "crowddiff-2":
-    {
-      "src": "/assets/slides/crowddiff-2.webp",
-      "title": "Diffusion for density estimation",
-      "alt": "Diffusion for density estimation. An image-conditioned denoiser predicts a crowd density map.",
-    },
-  "crowddiff-3":
-    {
-      "src": "/assets/slides/crowddiff-3.webp",
-      "title": "Fusion of head locations",
-      "alt": "Fusion of head locations. A neighborhood-based rejection radius filters duplicate detections.",
-    },
-  "crowddiff-4":
-    {
-      "src": "/assets/slides/crowddiff-4.webp",
-      "title": "Multiple crowd hypotheses",
-      "alt": "Multiple crowd hypotheses. Different realizations provide complementary head-location estimates.",
-    },
-  "crowddiff-5":
-    {
-      "src": "/assets/slides/crowddiff-5.webp",
-      "title": "More hypotheses improve counting",
-      "alt": "More hypotheses improve counting. UCF-QNRF ablation. Mean absolute error is lower with more realizations. 1: 74.59, 2: 71.94, 4: 68.95, 8: 66.97.",
-    },
-  "control2control-1":
-    {
-      "src": "/assets/slides/control2control-1-corgi.webp",
-      "title": "Control2Control",
-      "alt": "Control2Control: original corgi, a sketch adding glasses, and the edited corgi wearing sunglasses.",
-    },
-  "control2control-2":
-    {
-      "src": "/assets/slides/control2control-2.webp",
-      "title": "Interactive spatial editing",
-      "alt": "Interactive spatial editing: a sketch, pose or layout specifies the requested change.",
-    },
-  "control2control-3":
-    {
-      "src": "/assets/slides/control2control-3-context.webp",
-      "title": "Automatic masks and attention transfer",
-      "alt": "Complete revitalized attention-transfer diagram, showing masked source and target keys and values and the retained target queries.",
-    },
-  "control2control-4":
-    {
-      "src": "/assets/slides/control2control-4.webp",
-      "title": "Object movement with scene consistency",
-      "alt": "Object movement examples show a cup on a reflective table and multiple subjects in one scene.",
-    },
-  "control2control-5":
-    {
-      "src": "/assets/slides/control2control-5.webp",
-      "title": "Pose-controlled editing",
-      "alt": "Pose skeletons guide single-person and multi-person edits using a pretrained spatial controller.",
-    },
-  "nvidia-mesh-properties-1":
-    {
-      "src": "/assets/slides/nvidia-mesh-properties-1.webp",
-      "title": "NVIDIA: physical properties of 3D meshes",
-      "alt": "Research draft: SmartTagger combines 3D part segmentation and estimated material labels.",
-    },
-  "nvidia-mesh-properties-2":
-    {
-      "src": "/assets/slides/nvidia-mesh-properties-2.webp",
-      "title": "Material-aware 3D assets",
-      "alt": "Material-aware 3D assets. Multi-view foundation-model features connect geometry with physical properties.",
-    },
-  "nvidia-mesh-properties-3":
-    {
-      "src": "/assets/slides/nvidia-mesh-properties-3.webp",
-      "title": "Consistent features across views",
-      "alt": "Consistent features across views. SAM labels help aggregate the features projected onto the 3D surface.",
-    },
-  "nvidia-mesh-properties-4":
-    {
-      "src": "/assets/slides/nvidia-mesh-properties-4.webp",
-      "title": "Multimodal part analysis",
-      "alt": "Multimodal part analysis. A multimodal model groups parts and proposes material labels.",
-    },
-  "nvidia-mesh-properties-5":
-    {
-      "src": "/assets/slides/nvidia-mesh-properties-5-results.webp",
-      "title": "Physical-property estimation results",
-      "alt": "Physical-property estimation results. Omniverse part examples and ABO-500 mass-estimation results. Metric, NeRF2- Physics, Ours. ADE, 10.846, 9.752. ALDE, 1.489, 1.285. APE, 0.790, 0.834. MnRE, 0.300, 0.365. ADE, ALDE, APE: lower is better. MnRE: higher is better.",
-    },
-}
+google-nvs-1:
+  title: "Learning to synthesize new views"
+  takeaway: "A transformer trained on real and synthetic views can reconstruct a scene from an unfamiliar camera angle."
+  original: "/assets/slides/google-nvs-1-context.webp"
+  alt: "The same scene shown as input views, the LVSM baseline, the Tok-D reconstruction and ground truth."
+  figure: "/assets/slides/figures/google-nvs-1.webp"
+  width: 1122
+  height: 614
+
+google-nvs-2:
+  title: "Where the training views come from"
+  takeaway: "CAT3D generates the source views. The original photograph supplies the target, so the model learns against a real observation."
+  original: "/assets/slides/google-nvs-2.webp"
+  alt: "Training diagram showing generated source views entering the transformer and a real target image providing supervision."
+  figure: "/assets/slides/figures/google-nvs-2.webp"
+  width: 1109
+  height: 486
+
+google-nvs-3:
+  title: "Separating source and target tokens"
+  takeaway: "Tok-D modulates the two token types separately, reducing the influence of artifacts in generated views."
+  original: "/assets/slides/google-nvs-3-context.webp"
+  alt: "The Tok-D and Tok-D Plus blocks use style embeddings to distinguish source and target features."
+  figure: "/assets/slides/figures/google-nvs-3.webp"
+  width: 1424
+  height: 385
+
+google-nvs-4:
+  title: "Reconstruction on real scenes"
+  takeaway: "With real-data training at 256 × 256, Tok-D raises PSNR by 1.13 dB on RealEstate10K and 1.64 dB on DL3DV relative to LVSM."
+  original: "/assets/slides/google-nvs-4-context.webp"
+  project_table: true
+
+google-nvs-5:
+  title: "Testing on unfamiliar scenes"
+  takeaway: "Synthetic augmentation adds 0.06 dB on ACID and 0.09 dB on DL3DV. RealEstate10K changes by −0.05 dB."
+  original: "/assets/slides/google-nvs-5.webp"
+  alt: "Input views, LVSM, Tok-D and ground truth shown side by side for scenes from the cross-dataset evaluation."
+  figure: "/assets/slides/figures/google-nvs-5.webp"
+  width: 1423
+  height: 522
+
+gendeg-1:
+  title: "Generating paired restoration data"
+  takeaway: "GenDeg synthesized over 550,000 pairs across six degradation types. Combined with existing pairs, GenDS contains over 750,000 samples."
+  original: "/assets/slides/gendeg-1-context.webp"
+  alt: "Restoration results across six degradation types, including inputs, baseline methods, variants trained with GenDS and ground truth. GD denotes GenDS training."
+  figure: "/assets/slides/figures/gendeg-1.webp"
+  width: 1020
+  height: 616
+
+gendeg-2:
+  title: "Learning to generate degradations"
+  takeaway: "A diffusion model learns from image content, text and degradation statistics. Its outputs become paired training data for a restoration model."
+  original: "/assets/slides/gendeg-2-context.webp"
+  alt: "Three stages of the GenDeg pipeline showing generator training, degradation synthesis and restoration training, with the original legends."
+  figure: "/assets/slides/figures/gendeg-2.webp"
+  width: 1186
+  height: 564
+
+gendeg-3:
+  title: "Controlling degradation intensity"
+  takeaway: "Changing degradation statistics creates different corruption patterns for the same clean image. Structure correction and intensity filtering select suitable pairs."
+  original: "/assets/slides/gendeg-3.webp"
+  alt: "Diagram showing how conditioning, structure correction and filtering select generated training pairs."
+  figure: "/assets/slides/figures/gendeg-3.webp"
+  width: 1083
+  height: 462
+
+gendeg-4:
+  title: "Restoration beyond the training set"
+  takeaway: "With the same Swin model, GenDS improves LPIPS on all four test sets. FID improves on three and rises on GoPro."
+  original: "/assets/slides/gendeg-4-results.webp"
+  project_table: true
+
+gendeg-5:
+  title: "Restoring details in unfamiliar scenes"
+  takeaway: "Training with GenDS helps recover details across degradation patterns that the restoration model did not see during training."
+  original: "/assets/slides/gendeg-5.webp"
+  alt: "Input scenes, outputs from Swin and NAFNet with and without GenDS training, and ground truth. GD marks models trained with GenDS."
+  figure: "/assets/slides/figures/gendeg-5.webp"
+  width: 1418
+  height: 306
+
+scale-wise-var-1:
+  title: "A diffusion view of scale-wise generation"
+  takeaway: "Under a Markovian attention mask, predicting the next scale of visual tokens corresponds to a discrete diffusion transition."
+  original: "/assets/slides/scale-wise-var-1-context.webp"
+  alt: "Published figure comparing image generation and zero-shot reconstruction with VAR and SRDD."
+  figure: "/assets/slides/figures/scale-wise-var-1.webp"
+  width: 926
+  height: 609
+
+scale-wise-var-2:
+  title: "What the attention mask changes"
+  takeaway: "Restricting attention to the previous scale makes the connection to discrete diffusion explicit."
+  original: "/assets/slides/scale-wise-var-2.webp"
+  table: {"headers": ["Attention mask", "Information available at the next scale"], "rows": [["Standard VAR", "All previously generated scales"], ["Markovian VAR", "Only the immediately preceding scale"]], "source": "Scale-Wise VAR, 2025 preprint. The equivalence depends on this choice of mask."}
+
+scale-wise-var-3:
+  title: "Refining an initial prediction"
+  takeaway: "The diffusion interpretation allows the model to revisit a prediction by resampling tokens at a scale."
+  original: "/assets/slides/scale-wise-var-3-context.webp"
+  alt: "Image grids compare Markovian VAR, simple resampling and masked resampling across several scales."
+  figure: "/assets/slides/figures/scale-wise-var-3.webp"
+  width: 1062
+  height: 469
+
+scale-wise-var-4:
+  title: "Reconstruction without additional training"
+  takeaway: "The same model can fill missing regions, extend a frame and increase image resolution."
+  original: "/assets/slides/scale-wise-var-4.webp"
+  alt: "Each triplet shows the input, the VAR result and the reconstruction from SRDD."
+  figure: "/assets/slides/figures/scale-wise-var-4.webp"
+  width: 1378
+  height: 346
+
+scale-wise-var-5:
+  title: "Generation quality across four datasets"
+  takeaway: "After 200 epochs, SRDD has lower FID than VAR on all four reported datasets. The relative decrease on MiniImageNet is 20.2%."
+  original: "/assets/slides/scale-wise-var-5-results.webp"
+  project_table: true
+
+steered-diffusion-1:
+  title: "Guiding a pretrained generator"
+  takeaway: "Steered Diffusion uses a task function during sampling to guide image-to-image and label-conditioned generation."
+  original: "/assets/slides/steered-diffusion-1.webp"
+  alt: "Examples compare inpainting and semantic generation, showing each input condition beside generated samples."
+  figure: "/assets/slides/figures/steered-diffusion-1.webp"
+  width: 1349
+  height: 489
+
+steered-diffusion-2:
+  title: "Steering the clean-image estimate"
+  takeaway: "At each denoising step, a pretrained task function guides the model’s estimate of the clean image toward the requested condition."
+  original: "/assets/slides/steered-diffusion-2.webp"
+  alt: "Two schematics show the denoising process and the implicit steering loss used within it."
+  figure: "/assets/slides/figures/steered-diffusion-2.webp"
+  width: 1390
+  height: 378
+
+steered-diffusion-3:
+  title: "Restoration during sampling"
+  takeaway: "Predefined transformations express constraints for super-resolution and colorization. The multi-step variant repeats steering within each denoising step."
+  original: "/assets/slides/steered-diffusion-3-context.webp"
+  alt: "Low-resolution and grayscale inputs beside reconstructions from baseline methods and the single- and multi-step Steered Diffusion variants."
+  figure: "/assets/slides/figures/steered-diffusion-3.webp"
+  width: 1337
+  height: 461
+
+steered-diffusion-4:
+  title: "Editing with text and identity constraints"
+  takeaway: "Text guides the requested facial edit while an identity constraint helps preserve the person in the input."
+  original: "/assets/slides/steered-diffusion-4.webp"
+  alt: "The same face edited using different text descriptions, with the original input at left."
+  figure: "/assets/slides/figures/steered-diffusion-4.webp"
+  width: 1409
+  height: 233
+
+steered-diffusion-5:
+  title: "Results across four conditional tasks"
+  takeaway: "At inference time, steering improves the reported task-specific scores over ILVR or RePaint. The first three comparisons use CelebA."
+  original: "/assets/slides/steered-diffusion-5-results.webp"
+  project_table: true
+
+unite-and-conquer-1:
+  title: "Combining conditions at inference time"
+  takeaway: "Generate a face from a sketch and text, or combine a semantic map with an appearance description using separately learned conditions."
+  original: "/assets/slides/unite-and-conquer-1-context.webp"
+  alt: "Original face generation panels show semantic maps or sketches, prompts, generated images and the TediGAN comparison where applicable."
+  figure: "/assets/slides/figures/unite-and-conquer-1.webp"
+  width: 1428
+  height: 484
+
+unite-and-conquer-2:
+  title: "Training the conditions separately"
+  takeaway: "Train separate experts or alternate single-modality pairs in one model. Combine the conditional and unconditional predictions during sampling."
+  original: "/assets/slides/unite-and-conquer-2-context.webp"
+  alt: "Diagrams of training separate conditional models or training one shared model on different conditions."
+  figure: "/assets/slides/figures/unite-and-conquer-2.webp"
+  width: 906
+  height: 462
+
+unite-and-conquer-3:
+  title: "Combining models trained on different data"
+  takeaway: "An ImageNet class model sets the subject while a text-conditioned generator supplies the scene."
+  original: "/assets/slides/unite-and-conquer-3.webp"
+  alt: "Class-and-text generations compared with CompGen, with the class label and scene prompt above each example."
+  figure: "/assets/slides/figures/unite-and-conquer-3.webp"
+  width: 1415
+  height: 343
+
+unite-and-conquer-4:
+  title: "Balancing the models’ contributions"
+  takeaway: "Reliability weights mix unconditional predictions. Guidance weights control how strongly the sampler follows each condition."
+  original: "/assets/slides/unite-and-conquer-4-context.webp"
+  alt: "A grid pairs the class “lion” with the text “a mountain.” Rows vary reliability and columns vary class and text guidance."
+  figure: "/assets/slides/figures/unite-and-conquer-4.webp"
+  width: 447
+  height: 455
+
+unite-and-conquer-5:
+  title: "Class accuracy under joint conditioning"
+  takeaway: "Across 500 images, the best of three reliability settings reaches 87% class accuracy. The proposed model receives class and text inputs, while the baselines receive text."
+  original: "/assets/slides/unite-and-conquer-5-results.webp"
+  project_table: true
+
+maxfusion-1:
+  title: "Combining spatial conditions"
+  takeaway: "MaxFusion uses feature variance to combine pretrained controllers during generation. The controllers require no additional training."
+  original: "/assets/slides/maxfusion-1-context.webp"
+  alt: "Examples show conflicting spatial conditions and the composite images generated from them."
+  figure: "/assets/slides/figures/maxfusion-1.webp"
+  width: 1252
+  height: 524
+
+maxfusion-2:
+  title: "Finding the strongest conditioning signal"
+  takeaway: "The spatial variance of intermediate features indicates where a controller carries information about its condition."
+  original: "/assets/slides/maxfusion-2.webp"
+  alt: "ControlNet variance maps at successive intermediate layers for several conditions."
+  figure: "/assets/slides/figures/maxfusion-2.webp"
+  width: 1321
+  height: 435
+
+maxfusion-3:
+  title: "Merging features during denoising"
+  takeaway: "MaxFusion aligns and combines features from multiple controllers before passing them to the next stage of the diffusion model."
+  original: "/assets/slides/maxfusion-4.webp"
+  alt: "Two conditional branches merge within the denoiser, with the feature-fusion operation shown in detail."
+  figure: "/assets/slides/figures/maxfusion-3.webp"
+  width: 1263
+  height: 418
+
+maxfusion-4:
+  title: "Testing conflicting conditions"
+  takeaway: "On 2,000 COCO examples at 50 sampling steps, MaxFusion lowers FID for both condition pairs. Adherence to the input conditions varies by metric."
+  original: "/assets/slides/maxfusion-4-results.webp"
+  project_table: true
+
+maxfusion-5:
+  title: "Generating from complementary controls"
+  takeaway: "A single image can reflect two spatial cues, such as edges and semantic regions, supplied by different controllers."
+  original: "/assets/slides/maxfusion-5.webp"
+  alt: "Edge or depth and segmentation conditions beside outputs from baseline methods and MaxFusion."
+  figure: "/assets/slides/figures/maxfusion-5.webp"
+  width: 1369
+  height: 461
+
+briar-1:
+  title: "Recognizing faces at long range"
+  takeaway: "At a 0.1% false accept rate on BRIAR, the Swin-B system reaches 70.84% true accepts. AdaFace with ResNet101 reaches 39.41% under the same WebFace12M pretraining setting."
+  original: "/assets/slides/briar-1.webp"
+  project_table: true
+
+briar-2:
+  title: "Adapting the recognition model in stages"
+  takeaway: "Pretrain the backbone, align a new recognition head and then fine-tune the full network on lower-quality images."
+  original: "/assets/slides/briar-2.webp"
+  alt: "Training diagram showing supervised pretraining, classifier alignment and full fine-tuning."
+  figure: "/assets/slides/figures/briar-2.webp"
+  width: 1286
+  height: 239
+
+briar-3:
+  title: "Keeping context around small faces"
+  takeaway: "Enlarging an aligned crop preserves information around a distant face before the recognition input is resized."
+  original: "/assets/slides/briar-3.webp"
+  alt: "From a long-range image through face detection and enlargement to the final recognition crop."
+  figure: "/assets/slides/figures/briar-3.webp"
+  width: 1403
+  height: 298
+
+briar-4:
+  title: "The gap between high- and low-quality images"
+  takeaway: "The feature distributions and example faces show how sharply the imaging conditions differ between LFW and BRIAR."
+  original: "/assets/slides/briar-4.webp"
+  alt: "UMAP plots above the corresponding high- and low-quality face samples."
+  figure: "/assets/slides/figures/briar-4.webp"
+  width: 1029
+  height: 441
+
+briar-5:
+  title: "Recognition across five benchmarks"
+  takeaway: "The FG 2025 study evaluates three types of imagery. Comparisons depend on the pretraining data, architecture and evaluation protocol."
+  original: "/assets/slides/briar-5.webp"
+  table: {"headers": ["Benchmark", "Evaluation"], "rows": [["BRIAR and TinyFace", "Low-resolution recognition"], ["IJB-S", "Surveillance imagery"], ["IJB-B and IJB-C", "Mixed-quality verification"]], "source": "FG 2025. The study reports state-of-the-art results across these benchmarks."}
+
+petalface-1:
+  title: "Adapting face recognition with fewer parameters"
+  takeaway: "PETALface trains 0.48% of the parameters. With Swin-B and WebFace4M, BRIAR true accepts rise from 45.93% to 55.35% at a 0.1% false accept rate."
+  original: "/assets/slides/petalface-1-visual.webp"
+  alt: "BRIAR gallery and probe examples with an image-quality analysis. The photographs are research inputs."
+  figure: "/assets/slides/figures/petalface-1.webp"
+  width: 1398
+  height: 319
+
+petalface-2:
+  title: "The gap between gallery and probe images"
+  takeaway: "A sharp reference photograph and a low-resolution probe can depict the same person under very different imaging conditions."
+  original: "/assets/slides/petalface-2.webp"
+  alt: "Gallery and probe photographs alongside the distribution of image quality for both groups."
+  figure: "/assets/slides/figures/petalface-2.webp"
+  width: 1404
+  height: 321
+
+petalface-3:
+  title: "Weighting adapters by image quality"
+  takeaway: "An image-quality network chooses the relative weight of two low-rank adapters on a frozen recognition backbone."
+  original: "/assets/slides/petalface-3.webp"
+  alt: "Recognition architecture showing the frozen backbone, the two LoRA branches and their quality-dependent weights."
+  figure: "/assets/slides/figures/petalface-3.webp"
+  width: 1147
+  height: 466
+
+petalface-4:
+  title: "Rank-1 recognition on TinyFace"
+  takeaway: "With ArcFace, Swin-B and WebFace4M, PETALface reaches 75.72% Rank-1 accuracy, compared with 75.64% for LoRA."
+  original: "/assets/slides/petalface-4.webp"
+  table: {"headers": ["Adaptation", "Rank-1 accuracy"], "rows": [["Pretrained", "73.31%"], ["Full fine-tuning", "71.11%"], ["LoRA", "75.64%"], ["PETALface", "75.72%"]], "source": "WACV 2025, Table 1. Higher accuracy is better."}
+
+petalface-5:
+  title: "Verification on BRIAR"
+  takeaway: "On BRIAR Protocol 3.1, PETALface reaches 55.35% true accepts at a 0.1% false accept rate with Swin-B and WebFace4M."
+  original: "/assets/slides/petalface-5.webp"
+  project_table: true
+
+crowddiff-1:
+  title: "Counting from several density maps"
+  takeaway: "An image-conditioned diffusion model samples several plausible head-density maps. Combining their detections reduces ambiguity in the count."
+  original: "/assets/slides/crowddiff-1.webp"
+  alt: "Crowd image and density-map comparisons showing estimated counts for the same scene."
+  figure: "/assets/slides/figures/crowddiff-1.webp"
+  width: 650
+  height: 512
+
+crowddiff-2:
+  title: "Denoising a crowd-density map"
+  takeaway: "An image-conditioned denoiser estimates head locations. An auxiliary counting branch helps train the shared features."
+  original: "/assets/slides/crowddiff-2.webp"
+  alt: "CrowdDiff pipeline with the input image, counting branch, denoiser and output density map."
+  figure: "/assets/slides/figures/crowddiff-2.webp"
+  width: 590
+  height: 446
+
+crowddiff-3:
+  title: "Merging head locations"
+  takeaway: "A rejection radius based on local head spacing filters duplicate detections while retaining newly identified heads."
+  original: "/assets/slides/crowddiff-3.webp"
+  alt: "Schematic of the neighborhood and rejection radii, with accepted points in green and rejected points in red."
+  figure: "/assets/slides/figures/crowddiff-3.webp"
+  width: 556
+  height: 372
+
+crowddiff-4:
+  title: "Combining different samples"
+  takeaway: "Each realization can reveal an additional head. Merging their estimates produces a fused map of head locations."
+  original: "/assets/slides/crowddiff-4.webp"
+  alt: "Crowd examples with successive refinements and the final fused map."
+  figure: "/assets/slides/figures/crowddiff-4.webp"
+  width: 1415
+  height: 342
+
+crowddiff-5:
+  title: "Counting accuracy and runtime"
+  takeaway: "On UCF-QNRF, eight samples reduce mean absolute error to 66.97, but raise runtime to 1,360 ms. The paper uses four samples."
+  original: "/assets/slides/crowddiff-5.webp"
+  project_table: true
+
+control2control-1:
+  title: "Editing a scene with a sketch"
+  takeaway: "A sketch specifies the sunglasses to add. The edit preserves the corgi and its surroundings."
+  original: "/assets/slides/control2control-1-corgi.webp"
+  alt: "The input corgi, the sketch of sunglasses and the edited image displayed in sequence."
+  figure: "/assets/slides/figures/control2control-1.webp"
+  width: 1692
+  height: 570
+
+control2control-2:
+  title: "Turning an edit into a spatial condition"
+  takeaway: "A pretrained controller accepts a sketch, pose or layout that specifies the requested change."
+  original: "/assets/slides/control2control-2.webp"
+  alt: "Diagram showing the original input, edited spatial condition and resulting image."
+  figure: "/assets/slides/figures/control2control-2.webp"
+  width: 1712
+  height: 638
+
+control2control-3:
+  title: "Preserving the scene outside the edit"
+  takeaway: "Attention differences locate the edit. The model keeps target queries and uses target keys and values inside the mask and source keys and values outside it."
+  original: "/assets/slides/control2control-3-context.webp"
+  alt: "Attention-transfer diagram showing where source and target keys, values and queries enter the operation."
+  figure: "/assets/slides/figures/control2control-3.webp"
+  width: 1409
+  height: 326
+
+control2control-4:
+  title: "Moving objects within a scene"
+  takeaway: "Moving a cup on a reflective table, or several objects together, requires the edit to preserve the surrounding scene and object identities."
+  original: "/assets/slides/control2control-4.webp"
+  alt: "Single-object and multi-object movement examples with the source and edited scenes."
+  figure: "/assets/slides/figures/control2control-4.webp"
+  width: 1712
+  height: 361
+
+control2control-5:
+  title: "Changing one or more poses"
+  takeaway: "A separate skeleton specifies each person’s posture. These examples use Anything v4.0 with a pose-conditioned adapter."
+  original: "/assets/slides/control2control-5.webp"
+  alt: "Single-person and multi-person pose edits, shown with the guiding skeletons."
+  figure: "/assets/slides/figures/control2control-5.webp"
+  width: 1712
+  height: 361
+
+nvidia-mesh-properties-1:
+  title: "Estimating materials for 3D objects"
+  takeaway: "SmartTagger divides a mesh into parts and estimates each part’s material from rendered views."
+  original: "/assets/slides/nvidia-mesh-properties-1.webp"
+  alt: "Examples of 3D part segmentation and zero-shot material estimates on furniture and other objects."
+  figure: "/assets/slides/figures/nvidia-mesh-properties-1.webp"
+  width: 1174
+  height: 505
+
+nvidia-mesh-properties-2:
+  title: "From geometry to material-aware parts"
+  takeaway: "Features from multiple rendered views form a shared 3D representation for segmenting and labeling parts."
+  original: "/assets/slides/nvidia-mesh-properties-2.webp"
+  alt: "The pipeline takes a 3D representation through feature aggregation and part segmentation to material estimates."
+  figure: "/assets/slides/figures/nvidia-mesh-properties-2.webp"
+  width: 1278
+  height: 276
+
+nvidia-mesh-properties-3:
+  title: "Linking features across viewpoints"
+  takeaway: "Segmentation masks help aggregate visual features from different cameras onto a consistent 3D surface."
+  original: "/assets/slides/nvidia-mesh-properties-3.webp"
+  alt: "Feature aggregation pipeline showing multiview renderings, a vision encoder and features projected onto the surface."
+  figure: "/assets/slides/figures/nvidia-mesh-properties-3.webp"
+  width: 713
+  height: 312
+
+nvidia-mesh-properties-4:
+  title: "Identifying the parts and materials"
+  takeaway: "Cluster the 3D features into candidate parts, then use rendered views and region labels to estimate their materials."
+  original: "/assets/slides/nvidia-mesh-properties-4.webp"
+  alt: "The draft’s pipeline groups candidate 3D parts and uses multimodal reasoning to label them."
+  figure: "/assets/slides/figures/nvidia-mesh-properties-4.webp"
+  width: 682
+  height: 325
+
+nvidia-mesh-properties-5:
+  title: "Estimating mass on ABO-500"
+  takeaway: "The research draft reports lower ADE and ALDE and higher MnRE than NeRF2Physics. APE increases from 0.790 to 0.834."
+  original: "/assets/slides/nvidia-mesh-properties-5-results.webp"
+  project_table: true
