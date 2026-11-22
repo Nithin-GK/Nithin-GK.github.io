@@ -8,7 +8,7 @@ profile:
 selected_papers: true
 ---
 
-I’m a research engineer at Apple, where I build **multimodal agents** that interpret human interactions over time. I design simulations to test how these agents behave and use the results to identify what they need to learn next.
+I’m a research engineer at Apple, where I build **multimodal agents** that interpret human interactions over time. I develop simulation-based evaluations for multi-turn interactions and define scoring rubrics for agent responses.
 
 My research brings together **generative modeling** and **3D vision**. I study how to steer diffusion models with sketches, depth maps, and text, and how synthetic training views can help a model reconstruct an unfamiliar scene.
 
