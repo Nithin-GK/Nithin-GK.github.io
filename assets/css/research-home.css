@@ -50,16 +50,12 @@
   padding-bottom: clamp(30px, 3.3vw, 42px);
 }
 .intro-heading { grid-area: heading; }
-.intro-role, .paper-venue {
+.paper-venue {
   color: var(--home-link);
   font-weight: 600;
 }
-.intro-role {
-  font-size: 1rem;
-  margin: 0 0 18px;
-}
 .research-home h1 {
-  margin: 0 0 8px;
+  margin: 0 0 18px;
   font-family: "Roboto", "Helvetica Neue", sans-serif;
   font-size: clamp(2.15rem, 3.65vw, 2.9rem);
   font-weight: 500;
@@ -131,21 +127,30 @@
 .research-home ol.bibliography > li + li { border-top: 1px solid var(--home-rule); }
 .home-paper {
   display: grid;
-  grid-template-columns: clamp(148px, 20vw, 220px) minmax(0, 1fr);
+  grid-template-columns: clamp(190px, 28vw, 300px) minmax(0, 1fr);
   align-items: start;
   gap: clamp(20px, 3.5vw, 38px);
   padding-block: 25px;
   scroll-margin-top: 80px;
 }
 .paper-copy:only-child { grid-column: 1/-1; }
+.paper-figure {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  padding: 6px;
+  border: 1px solid var(--home-rule);
+  border-radius: 4px;
+  background: #fff;
+  cursor: zoom-in;
+}
+.paper-figure:hover { border-color: var(--home-link); }
 .paper-preview {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3/2;
+  max-height: 210px;
   object-fit: contain;
-  border-radius: 5px;
-  background: #f4f7fa;
 }
 .paper-venue { font-size: 0.81rem; letter-spacing: 0.035em; margin: 0 0 5px; }
 .home-paper h3 {
@@ -199,7 +204,6 @@
     grid-template-areas: "portrait heading" "bio bio" "links links";
     gap: 16px;
   }
-  .intro-role { font-size: 0.9rem; margin: 5px 0 0; }
   .research-home h1 { margin: 0; font-size: clamp(1.65rem, 6vw, 2.4rem); }
   .intro-portrait { margin: 0; align-self: center; }
   .intro-heading { align-self: center; }
@@ -214,14 +218,18 @@
   .home-page #navbar .nav-link { padding: 0.55rem 0.32rem; font-size: 0.83rem; }
   .papers-heading > a { font-size: 0.87rem; }
   .home-paper {
-    grid-template-columns: clamp(116px, 32vw, 145px) minmax(0, 1fr);
-    gap: 10px 15px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "venue" "title" "authors" "figure" "summary" "links";
+    gap: 7px;
     padding-block: 20px;
   }
   .paper-copy { display: contents; }
-  .paper-preview { grid-column: 1; grid-row: 1/3; }
-  .paper-venue { grid-column: 2; margin: 0 0 -7px; }
-  .home-paper h3 { grid-column: 2; }
-  .paper-authors, .paper-summary, .paper-links { grid-column: 1/-1; margin: 0; }
+  .paper-venue { grid-area: venue; margin: 0; }
+  .home-paper h3 { grid-area: title; }
+  .paper-authors { grid-area: authors; }
+  .paper-figure { grid-area: figure; margin-block: 4px; }
+  .paper-summary { grid-area: summary; }
+  .paper-links { grid-area: links; }
+  .paper-authors, .paper-summary, .paper-links { margin: 0; }
   .paper-links { column-gap: 15px; }
 }

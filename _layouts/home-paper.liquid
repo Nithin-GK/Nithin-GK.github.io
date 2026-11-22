@@ -4,7 +4,10 @@
 {% assign project = site.projects | where: 'project_key', preview.project | first %}
 <article class="home-paper" id="{{ entry.key }}">
   {% if preview.poster %}
-    <img class="paper-preview" src="{{ preview.poster | relative_url }}" alt="{{ preview.alt | escape }}" width="480" height="320" loading="lazy" decoding="async">
+    {% assign figure_url = preview.poster | relative_url | bust_file_cache %}
+    <a class="paper-figure" href="{{ figure_url }}" aria-label="Open full-size figure for {{ entry.title | strip_html | escape }}">
+      <img class="paper-preview" src="{{ figure_url }}" alt="{{ preview.alt | escape }}" width="{{ preview.width }}" height="{{ preview.height }}" loading="lazy" decoding="async">
+    </a>
   {% endif %}
   <div class="paper-copy">
     <p class="paper-venue">{{ entry.abbr | default: entry.year }}{% if entry.note %}<span class="paper-note"> · {{ entry.note }}</span>{% endif %}</p>
