@@ -10,7 +10,7 @@
     </a>
   {% endif %}
   <div class="paper-copy">
-    <p class="paper-venue">{{ entry.abbr | default: entry.year }}{% if entry.note %}<span class="paper-note"> · {{ entry.note }}</span>{% endif %}</p>
+    <p class="paper-venue">{{ entry.abbr | default: entry.year }}</p>
     <h3><a href="{% if project %}{{ project.url | relative_url }}{% elsif entry.pdf %}{{ entry.pdf }}{% else %}{{ '/publications/' | relative_url }}#{{ entry.key }}{% endif %}">{{ entry.title }}</a></h3>
     <p class="paper-authors">
       {%- for author in entry.author_array -%}
@@ -24,7 +24,7 @@
         {%- if author.last contains '*' -%}<sup title="Equal contribution">*</sup>{%- endif -%}
       {%- endfor -%}
     </p>
-    {% if preview.summary %}<p class="paper-summary">{{ preview.summary }}</p>{% endif %}
+    <div class="paper-citation">{% include publication-venue.liquid %}</div>
     <div class="paper-links">
       {% if entry.pdf %}<a href="{% if entry.pdf contains '://' %}{{ entry.pdf }}{% else %}{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}{% endif %}">Paper</a>{% endif %}
       {% if project %}<a href="{{ project.url | relative_url }}#slides">Slides</a>{% endif %}

@@ -3,10 +3,10 @@ layout: default
 ---
 <article class="research-home">
   <header class="research-intro">
-    <h1 class="intro-heading">{{ site.title }}</h1>
     {% if page.profile.image %}
       <img class="intro-portrait" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}" width="500" height="422" alt="Nithin Gopalakrishnan Nair" fetchpriority="high">
     {% endif %}
+    <h1 class="intro-heading">{{ site.title }}</h1>
     <div class="intro-bio">{{ content }}</div>
     <nav class="intro-links" aria-label="Contact and profiles">
       {% assign socials = site.data.socials %}
@@ -20,8 +20,7 @@ layout: default
   {% if page.selected_papers %}
     <section aria-labelledby="selected-publications">
       <div class="papers-heading">
-        <h2 id="selected-publications">Selected publications</h2>
-        <a href="{{ '/publications/' | relative_url }}">All publications</a>
+        <h2 id="selected-publications"><a href="{{ '/publications/' | relative_url }}">Selected Publications</a></h2>
       </div>
       {% include selected_papers.liquid %}
     </section>

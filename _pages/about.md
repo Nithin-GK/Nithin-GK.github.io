@@ -8,14 +8,8 @@ profile:
 selected_papers: true
 ---
 
-I’m a research engineer at Apple, where I build **multimodal agents** that interpret human interactions over time. I develop simulation-based evaluations for multi-turn interactions and define scoring rubrics for agent responses.
+I am a Research Engineer at Apple, where I work on long-horizon agents for human interaction understanding and the simulation and evaluation infrastructure used to develop them. I completed my Ph.D. in Electrical and Computer Engineering at Johns Hopkins University, working under the supervision of <a href='https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en'>Dr. Vishal M. Patel</a> at the VIU Lab. Prior to JHU, I obtained my dual degree (B.Tech & M.Tech) in Electrical Engineering from the Indian Institute of Technology Madras, where I conducted research on image reconstruction with <a href='https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en'>Dr. A.N. Rajagopalan</a> at the IPCV Lab.
 
-My research brings together **generative modeling** and **3D vision**. I study how to steer diffusion models with sketches, depth maps, and text, and how synthetic training views can help a model reconstruct an unfamiliar scene.
+My research spans large-scale model training, generative modeling, multimodal learning, synthetic data, and 3D understanding. During my Ph.D., I worked on controlling and composing diffusion models and improving generalization with synthetic data.
 
-<details class="intro-background" markdown="1">
-<summary>More about my research</summary>
-
-I earned my Ph.D. in Electrical and Computer Engineering at Johns Hopkins University, where I worked with [Vishal M. Patel](https://scholar.google.com/citations?user=AkEXTbIAAAAJ&hl=en) at the VIU Lab on controlling diffusion models and improving generalization with synthetic data. Before Hopkins, I completed a dual B.Tech. and M.Tech. in Electrical Engineering at IIT Madras, where I studied image reconstruction with [A. N. Rajagopalan](https://scholar.google.co.in/citations?user=jXTZEw4AAAAJ&hl=en) at the IPCV Lab.
-
-I find the connection between diffusion models and the physics of Brownian motion fascinating. I’ve worked on large-scale model training and on image, video, and 3D generation. I welcome collaborations in generative modeling.
-</details>
+I find the theory behind diffusion models fascinating. Fun fact: the basics were proposed by Einstein! Over the past several years, I have contributed to advances in image, video, and 3D generation using these models. I welcome collaborations with researchers who share an interest in generative modeling. Please feel free to <a href="mailto:iamnithingk@gmail.com">reach out</a>.
