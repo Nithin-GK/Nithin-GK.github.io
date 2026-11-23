@@ -5,7 +5,9 @@
 <article class="home-paper" id="{{ entry.key }}">
   {% if preview.poster %}
     {% assign figure_url = preview.poster | relative_url | bust_file_cache %}
-    <a class="paper-figure" href="{{ figure_url }}" aria-label="Open full-size figure for {{ entry.title | strip_html | escape }}">
+    {% assign full_figure_url = figure_url %}
+    {% if preview.full %}{% assign full_figure_url = preview.full | relative_url | bust_file_cache %}{% endif %}
+    <a class="paper-figure" href="{{ full_figure_url }}" aria-label="Open full-size figure for {{ entry.title | strip_html | escape }}">
       <img class="paper-preview" src="{{ figure_url }}" alt="{{ preview.alt | escape }}" width="{{ preview.width }}" height="{{ preview.height }}" loading="lazy" decoding="async">
     </a>
   {% endif %}

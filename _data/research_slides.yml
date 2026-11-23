@@ -88,8 +88,8 @@ scale-wise-var-1:
   original: "/assets/slides/scale-wise-var-1-context.webp"
   alt: "Published figure comparing image generation and zero-shot reconstruction with VAR and SRDD."
   figure: "/assets/slides/figures/scale-wise-var-1.webp"
-  width: 926
-  height: 609
+  width: 2800
+  height: 1843
 
 scale-wise-var-2:
   title: "What the attention mask changes"
@@ -101,10 +101,10 @@ scale-wise-var-3:
   title: "Refining an initial prediction"
   takeaway: "The diffusion interpretation allows the model to revisit a prediction by resampling tokens at a scale."
   original: "/assets/slides/scale-wise-var-3-context.webp"
-  alt: "Image grids compare Markovian VAR, simple resampling and masked resampling across several scales."
+  alt: "VAR and Markovian VAR samples beside the first through fifth steps of simple and masked resampling."
   figure: "/assets/slides/figures/scale-wise-var-3.webp"
-  width: 1062
-  height: 469
+  width: 2550
+  height: 1118
 
 scale-wise-var-4:
   title: "Reconstruction without additional training"
@@ -112,8 +112,8 @@ scale-wise-var-4:
   original: "/assets/slides/scale-wise-var-4.webp"
   alt: "Each triplet shows the input, the VAR result and the reconstruction from SRDD."
   figure: "/assets/slides/figures/scale-wise-var-4.webp"
-  width: 1378
-  height: 346
+  width: 2776
+  height: 700
 
 scale-wise-var-5:
   title: "Generation quality across four datasets"

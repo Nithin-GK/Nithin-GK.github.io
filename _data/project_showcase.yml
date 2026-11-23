@@ -493,8 +493,7 @@
         [
           {
             "label": "The autoregression–diffusion connection",
-            "src": "/assets/img/showcase/scale-wise-var-4.webp",
-            "preview": "/assets/img/showcase/scale-wise-var-4-preview.webp",
+            "src": "/assets/img/publication_preview/home/scale-wise-var-full.svg",
             "caption": "Next-scale prediction and discrete diffusion are equivalent under a Markovian attention mask. Orange and blue notation identify the two formulations.",
             "alt": "The full diagram and legend connect next-scale prediction with discrete diffusion under the Markovian attention mask. Orange and blue notation distinguish the scale-wise and diffusion formulations.",
           },

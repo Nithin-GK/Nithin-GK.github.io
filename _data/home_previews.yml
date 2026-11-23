@@ -1,9 +1,10 @@
 kumar2025scale:
   project: scale-wise-var
   poster: /assets/img/publication_preview/home/scale-wise-var.webp
-  width: 2000
-  height: 443
-  alt: A fine token grid is coarsened, then a transformer predicts the next finer scale. The arrows show the corresponding discrete diffusion steps.
+  full: /assets/img/publication_preview/home/scale-wise-var-full.svg
+  width: 1200
+  height: 544
+  alt: A VAR transformer takes a coarse token grid as input and predicts a finer grid of the same cat.
 nair2025scaling:
   project: novel-view-synthesis
   poster: /assets/img/publication_preview/home/novel-view-synthesis.webp
